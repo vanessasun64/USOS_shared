@@ -8,7 +8,7 @@
 %clear
 
 %% Set Model Options
-% dir_savepath = '/Users/vanessasun/Documents/phd/utah/research/F0AM_runs/';
+
 
 %% OBSERVATIONS & METEOROLOGY
 %{
@@ -28,7 +28,6 @@ foam_end=datetime('08/07/2024','InputFormat','MM/dd/yyyy');
 
 % Extract the year, month day: 
 yr=year(foam_start);mon=month(foam_start);dy=day(foam_start); 
-RUNNAME= strcat('USOS','_',num2str(mon), '_', num2str(dy),'_', num2str(yr)) ;
 
 % Use to set t_start and t_end to pass to get_subset to select only data
 % during this time period : 
@@ -43,6 +42,12 @@ t_end=datetime(yr,mon,dy,23,30,0);
 %   sun: struct with zenith and azimuth estimates for sun position
 [USOS, sun]= get_subset_USOS(t_start, t_end);
 
+%Set where to store the total file
+savedir = '/Users/vanessasun/Documents/phd/utah/research/USOS_shared/F0AM-4.3.0.1/Runs/';
+save_runname = strcat('USOS','_',num2str(mon), '_', num2str(dy),'_', num2str(yr));
+full_savepath = strcat(savedir,save_runname);
+
+%Set other Met parameters besides sun position
 %{
 P, T and RH were measured at the site and will be updated every step of the simulation.
 SZA was not measured, so we can use a function to calculate it.
@@ -151,7 +156,7 @@ ModelOptions.EndPointsOnly  = 1;
 ModelOptions.LinkSteps      = 1;
 ModelOptions.IntTime        = 1800; %change to timestep to match frequency of data
 ModelOptions.TimeStamp      = USOS.timehr_output; 
-ModelOptions.SavePath       = RUNNAME;
+ModelOptions.SavePath       = full_savepath;
 % ModelOptions.FixNOx         = 1; %if you use this, disable family conservation above.
 
 
@@ -203,7 +208,7 @@ S = F0AM_ModelCore(Met,InitConc,ChemFiles,BkgdConc,ModelOptions);
 
 %Save missing variable repIndex, have to resave the others
 S(1).repInd = repIndex;
-save_struct_name = strcat(RUNNAME,'_rep_save','.mat');
+save_struct_name = strcat(full_savepath,'_rep_save','.mat');
 save(save_struct_name, 'S')
 
 

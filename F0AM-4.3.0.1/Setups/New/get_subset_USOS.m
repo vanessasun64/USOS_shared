@@ -2,7 +2,7 @@ function [out, sun]= get_subset_USOS(t_start, t_end)
 % Function to get a subset of the data structure based on time, date,
     
     % Load in MATLAB version of the filled merge of campaign's data! 
-    dirpath2USOS='/Users/vanessasun/Documents/phd/utah/research/F0AM_files/F0AM-4.3.0.1/Campaign_Data/matlab_merge_original/parked/corrected/';
+    dirpath2USOS='/Users/vanessasun/Documents/phd/utah/research/USOS_shared/F0AM-4.3.0.1/Campaign_Data/matlab_merge/parked/corrected/';
     USOSfilename = '20240804_20240808_30min_CSL_mobile_lab_parked_with_interp_struct_for_MATLAB.mat';
     fullpath2USOS = fullfile(dirpath2USOS,USOSfilename);
     load(fullpath2USOS); % loads struct named USOS. 

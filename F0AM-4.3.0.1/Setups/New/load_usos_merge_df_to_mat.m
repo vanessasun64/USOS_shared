@@ -1,6 +1,6 @@
 clear all 
 
-datapath='/Users/vanessasun/Documents/phd/utah/research/F0AM_files/F0AM-4.3.0.1/Campaign_Data/matlab_merge_original/';
+datapath='/Users/vanessasun/Documents/phd/utah/research/USOS_shared/F0AM-4.3.0.1/Campaign_Data/matlab_merge/';
 parkeddir = 'parked/';
 drivingdir = 'driving/';
 originaldir = 'original/';
