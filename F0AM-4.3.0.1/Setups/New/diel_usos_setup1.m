@@ -192,7 +192,7 @@ ModelOptions.SavePath       = full_savepath;
 % Here, we run the same contraints for 3 days.
 % The output "repIndex" is used to separate the days with SplitRun later.
 
-nRep = 3; %number of days to repeat
+nRep = 4; %number of days to repeat
 [Met,InitConc,BkgdConc,repIndex] = InputReplicate(Met,InitConc,BkgdConc,nRep);
 ModelOptions.TimeStamp = repmat(ModelOptions.TimeStamp,nRep,1);
 

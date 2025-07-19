@@ -71,7 +71,8 @@ function [out, sun]= get_subset_USOS(t_start, t_end)
         location.altitude   = out.Altitude_m; % Needs altitude above mean sea level (in meters) 
         sun = sun_position(time,location); %fields zenith and azimuth
         
-        out.timehr_output = time.hour; %index assigning each timestamp to what hour of day it is
+        timestamp_collection = 0:0.5:23.5;
+        out.timehr_output = transpose(timestamp_collection); %index assigning each timestamp to what hour of day it is
         %disp(out.timehr_output)
     else % If you didn't have data for the whole day, then return empties!
         out=[]; sun=[]; 
