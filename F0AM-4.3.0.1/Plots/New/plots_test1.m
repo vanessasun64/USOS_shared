@@ -35,7 +35,7 @@ SplitRun(svar.S,'custom',svar.S.repInd)
 %% 
 
 %Test to see if we reached steady-state for a long-lived species
-PlotConc('GLYD',{S1,S2,S3, S4})
+PlotConc('GLYD',{S1,S2,S3,S4})
 legend('Day 1','Day 2','Day 3','Day 4')
 % 
 % % Now let's see how well we simulated NO and NO2, since only total NOx was "fixed".

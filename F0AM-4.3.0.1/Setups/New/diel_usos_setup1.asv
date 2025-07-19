@@ -208,18 +208,19 @@ S = F0AM_ModelCore(Met,InitConc,ChemFiles,BkgdConc,ModelOptions);
 %F0AM is set up to save without the variable repIndex. We re-save a new
 %file with its inclusion with ending '_rep_save'
 
-%Save missing variable repIndex as new MATLAB file
+%Save missing variable repIndex, have to resave the others
 S(1).repInd = repIndex;
 save_struct_name = strcat(full_savepath,'_rep_save','.mat');
 save(save_struct_name, 'S')
 
-%Split up the run into each day of data
+%% 
 SplitRun(S,'custom',S.repInd);
 
-%Save each day's data as its own file
+%% 
 day_split = {'S1', 'S2', 'S3', 'S4'};
 for i = 1:length(day_split)
-    save_runday_name = strcat(full_savepath,'_rep_save_',day_split{i},'.mat');
-    save(save_runday_name,day_split{i})
+    disp(day_split{i});
 end
 
+save_runday_name = strcat(full_savepath,'_rep_save_S1','.mat');
+save(save_runday_name,'S1')
