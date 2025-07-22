@@ -61,7 +61,7 @@ def subset_days(date_time_start, date_time_stop,file_subset_name, var_name):
     ddict= OrderedDict(sorted(ddict.items())) 
 
     # Save the USOS data in an output .mat file: 
-    outpath = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/F0AM-4.3.0.1/Setups/USOS/matlab_struct_original/'
+    outpath = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/F0AM-4.3.0.1/Campaign_Data/matlab_merge/parked/original/'
     matfilename = file_subset_name + '.mat'
     savemat(outpath+matfilename,{var_name: ddict})
     print('Saved MATLAB file to:' + outpath + matfilename)
@@ -98,7 +98,7 @@ def all_days(file_alldays_name):
 # %% BEGIN MAIN 
 
 #import NetCDF file for all days
-all_days_filepath = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_merges/R0/CSL_MobileLab_Parked/merged/rev_1hr/all_CSL_MobileLab_Parked_rev1hr.nc'
+all_days_filepath = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/CampaignData_and_Merges/R0/CSL_MobileLab_Parked/merged/rev_30min/all_CSL_MobileLab_Parked_rev30minv4.nc'
 all_days_filepath_load = xr.open_dataset(all_days_filepath)
 df_alldays = all_days_filepath_load.to_dataframe()
 df_alldays.reset_index(inplace=True)
@@ -148,7 +148,7 @@ need2fill= {'Br2_CIMS':True,
         'Nonanal_PTR':False,
         'C7H4ClF3_PTR':False,
         'D5_siloxane_PTR':False,
-        'PAN_CIMS':False,
+        'PAN_CIMS':True,
         'APAN_CIMS':False,
         'PPN_CIMS':True,
         'HCOOH_CIMS':True,
@@ -303,7 +303,7 @@ vars2fill=[key for key,value in need2fill.items() if value ==True]
 #07/07/2025 Subset for smokefree days for first F0AM run, with varname set to Campaign Name.
 subset_days(date_time_start = "2024-08-04 00:00:00", 
             date_time_stop= "2024-08-08 23:00:00", 
-            file_subset_name ='20240804_20240808_1hr_CSL_mobile_lab_parked_with_interp',
+            file_subset_name ='20240804_20240808_30min_CSL_mobile_lab_parked_with_interp_with_pan_interp',
             var_name = 'USOS')
 
 # subset_days(date_time_start = "2024-08-04 00:00:00", 
