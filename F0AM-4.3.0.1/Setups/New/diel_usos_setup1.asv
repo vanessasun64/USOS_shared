@@ -42,12 +42,22 @@ t_end=datetime(yr,mon,dy,23,30,0);
 %   sun: struct with zenith and azimuth estimates for sun position
 [USOS, sun]= get_subset_USOS(t_start, t_end);
 
+
 %Set where to store the total file
 savedir = '/Users/vanessasun/Documents/phd/utah/research/USOS_shared/F0AM-4.3.0.1/Runs/';
 runname_str = strcat('USOS','_',num2str(mon), '_', num2str(dy),'_', num2str(yr));
 dir_path = strcat(savedir,runname_str);
 mkdir(dir_path);
-full_savepath = strcat(dir_path,'/',runname_str);
+full_savepath = strcat(dir_path,'/',runname_str,'_with_pan_interp_');
+
+%% 
+%Save USOS output as a CSV file for use in Python
+USOS_observed_table=struct2table(USOS);
+USOS_observed_save_path = strcat(full_savepath,'_observed_conc','.csv');
+writetable(USOS_observed_table, USOS_observed_save_path)
+
+%% 
+
 
 %Set other Met parameters besides sun position
 %{
@@ -89,8 +99,8 @@ InitConc = {...
     'NO2'               USOS.NO2_LIF            0;
     'HONO'              USOS.HONO_CIMS          1;
     'HNO3'              USOS.HNO3_CIMS          1;
-    %'PAN'               USOS.PAN_CIMS           0;
-    'PANX'              USOS.PPN_CIMS           0;
+    %'PAN'               USOS.PAN_CIMS           1;
+    %'PANX'              USOS.PPN_CIMS           1;
     'NOx'               {'NO2','NO'}        []; %family conservation
 
     %Biogenics
@@ -208,19 +218,22 @@ S = F0AM_ModelCore(Met,InitConc,ChemFiles,BkgdConc,ModelOptions);
 %F0AM is set up to save without the variable repIndex. We re-save a new
 %file with its inclusion with ending '_rep_save'
 
-%Save missing variable repIndex, have to resave the others
+%Save missing variable repIndex as new MATLAB file
 S(1).repInd = repIndex;
 save_struct_name = strcat(full_savepath,'_rep_save','.mat');
 save(save_struct_name, 'S')
 
-%% 
+%Split up the run into each day of data
 SplitRun(S,'custom',S.repInd);
 
-%% 
+%Save each day's data as its own file
 day_split = {'S1', 'S2', 'S3', 'S4'};
 for i = 1:length(day_split)
-    disp(day_split{i});
+    save_runday_name = strcat(full_savepath,'_rep_save_',day_split{i},'.mat');
+    save(save_runday_name,day_split{i})
 end
-
-save_runday_name = strcat(full_savepath,'_rep_save_S1','.mat');
-save(save_runday_name,'S1')
+%% 
+%Save species concentrations as csv file for use in plotting via Python
+speciesConc_table=struct2table(S.Conc);
+species_conc_save_path = strcat(full_savepath,'_model_conc','.csv');
+writetable(speciesConc_table, species_conc_save_path)

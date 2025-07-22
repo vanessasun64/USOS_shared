@@ -42,12 +42,22 @@ t_end=datetime(yr,mon,dy,23,30,0);
 %   sun: struct with zenith and azimuth estimates for sun position
 [USOS, sun]= get_subset_USOS(t_start, t_end);
 
+
 %Set where to store the total file
 savedir = '/Users/vanessasun/Documents/phd/utah/research/USOS_shared/F0AM-4.3.0.1/Runs/';
 runname_str = strcat('USOS','_',num2str(mon), '_', num2str(dy),'_', num2str(yr));
 dir_path = strcat(savedir,runname_str);
 mkdir(dir_path);
 full_savepath = strcat(dir_path,'/',runname_str);
+
+%% 
+%Save USOS output as a CSV file for use in Python
+USOS_observed_table=struct2table(USOS);
+USOS_observed_save_path = strcat(full_savepath,'_observed_conc','.csv');
+writetable(USOS_observed_table, USOS_observed_save_path)
+
+%% 
+
 
 %Set other Met parameters besides sun position
 %{
@@ -89,8 +99,8 @@ InitConc = {...
     'NO2'               USOS.NO2_LIF            0;
     'HONO'              USOS.HONO_CIMS          1;
     'HNO3'              USOS.HNO3_CIMS          1;
-    %'PAN'               USOS.PAN_CIMS           0;
-    'PANX'              USOS.PPN_CIMS           0;
+    %'PAN'               USOS.PAN_CIMS           1;
+    %'PANX'              USOS.PPN_CIMS           1;
     'NOx'               {'NO2','NO'}        []; %family conservation
 
     %Biogenics
@@ -222,4 +232,8 @@ for i = 1:length(day_split)
     save_runday_name = strcat(full_savepath,'_rep_save_',day_split{i},'.mat');
     save(save_runday_name,day_split{i})
 end
-
+%% 
+%Save species concentrations as csv file for use in plotting via Python
+speciesConc_table=struct2table(S.Conc);
+species_conc_save_path = strcat(full_savepath,'_model_conc','.csv');
+writetable(speciesConc_table, species_conc_save_path)

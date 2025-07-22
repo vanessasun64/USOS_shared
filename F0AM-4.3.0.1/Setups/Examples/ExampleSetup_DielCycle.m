@@ -5,7 +5,7 @@
 %
 % 20151126 GMW
 
-%clear
+clear
 
 %% OBSERVATIONS
 %{
@@ -208,7 +208,7 @@ S = F0AM_ModelCore(Met_SOAS,InitConc_SOAS,ChemFiles_SOAS,BkgdConc_SOAS,ModelOpti
 
 % First, let's separate the three days using SplitRun.
 % The first day is effectively "spin-up" for secondary and intermediate species.
-% SplitRun(S,'custom',repIndex)
+SplitRun(S,'custom',repIndex)
 % 
 % % Now let's see how well we simulated NO and NO2, since only total NOx was "fixed".
 % S3.Conc.NOx = S3.Conc.NO+S3.Conc.NO2;
@@ -230,10 +230,10 @@ S = F0AM_ModelCore(Met_SOAS,InitConc_SOAS,ChemFiles_SOAS,BkgdConc_SOAS,ModelOpti
 % legend('Obs','Model')
 % 
 % % Now, let's see how ozone did over the three days.
-% PlotConc('O3',{S1,S2,S3})
-% hold on
-% plot(SOAS.Time,SOAS.O3,'k-')
-% legend('Day 1','Day 2','Day 3','Obs')
+PlotConc('O3',{S1,S2,S3})
+hold on
+plot(SOAS.Time,SOAS.O3,'k-')
+legend('Day 1','Day 2','Day 3','Obs')
 % 
 % % Next, let's look at ozone production on the last day.
 % O3rates = PlotRates('O3',S3,5,'unit','ppb_h','sumEq',1);
