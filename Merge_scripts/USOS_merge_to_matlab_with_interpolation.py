@@ -148,9 +148,9 @@ need2fill= {'Br2_CIMS':True,
         'Nonanal_PTR':False,
         'C7H4ClF3_PTR':False,
         'D5_siloxane_PTR':False,
-        'PAN_CIMS':True,
+        'PAN_CIMS':False,
         'APAN_CIMS':False,
-        'PPN_CIMS':True,
+        'PPN_CIMS':False,
         'HCOOH_CIMS':True,
         'HONO_CIMS':True,
         'O3_ppbv':True,
@@ -303,7 +303,7 @@ vars2fill=[key for key,value in need2fill.items() if value ==True]
 #07/07/2025 Subset for smokefree days for first F0AM run, with varname set to Campaign Name.
 subset_days(date_time_start = "2024-08-04 00:00:00", 
             date_time_stop= "2024-08-08 23:00:00", 
-            file_subset_name ='20240804_20240808_30min_CSL_mobile_lab_parked_with_interp_with_pan_interp',
+            file_subset_name ='20240804_20240808_30min_CSL_mobile_lab_parked_with_interp',
             var_name = 'USOS')
 
 # subset_days(date_time_start = "2024-08-04 00:00:00", 
