@@ -46,10 +46,9 @@ t_end=datetime(yr,mon,dy,23,30,0);
 %Set where to store the total file
 savedir = '/Users/vanessasun/Documents/phd/utah/research/USOS_shared/F0AM-4.3.0.1/Runs/';
 runname_str = strcat('USOS','_',num2str(mon), '_', num2str(dy),'_', num2str(yr));
-dir_path = strcat(savedir,runname_str);
+dir_path = strcat(savedir,runname_str,'/','Run5/');
 mkdir(dir_path);
-full_savepath = strcat(dir_path,'/',runname_str,'_with_pan_interp_');
-
+full_savepath = strcat(dir_path,runname_str);
 %% 
 %Save USOS output as a CSV file for use in Python
 USOS_observed_table=struct2table(USOS);
@@ -73,7 +72,7 @@ Met = {...
     'RH'         USOS.RH_percent; %Relative Humidity, %
     'SZA'        sun.zenith; %solar zenith angle, degrees
     'kdil'       1/(24*60*60); %dilution constant, /s
-    'jcorr'      0.5; %optimizes comparison b/w model and observed NO/NO2
+    'jcorr'      0.35; %optimizes comparison b/w model and observed NO/NO2
     };
 
 %% CHEMICAL CONCENTRATIONS
@@ -237,3 +236,12 @@ end
 speciesConc_table=struct2table(S.Conc);
 species_conc_save_path = strcat(full_savepath,'_model_conc','.csv');
 writetable(speciesConc_table, species_conc_save_path)
+%%
+chem_struct = S.Chem;
+photolysis_rates_save_path = strcat(full_savepath,'_model_photolysis_rates','.csv');
+writematrix(chem_struct.Rates,photolysis_rates_save_path);
+%% 
+transpose_rnames = transpose(chem_struct.Rnames);
+rnames_table = cell2table(transpose_rnames);
+photolysis_names_save_path = strcat(full_savepath,'_model_photolysis_rxn_names','.csv');
+writetable(rnames_table,photolysis_names_save_path)
