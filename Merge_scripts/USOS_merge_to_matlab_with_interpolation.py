@@ -43,6 +43,7 @@ def subset_days(date_time_start, date_time_stop,file_subset_name, var_name):
     df_subsetdays = df_alldays.sort_index().loc[date_time_start:date_time_stop]
 
     df_interp_subset=df_subsetdays.copy()
+
     for i,col in enumerate(vars2fill):
         # Set any negative values to NaN so we can iterp them... 
         df_interp_subset[col] = df_interp_subset[col].mask(df_interp_subset[col] < 0, np.nan)
@@ -53,6 +54,10 @@ def subset_days(date_time_start, date_time_stop,file_subset_name, var_name):
         if n_baddies > 0: 
                 #apply the linear interpolation
             df_interp_subset[col] = df_interp_subset[col].interpolate(method='linear')
+
+    df_interp_subset['jNO2_ratio'] = df_interp_subset['jNO2_meas']/df_interp_subset['jNO2']
+    msk = ((df_interp_subset['jNO2_ratio'] ==np.inf)  | (df_interp_subset['jNO2_ratio'] >10) )
+    df_interp_subset.loc[msk,'jNO2_ratio'] = 1.0
 
     # Convert the dataframe to a nested dictionary (so scipy can output to a matlab structure!) 
     ddict=dataframe_to_nested_dict(df_interp_subset)
@@ -105,7 +110,7 @@ df_alldays.reset_index(inplace=True)
 df_alldays.set_index('time_local', inplace=True)
 
 # Define which variables we need to make sure don't have Nans/ negs since we'll be using then as constraints in F0AM: 
-# True means constrain
+# True means we will get an interpolation if there is a hole in the available data
 need2fill= {'Br2_CIMS':True,
         'BrO_CIMS':True,
         'Cl2_CIMS':True,
@@ -233,24 +238,24 @@ need2fill= {'Br2_CIMS':True,
         'x3_MethylPentane_WAS':False,
         'x3_x4_EthylToluene_WAS':False,
         'RH_percent':True,
-        'AOD':False}
-        # 'jNO2':True,
-        # 'jBrCl':True,
-        # 'jBr2':True,
-        # 'jCCl4':True,
-        # 'jCH2Oa':True,
-        # 'jCH2Ob':True,
-        # 'jClNO2':True,
-        # 'jClOa':True,
-        # 'jClOb':True,
-        # 'jCl2':True,
-        # 'jHNO2':True,
-        # 'jHNO3':True,
-        # 'jI2':True,
-        # 'jNO3a':True,
-        # 'jNO3b':True,
-        # 'jN2O5':True,
-        # 'jO3':True,
+        'AOD':False,
+        'jNO2':True,
+        'jBrCl':True,
+        'jBr2':True,
+        'jCCl4':True,
+        'jCH2Oa':True,
+        'jCH2Ob':True,
+        'jClNO2':True,
+        'jClOa':True,
+        'jClOb':True,
+        'jCl2':True,
+        'jHNO2':True,
+        'jHNO3':True,
+        'jI2':True,
+        'jNO3a':True,
+        'jNO3b':True,
+        'jN2O5':True,
+        'jO3':True}
         # 'Time_Start_POPS':False,
         # 'Time_Stop_POPS':False,
         # 'Press_mb_POPS':False,
