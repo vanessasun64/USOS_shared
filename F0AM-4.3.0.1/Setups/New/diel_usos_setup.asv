@@ -40,12 +40,16 @@ t_end=datetime(yr,mon,dy,23,30,0);
 [USOS, sun]= get_subset_USOS(t_start, t_end);
 
 
+%% 
+
 %Set where to store the total file
 savedir = '/Users/vanessasun/Documents/phd/utah/research/USOS_shared/F0AM-4.3.0.1/Runs/';
 runname_str = strcat('USOS','_',num2str(mon), '_', num2str(dy),'_', num2str(yr));
-dir_path = strcat(savedir,runname_str,'/','Run9/');
+dir_path = strcat(savedir,runname_str,'/','Run20/');
 mkdir(dir_path);
 full_savepath = strcat(dir_path,runname_str);
+
+mkdir()
 
 %% Set Model Options
 
@@ -84,37 +88,39 @@ for spn=0:1
     kdil is a physical loss constant for all species; 1 per day is a typical value.
     %}
     
+
     Met = {...
     %   names       %values
         'P'          USOS.Pressure_mb; %Pressure, mbar
         'T'          USOS.Temp_K; %Temperature, K
         'RH'         USOS.RH_percent; %Relative Humidity, %
         'SZA'        sun.zenith; %solar zenith angle, degrees
-        'kdil'       1/(32*60*60); %dilution constant, /s
-        'jcorr'      0.3; %optimizes comparison b/w model and observed NO/NO2
+        'kdil'       0; %dilution constant, /s
+        'jcorr'      USOS.jNO2_adj_ratio; %optimizes comparison b/w model and observed NO/NO2
+        
+        %ozone column info here
+        'O3col'      290;
 
         %example: 'J3' USOS.jBr2*0.3 (jcorr)
-        
-        'J4' USOS.jNO2_meas
-        'Jn31' USOS.jBrCl
-        'Jn24' USOS.jBr2
-        USOS.jCCl4
-        USOS.jCH2Oa
-        USOS.jCH2Ob 
-        USOS.jClNO2
-        USOS.jClOa
-        USOS.jClOb
-        USOS.jCl2
-        USOS.jHNO2
-        USOS.jHNO3
-        USOS.jI2
-        USOS.jNO2 
-        USOS.jNO3a
-        USOS.jNO3b 
-        USOS.jN2O5 
-        USOS.jO3
-        %ozone column info here
-       get a time varying jcorr ()
+        'J1'         USOS.jO3 .* USOS.jNO2_ratio;
+        'J4'         USOS.jNO2  .* USOS.jNO2_ratio;
+        'J5'         USOS.jNO3a .* USOS.jNO2_ratio;
+        'J6'         USOS.jNO3b .* USOS.jNO2_ratio;
+        'J7'         USOS.jHNO2 .* USOS.jNO2_ratio;
+        'J8'         USOS.jHNO3 .* USOS.jNO2_ratio;
+        'J11'        USOS.jCH2Oa .* USOS.jNO2_ratio;
+        'J12'        USOS.jCH2Ob .* USOS.jNO2_ratio;
+
+        %Species not in MCM
+        'Jn20'       USOS.jN2O5 .* USOS.jNO2_ratio;
+        'Jn24'       USOS.jBr2 .* USOS.jNO2_ratio;
+        'Jn31'       USOS.jBrCl .* USOS.jNO2_ratio;
+        'Jn32'       USOS.jCl2 .* USOS.jNO2_ratio;
+        %'Jn33' USOS.jClOa + USOS.jClOb %Jn33 covers both rxns
+        'Jn40'       USOS.jI2 .* USOS.jNO2_ratio;
+        'Jn54'       USOS.jClNO2 .* USOS.jNO2_ratio;
+
+        'Jv11'       USOS.jCCl4 .* USOS.jNO2_ratio;
         };
     
     %% CHEMICAL CONCENTRATIONS
@@ -140,8 +146,8 @@ for spn=0:1
         'NO2'               USOS.NO2_LIF            0;
         'HONO'              USOS.HONO_CIMS          hold;
         'HNO3'              USOS.HNO3_CIMS          hold;
-        %'PAN'               USOS.PAN_CIMS           1;
-        %'PANX'              USOS.PPN_CIMS           1;
+        'PAN'               USOS.PAN_CIMS           hold;
+        'PANX'              USOS.PPN_CIMS           hold;
         'NOx'               {'NO2','NO'}        []; %family conservation
     
         %Biogenics
@@ -199,8 +205,8 @@ for spn=0:1
     Background concentrations, along with the value of kdil in Met, determine the dilution rate for chemical species.
     Here we stick with the default value of 0 for all species, which effectively makes dilution a first-order loss.
     %}
-    BkgdConc = {'DEFAULT'       0
-    'PAN' 0.2   
+    BkgdConc = {
+        'DEFAULT'       0
     };
     
     %% OPTIONS
@@ -277,10 +283,9 @@ end
 %file with its inclusion with ending '_rep_save'
 
 %Save missing variable repIndex as new MATLAB file
-S(1).repInd = repIndex;
-save_struct_name = strcat(full_savepath,'_rep_save','.mat');
-save(save_struct_name, 'S')
-
+% S(1).repInd = repIndex;
+% save_struct_name = strcat(full_savepath,'_rep_save','.mat');
+% save(save_struct_name, 'S')
 
 % %Split up the run into each day of data
 % SplitRun(S,'custom',S.repInd);
