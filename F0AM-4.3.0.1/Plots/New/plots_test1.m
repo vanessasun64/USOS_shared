@@ -22,7 +22,7 @@ t_end=datetime(yr,mon,dy,23,30,0);
 %% Get Model Run values
 savedir = '/Users/vanessasun/Documents/phd/utah/research/USOS_shared/F0AM-4.3.0.1/Runs/';
 save_runname = strcat('USOS','_',num2str(mon), '_', num2str(dy),'_', num2str(yr));
-full_savepath = strcat(savedir,save_runname,'_rep_save.mat');
+full_savepath = strcat(savedir,save_runname,'/',save_runname,'_rep_save.mat');
 
 Svar_path = fullfile(full_savepath);
 svar = load(Svar_path);
@@ -35,8 +35,8 @@ SplitRun(svar.S,'custom',svar.S.repInd)
 %% 
 
 %Test to see if we reached steady-state for a long-lived species
-PlotConc('GLYD',{S1,S2,S3,S4})
-legend('Day 1','Day 2','Day 3','Day 4')
+% PlotConc('GLYD',{S1,S2,S3,S4})
+% legend('Day 1','Day 2','Day 3','Day 4')
 % 
 % % Now let's see how well we simulated NO and NO2, since only total NOx was "fixed".
 % S3.Conc.NOx = S3.Conc.NO+S3.Conc.NO2;
@@ -55,14 +55,14 @@ legend('Day 1','Day 2','Day 3','Day 4')
 % text(0.55,0.7,'solid: model')
 % text(0.55,0.5,'dash: observed')
 % legend('NO','NO2','NOx')
-% 
-% figure
-% plot(USOS.timehr_output,USOS.NO_LIF./USOS.NO2_LIF,'k-')
-% hold on
-% plot(S3.Time,S3.Conc.NO./S3.Conc.NO2,'k--')
-% xlabel('Model Time')
-% ylabel('NO/NO2')
-% legend('Obs','Model')
+
+figure
+plot(USOS.timehr_output,USOS.NO_LIF./USOS.NO2_LIF,'k-')
+hold on
+plot(S3.Time,S3.Conc.NO./S3.Conc.NO2,'k--')
+xlabel('Model Time')
+ylabel('NO/NO2')
+legend('Obs','Model')
 % 
 % Now, let's see how ozone did over the three days.
 % PlotConc('O3',{S1,S2,S3})

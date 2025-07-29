@@ -146,8 +146,8 @@ for spn=0:1
         'NO2'               USOS.NO2_LIF            0;
         'HONO'              USOS.HONO_CIMS          hold;
         'HNO3'              USOS.HNO3_CIMS          hold;
-        'PAN'               USOS.PAN_CIMS           hold;
-        'PANX'              USOS.PPN_CIMS           hold;
+        %'PAN'               USOS.PAN_CIMS           hold;
+        %'PANX'              USOS.PPN_CIMS           hold;
         'NOx'               {'NO2','NO'}        []; %family conservation
     
         %Biogenics
@@ -206,7 +206,9 @@ for spn=0:1
     Here we stick with the default value of 0 for all species, which effectively makes dilution a first-order loss.
     %}
     BkgdConc = {
-        'DEFAULT'       0
+        'DEFAULT'       0;
+        'PAN'           0.2;
+        'CH4'           1965;
     };
     
     %% OPTIONS

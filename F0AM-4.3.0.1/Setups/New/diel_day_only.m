@@ -28,8 +28,8 @@ yr=year(foam_start);mon=month(foam_start);dy=day(foam_start);
 
 % Use to set t_start and t_end to pass to get_subset to select only data
 % during this time period : 
-t_start=datetime(yr,mon,dy,0,0,0);
-t_end=datetime(yr,mon,dy,23,30,0);
+t_start=datetime(yr,mon,dy,6,0,0);
+t_end=datetime(yr,mon,dy,18,30,0);
 
 % Pass to our function to load USOS data and select the appropriate time
 % period. Also include sun position calculation. Outputs are: 
@@ -37,19 +37,18 @@ t_end=datetime(yr,mon,dy,23,30,0);
 %   utc_time: MATLAB datetime object added to USOS.utc_time
 %   Time_MST: MATLAB datetime object added to USOS.Time_MST
 %   sun: struct with zenith and azimuth estimates for sun position
-[USOS, sun]= get_subset_USOS(t_start, t_end);
-
+[USOS, sun]= dayonly_get_subset_USOS(t_start, t_end);
 
 %% 
 
 %Set where to store the total file
 savedir = '/Users/vanessasun/Documents/phd/utah/research/USOS_shared/F0AM-4.3.0.1/Runs/';
 runname_str = strcat('USOS','_',num2str(mon), '_', num2str(dy),'_', num2str(yr));
-dir_path = strcat(savedir,runname_str,'/','Run20/');
+dir_path = strcat(savedir,runname_str,'/','day_only/Run1/');
 mkdir(dir_path);
 full_savepath = strcat(dir_path,runname_str);
-
-mkdir()
+new_plots_dir = strcat(dir_path,'/plots/');
+mkdir(new_plots_dir);
 
 %% Set Model Options
 
@@ -96,7 +95,7 @@ for spn=0:1
         'RH'         USOS.RH_percent; %Relative Humidity, %
         'SZA'        sun.zenith; %solar zenith angle, degrees
         'kdil'       0; %dilution constant, /s
-        'jcorr'      USOS.jNO2_adj_ratio; %optimizes comparison b/w model and observed NO/NO2
+        'jcorr'      USOS.jNO2_ratio; %optimizes comparison b/w model and observed NO/NO2
         
         %ozone column info here
         'O3col'      290;

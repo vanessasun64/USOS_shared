@@ -2,7 +2,7 @@ function [out, sun]= get_subset_USOS(t_start, t_end)
 % Function to get a subset of the data structure based on time, date,
     
     % Load in MATLAB version of the filled merge of campaign's data! 
-    dirpath2USOS='/Users/vanessasun/Documents/phd/utah/research/F0AM-4.3.0.1/Campaign_Data/matlab_merge/parked/corrected/';
+    dirpath2USOS='/Users/vanessasun/Documents/phd/utah/research/USOS_shared/F0AM-4.3.0.1/Campaign_Data/matlab_merge/parked/corrected/';
     USOSfilename = '20240804_20240808_30min_CSL_mobile_lab_parked_with_interp_pan_interp_struct_for_MATLAB.mat';
     fullpath2USOS = fullfile(dirpath2USOS,USOSfilename);
     load(fullpath2USOS); % loads struct named USOS. 
@@ -71,7 +71,7 @@ function [out, sun]= get_subset_USOS(t_start, t_end)
         location.altitude   = out.Altitude_m; % Needs altitude above mean sea level (in meters) 
         sun = sun_position(time,location); %fields zenith and azimuth
         
-        timestamp_collection = 0:0.5:23.5;
+        timestamp_collection = 6:0.5:18.5;
         out.timehr_output = transpose(timestamp_collection); %index assigning each timestamp to what hour of day it is
         %disp(out.timehr_output)
     else % If you didn't have data for the whole day, then return empties!
