@@ -1,6 +1,6 @@
 clear all; close all; 
 
-pth_win="\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4_3_0_1\Runs\USOS_8_6_2024\Run23\USOS_8_6_2024_run.mat"; 
+pth_win="C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.3.0.1\Runs\USOS_8_6_2024\Run23\USOS_8_6_2024_run.mat"; 
 load(pth_win)
 %% 
 

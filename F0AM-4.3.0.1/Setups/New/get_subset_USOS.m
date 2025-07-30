@@ -8,7 +8,7 @@ function [out, sun]= get_subset_USOS(t_start, t_end)
     dirpath2USOS_win= '\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4_3_0_1\Campaign_Data\matlab_merge\parked\corrected\';
     USOSfilename_win = '20240804_20240808_30min_CSL_mobile_lab_parked_with_interp_struct_for_MATLAB.mat';
     
-    fullpath2USOS = fullfile(dirpath2USOS_win,USOSfilename_win);
+    fullpath2USOS = fullfile('C:\',dirpath2USOS_win,USOSfilename_win);
     load(fullpath2USOS); % loads struct named USOS. 
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
