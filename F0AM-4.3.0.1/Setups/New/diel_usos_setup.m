@@ -39,13 +39,12 @@ t_end=datetime(yr,mon,dy,23,30,0);
 %   sun: struct with zenith and azimuth estimates for sun position
 [USOS, sun]= get_subset_USOS(t_start, t_end);
 
-
 %% 
 
 %Set where to store the total file
 savedir = '/Users/vanessasun/Documents/phd/utah/research/USOS_shared/F0AM-4.3.0.1/Runs/';
 runname_str = strcat('USOS','_',num2str(mon), '_', num2str(dy),'_', num2str(yr));
-dir_path = strcat(savedir,runname_str,'/','Run20/');
+dir_path = strcat(savedir,runname_str,'/','Run23/');
 mkdir(dir_path);
 full_savepath = strcat(dir_path,runname_str);
 new_plots_dir = strcat(dir_path,'/plots/');
@@ -87,40 +86,60 @@ for spn=0:1
     SZA was not measured, so we can use a function to calculate it.
     kdil is a physical loss constant for all species; 1 per day is a typical value.
     %}
+    % Scale dilutition factor to windspeed: 
+    kdil0=1./86400; %1./86400; 
+    ws=USOS.WindSpd_ms;
+    kdil_min=0.90.*(kdil0); 
+    kdil_max=1.05.*(kdil0);
+    ws_min=min(ws);
+    ws_max=max(ws);
+    sfactor=(kdil_max-kdil_min)./(ws_max-ws_min); 
+    kdil=kdil_min+(ws-ws_min).*sfactor; 
     
+    % Scale BLH to temperature: 
+    t=USOS.Temp_K;
+    blh_min=1000; 
+    blh_max=2500;
+    t_min=min(t);
+    t_max=max(t);
+    blh_factor=(blh_max-blh_min)./(t_max-t_min); 
+    blh=blh_min+(t-t_min).*blh_factor; 
 
+    % Create a dilution factor that follows general windespeed... 
     Met = {...
     %   names       %values
         'P'          USOS.Pressure_mb; %Pressure, mbar
         'T'          USOS.Temp_K; %Temperature, K
         'RH'         USOS.RH_percent; %Relative Humidity, %
         'SZA'        sun.zenith; %solar zenith angle, degrees
-        'kdil'       0; %dilution constant, /s
-        'jcorr'      USOS.jNO2_adj_ratio; %optimizes comparison b/w model and observed NO/NO2
+        'jcorr'      'JNO2';
+
+        'kdil'       kdil; %dilution constant, /s
+        'BLH'         blh ; % boundary layer height, m?? get from Joey or from airport
         
         %ozone column info here
         'O3col'      290;
 
         %example: 'J3' USOS.jBr2*0.3 (jcorr)
-        'J1'         USOS.jO3 .* USOS.jNO2_ratio;
-        'J4'         USOS.jNO2  .* USOS.jNO2_ratio;
-        'J5'         USOS.jNO3a .* USOS.jNO2_ratio;
-        'J6'         USOS.jNO3b .* USOS.jNO2_ratio;
-        'J7'         USOS.jHNO2 .* USOS.jNO2_ratio;
-        'J8'         USOS.jHNO3 .* USOS.jNO2_ratio;
-        'J11'        USOS.jCH2Oa .* USOS.jNO2_ratio;
-        'J12'        USOS.jCH2Ob .* USOS.jNO2_ratio;
+        'JO1D'        USOS.jO3 .* USOS.jNO2_ratio; %  O3 -> O1D
+        'JNO2'        USOS.jNO2 .* USOS.jNO2_ratio;
+        'JNO3_NO'     USOS.jNO3a .* USOS.jNO2_ratio;
+        'JNO3_NO2'    USOS.jNO3b .* USOS.jNO2_ratio;
+        'JHONO'       USOS.jHNO2 .* USOS.jNO2_ratio;
+        'JHNO3'       USOS.jHNO3 .* USOS.jNO2_ratio;
+        'JHCHO_R'     USOS.jCH2Oa .* USOS.jNO2_ratio;
+        'JHCHO_M'     USOS.jCH2Ob .* USOS.jNO2_ratio;
 
         %Species not in MCM
-        'Jn20'       USOS.jN2O5 .* USOS.jNO2_ratio;
-        'Jn24'       USOS.jBr2 .* USOS.jNO2_ratio;
-        'Jn31'       USOS.jBrCl .* USOS.jNO2_ratio;
-        'Jn32'       USOS.jCl2 .* USOS.jNO2_ratio;
-        %'Jn33' USOS.jClOa + USOS.jClOb %Jn33 covers both rxns
-        'Jn40'       USOS.jI2 .* USOS.jNO2_ratio;
-        'Jn54'       USOS.jClNO2 .* USOS.jNO2_ratio;
+        'JN2O5'      USOS.jN2O5 .* USOS.jNO2_ratio;
+        'JBr2'       USOS.jBr2 .* USOS.jNO2_ratio;
+        'JBrCL'      USOS.jBrCl .* USOS.jNO2_ratio;
+        'JCL2'       USOS.jCl2 .* USOS.jNO2_ratio;
+        % 'JClO'        USOS.jClOb.* USOS.jNO2_ratio;
+        'JI2'       USOS.jI2 .* USOS.jNO2_ratio;
+        'JCLNO2'    USOS.jClNO2 .* USOS.jNO2_ratio;
 
-        'Jv11'       USOS.jCCl4 .* USOS.jNO2_ratio;
+       % 'Jv11'       USOS.jCCl4 .* USOS.jNO2_ratio;
         };
     
     %% CHEMICAL CONCENTRATIONS
@@ -142,8 +161,8 @@ for spn=0:1
         'DMS'               USOS.DMS_PTR            hold;
     
         %NOy
-        'NO'                USOS.NO_LIF             0;
-        'NO2'               USOS.NO2_LIF            0;
+        'NO'                USOS.NO_LIF             hold;
+        'NO2'               USOS.NO2_LIF            hold;
         'HONO'              USOS.HONO_CIMS          hold;
         'HNO3'              USOS.HNO3_CIMS          hold;
         %'PAN'               USOS.PAN_CIMS           hold;
@@ -166,7 +185,7 @@ for spn=0:1
         'ALD2'              USOS.Acetaldehyde_PTR   hold;
         'ETOH'              USOS.Ethanol_PTR        hold;
         'FORM'              USOS.HCHO_CRDS          hold; %Formaldehyde 
-        'FACD'              USOS.HCOOH_CIMS         hold; %Formic Acid
+        'FACD'              USOS.HCOOH_CIMS         evolve; %Formic Acid
         
         %Br and Cl
         'BR2'               USOS.Br2_CIMS           hold;
@@ -207,8 +226,9 @@ for spn=0:1
     %}
     BkgdConc = {
         'DEFAULT'       0;
-        'PAN'           0.2;
+        'PAN'           0.14;
         'CH4'           1965;
+        'O3'            35; 
     };
     
     %% OPTIONS
@@ -229,7 +249,7 @@ for spn=0:1
     ModelOptions.IntTime        = 1800; %change to timestep to match frequency of data
     ModelOptions.TimeStamp      = USOS.timehr_output; 
     %ModelOptions.SavePath       = full_savepath;
-    % ModelOptions.FixNOx         = 1; %if you use this, disable family conservation above.
+    %ModelOptions.FixNOx         = 1; %if you use this, disable family conservation above.
     
     if spn == 1
        ModelOptions.SavePath = strcat(full_savepath,'_run.mat');
@@ -279,7 +299,19 @@ for spn=0:1
 % Output will be saved in the "SavePath" above and will also be written to the structure S.
 
     S = F0AM_ModelCore(Met,InitConc,ChemFiles,BkgdConc,ModelOptions);
+
 end
+ % Append the observations to the model struct so we have it all in one
+ % % file: 
+ % fields=fieldnames(USOS);
+ % S.Obs=struct; 
+ % for f=1:length(fields)
+ %     field_i=fields{f}; 
+ %     S.Obs.(field)=USOS.(field); 
+ % end
+ % Overwrite with the obs appended to it too!  
+ %save(savepath, savename)
+
 %% Corrected file:
 %F0AM is set up to save without the variable repIndex. We re-save a new
 %file with its inclusion with ending '_rep_save'
