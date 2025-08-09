@@ -1,6 +1,6 @@
 clear all; close all; 
 
-pth_win="C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.3.0.1\Runs\USOS_8_6_2024\Run23\USOS_8_6_2024_run.mat"; 
+pth_win="C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.3.0.1\Runs\USOS_8_6_2024\Run24\USOS_8_6_2024_run.mat"; 
 load(pth_win)
 %% 
 
@@ -12,27 +12,44 @@ t_start=datetime(yr,mon,dy,0,0,0);
 t_end=datetime(yr,mon,dy,23,30,0);
 [USOS, sun]= get_subset_USOS(t_start, t_end);
 %% 
-PlotConc('CH4', S); hold on 
-plot(S.Time, USOS.CH4_Piccaro, 'k')
-legend('Model','Data')
-purtyPlot
-
-PlotConc('PAN', S); hold on 
-plot(S.Time, USOS.PAN_CIMS, 'k')
-legend('Model','Data')
-purtyPlot
-
-PlotConc('PANX', S); hold on 
-plot(S.Time, USOS.PPN_CIMS, 'k')
-legend('Model','Data')
-purtyPlot
-% 
-% 
-% 
-% PlotConc('O3', S); hold on 
-% plot(S.Time, USOS.O3_ppbv, 'k')
+% PlotConc('CH4', S); hold on 
+% plot(S.Time, USOS.CH4_Piccaro, 'k')
 % legend('Model','Data')
 % purtyPlot
+
+% PlotConc('PAN', S); hold on 
+% plot(S.Time, USOS.PAN_CIMS, 'k')
+% legend('Model','Data')
+% purtyPlot
+
+% PlotConc('PANX', S); hold on 
+% plot(S.Time, USOS.PPN_CIMS, 'k')
+% legend('Model','Data')
+% purtyPlot
+% 
+
+% figure
+% plot(S.Time, S.Met.jcorr)
+% ylabel('jcorr')
+%% 
+
+% 
+% S.Conc.NOx = S.Conc.NO+S.Conc.NO2;
+% PlotConcGroup({'NO','NO2','NOx'},S,3,'sortem',0,'ptype','line')
+% hold on
+% plot(S.Time,USOS.NO_LIF,'b--')
+% plot(S.Time,USOS.NO2_LIF,'r--')
+% plot(S.Time,USOS.NO_LIF+USOS.NO2_LIF,'y--')
+% text(0.55,0.7,'solid: model')
+% text(0.55,0.6,'dash: observed')
+% legend('NO','NO2','NOx')
+
+
+
+PlotConc('O3', S); hold on 
+plot(S.Time, USOS.O3_ppbv, 'k')
+legend('Model','Data')
+purtyPlot
 % 
 % PlotConc('ISPD', S); hold on 
 % plot(S.Time, USOS.MVK_MACR_PTR+USOS.C5H10O3_CIMS, 'k')
@@ -46,25 +63,9 @@ purtyPlot
 % 
 % PlotRates('FACD', S,5 );
 
-% % Total loss rate of nOX: 
-% NOx={'NO','NO2','NO3','HONO','CRON'};
-% NOx_res={'CLN2','CLN3','INO2','INO3','BRN2','BRN3','N2O5', 'PAN', 'PANX','HNO3', 'INTR','NTR1','NTR2','OPAN','PNA'}; 
-% [~,iNOx] = ismember(NOx,S.Cnames);
-% [~,i_res] = ismember(NOx_res,S.Cnames);
-% iLostNOx = sum(S.Chem.f(:,iNOx)==-1,2) & ... %use stoichiometric coefficients to ID reactions
-%            sum(S.Chem.f(:,i_res)==1,2);
-% LNOx_res = sum(S.Chem.Rates(:,iLostNOx),2)*3600; %total NOx lost to make res species
-% 
-% rxns=S.Chem.Rnames{iLostNOx};
-% NOxrates = PlotRates(['Nox_res',NOx_r                                                                                                                                   `6es],S,10,'unit','ppb_h','sumEq',1);
-% LNOxrate = sum(sum(NOxrates.Prod,2) + sum(NOxrates.Loss,2),2);
-% 
-% figure
-% plot(S.Time,LNOxrate,'k-',S.Time,LNOx_res,'r--')
-% xlabel('Hour of Day')
-% ylabel('NOx Loss Rate (ppb h^-^1)')
-% legend('P(NOx res)','Loses NOx to Res')
-% purtyPlot
+
+%% 
+
 % 
 % 
 % NO2rates = PlotRates('NO2',S,15,'unit','ppb_h','sumEq',1, 'plotme',0);
@@ -72,14 +73,41 @@ purtyPlot
 % area(S.Time, NO2rates.Prod(:,3:width(NO2rates.Prod)));
 % legend(NO2rates.Pnames{3:length(NO2rates.Pnames)})
 % 
-% % Get the MODELED net O3 production rate: 
-% O3rates = PlotRates('O3',S,5,'unit','ppb_h','sumEq',1);
-% O3netRate = sum(sum(O3rates.Prod,2) + sum(O3rates.Loss,2),2);
+% %Or, we could look at OH reactivity to see which VOC are contributing most.
+% % Let's group measured species together to make the plot easier to interpret.
+% Inorg = {'Inorganic';'CO';'H2';'O3';'HO2';'H2O2';'NO2'};
+% Terp  = {'MTerp','APINENE','BPINENE','LIMONENE'};
+% Alk   = {'Alk','C2H4','C2H6','C3H8','IC4H10','IC5H12','NC5H12','NC6H14','NC10H22'};
+% Arom  = {'Arom','BENZENE','TOLUENE','EBENZ','TM124B','TM135B','MXYL','OXYL','PXYL','BENZAL'};
+% oVOC  = {'oVOC','CH3CHO','C2H5CHO','C3H7CHO','HOCH2CHO','GLYOX','CH3OH','C2H5OH','ACETOL','BIACET'};
+% MVKMACR = {'MVKMACR','MVK','MACR'};
+% Reactants = {Inorg,Alk,Arom,oVOC,'HCHO',MVKMACR,Terp,'C5H8'};
+% PlotReactivity('OH',S3,Reactants,'ptype','bar');
+% hold on
+% plot(SOAS.Time,SOAS.kOH,'k*-')
+% text(0.05,0.9,'black line: observed')
 % 
-% O3netRate(O3netRate<0)=0; 
-% OPE=O3netRate./LNOxrate;
-% figure
-% plot(S.Time, OPE)
+
+%% 
+
+% % Get the MODELED net O3 production rate: 
+O3rates = PlotRates('O3',S,5,'unit','ppb_h','sumEq',1);
+O3netRate = sum(sum(O3rates.Prod,2) + sum(O3rates.Loss,2),2);
+
+figure
+plot(S.Time,O3rates.Prod,'k-',S.Time,O3rates.Loss,'r--')
+xlabel('Hour of Day')
+ylabel('Ozone (ppb h^-^1)')
+legend('P(O3)','L(O3)')
+purtyPlot
+%% 
+
+
+O3netRate(O3netRate<0)=0; 
+OPE=O3netRate./LNOxrate;
+figure
+plot(S.Time, OPE)
+ylabel('OPE')
 % 
 % 
 % 

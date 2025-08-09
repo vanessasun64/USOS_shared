@@ -1,16 +1,22 @@
 clear all 
 
 datapath='/Users/vanessasun/Documents/phd/utah/research/USOS_shared/F0AM-4.3.0.1/Campaign_Data/matlab_merge/';
+datapath_win = 'C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.3.0.1\Campaign_Data\matlab_merge\';
 parkeddir = 'parked/';
+parkeddir_win = 'parked\';
 drivingdir = 'driving/';
+drivingdir_win = 'driving\';
 originaldir = 'original/';
+originaldir_win = 'original\';
 correcteddir = 'corrected/';
+correcteddir_win = 'corrected\';
 % originalmerge = 'original_merge/';
 matlabstructs = 'matlab_structs/';
+matlabstructs = 'matlab_structs\';
 
-d=dir(fullfile(datapath,parkeddir,originaldir,'*.mat')); %select parkeddir or drivingdir as needed
+d=dir(fullfile(datapath_win,parkeddir_win,originaldir_win,'*.mat')); %select parkeddir or drivingdir as needed
 for i=1:numel(d)
-  mat_file = fullfile(datapath,parkeddir,originaldir,d(i).name); %select parkeddir or drivingdir as needed
+  mat_file = fullfile(datapath_win,parkeddir_win,originaldir_win,d(i).name); %select parkeddir or drivingdir as needed
   filename_with_extension = d(i).name;
   filename_without_extension = extractBefore(filename_with_extension, ".");
   
@@ -27,7 +33,7 @@ for i=1:numel(d)
     end
   end
   add_closing = '_struct_for_MATLAB.mat';
-  save(strcat(datapath,parkeddir,correcteddir, filename_without_extension,add_closing),'USOS'); %select parkeddir or drivingdir as needed
+  save(strcat(datapath_win,parkeddir_win,correcteddir_win, filename_without_extension,add_closing),'USOS'); %select parkeddir or drivingdir as needed
 end
 
 clear all 
