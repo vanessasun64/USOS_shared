@@ -319,6 +319,9 @@ def subset_days_with_pan_interp(date_time_start, date_time_stop,file_subset_name
     df_subsetdays = df_alldays.sort_index().loc[date_time_start:date_time_stop]
     df_interp_subset=df_subsetdays.copy()
 
+    df_interp_subset['PAN_CIMS'] = df_interp_subset['PAN_CIMS'].fillna(value = 0.14)
+    df_interp_subset['PPN_CIMS'] = df_interp_subset['PPN_CIMS'].fillna(value = 0.01)
+
     for i,col in enumerate(vars2fill):
         # Set any negative values to NaN so we can iterp them... 
         df_interp_subset[col] = df_interp_subset[col].mask(df_interp_subset[col] < 0, np.nan)
@@ -361,7 +364,7 @@ df_alldays.set_index('time_local', inplace=True)
 
 subset_days_with_pan_interp(date_time_start = "2024-08-04 00:00:00", 
             date_time_stop= "2024-08-08 23:00:00", 
-            file_subset_name ='20240804_20240808_30min_CSL_mobile_lab_parked_with_interp',
+            file_subset_name ='20240804_20240808_30min_CSL_mobile_lab_parked_with_interp_pan_interp',
             var_name = 'USOS')
 # subset_days(date_time_start = "2024-08-04 00:00:00", 
 #             date_time_stop= "2024-08-08 23:30:00", 
