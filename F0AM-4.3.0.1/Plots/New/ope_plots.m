@@ -1,8 +1,8 @@
 clear all; close all; 
 
 %Load run
-pth_win="C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.3.0.1\Runs\USOS_8_6_2024\Run26\USOS_8_6_2024_run.mat"; 
-load(pth_win)
+pth_win = "C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.3.0.1\Runs\USOS_8_6_2024\Run26\USOS_8_6_2024_run.mat";
+load(pth_win);
 
 %Load USOS observational data
 % Set start/end date in MST time... 
@@ -14,12 +14,20 @@ t_end=datetime(yr,mon,dy,23,30,0);
 [USOS, sun]= get_subset_USOS(t_start, t_end);
 
 %%
-
 figure
 PlotConc('O3', S); hold on 
 plot(S.Time, USOS.O3_ppbv, 'k')
 legend('Model','Data')
 purtyPlot
+
+O3rates = PlotRates('O3',S,5,'unit','ppb_h','sumEq',1);
+O3netRate = sum(sum(O3rates.Prod,2) + sum(O3rates.Loss,2),2); %Net Ozone
+
+figure
+plot(S.Time,O3netRate)
+xlabel('Time (hrs)');
+ylabel('Estimated O3 Net Rate (ppb/hr)');
+title('Net Ozone Production');
 
 %% Numerator of OPE: Production of O3 from RO2 + NO -> RO + NO2 rxns and HO2 + NO -> NO2 + OH
 
@@ -38,11 +46,12 @@ RO2_NO_conversion_rxns = S.Chem.Rnames(iRO2_NO_conversion); %check rxns where we
 % use this to check stoic coeff in NO2 product for coeffs_RO2_NO below
 
 coeffs_RO2_NO = {1,1,1,1,0.9,1,0.918,0.86,0.86,1}; %stoic coeff for NO2 product in RO2+NO -> NO2 reaction, determined by hand by looking at rxns in RO2_NO_conversion_rxns
-cell_coeffs_RO2_NO_conversion = cell2mat(coeffs_RO2_NO) %turn cell to matrix so that we can multiply by the rxn rates for RO2+NO rxns
+cell_coeffs_RO2_NO_conversion = cell2mat(coeffs_RO2_NO); %turn cell to matrix so that we can multiply by the rxn rates for RO2+NO rxns
 RO2_NO_conversion_rates = S.Chem.Rates(:,iRO2_NO_conversion) .* 3600; %get all the rxn rates for RO2+NO -> NO2 rxns
 RO2_NO_conversion_multiply_rates = RO2_NO_conversion_rates .* cell_coeffs_RO2_NO_conversion; %multiply stoic coeff by each rxn rate for RO2+NO rxns
 RO2_NO_conversion_sum_rates = sum(RO2_NO_conversion_multiply_rates,2); %sum all RO2 species together to get total rate for RO2+NO -> RO + NO2
 
+%%
 %Here I was trying to compare our calculated RO2+NO -> RO + NO2 rate to see
 %if it matched the RO2+NO in the mechanism, but the RO2+NO rxn in the
 %mechanism says RO2+NO->NO so I'm not sure if it's only tracking the RO2
@@ -66,11 +75,20 @@ PO3_from_HO2_NO = S.Chem.Rates(:,iHO2_NO) .* 3600 %get rxn rate for HO2+NO rxn; 
 %add rates from RO2+NO -> RO + NO2 and HO2 + NO -> NO2 + OH rxn to get NO to NO2 conversion which gives us the P(O3)
 PO3 = RO2_NO_conversion_sum_rates + PO3_from_HO2_NO;
 
+% figure
+% plot(S.Time, PO3);
+% legend('Calculated O3');
+% xlabel('Time (hrs)');
+% ylabel('Rate of conversion of NO to NO_2 (ppb/hr)');
+% title('Production of Ozone, from NO to NO2 conversions');
+% purtyPlot
+
+%%
 figure
-plot(S.Time, PO3);
+plot(S.Time,O3netRate, S.Time, RO2_NO_conversion_sum_rates, S.Time, PO3_from_HO2_NO, S.Time, PO3);
 xlabel('Time (hrs)');
-ylabel('Rate of conversion of NO to NO_2 (ppb/hr)');
-title('Production of Ozone, from NO to NO2 conversions');
+ylabel('Ozone Production (ppb/hr)');
+legend('O3 Net','RO2 + NO', 'HO2 + NO', 'RO2 + NO and HO2 + NO');
 purtyPlot
 
 %% Denominator of OPE: loss of NOx to make NOx reservoir species and organic nitrates
@@ -78,7 +96,7 @@ purtyPlot
 % RO2 + NO -> RONO2
 % RO2 + NO2 -> PAN
 
-NOx={'NO','NO2','NO3'} 
+NOx={'NO','NO2','NO3'};
 
 %NOx reservoir species
 NOx_res_and_org_nitrates={'N2O5', 'PAN','HNO3', 'PANX','CLN2','CLN3','INO2','INO3','BRN2','BRN3', 'INTR','NTR1','NTR2','OPAN','PNA','HONO','CRON'}; 
@@ -93,10 +111,10 @@ iLostNOx = sum(S.Chem.f(:,iNOx)==-1,2) & ... %use stoichiometric coefficients to
 
 coeffs_lost_NOx = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0.5,0.5,0.5,0.1,0.65,0.859,1,0.53,0.082,0.14,0.14,1,1,1,0.5,1,1,1,1,1,1,1,1,1,1};
 
-cell_coeffs_lost_NOx = cell2mat(coeffs_lost_NOx) %turn cell to matrix so that we can multiply by the rxn rates 
+cell_coeffs_lost_NOx = cell2mat(coeffs_lost_NOx); %turn cell to matrix so that we can multiply by the rxn rates 
 lost_NOx_rates = S.Chem.Rates(:,iLostNOx) .* 3600; %get all the rxn rates for rxns
 lost_NOx_multiply_rates = lost_NOx_rates .* cell_coeffs_lost_NOx; %multiply stoic coeff by each rxn rate
-lost_NOx_sum_rates = sum(lost_NOx_rates,2); %sum all species together to get total rate for RO2+NO -> RO + NO2
+lost_NOx_sum_rates = sum(lost_NOx_multiply_rates,2); %sum all species together to get total rate for RO2+NO -> RO + NO2
 
 figure
 plot(S.Time, lost_NOx_sum_rates);
