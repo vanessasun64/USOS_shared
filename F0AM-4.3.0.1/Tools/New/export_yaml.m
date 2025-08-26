@@ -42,10 +42,6 @@ t_end=datetime(yr,mon,dy,23,30,0);
 [USOS, sun]= get_subset_USOS(t_start, t_end);
 
 %%
-
-
-
-%%
 %WriteYaml will not accept any datetimes, so we convert the datetimes in
 %USOS to cells
 convert_datetime_usos_time_mst = cellstr(USOS.time_MST);
