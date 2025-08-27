@@ -2,7 +2,8 @@ clear all; close all;
 
 %Load run
 pth_win="C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.3.0.1\Runs\USOS_8_6_2024\Run26\USOS_8_6_2024_run.mat"; 
-load(pth_win)
+pth_mac="/Users/vanessasun/Documents/phd/utah/research/USOS_shared/F0AM-4.3.0.1/Runs/USOS_8_6_2024/Run26/USOS_8_6_2024_run.mat"; 
+load(pth_mac)
 
 %Load USOS observational data
 % Set start/end date in MST time... 
