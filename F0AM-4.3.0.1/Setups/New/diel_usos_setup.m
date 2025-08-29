@@ -152,7 +152,7 @@ for spn=0:1
     When many species are used, it helps to organize alphabetically or by functional group.
     %}
 
-    InitConc = {...
+ InitConc = {...
         % names           conc(ppb)                HoldMe
         
         %Inorganics
@@ -165,9 +165,9 @@ for spn=0:1
         'NO2'               USOS.NO2_LIF            hold;
         'HONO'              USOS.HONO_CIMS          hold;
         'HNO3'              USOS.HNO3_CIMS          hold;
-        %'PAN'               USOS.PAN_CIMS           hold;
-        %'PANX'              USOS.PPN_CIMS           hold;
-        'NOx'               {'NO2','NO'}        []; %family conservation
+        'PAN'               USOS.PAN_CIMS           hold;
+        'PANX'              USOS.PPN_CIMS           hold;
+        %'NOx'               {'NO2','NO'}        []; %family conservation
     
         %Biogenics
         'ISOP'              USOS.Isoprene_PTR       hold;
@@ -185,7 +185,7 @@ for spn=0:1
         'ALD2'              USOS.Acetaldehyde_PTR   hold;
         'ETOH'              USOS.Ethanol_PTR        hold;
         'FORM'              USOS.HCHO_CRDS          hold; %Formaldehyde 
-        'FACD'              USOS.HCOOH_CIMS         evolve; %Formic Acid
+        'FACD'              USOS.HCOOH_CIMS         hold; %Formic Acid
         
         %Br and Cl
         'BR2'               USOS.Br2_CIMS           hold;
