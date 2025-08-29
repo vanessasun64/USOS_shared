@@ -44,7 +44,7 @@ t_end=datetime(yr,mon,dy,23,30,0);
 %Set where to store the total file
 savedir = '/Users/vanessasun/Documents/phd/utah/research/USOS_shared/F0AM-4.3.0.1/Runs/';
 runname_str = strcat('USOS','_',num2str(mon), '_', num2str(dy),'_', num2str(yr));
-dir_path = strcat(savedir,runname_str,'/','Run23/');
+dir_path = strcat(savedir,runname_str,'/','Run27/','CRACMM/');
 mkdir(dir_path);
 full_savepath = strcat(dir_path,runname_str);
 new_plots_dir = strcat(dir_path,'/plots/');
@@ -112,7 +112,7 @@ for spn=0:1
         'T'          USOS.Temp_K; %Temperature, K
         'RH'         USOS.RH_percent; %Relative Humidity, %
         'SZA'        sun.zenith; %solar zenith angle, degrees
-        'jcorr'      'JNO2';
+        'jcorr'      'JNO2_RACM2';
 
         'kdil'       kdil; %dilution constant, /s
         'BLH'         blh ; % boundary layer height, m?? get from Joey or from airport
@@ -121,23 +121,23 @@ for spn=0:1
         'O3col'      290;
 
         %example: 'J3' USOS.jBr2*0.3 (jcorr)
-        'JO1D'        USOS.jO3 .* USOS.jNO2_ratio; %  O3 -> O1D
-        'JNO2'        USOS.jNO2 .* USOS.jNO2_ratio;
-        'JNO3_NO'     USOS.jNO3a .* USOS.jNO2_ratio;
-        'JNO3_NO2'    USOS.jNO3b .* USOS.jNO2_ratio;
-        'JHONO'       USOS.jHNO2 .* USOS.jNO2_ratio;
-        'JHNO3'       USOS.jHNO3 .* USOS.jNO2_ratio;
-        'JHCHO_R'     USOS.jCH2Oa .* USOS.jNO2_ratio;
-        'JHCHO_M'     USOS.jCH2Ob .* USOS.jNO2_ratio;
+        'JO3O1D_NASA06'        USOS.jO3 .* USOS.jNO2_ratio; %  O3 -> O1D
+        'JNO2_RACM2'        USOS.jNO2 .* USOS.jNO2_ratio;
+        'JNO3NO_RACM2'     USOS.jNO3a .* USOS.jNO2_ratio;
+        'JNO3NO2_RACM2'    USOS.jNO3b .* USOS.jNO2_ratio;
+        'JHONO_RACM2'       USOS.jHNO2 .* USOS.jNO2_ratio;
+        'JHNO3_RACM2'       USOS.jHNO3 .* USOS.jNO2_ratio;
+        'JHCHO_RAD_JPL19'     USOS.jCH2Oa .* USOS.jNO2_ratio;
+        'JHCHO_MOL_JPL19'     USOS.jCH2Ob .* USOS.jNO2_ratio;
 
         %Species not in MCM
-        'JN2O5'      USOS.jN2O5 .* USOS.jNO2_ratio;
-        'JBr2'       USOS.jBr2 .* USOS.jNO2_ratio;
-        'JBrCL'      USOS.jBrCl .* USOS.jNO2_ratio;
-        'JCL2'       USOS.jCl2 .* USOS.jNO2_ratio;
-        % 'JClO'        USOS.jClOb.* USOS.jNO2_ratio;
-        'JI2'       USOS.jI2 .* USOS.jNO2_ratio;
-        'JCLNO2'    USOS.jClNO2 .* USOS.jNO2_ratio;
+        % 'JN2O5'      USOS.jN2O5 .* USOS.jNO2_ratio; Not in mech
+        'JBR2_JPL19'       USOS.jBr2 .* USOS.jNO2_ratio;
+        'JBRCL_JPL19'      USOS.jBrCl .* USOS.jNO2_ratio;
+        'JCL2_JPL19'       USOS.jCl2 .* USOS.jNO2_ratio;
+        'JCLO_JPL19'        USOS.jClOb.* USOS.jNO2_ratio;
+        'JI2_JPL19'       USOS.jI2 .* USOS.jNO2_ratio;
+        'JCLNO2_JPL19'    USOS.jClNO2 .* USOS.jNO2_ratio;
 
        % 'Jv11'       USOS.jCCl4 .* USOS.jNO2_ratio;
         };
@@ -169,7 +169,7 @@ for spn=0:1
         %'NOx'               {'NO2','NO'}        []; %family conservation
     
         %Biogenics
-        'ISOP'              USOS.Isoprene_PTR       hold;
+        'ISO'              USOS.Isoprene_PTR       hold;
         'API'              2/3*USOS.Monoterpenes_PTR   hold;
         'LIM'           1/3*USOS.Monoterpenes_PTR hold;
     
@@ -178,26 +178,26 @@ for spn=0:1
     
         %Aromatics
         'BEN'              USOS.Benzene_PTR        hold;
-        'TOL'               USOS.Toluene_PTR        hold;
-        'STY'                  USOS.Styrene_PTR     hold;
-        'NAPH'                 USOS.Naphthalene_PTR hold;
+        'TOL'              USOS.Toluene_PTR        hold;
+        'STY'              USOS.Styrene_PTR        hold;
+        'NAPH'             USOS.Naphthalene_PTR    hold;
     
         %Oxygenates
         'MOH'              USOS.Methanol_PTR       hold;
         'ACD'              USOS.Acetaldehyde_PTR   hold;
         'EOH'              USOS.Ethanol_PTR        hold;
-        'HCHO'              USOS.HCHO_CRDS          hold; %Formaldehyde 
-        'ORA1'              USOS.HCOOH_CIMS         hold; %Formic Acid
+        'HCHO'             USOS.HCHO_CRDS          hold; %Formaldehyde 
+        'ORA1'             USOS.HCOOH_CIMS         hold; %Formic Acid
         
         %Br and Cl
-        'BR2'               USOS.Br2_CIMS           hold;
-        'CL2'               USOS.Cl2_CIMS           hold;
-        'CLNO2'              USOS.ClNO2_CIMS         hold;
-        'BRCL'              USOS.BrCl_CIMS          hold;
-        'BRO'               USOS.BrO_CIMS           hold;
+        'BR2'              USOS.Br2_CIMS           hold;
+        'CL2'              USOS.Cl2_CIMS           hold;
+        'CLNO2'            USOS.ClNO2_CIMS         hold;
+        'BRCL'             USOS.BrCl_CIMS          hold;
+        'BRO'              USOS.BrO_CIMS           hold;
 
         %Aldehydes
-        'ACRO'          Acrolein_PTR                hold;
+        'ACRO'             USOS.Acrolein_PTR       hold;
         };
 
     %% Decide if you want to load in spin - up concentrations or not. 
@@ -219,9 +219,9 @@ for spn=0:1
     the specific set of initial species included above.
     %}
     ChemFiles = {...
-       'CB6r5h_K(Met)'; %contains all k-rates
-       'CB6r5h_J(Met,2)'; %photolysis file, flag of 2 means we're using the Hybrid Method
-       'CB6r5h_AllRxns'; %Lists all reactions and species to add
+       'cracmm3m_K(Met)'; %contains all k-rates
+       'cracmm3m_J(Met,2)'; %photolysis file, flag of 2 means we're using the Hybrid Method
+       'cracmm3m_AllRxns'; %Lists all reactions and species to add
        };
     
     %% DILUTION CONCENTRATIONS
@@ -306,55 +306,3 @@ for spn=0:1
     S = F0AM_ModelCore(Met,InitConc,ChemFiles,BkgdConc,ModelOptions);
 
 end
- % Append the observations to the model struct so we have it all in one
- % % file: 
- % fields=fieldnames(USOS);
- % S.Obs=struct; 
- % for f=1:length(fields)
- %     field_i=fields{f}; 
- %     S.Obs.(field)=USOS.(field); 
- % end
- % Overwrite with the obs appended to it too!  
- %save(savepath, savename)
-
-%% Corrected file:
-%F0AM is set up to save without the variable repIndex. We re-save a new
-%file with its inclusion with ending '_rep_save'
-
-%Save missing variable repIndex as new MATLAB file
-% S(1).repInd = repIndex;
-% save_struct_name = strcat(full_savepath,'_rep_save','.mat');
-% save(save_struct_name, 'S')
-
-% %Split up the run into each day of data
-% SplitRun(S,'custom',S.repInd);
-% 
-% %Save each day's data as its own file
-% day_split = {'S1', 'S2', 'S3', 'S4'};
-% for i = 1:length(day_split)
-%     save_runday_name = strcat(full_savepath,'_spinup_',day_split{i},'.mat');
-%     save(save_runday_name,day_split{i})
-% end
-
-%%
-%% 
-%Save species concentrations as csv file for use in plotting via Python
-speciesConc_table=struct2table(S.Conc);
-species_conc_save_path = strcat(full_savepath,'_model_conc','.csv');
-writetable(speciesConc_table, species_conc_save_path)
-%%
-chem_struct = S.Chem;
-photolysis_rates_save_path = strcat(full_savepath,'_model_photolysis_rates','.csv');
-writematrix(chem_struct.Rates,photolysis_rates_save_path);
-%% 
-transpose_rnames = transpose(chem_struct.Rnames);
-rnames_table = cell2table(transpose_rnames);
-photolysis_names_save_path = strcat(full_savepath,'_model_photolysis_rxn_names','.csv');
-writetable(rnames_table,photolysis_names_save_path)
-
-%%
-spinup_path_load = strcat(full_savepath,'_spinup.mat');
-spinup_var = importdata(spinup_path_load);
-spinup_speciesConc_table=struct2table(spinup_var.Conc);
-spinup_conc_save_path = strcat(full_savepath,'_spinup_conc','.csv');
-writetable(spinup_speciesConc_table, spinup_conc_save_path)
