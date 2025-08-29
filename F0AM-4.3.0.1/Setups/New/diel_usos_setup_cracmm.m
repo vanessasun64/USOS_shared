@@ -158,7 +158,6 @@ for spn=0:1
         %Inorganics
         'O3'                USOS.O3_ppbv            evolve;
         'CO'                USOS.CO_Piccaro         hold;
-        'DMS'               USOS.DMS_PTR            hold;
     
         %NOy
         'NO'                USOS.NO_LIF             hold;
@@ -166,34 +165,39 @@ for spn=0:1
         'HONO'              USOS.HONO_CIMS          hold;
         'HNO3'              USOS.HNO3_CIMS          hold;
         'PAN'               USOS.PAN_CIMS           hold;
-        'PANX'              USOS.PPN_CIMS           hold;
+        'PPN'              USOS.PPN_CIMS           hold;
         %'NOx'               {'NO2','NO'}        []; %family conservation
     
         %Biogenics
         'ISOP'              USOS.Isoprene_PTR       hold;
         'API'              2/3*USOS.Monoterpenes_PTR   hold;
-        'LIM'           1/3*USOS.Monoterpenes_PTR
+        'LIM'           1/3*USOS.Monoterpenes_PTR hold;
     
         %CxHy (Hydrocarbons)
         'CH4'               USOS.CH4_Piccaro        hold;
     
         %Aromatics
-        'BENZ'              USOS.Benzene_PTR        hold;
+        'BEN'              USOS.Benzene_PTR        hold;
         'TOL'               USOS.Toluene_PTR        hold;
+        'STY'                  USOS.Styrene_PTR     hold;
+        'NAPH'                 USOS.Naphthalene_PTR hold;
     
         %Oxygenates
-        'MEOH'              USOS.Methanol_PTR       hold;
-        'ALD2'              USOS.Acetaldehyde_PTR   hold;
-        'ETOH'              USOS.Ethanol_PTR        hold;
-        'FORM'              USOS.HCHO_CRDS          hold; %Formaldehyde 
-        'FACD'              USOS.HCOOH_CIMS         hold; %Formic Acid
+        'MOH'              USOS.Methanol_PTR       hold;
+        'ACD'              USOS.Acetaldehyde_PTR   hold;
+        'EOH'              USOS.Ethanol_PTR        hold;
+        'HCHO'              USOS.HCHO_CRDS          hold; %Formaldehyde 
+        'ORA1'              USOS.HCOOH_CIMS         hold; %Formic Acid
         
         %Br and Cl
         'BR2'               USOS.Br2_CIMS           hold;
         'CL2'               USOS.Cl2_CIMS           hold;
-        'CLN2'              USOS.ClNO2_CIMS         hold;
+        'CLNO2'              USOS.ClNO2_CIMS         hold;
         'BRCL'              USOS.BrCl_CIMS          hold;
         'BRO'               USOS.BrO_CIMS           hold;
+
+        %Aldehydes
+        'ACRO'          Acrolein_PTR                hold;
         };
 
     %% Decide if you want to load in spin - up concentrations or not. 
