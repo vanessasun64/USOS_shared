@@ -296,5 +296,6 @@ for spn=0:1
 % Output will be saved in the "SavePath" above and will also be written to the structure S.
 
     S = F0AM_ModelCore(Met,InitConc,ChemFiles,BkgdConc,ModelOptions);
-
+    yaml_save_path = strcat(full_savepath,'.yaml');
+    WriteYaml(yaml_save_path,S)
 end
