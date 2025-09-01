@@ -104,7 +104,7 @@ end
 % check other fields
 FieldInfo = InitializeMet;
 try
-    Met = CheckStructure(Met,FieldInfo,'J');
+    Met = CheckStructure(Met,FieldInfo,'j');
 catch ME
     msg = ' To add new variables to Met, modify the list in InitializeMet.m.';
     causeException = MException('F0AM:UnspecifiedInput',msg);

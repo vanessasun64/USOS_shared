@@ -1,7 +1,7 @@
 clear all; close all; 
 
 %Load run
-pth_win = "C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.3.0.1\Runs\USOS_8_6_2024\Run26\USOS_8_6_2024_run.mat";
+pth_win = "C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.3.0.1\Runs\USOS_8_6_2024\Run29\GEOS-Chem\USOS_8_6_2024_run.mat";
 load(pth_win);
 
 %Load USOS observational data
@@ -13,7 +13,6 @@ t_start=datetime(yr,mon,dy,0,0,0);
 t_end=datetime(yr,mon,dy,23,30,0);
 [USOS, sun]= get_subset_USOS(t_start, t_end);
 
-%%
 figure
 PlotConc('O3', S); hold on 
 plot(S.Time, USOS.O3_ppbv, 'k')

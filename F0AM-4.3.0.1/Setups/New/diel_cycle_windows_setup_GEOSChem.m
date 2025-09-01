@@ -1,0 +1,300 @@
+% ExampleSetup_DielCycle.m
+% This example shows a model setup for simulation of an "average" diurnal cycle at a ground location.
+% In particular, we will try to simulate ozone production.
+% Read comments in each section for a guided tour.
+%
+% 20151126 GMW
+
+clear
+
+%% OBSERVATIONS & METEOROLOGY
+%{
+Constraints are taken from observations during the USOS field campaign.
+The file loaded below contains observations (resolution: 30 minutes) for a subset
+of multiple days for the campaign. For our F0AM run, we only want one day
+to be analyzed at a time so we are importing our data as a variable and
+limiting to the observations for the one day.
+
+Note that constraints CANNOT contains NaNs or negative numbers (data in this file has already been filtered).
+%}
+
+% load 20240804_20240808_30min_CSL_mobile_lab_parked_with_interp_struct_for_MATLAB.mat %structure "USOS"
+% Set start/end date in MST time... 
+foam_start=datetime('08/06/2024','InputFormat','MM/dd/yyyy');
+foam_end=datetime('08/07/2024','InputFormat','MM/dd/yyyy');
+
+% Extract the year, month day: 
+yr=year(foam_start);mon=month(foam_start);dy=day(foam_start); 
+
+% Use to set t_start and t_end to pass to get_subset to select only data
+% during this time period : 
+t_start=datetime(yr,mon,dy,0,0,0);
+t_end=datetime(yr,mon,dy,23,30,0);
+
+% Pass to our function to load USOS data and select the appropriate time
+% period. Also include sun position calculation. Outputs are: 
+%   USOS: struct with USOS data from only this period 
+%   utc_time: MATLAB datetime object added to USOS.utc_time
+%   Time_MST: MATLAB datetime object added to USOS.Time_MST
+%   sun: struct with zenith and azimuth estimates for sun position
+[USOS, sun]= get_subset_USOS(t_start, t_end);
+
+%% 
+
+%Set where to store the total file
+savedir = 'C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.3.0.1\Runs\';
+runname_str = strcat('USOS','_',num2str(mon), '_', num2str(dy),'_', num2str(yr));
+dir_path = strcat(savedir,runname_str,'\','Run29\','GEOS-Chem\')
+mkdir(dir_path);
+full_savepath = strcat(dir_path,runname_str);
+new_plots_dir = strcat(dir_path,'\plots\');
+mkdir(new_plots_dir);
+
+%% Set Model Options
+
+for spn=0:1
+        % Set the date of the simulation. As start for 1st dat, and as start+NDays for the rest. 
+       
+    load_spinup = spn;    % Set=1 to load data in file "spin_up" as InitConc for F0AM. 
+            
+    % Now use that to configure F0AM to repeat runs and such! 
+    if load_spinup ==1
+        type='_run';
+        spin_up= strcat(full_savepath,'_spinup.mat'); 
+        nRep=0;
+        hold=1; % Hold these species constant throughout model step.   Always set to 1. 
+        evolve=0; % Don't hold these species constant throughout model step, allow to evolve on regular run  
+    else
+        nRep=4; %Set number of days to repeat on spin up.
+        hold=1; % Hold these species constant throughout model step. Always set to 1. 
+        evolve=1; % Also hold these species constant throughout model step on spin up! 
+        type='_spinup'; 
+    end
+
+   
+%%
+    %Set other Met parameters besides sun position
+    %{
+    P, T and RH were measured at the site and will be updated every step of the simulation.
+    SZA was not measured, so we can use a function to calculate it.
+    kdil is a physical loss constant for all species; 1 per day is a typical value.
+    %}
+    % Scale dilutition factor to windspeed: 
+    kdil0=1./86400; %1./86400; 
+    ws=USOS.WindSpd_ms;
+    kdil_min=0.90.*(kdil0); 
+    kdil_max=1.05.*(kdil0);
+    ws_min=min(ws);
+    ws_max=max(ws);
+    sfactor=(kdil_max-kdil_min)./(ws_max-ws_min); 
+    kdil=kdil_min+(ws-ws_min).*sfactor; 
+    
+    % Scale BLH to temperature: 
+    t=USOS.Temp_K;
+    blh_min=1000; 
+    blh_max=2500;
+    t_min=min(t);
+    t_max=max(t);
+    blh_factor=(blh_max-blh_min)./(t_max-t_min); 
+    blh=blh_min+(t-t_min).*blh_factor; 
+
+    % Create a dilution factor that follows general windespeed... 
+    Met = {...
+    %   names       %values
+        'P'          USOS.Pressure_mb; %Pressure, mbar
+        'T'          USOS.Temp_K; %Temperature, K
+        'RH'         USOS.RH_percent; %Relative Humidity, %
+        'SZA'        sun.zenith; %solar zenith angle, degrees
+        'jcorr'      'jNO2';
+
+        'kdil'       kdil; %dilution constant, /s
+        'BLH'         blh ; % boundary layer height, m?? get from Joey or from airport
+        
+        %ozone column info here
+        'O3col'      290;
+
+        %example: 'J3' USOS.jBr2*0.3 (jcorr)
+        'jO31D'        USOS.jO3 .* USOS.jNO2_ratio; %  O3 -> O1D
+        'jNO2'        USOS.jNO2 .* USOS.jNO2_ratio;
+        'jNO3_b'     USOS.jNO3a .* USOS.jNO2_ratio;
+        'jNO3_a'    USOS.jNO3b .* USOS.jNO2_ratio;
+        'jHNO2'       USOS.jHNO2 .* USOS.jNO2_ratio;
+        'jHNO3'       USOS.jHNO3 .* USOS.jNO2_ratio;
+        'jH2COa'     USOS.jCH2Oa .* USOS.jNO2_ratio;
+        'jH2COb'     USOS.jCH2Ob .* USOS.jNO2_ratio;
+
+        %Species not in MCM
+        'jN2O5'      USOS.jN2O5 .* USOS.jNO2_ratio;
+        'jBr2'       USOS.jBr2 .* USOS.jNO2_ratio;
+        'jBrCL'      USOS.jBrCl .* USOS.jNO2_ratio;
+        'jCL2'       USOS.jCl2 .* USOS.jNO2_ratio;
+        'jClO'        USOS.jClOb.* USOS.jNO2_ratio;
+        'jI2'       USOS.jI2 .* USOS.jNO2_ratio;
+        'jClNO2'    USOS.jClNO2 .* USOS.jNO2_ratio;
+
+        'jCCl4'       USOS.jCCl4 .* USOS.jNO2_ratio;
+        };
+    
+    %% CHEMICAL CONCENTRATIONS
+    %{
+    Concentrations are initialized using observations or fixed values.
+    Species with HoldMe = 1 will be held constant throughout each step.
+    Species with HoldMe = 0 are only initialized at the start of the run, because
+     ModelOptions.LinkSteps=1 (see below). For this particular case, NO2 and O3 are
+     unconstrained because we are investigating ozone production.
+    When many species are used, it helps to organize alphabetically or by functional group.
+    %}
+
+    InitConc = {...
+        % names           conc(ppb)                HoldMe
+        
+        %Inorganics
+        'O3'                USOS.O3_ppbv            evolve;
+        'CO'                USOS.CO_Piccaro         hold;
+        'DMS'               USOS.DMS_PTR            hold;
+    
+        %NOy
+        'NO'                USOS.NO_LIF             hold;
+        'NO2'               USOS.NO2_LIF            hold;
+        'HNO2'              USOS.HONO_CIMS          hold;
+        'HNO3'              USOS.HNO3_CIMS          hold;
+        'PAN'               USOS.PAN_CIMS           hold;
+        'PPN'              USOS.PPN_CIMS           hold;
+        %'NOx'               {'NO2','NO'}        []; %family conservation
+    
+        %Biogenics
+        'ISOP'              USOS.Isoprene_PTR       hold;
+        'MTPA'              USOS.Monoterpenes_PTR   hold;
+    
+        %CxHy (Hydrocarbons)
+        'CH4'               USOS.CH4_Piccaro        hold;
+    
+        %Aromatics
+        'BENZ'              USOS.Benzene_PTR        hold;
+        'TOLU'               USOS.Toluene_PTR        hold;
+        'STYR'              USOS.Styrene_PTR        hold;
+        'NAP'               USOS.Naphthalene_PTR    hold;
+    
+        %Oxygenates
+        'MOH'              USOS.Methanol_PTR       hold;
+        'ALD2'              USOS.Acetaldehyde_PTR   hold;
+        'EOH'              USOS.Ethanol_PTR        hold;
+        'CH2O'              USOS.HCHO_CRDS          hold; %Formaldehyde 
+        'HCOOH'              USOS.HCOOH_CIMS         hold; %Formic Acid
+        'ACR'               USOS.Acrolein_PTR       hold
+        
+        %Br and Cl
+        'Br2'               USOS.Br2_CIMS           hold;
+        'Cl2'               USOS.Cl2_CIMS           hold;
+        'ClNO2'              USOS.ClNO2_CIMS         hold;
+        'BrCl'              USOS.BrCl_CIMS          hold;
+        'BrO'               USOS.BrO_CIMS           hold;
+        };
+
+    %% Decide if you want to load in spin - up concentrations or not. 
+        if load_spinup ==1 % If this is a spin up, then load the spin up file, and 
+            % Use contents to initialize the Met input instead. 
+            load(spin_up); 
+            % Pull the last point from that run, and spin it into InitConc & Met ready
+            % for the "real" model run ... 
+            [InitConc,Met_old] = Run2Init(S,length(S.Conc.NO2), InitConc);    
+        end
+
+    %% CHEMISTRY
+    %{
+    ChemFiles is a cell array of strings specifying functions and scripts for the chemical mechanism.
+    THE FIRST CELL is always a function for generic K-values.
+    THE SECOND CELL is always a function for J-values (photolysis frequencies).
+    All other inputs are scripts for mechanisms and sub-mechanisms.
+    Here we give example using MCMv3.3.1. Note that this mechanism was extracted from the MCM website for
+    the specific set of initial species included above.
+    %}
+    ChemFiles = {...
+       'GEOSCHEM_K_v1452_Hg(Met)'; %contains all k-rates
+       'GEOSCHEM_J_v1452_Hg(Met,2)'; %photolysis file, flag of 2 means we're using the Hybrid Method
+       'GEOSCHEM_GasRxns_v1452_Hg'; %Lists all reactions and species to add
+       };
+    
+    %% DILUTION CONCENTRATIONS
+    %{
+    Background concentrations, along with the value of kdil in Met, determine the dilution rate for chemical species.
+    Here we stick with the default value of 0 for all species, which effectively makes dilution a first-order loss.
+    %}
+    BkgdConc = {
+        'DEFAULT'       0;
+        'PAN'           0.14;
+        'PPN'           0.014;
+        'CH4'           1965;
+        'O3'            35; 
+    };
+    
+    %% OPTIONS
+    %{
+    "Verbose" can be set from 0-3; this just affects the level of detail printed to the command
+      window regarding model progress.
+    "EndPointsOnly" is set to 1 because we only want the last point of each step.
+    "LinkSteps" is set to 1 so that non-constrained species are carried over between steps.
+    "IntTime" is the integration time for each step, equal to the spacing of the data (60 minutes).
+    "TimeStamp" is set to the hour-of-day for observations.
+    "SavePath" give the filename only (in this example); the default save directory is the UWCMv3\Runs folder.
+    "FixNOx" forces total NOx to be reset to constrained values at the beginning of every step.
+    %}
+    
+    ModelOptions.Verbose        = 2;
+    ModelOptions.EndPointsOnly  = 1;
+    ModelOptions.LinkSteps      = 1;
+    ModelOptions.IntTime        = 1800; %change to timestep to match frequency of data
+    ModelOptions.TimeStamp      = USOS.timehr_output; 
+    %ModelOptions.SavePath       = full_savepath;
+    %ModelOptions.FixNOx         = 1; %if you use this, disable family conservation above.
+    
+    if spn == 1
+       ModelOptions.SavePath = strcat(full_savepath,'_run.mat');
+    else
+       ModelOptions.SavePath = strcat(full_savepath,'_spinup.mat');
+    end
+
+%% INPUT REPLICATION AND INTERPOLATION
+% For this particular scenario, it might be desirable to modify the inputs in a few ways.
+% This sections demonstrates how to do so.
+
+% INTERPOLATION
+% Inputs currently have a time resolution of 60 minutes, but this is pretty coarse (the sun can move
+% a lot in 60 minutes). The InputInterp function allows you to interpolate all inputs to a finer
+% time resolution. NOTES:
+%   - If your native data is fast (e.g., 1 Hz), it is generally better practice to bin-average that 
+%       data to your desired resolution rather than average down to 60 minutes and then interpolate as done here.
+%   - Make sure you adjust ModelOptions.IntTime too!
+% To turn this on, set the "0" to "1" below.
+% if 0
+%     dt = 1800; %time spacing, seconds
+% 
+%     Time_interp = (0:dt:(86400-dt))'/3600; %interpolation timebase, fractional hours (to match SOAS.Time)
+%     circularFlag = 1; % time wraps around at midnight
+%     [Met,InitConc,BkgdConc] = ...
+%         InputInterp(Met,InitConc,BkgdConc,USOS.time_local,Time_interp,circularFlag);
+%     ModelOptions.TimeStamp = Time_interp;
+%     ModelOptions.IntTime = dt;
+% end
+
+%% REPLICATION
+% Sometimes you may want to run the same inputs for multiple times. Typically, this scenario would
+% be ground-site observations over one or more days, and you need a "spin-up" for non-measured
+% species. The InputReplicate function lets you do this. Note, this only makes sense to use if
+% ModelOptions.LinkSteps = 1. This replaces the "ModelOptions.Repeat" functionality in model
+% versions prior to F0AMv4.
+% Here, we run the same contraints for 3 days.
+% The output "repIndex" is used to separate the days with SplitRun later.
+
+    if nRep > 1
+        [Met,InitConc,BkgdConc,repIndex] = InputReplicate(Met,InitConc,BkgdConc,nRep);
+        ModelOptions.TimeStamp = repmat(ModelOptions.TimeStamp,nRep,1);
+    end
+
+%% MODEL RUN
+% Now we call the model. Note this may take several minutes to run, depending on your system.
+% Output will be saved in the "SavePath" above and will also be written to the structure S.
+
+    S = F0AM_ModelCore(Met,InitConc,ChemFiles,BkgdConc,ModelOptions);
+
+end

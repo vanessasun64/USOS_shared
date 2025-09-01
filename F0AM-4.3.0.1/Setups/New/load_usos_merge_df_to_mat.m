@@ -14,9 +14,9 @@ correcteddir_win = 'corrected\';
 matlabstructs_mac = 'matlab_structs/';
 matlabstructs_win = 'matlab_structs\';
 
-d=dir(fullfile(datapath_mac,parkeddir_mac,originaldir_mac,'*.mat')); %select parkeddir or drivingdir as needed
+d=dir(fullfile(datapath_win,parkeddir_win,originaldir_win,'*.mat')); %select parkeddir or drivingdir as needed
 for i=1:numel(d)
-  mat_file = fullfile(datapath_mac,parkeddir_mac,originaldir_mac,d(i).name); %select parkeddir or drivingdir as needed
+  mat_file = fullfile(datapath_win,parkeddir_win,originaldir_win,d(i).name); %select parkeddir or drivingdir as needed
   filename_with_extension = d(i).name;
   filename_without_extension = extractBefore(filename_with_extension, ".");
   
@@ -33,7 +33,7 @@ for i=1:numel(d)
     end
   end
   add_closing = '_struct_for_MATLAB.mat';
-  save(strcat(datapath_mac,parkeddir_mac,correcteddir_mac, filename_without_extension,add_closing),'USOS'); %select parkeddir or drivingdir as needed
+  save(strcat(datapath_win,parkeddir_win,correcteddir_win, filename_without_extension,add_closing),'USOS'); %select parkeddir or drivingdir as needed
 end
 
 clear all 

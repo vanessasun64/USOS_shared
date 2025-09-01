@@ -523,118 +523,120 @@ CS{i} = 'Cross_Section_FURFURAL.csv';
 QY{i} = 0.5; %based on recommendation from NOAA lab experiments (Coggon, p.comm., 2019)
 % note, Hiraoka and Srinivasan (1968) give much lower QY of 0.005: https://doi.org/10.1063/1.1669411
 
-%% newly added by Jessica
-i=i+1;
+%------------------------------------------------------------------------
+%% Stuff For GEOS-Chem v14+ (FullChem / Hg) & Cb6r5_h 
+%------------------------------------------------------------------------
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: O2+hv->O+O
 Jnames{i} = 'Jv1';
 CS{i} = 'Cross_Section_O2_JPL-2010(2011)_298K_205-245nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: OCS+hv->SO2+CO
 Jnames{i} = 'Jv2';
 CS{i} = 'Cross_Section_OCS_JPL-2010(2011)_295K_186.1-296.3nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: SO2+hv->SO+O
 Jnames{i} = 'Jv3';
 CS{i} = 'Cross_Section_SO2_ManattLane(1993)_293K_106.1-403.7nm.txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: N2O+hv->N2+O
 Jnames{i} = 'Jv4';
 CS{i} = 'Cross_Section_N2O_JPL-2010(2011)_298K_160-240nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1;% For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: NO+hv->N+O
 Jnames{i} = 'Jv5';
 CS{i} = 'Cross_Section_NO.csv';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CFCl3(CFC-11)+hv->Cl+Cl+Cl
 Jnames{i} = 'Jv6';
 CS{i} = 'Cross_Section_CFCl3_JPL-2010(2011)_298K_174-260nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CF2Cl2(CFC-12)->2Cl
 Jnames{i} = 'Jv7';
 CS{i} = 'Cross_Section_CF2Cl2_JPL-2010(2011)_298K_170-240nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CF2ClCFCl2(CFC-113)+hv->Cl+Cl+Cl
 Jnames{i} = 'Jv8';
 CS{i} = 'Cross_Section_CF2ClCFCl2_JPL-2010(2011)_298K_175-250nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1;% For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CF2ClCF2Cl(CFC-114)+hv->Cl+Cl
 Jnames{i} = 'Jv9';
 CS{i} = 'Cross_Section_CF2ClCF2Cl_JPL-2010(2011)_295K_172-235nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CF3CF2Cl(CFC-115)+hv->Cl
 Jnames{i} = 'Jv10';
 CS{i} = 'Cross_Section_CF3CF2Cl_JPL-2010(2011)_298K_172-230nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CCl4+hv->Cl+Cl+Cl+Cl
 Jnames{i} = 'Jv11';
 CS{i} = 'Cross_Section_CCl4_JPL-2010(2011)_295-298K_174-275nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CH3Cl+hv->Cl+CH3O2
 Jnames{i} = 'Jv12';
 CS{i} = 'Cross_Section_CH3Cl_JPL-2010(2011)_298K_174-236nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CH3CCl3+hv->Cl+Cl+Cl
 Jnames{i} = 'Jv13';
 CS{i} = 'Cross_Section_CH3CCl3_JPL-2010(2011)_298K_170-255nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CH2Cl2+hv->Cl+Cl
 Jnames{i} = 'Jv14';
 CS{i} = 'Cross_Section_CH2Cl2_JPL-2010(2011)_298K_176-256nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CHF2Cl(HCFC-22)+hv->Cl
 Jnames{i} = 'Jv15';
 CS{i} = 'Cross_Section_CHF2Cl_JPL-2010(2011)_298K_170-220nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CF3CHCl2(HCFC-123)+hv->Cl+Cl
 Jnames{i} = 'Jv16';
 CS{i} = 'Cross_Section_CF3CHCl2_JPL-2010(2011)_295K_170-250nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CH3CFCl2(HCFC-141b)+hv->C+Cl
 Jnames{i} = 'Jv17';
 CS{i} = 'Cross_Section_CH3CFCl2_JPL-2010(2011)_298K_170-240nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CH3CF2Cl(HCFC-142b)+hv->Cl
 Jnames{i} = 'Jv18';
 CS{i} = 'Cross_Section_CH3CF2Cl_JPL-2010(2011)_298K_170-230nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CH3Br+hv->Br+CH3O2
 Jnames{i} = 'Jv19';
 CS{i} = 'Cross_Section_CH3Br_JPL-2010(2011)_295-296K_174-290nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CF2ClBr(Halon-1211)+hv->Br+Cl
 Jnames{i} = 'Jv20';
 CS{i} = 'Cross_Section_CF2ClBr_JPL-2010(2011)_295K_170-320nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CF3Br(Halon-1301)+hv->Br
 Jnames{i} = 'Jv21';
 CS{i} = 'Cross_Section_CF3Br_JPL-2010(2011)_295-298K_168-300nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CF2BrCF2Br(Halon-2402)+hv->Br+Br
 Jnames{i} = 'Jv22';
 CS{i} = 'Cross_Section_CF2BrCF2Br_JPL-2010(2011)_296K_170-320nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CH2Br2+hv->2Br
 Jnames{i} = 'Jv23';
 CS{i} = 'Cross_Section_CH2Br2_JPL-2010(2011)_298K_174-300nm(rec).txt';
 QY{i} = 1;
@@ -644,12 +646,12 @@ Jnames{i} = 'Jv24';
 CS{i} = 'Cross_Section_CH3I_JPL-2010(2011)_210-365K_210-365nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CF3I+hv->I 
 Jnames{i} = 'Jv25';
 CS{i} = 'Cross_Section_CF3I_JPL-2010(2011)_295-300K_180-385nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: CF2Br2 (Halon-1202) --> Br +Br 
 Jnames{i} = 'Jv26';
 CS{i} = 'Cross_Section_CF2Br2_JPL-2010(2011)_296K_170-340nm(rec).txt';
 QY{i} = 1;
@@ -671,31 +673,85 @@ Jnames{i} = 'Jv29';
 CS{i} = 'Cross_Section_CH2BrI_JPL-2010(2011)_298K_215-390nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: HOCH2OOH(HMHP)+hv->HOCH2O+OH
 Jnames{i} = 'Jv30';
 CS{i} = 'Cross_Section_HOCH2OOH_JPL-2010(2011)_298K_205-360nm(rec).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: H2SO4+hv->OH + OH + SO2
 Jnames{i} = 'Jv31';
 CS{i} = 'Cross_Section_H2SO4_Burkholder(2000)_473K_195-330nm(upper limits).txt';
 QY{i} = 1;
 
-i=i+1;
+i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: H2O+hv->OH+H
 Jnames{i} = 'Jv32';
 CS{i} = 'Cross_Section_H2O_JPL-2010(2011)_298K_121-198nm(rec).txt';
 QY{i} = 1;
 
-% i=i+1;
-% Jnames{i} = 'Jv33'
-% CS{i} = 
-% QY{i} = 
+ i=i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn:  HO2+hv->OH+O
+Jnames{i} = 'Jv33';
+CS{i} = 'Cross_Section_HO2_JPL-2010(2011)_298K_190-260nm(rec).txt';
+QY{i} = 1;
 
 i = i+1; %CLAD in CB6r5h; full rxn: C2H3ClO -> MEO2 + XO2 + CO + Cl + RO2 + RO2
 Jnames{i} = 'Jv34';
 CS{i} = 'Cross_Section_CH2ClCHO_JPL-2010(2011)_298K_240-357nm(rec).txt';
 QY{i} = 1;
 
+i = i+1; % For GEOS-Chem v14+ FullChem Mechanism;  Full Rxn: PPN+hv->RCO3+NO2+NO3
+Jnames{i} = 'Jv35';
+CS{i} = 'Cross_Section_CH2ClCHO_JPL-2010(2011)_298K_240-357nm(rec).txt';
+QY{i} = 1;
+
+i = i+1; % For GEOS-Chem v14+ Hg Mechanism;  Full Rxn: 'HgCl+hv->Hg0+Cl
+Jnames{i} = 'Jv36';
+CS{i} = 'Cross_Section_CH2ClCHO_JPL-2010(2011)_298K_240-357nm(rec).txt';
+QY{i} = 1;
+
+i = i+1; % For GEOS-Chem v14+ Hg Mechanism;  Full Rxn: 'HgBr+hv->Hg0+Br 
+Jnames{i} = 'Jv37';
+CS{i} = 'Cross_Section_CH2ClCHO_JPL-2010(2011)_298K_240-357nm(rec).txt';
+QY{i} = 1;
+
+i = i+1; % For GEOS-Chem v14+ Hg Mechanism;  Full Rxn: HgOH+hv->Hg0+OH
+Jnames{i} = 'Jv38';
+CS{i} = 'Cross_Section_CH2ClCHO_JPL-2010(2011)_298K_240-357nm(rec).txt';
+QY{i} = 1;
+
+i = i+1; % For GEOS-Chem v14+ Hg Mechanism;  Full Rxn: HgCl2+hv->Hg0+2Cl
+Jnames{i} = 'Jv39';
+CS{i} = 'Cross_Section_CH2ClCHO_JPL-2010(2011)_298K_240-357nm(rec).txt';
+QY{i} = 1;
+
+i = i+1; % For GEOS-Chem v14+ Hg Mechanism;  Full Rxn: HgBr2+hv->0.4Hg0+0.6HgBr+1.4Br
+Jnames{i} = 'Jv40';
+CS{i} = 'Cross_Section_CH2ClCHO_JPL-2010(2011)_298K_240-357nm(rec).txt';
+QY{i} = 1;
+
+i = i+1; % For GEOS-Chem v14+ Hg Mechanism;  Full Rxn: HgBrOH+hv->0.49Hg0+0.35HgOH+0.15HgBr+0.01HgBrOH+0.85Br+0.65OH
+Jnames{i} = 'Jv41';
+CS{i} = 'Cross_Section_CH2ClCHO_JPL-2010(2011)_298K_240-357nm(rec).txt';
+QY{i} = 1;
+
+i = i+1; % For GEOS-Chem v14+ Hg Mechanism;  Full Rxn: HgBrHO2+hv->0.25HgBrO+0.67Hg0+0.07HgBr+0.01HgBrOH+0.67Br+0.74HO2+0.26OH
+Jnames{i} = 'Jv42';
+CS{i} = 'Cross_Section_CH2ClCHO_JPL-2010(2011)_298K_240-357nm(rec).txt';
+QY{i} = 1;
+
+i = i+1; % For GEOS-Chem v14+ Hg Mechanism;  Full Rxn: HgBrClO+hv->Hg0+Cl+Br
+Jnames{i} = 'Jv43';
+CS{i} = 'Cross_Section_CH2ClCHO_JPL-2010(2011)_298K_240-357nm(rec).txt';
+QY{i} = 1;
+
+i = i+1; % For GEOS-Chem v14+ Hg Mechanism;  Full Rxn:: HgBrBrO+hv->Hg0+BrO
+Jnames{i} = 'Jv44';
+CS{i} = 'Cross_Section_CH2ClCHO_JPL-2010(2011)_298K_240-357nm(rec).txt';
+QY{i} = 1;
+
+i = i+1; % For GEOS-Chem v14+ Hg Mechanism;  Full Rxn: HgBrNO2+hv->0.9HgBrO+0.1HgBr+0.9NO+0.1NO2
+Jnames{i} = 'Jv45';
+CS{i} = 'Cross_Section_CH2ClCHO_JPL-2010(2011)_298K_240-357nm(rec).txt';
+QY{i} = 1;
 % end of list
 
 %% INTEGRATE
@@ -708,7 +764,7 @@ for i=1:nj
     elseif any(strcmp('all',J2plot) | strcmp(Jnames{i},J2plot))
         plotem=1;
     end
-    
+
     J.(Jnames{i}) = IntegrateJ(CS{i},QY{i},LFlux,T,P,[],plotem);
     
     if plotem, set(gcf,'name',Jnames{i}); end
