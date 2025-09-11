@@ -188,6 +188,7 @@ for spn=0:1
         'EOH'              USOS.Ethanol_PTR        hold;
         'HCHO'             USOS.HCHO_CRDS          hold; %Formaldehyde 
         'ORA1'             USOS.HCOOH_CIMS         hold; %Formic Acid
+        'ACRO'             USOS.Acrolein_PTR       hold;
         
         %Br and Cl
         'BR2'              USOS.Br2_CIMS           hold;
@@ -196,8 +197,7 @@ for spn=0:1
         'BRCL'             USOS.BrCl_CIMS          hold;
         'BRO'              USOS.BrO_CIMS           hold;
 
-        %Aldehydes
-        'ACRO'             USOS.Acrolein_PTR       hold;
+       
         };
 
     %% Decide if you want to load in spin - up concentrations or not. 

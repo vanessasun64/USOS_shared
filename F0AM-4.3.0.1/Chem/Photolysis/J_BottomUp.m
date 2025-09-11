@@ -32,6 +32,7 @@ function J = J_BottomUp(LFlux,T,P,J2plot)
 % 20190501 GMW  Added Jn52 (furfural).
 % 20200421 GMW  Added Jn53 - 56 (halogen reactions in SAPRC07B)
 
+
 % Initialization
 nj = 200; %overguess number of rate constants
 Jnames = cell(nj,1);
@@ -206,7 +207,7 @@ CS{i} = @Cross_Section_IC3H7NO3;
 QY{i} = 1;
 
 i=i+1;
-Jnames{i} = 'J55'; % TC4H9NO3 -> t-C4H9O + NO2
+Jnames{i} = 'J55'; % TC4H9NO3 -> t-C4H9O + NO2 
 CS{i} = 'Cross_Section_TC4H9NO3.csv';
 QY{i} = 1;
 
@@ -255,7 +256,7 @@ CS{i} = 'Cross_Section_CH3CHO.csv';
 QY{i} = @Quantum_Yield_CH3CHO_CH3CO;
 
 % i=i+1;
-% Jnames{i} = 'Jn7; % reserved
+% Jnames{i} = 'Jn7'; % reserved
 % CS{i} = ;
 % QY{i} = ;
 
@@ -272,8 +273,8 @@ QY{i} = 1; % from JPL recommendation
 
 
 i=i+1;
-Jnames{i} = 'Jn10'; % Hydroxyaceton CH3C(O)CH2OH->(1)CH3C(O)+CH2OH (2) CH3+HOCH2CO (3)C3H8OH+CO
-CS{i} = 'Cross_Section_Hydroxyaceton.csv';
+Jnames{i} = 'Jn10'; % Hydroxyacetone CH3C(O)CH2OH->(1)CH3C(O)+CH2OH (2) CH3+HOCH2CO (3)C3H8OH+CO
+CS{i} = 'Cross_Section_Hydroxyacetone.csv';
 QY{i} = 0.60;
 
 i=i+1;
@@ -751,6 +752,77 @@ QY{i} = 1;
 i = i+1; % For GEOS-Chem v14+ Hg Mechanism;  Full Rxn: HgBrNO2+hv->0.9HgBrO+0.1HgBr+0.9NO+0.1NO2
 Jnames{i} = 'Jv45';
 CS{i} = 'Cross_Section_CH2ClCHO_JPL-2010(2011)_298K_240-357nm(rec).txt';
+QY{i} = 1;
+
+% Added for CRACMM
+i = i+1; %BALD ----> BEN + CO
+Jnames{i} = 'Jv46';
+CS{i} = 'Cross_Section_BALD1_CALVERT11.txt';
+QY{i} = 1;
+
+i = i+1; %BALD ----> BAL1 + CO + HO2 
+Jnames{i} = 'Jv47';
+CS{i} = 'Cross_Section_BALD2_CALVERT11.txt';
+QY{i} = 1;
+
+i = i+1; %ONIT ----> HO2 + NO2 +  0.20000*ALD +  0.80000*KET 
+Jnames{i} = 'Jv48';
+CS{i} = 'Cross_Section_ONIT_CALVERT08.txt';
+QY{i} = 1;
+
+i = i+1; %PPN ----> RCO3 + NO2 
+Jnames{i} = 'Jv49';
+CS{i} = 'Cross_Section_PPN1_JPL19.txt';
+QY{i} = 1;
+
+i = i+1 %PPN ----> HC3P + NO3 
+Jnames{i} = 'Jv50';
+CS{i} = 'Cross_Section_PPN2_JPL19.txt';
+QY{i} = 1;
+
+i = i+1; %VTRPN ----> NO2 +  0.67000*KET +  0.33000*UALD
+Jnames{i} = 'Jv51';
+CS{i} = 'Cross_Section_TRPN_WANG2023.txt';
+QY{i} = 1;
+
+i = i+1; %VHONIT ----> HKET + NO2
+Jnames{i} = 'Jv52';
+CS{i} = 'Cross_Section_TRPN_WANG2023.txt';
+QY{i} = 1;
+
+i = i+1; %HCOCL ----> CL + CO + HO2
+Jnames{i} = 'Jv53';
+CS{i} = 'Cross_Section_HCOCl.csv';
+QY{i} = 1;
+
+i = i+1; %OBRO ----> BRO + O3P
+Jnames{i} = 'Jv54';
+CS{i} = 'Cross_Section_OBrO.csv';
+QY{i} = 1;
+
+i = i+1; %BrNO ----> Br + NO 
+Jnames{i} = 'Jv55';
+CS{i} = 'Cross_Section_BRNO_JPL19.txt';
+QY{i} = 1;
+
+i = i+1; %HCOBr ----> Br + CO + HO2
+Jnames{i} = 'Jv56';
+CS{i} = 'Cross_Section_HCOBR_JPL19.txt';
+QY{i} = 1;
+
+i = i+1; %HI ----> I + HO2
+Jnames{i} = 'Jv57';
+CS{i} = 'Cross_Section_HI_JPL19.txt';
+QY{i} = 1;
+
+i = i+1; %CHBr2CL ----> 2.00000*Br + CL + HO2
+Jnames{i} = 'Jv58';
+CS{i} = 'Cross_Section_CHBR2CL_JPL19.txt';
+QY{i} = 1;
+
+i = i+1; %CHBrCL2 ----> BR +  2.00000*CL + HO2
+Jnames{i} = 'Jv59';
+CS{i} = 'Cross_Section_CHBRCL2_JPL19.txt';
 QY{i} = 1;
 % end of list
 
