@@ -104,13 +104,19 @@ end
 % check other fields
 FieldInfo = InitializeMet;
 try
-    Met = CheckStructure(Met,FieldInfo,'j');
-catch ME
-    msg = ' To add new variables to Met, modify the list in InitializeMet.m.';
-    causeException = MException('F0AM:UnspecifiedInput',msg);
-    ME = addCause(ME,causeException);
-    rethrow(ME)
+    Met = CheckStructure(Met,FieldInfo,'J');
+catch
+    try
+        Met = CheckStructure(Met,FieldInfo,'j');
+
+    catch ME
+        msg = ' To add new variables to Met, modify the list in InitializeMet.m.';
+        causeException = MException('F0AM:UnspecifiedInput',msg);
+        ME = addCause(ME,causeException);
+        rethrow(ME)
+    end
 end 
+
 % if isempty(Met.LFlux), Met = rmfield(Met,'LFlux'); end % why? commented out 20200822
 Met = Check4NanNeg(Met);
 
@@ -343,7 +349,13 @@ for i=1:length(iC)
         'InitConc species %s not found in ChemFiles species list.',Inames{i})
     end
 end
-Chem.iHold = iC(holdFlag & isSpecies); %index for fixed concentrations
+Chem.iHold = iC(holdFlag==1 & isSpecies); %index for fixed concentrations
+
+% [~,iEvolve]  = ismember(Inames,Cnames); %index location of species
+% iEvolve = holdFlag==0;
+% Chem.iEvolve = iC(iEvolve);
+Chem.iEvolve = iC(holdFlag==0 & isSpecies); %index for fixed concentrations
+
 Chem.iInit = iC(isSpecies); %flag for initialzed concentrations
 
 conc_init = conc_init.*repmat(Met.M,1,nSp)./1e9; %convert from ppb to molec/cc

@@ -45,8 +45,7 @@ t_end=datetime(yr,mon,dy,23,30,0);
 savedir = 'C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.3.0.1\Runs\';
 runname_str = strcat('USOS','_',num2str(mon), '_', num2str(dy),'_', num2str(yr));
 runnumber = '29';
-chem_mech_str = 'GEOS-Chem';
-dir_path = strcat(savedir,runname_str,'\','Run', runnumber,'\',chem_mech_str,'\');
+dir_path = strcat(savedir,runname_str,'\','Run', runnumber,'\','CRACMM\');
 mkdir(dir_path);
 full_savepath = strcat(dir_path,runname_str);
 new_plots_dir = strcat(dir_path,'\plots\');
@@ -73,8 +72,8 @@ for spn=0:1
         type='_spinup'; 
     end
 
-   
-%%
+    %% 
+    
     %Set other Met parameters besides sun position
     %{
     P, T and RH were measured at the site and will be updated every step of the simulation.
@@ -107,7 +106,7 @@ for spn=0:1
         'T'          USOS.Temp_K; %Temperature, K
         'RH'         USOS.RH_percent; %Relative Humidity, %
         'SZA'        sun.zenith; %solar zenith angle, degrees
-        'jcorr'      'jNO2';
+        'jcorr'      'JNO2_RACM2';
 
         'kdil'       kdil; %dilution constant, /s
         'BLH'         blh ; % boundary layer height, m?? get from Joey or from airport
@@ -115,30 +114,26 @@ for spn=0:1
         %ozone column info here
         'O3col'      290;
 
-        %if the J is lower case, then in F0AM_ModelCore.m the 
-        %Met = CheckStructure(Met,FieldInfo,'J');
-        %needs to have lowercase J as string for mechanism
-
         %example: 'J3' USOS.jBr2*0.3 (jcorr)
-        'jO31D'        USOS.jO3 .* USOS.jNO2_ratio; %  O3 -> O1D
-        'jNO2'        USOS.jNO2 .* USOS.jNO2_ratio;
-        'jNO3_b'     USOS.jNO3a .* USOS.jNO2_ratio;
-        'jNO3_a'    USOS.jNO3b .* USOS.jNO2_ratio;
-        'jHNO2'       USOS.jHNO2 .* USOS.jNO2_ratio;
-        'jHNO3'       USOS.jHNO3 .* USOS.jNO2_ratio;
-        'jH2COa'     USOS.jCH2Oa .* USOS.jNO2_ratio;
-        'jH2COb'     USOS.jCH2Ob .* USOS.jNO2_ratio;
+        'JO3O1D_NASA06'        USOS.jO3 .* USOS.jNO2_ratio; %  O3 -> O1D
+        'JNO2_RACM2'        USOS.jNO2 .* USOS.jNO2_ratio;
+        'JNO3NO_RACM2'     USOS.jNO3a .* USOS.jNO2_ratio;
+        'JNO3NO2_RACM2'    USOS.jNO3b .* USOS.jNO2_ratio;
+        'JHONO_RACM2'       USOS.jHNO2 .* USOS.jNO2_ratio;
+        'JHNO3_RACM2'       USOS.jHNO3 .* USOS.jNO2_ratio;
+        'JHCHO_RAD_JPL19'     USOS.jCH2Oa .* USOS.jNO2_ratio;
+        'JHCHO_MOL_JPL19'     USOS.jCH2Ob .* USOS.jNO2_ratio;
 
         %Species not in MCM
-        'jN2O5'      USOS.jN2O5 .* USOS.jNO2_ratio;
-        'jBr2'       USOS.jBr2 .* USOS.jNO2_ratio;
-        'jBrCL'      USOS.jBrCl .* USOS.jNO2_ratio;
-        'jCL2'       USOS.jCl2 .* USOS.jNO2_ratio;
-        'jClO'        USOS.jClOb.* USOS.jNO2_ratio;
-        'jI2'       USOS.jI2 .* USOS.jNO2_ratio;
-        'jClNO2'    USOS.jClNO2 .* USOS.jNO2_ratio;
+        % 'JN2O5'      USOS.jN2O5 .* USOS.jNO2_ratio; Not in mech
+        'JBR2_JPL19'       USOS.jBr2 .* USOS.jNO2_ratio;
+        'JBRCL_JPL19'      USOS.jBrCl .* USOS.jNO2_ratio;
+        'JCL2_JPL19'       USOS.jCl2 .* USOS.jNO2_ratio;
+        'JCLO_JPL19'        USOS.jClOb.* USOS.jNO2_ratio;
+        'JI2_JPL19'       USOS.jI2 .* USOS.jNO2_ratio;
+        'JCLNO2_JPL19'    USOS.jClNO2 .* USOS.jNO2_ratio;
 
-        'jCCl4'       USOS.jCCl4 .* USOS.jNO2_ratio;
+       % 'Jv11'       USOS.jCCl4 .* USOS.jNO2_ratio;
         };
     
     %% CHEMICAL CONCENTRATIONS
@@ -151,50 +146,50 @@ for spn=0:1
     When many species are used, it helps to organize alphabetically or by functional group.
     %}
 
-    InitConc = {...
+ InitConc = {...
         % names           conc(ppb)                HoldMe
         
         %Inorganics
         'O3'                USOS.O3_ppbv            evolve;
         'CO'                USOS.CO_Piccaro         hold;
-        'DMS'               USOS.DMS_PTR            hold;
     
         %NOy
         'NO'                USOS.NO_LIF             hold;
         'NO2'               USOS.NO2_LIF            hold;
-        'HNO2'              USOS.HONO_CIMS          hold;
+        'HONO'              USOS.HONO_CIMS          hold;
         'HNO3'              USOS.HNO3_CIMS          hold;
         'PAN'               USOS.PAN_CIMS           hold;
         'PPN'              USOS.PPN_CIMS           hold;
         %'NOx'               {'NO2','NO'}        []; %family conservation
     
         %Biogenics
-        'ISOP'              USOS.Isoprene_PTR       hold;
-        'MTPA'              USOS.Monoterpenes_PTR   hold;
+        'ISO'              USOS.Isoprene_PTR       hold;
+        'API'              2/3*USOS.Monoterpenes_PTR   hold;
+        'LIM'              1/3*USOS.Monoterpenes_PTR hold;
     
         %CxHy (Hydrocarbons)
         'CH4'               USOS.CH4_Piccaro        hold;
     
         %Aromatics
-        'BENZ'              USOS.Benzene_PTR        hold;
-        'TOLU'               USOS.Toluene_PTR        hold;
-        'STYR'              USOS.Styrene_PTR        hold;
-        'NAP'               USOS.Naphthalene_PTR    hold;
+        'BEN'              USOS.Benzene_PTR        hold;
+        'TOL'              USOS.Toluene_PTR        hold;
+        'STY'              USOS.Styrene_PTR        hold;
+        'NAPH'             USOS.Naphthalene_PTR    hold;
     
         %Oxygenates
         'MOH'              USOS.Methanol_PTR       hold;
-        'ALD2'              USOS.Acetaldehyde_PTR   hold;
+        'ACD'              USOS.Acetaldehyde_PTR   hold;
         'EOH'              USOS.Ethanol_PTR        hold;
-        'CH2O'              USOS.HCHO_CRDS          hold; %Formaldehyde 
-        'HCOOH'              USOS.HCOOH_CIMS         hold; %Formic Acid
-        'ACR'               USOS.Acrolein_PTR       hold;
+        'HCHO'             USOS.HCHO_CRDS          hold; %Formaldehyde 
+        'ORA1'             USOS.HCOOH_CIMS         hold; %Formic Acid
+        'ACRO'             USOS.Acrolein_PTR       hold;
         
         %Br and Cl
-        'Br2'               USOS.Br2_CIMS           hold;
-        'Cl2'               USOS.Cl2_CIMS           hold;
-        'ClNO2'              USOS.ClNO2_CIMS         hold;
-        'BrCl'              USOS.BrCl_CIMS          hold;
-        'BrO'               USOS.BrO_CIMS           hold;
+        'BR2'              USOS.Br2_CIMS           hold;
+        'CL2'              USOS.Cl2_CIMS           hold;
+        'CLNO2'            USOS.ClNO2_CIMS         hold;
+        'BRCL'             USOS.BrCl_CIMS          hold;
+        'BRO'              USOS.BrO_CIMS           hold;
         };
 
     %% Decide if you want to load in spin - up concentrations or not. 
@@ -216,9 +211,9 @@ for spn=0:1
     the specific set of initial species included above.
     %}
     ChemFiles = {...
-       'GEOSCHEM_K_v1452_Hg(Met)'; %contains all k-rates
-       'GEOSCHEM_J_v1452_Hg(Met,2)'; %photolysis file, flag of 2 means we're using the Hybrid Method
-       'GEOSCHEM_GasRxns_v1452_Hg'; %Lists all reactions and species to add
+       'cracmm3m_K(Met)'; %contains all k-rates
+       'cracmm3m_J_edited(Met,2)'; %photolysis file, flag of 2 means we're using the Hybrid Method
+       'cracmm3m_AllRxns'; %Lists all reactions and species to add
        };
     
     %% DILUTION CONCENTRATIONS
@@ -229,7 +224,6 @@ for spn=0:1
     BkgdConc = {
         'DEFAULT'       0;
         'PAN'           0.14;
-        'PPN'           0.014;
         'CH4'           1965;
         'O3'            35; 
     };
@@ -302,92 +296,5 @@ for spn=0:1
 % Output will be saved in the "SavePath" above and will also be written to the structure S.
 
     S = F0AM_ModelCore(Met,InitConc,ChemFiles,BkgdConc,ModelOptions);
-    yaml_save_path = strcat(full_savepath,'.yaml');
-    WriteYaml(yaml_save_path,S);
-
-    %% Set logfile
-    logfiles_savename = strcat(savedir,runname_str,'\','LogFile_', runname_str,'.txt');
-    disp(logfiles_savename);
-
-    fid = fopen(logfiles_savename, 'a');
-
-    if fid == -1
-        error('Cannot open log file.');
-    end
-
-    %Add date of campaign
-    logdate_str = 'Log Runs for USOS Campaign for date';
-    logdate_text = string(logdate_str) + ' ' + string(runname_str);
-    fprintf(fid,'%s\n', logdate_text);
-
-    %Add run number
-    runnumber_info = 'For Run';
-    chem_mech_text = 'with chemical mechanism';
-    runnumber_text = string(runnumber_info) + ' ' + string(runnumber) + ' ' + string(chem_mech_text) + ' ' + string(chem_mech_str);
-    fprintf(fid, '%s\n\n', runnumber_text);
-    
-    %Add run date
-    date_of_run_str = 'F0AM run on:';
-    date_of_run_text = string(date_of_run_str) + ' '
-    date_today =  datestr(now, 0);
-    fprintf(fid, '%s', date_of_run_text);
-    fprintf(fid, '%s\n\n', datestr(now, 0));
-
-    %Print kdil values
-    kdil_text = 'kdil values:';
-    fprintf(fid,'%s\n', kdil_text);
-
-    kdil_arr = [];
-
-    for kdil_val = 1:length(kdil)
-        kdil_arr = [kdil_arr, kdil(kdil_val)];
-    end
-
-    kdil_sort = sort(kdil_arr);
-    kdil_to_cell = num2cell(kdil_sort);
-
-    fprintf(fid,'%s, ', kdil_to_cell{1:end-1});
-    fprintf(fid,'%s\n\n', kdil_to_cell{end});
-
-    %Species held
-    species_held_str = 'Species held:';
-    fprintf(fid, '%s\n', species_held_str);
-
-    species_held_arr = [];
-
-    for spec_idx = 1:length(S.Chem.iHold)
-        spec_holds = S.Chem.iHold(spec_idx);
-        species_held_name = S.Cnames(spec_holds);
-        species_held_arr = [species_held_arr, species_held_name];
-    end
-    species_held_sort_arr = sort(species_held_arr);
-    fprintf(fid,'%s, ', species_held_sort_arr{1:end-1});
-    fprintf(fid,'%s\n\n', species_held_sort_arr{end});
-
-    %Species evolved
-    %Have to enter manually, as I can't figure out how to automate this
-    species_evolve_str = 'Species evolved:';
-    fprintf(fid, '%s\n', species_evolve_str);
-
-    evolve_species_names = ['O3'];
-    fprintf(fid,'%s\n', evolve_species_names);
-    % if more species than O3 are added use instead:
-    %species_evolve_sort_arr = sort(evolve_species_names);
-    %fprintf(fid,'%s, ', species_evolve_sort_arr{1:end-1});
-    %fprintf(fid,'%s\n', species_evolve_sort_arr{end});
-
-    % Make a horizontal line to separate runs
-    % Define the character and the length of the line
-    line_char = '-';
-    line_length = 50;
-    
-    % Print the horizontal line
-    for i = 1:line_length
-        fprintf(fid,'%s', line_char);
-    end
-    fprintf(fid,'\n'); % Add a newline at the end of the line
-    
-    fclose(fid);
 
 end
-
