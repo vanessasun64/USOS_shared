@@ -10,7 +10,7 @@ function [out, sun]= get_subset_USOS(t_start, t_end)
     
     fullpath2USOS_mac = fullfile(dirpath2USOS_mac,USOSfilename_mac);
     fullpath2USOS_win = fullfile('C:',dirpath2USOS_win,USOSfilename_win);
-    load(fullpath2USOS_mac); % loads struct named USOS. 
+    load(fullpath2USOS_win); % loads struct named USOS. 
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %  Get time to make sense in MATLAB and add a local time field to the struct 

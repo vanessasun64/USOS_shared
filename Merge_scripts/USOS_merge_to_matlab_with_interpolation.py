@@ -158,7 +158,7 @@ def subset_days_with_pan_interp(date_time_start, date_time_stop,file_subset_name
             'Benzaldehyde_PTR':False,
             'C8Aromatics_PTR':False,
             'C9Aromatics_PTR':False,
-            'Naphthalene_PTR':False,
+            'Naphthalene_PTR':True,
             'Octanal_PTR':False,
             'Monoterpenes_PTR':True,
             'Nonanal_PTR':False,

@@ -44,7 +44,7 @@ t_end=datetime(yr,mon,dy,23,30,0);
 %Set where to store the total file
 savedir = 'C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.3.0.1\Runs\';
 runname_str = strcat('USOS','_',num2str(mon), '_', num2str(dy),'_', num2str(yr));
-dir_path = strcat(savedir,runname_str,'\','Run26\')
+dir_path = strcat(savedir,runname_str,'\','Run28\')
 mkdir(dir_path);
 full_savepath = strcat(dir_path,runname_str);
 new_plots_dir = strcat(dir_path,'\plots\');
@@ -226,7 +226,8 @@ for spn=0:1
     %}
     BkgdConc = {
         'DEFAULT'       0;
-        %'PAN'           0.14;
+        'PAN'           0.14;
+        'PPN'           0.014;
         'CH4'           1965;
         'O3'            35; 
     };

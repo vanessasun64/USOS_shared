@@ -42,12 +42,14 @@ t_end=datetime(yr,mon,dy,23,30,0);
 %% 
 
 %Set where to store the total file
-savedir = '/Users/vanessasun/Documents/phd/utah/research/USOS_shared/F0AM-4.3.0.1/Runs/';
+savedir = 'C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.3.0.1\Runs\';
 runname_str = strcat('USOS','_',num2str(mon), '_', num2str(dy),'_', num2str(yr));
-dir_path = strcat(savedir,runname_str,'/','Run27/','CRACMM/');
+runnumber = '29';
+chem_mech_str = 'CRACMM';
+dir_path = strcat(savedir,runname_str,'\','Run', runnumber,'\',chem_mech_str,'\');
 mkdir(dir_path);
 full_savepath = strcat(dir_path,runname_str);
-new_plots_dir = strcat(dir_path,'/plots/');
+new_plots_dir = strcat(dir_path,'\plots\');
 mkdir(new_plots_dir);
 
 %% Set Model Options
@@ -72,13 +74,6 @@ for spn=0:1
     end
 
     %% 
-    %Save USOS output as a CSV file for use in Python
-    USOS_observed_table=struct2table(USOS);
-    USOS_observed_save_path = strcat(full_savepath,'_observed_conc','.csv');
-    writetable(USOS_observed_table, USOS_observed_save_path)
-    
-    %% 
-    
     
     %Set other Met parameters besides sun position
     %{
@@ -119,6 +114,10 @@ for spn=0:1
         
         %ozone column info here
         'O3col'      290;
+        
+        %if the J is capitalized, then in F0AM_ModelCore.m the 
+        %Met = CheckStructure(Met,FieldInfo,'J');
+        %needs to have capital J as string for mechanism
 
         %example: 'J3' USOS.jBr2*0.3 (jcorr)
         'JO3O1D_NASA06'        USOS.jO3 .* USOS.jNO2_ratio; %  O3 -> O1D
@@ -138,8 +137,6 @@ for spn=0:1
         'JCLO_JPL19'        USOS.jClOb.* USOS.jNO2_ratio;
         'JI2_JPL19'       USOS.jI2 .* USOS.jNO2_ratio;
         'JCLNO2_JPL19'    USOS.jClNO2 .* USOS.jNO2_ratio;
-
-       % 'Jv11'       USOS.jCCl4 .* USOS.jNO2_ratio;
         };
     
     %% CHEMICAL CONCENTRATIONS
@@ -171,7 +168,7 @@ for spn=0:1
         %Biogenics
         'ISO'              USOS.Isoprene_PTR       hold;
         'API'              2/3*USOS.Monoterpenes_PTR   hold;
-        'LIM'           1/3*USOS.Monoterpenes_PTR hold;
+        'LIM'              1/3*USOS.Monoterpenes_PTR hold;
     
         %CxHy (Hydrocarbons)
         'CH4'               USOS.CH4_Piccaro        hold;
@@ -188,6 +185,7 @@ for spn=0:1
         'EOH'              USOS.Ethanol_PTR        hold;
         'HCHO'             USOS.HCHO_CRDS          hold; %Formaldehyde 
         'ORA1'             USOS.HCOOH_CIMS         hold; %Formic Acid
+        'ACRO'             USOS.Acrolein_PTR       hold;
         
         %Br and Cl
         'BR2'              USOS.Br2_CIMS           hold;
@@ -195,9 +193,6 @@ for spn=0:1
         'CLNO2'            USOS.ClNO2_CIMS         hold;
         'BRCL'             USOS.BrCl_CIMS          hold;
         'BRO'              USOS.BrO_CIMS           hold;
-
-        %Aldehydes
-        'ACRO'             USOS.Acrolein_PTR       hold;
         };
 
     %% Decide if you want to load in spin - up concentrations or not. 
@@ -220,7 +215,7 @@ for spn=0:1
     %}
     ChemFiles = {...
        'cracmm3m_K(Met)'; %contains all k-rates
-       'cracmm3m_J(Met,2)'; %photolysis file, flag of 2 means we're using the Hybrid Method
+       'cracmm3m_J_edited(Met,2)'; %photolysis file, flag of 2 means we're using the Hybrid Method
        'cracmm3m_AllRxns'; %Lists all reactions and species to add
        };
     
@@ -304,5 +299,94 @@ for spn=0:1
 % Output will be saved in the "SavePath" above and will also be written to the structure S.
 
     S = F0AM_ModelCore(Met,InitConc,ChemFiles,BkgdConc,ModelOptions);
+    yaml_save_path = strcat(full_savepath,'run_output_python.yaml');
+    WriteYaml(yaml_save_path,S);
 
+    %% Set logfile
+    logfiles_savename = strcat(savedir,runname_str,'\','LogFile_', runname_str,'.txt');
+    disp(logfiles_savename);
+
+    fid = fopen(logfiles_savename, 'a');
+
+    if fid == -1
+        error('Cannot open log file.');
+    end
+
+    %Add date of campaign
+    logdate_str = 'Log Runs for USOS Campaign for date';
+    logdate_text = string(logdate_str) + ' ' + string(runname_str);
+    fprintf(fid,'%s\n', logdate_text);
+
+    %Add run number
+    runnumber_info = 'For Run';
+    chem_mech_text = 'with chemical mechanism';
+    runnumber_text = string(runnumber_info) + ' ' + string(runnumber) + ' ' + string(chem_mech_text) + ' ' + string(chem_mech_str);
+    fprintf(fid, '%s\n\n', runnumber_text);
+    
+    %Add run date
+    date_of_run_str = 'F0AM run on:';
+    date_of_run_text = string(date_of_run_str) + ' '
+    date_today =  datestr(now, 0);
+    fprintf(fid, '%s', date_of_run_text);
+    fprintf(fid, '%s\n\n', datestr(now, 0));
+
+    %Print kdil values
+    kdil_text = 'kdil values:';
+    fprintf(fid,'%s\n', kdil_text);
+
+    kdil_arr = [];
+
+    for kdil_val = 1:length(kdil)
+        kdil_arr = [kdil_arr, kdil(kdil_val)];
+    end
+
+    kdil_sort = sort(kdil_arr);
+    kdil_to_cell = num2cell(kdil_sort);
+
+    fprintf(fid,'%s, ', kdil_to_cell{1:end-1});
+    fprintf(fid,'%s\n\n', kdil_to_cell{end});
+
+    %Species held
+    species_held_str = 'Species held:';
+    fprintf(fid, '%s\n', species_held_str);
+
+    species_held_arr = [];
+
+    for spec_idx = 1:length(S.Chem.iHold)
+        spec_holds = S.Chem.iHold(spec_idx);
+        species_held_name = S.Cnames(spec_holds);
+        species_held_arr = [species_held_arr, species_held_name];
+    end
+    species_held_sort_arr = sort(species_held_arr);
+    fprintf(fid,'%s, ', species_held_sort_arr{1:end-1});
+    fprintf(fid,'%s\n\n', species_held_sort_arr{end});
+
+    %Species evolved
+    %Have to enter manually, as I can't figure out how to automate this
+    species_evolve_str = 'Species evolved:';
+    fprintf(fid, '%s\n', species_evolve_str);
+
+    evolve_species_names = ['O3'];
+    fprintf(fid,'%s\n', evolve_species_names);
+    % if more species than O3 are added use instead:
+    %species_evolve_sort_arr = sort(evolve_species_names);
+    %fprintf(fid,'%s, ', species_evolve_sort_arr{1:end-1});
+    %fprintf(fid,'%s\n', species_evolve_sort_arr{end});
+
+    % Make a horizontal line to separate runs
+    % Define the character and the length of the line
+    line_char = '-';
+    line_length = 50;
+    
+    % Print the horizontal line
+    for i = 1:line_length
+        fprintf(fid,'%s', line_char);
+    end
+    fprintf(fid,'\n'); % Add a newline at the end of the line
+    
+    fclose(fid);
 end
+
+
+
+% fclose(fid);

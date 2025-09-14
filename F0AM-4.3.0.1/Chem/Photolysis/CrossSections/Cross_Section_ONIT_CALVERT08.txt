@@ -1,0 +1,46 @@
+# ONIT_CALVERT08
+# ONIT + HV = 0.20*ALD + 0.80*KET + HO2 + NO2 
+# Absorption x-section from Calvert et al., 2008 Recommendations; pages 811
+# Absorption x-section data are average of 5 organic nitrate species: CH3ONO2, CH3CH2ONO2, (1-C3H7)ONO2, (2-C3H7)ONO2, (1-C4H9)ONO2
+# Quantum yield data are from JPL-19; page 4-121
+# Source: Chemical Kinetics and Photochemical Data for Use in Atmospheric Studies, Evaluation No.
+#         19," JPL Publication 19-5, Jet Propulsion Laboratory, Pasadena,
+#         2019 http://jpldataeval.jpl.nasa.gov (May 2020)
+# Supplied by Dr. William Stockwell, reformatted by Dr. Golam Sarwar to make it compatible with CMAQ
+# Points 
+# With FAC, units are (cm^2/molecule)
+# FAC=1.0
+278	2.53E-20	1.00
+280	2.32E-20	1.00
+282	2.11E-20	1.00
+284	1.90E-20	1.00
+286	1.70E-20	1.00
+288	1.50E-20	1.00
+290	1.31E-20	1.00
+292	1.13E-20	1.00
+294	9.67E-21	1.00
+296	8.19E-21	1.00
+298	6.85E-21	1.00
+300	5.71E-21	1.00
+302	4.69E-21	1.00
+304	3.83E-21	1.00
+306	3.08E-21	1.00
+308	2.46E-21	1.00
+310	1.95E-21	1.00
+312	1.52E-21	1.00
+314	1.19E-21	1.00
+316	9.10E-22	1.00
+318	6.94E-22	1.00
+320	5.24E-22	1.00
+322	3.90E-22	1.00
+324	2.88E-22	1.00
+326	2.12E-22	1.00
+328	1.56E-22	1.00
+330	1.10E-22	1.00
+332	7.80E-23	1.00
+334	5.80E-23	1.00
+336	4.00E-23	1.00
+338	2.60E-23	1.00
+340	1.80E-23	1.00
+342	1.40E-23	1.00
+344	8.00E-24	1.00

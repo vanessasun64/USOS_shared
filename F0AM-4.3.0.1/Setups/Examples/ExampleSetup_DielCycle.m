@@ -241,21 +241,21 @@ legend('Day 1','Day 2','Day 3','Obs')
 % 
 % % The net ozone rate calculated above should be roughly equal to the rate of NO + XO2 = NO2.
 % % Let's find reactions that destroy NO and a peroxy radical and produce NO2.
-% XO2names = [S3.Cnames(S3.iRO2);'HO2'];
-% [~,iNO]  = ismember('NO',S3.Cnames); %index location of species
-% [~,iNO2] = ismember('NO2',S3.Cnames);
-% [~,iXO2] = ismember(XO2names,S3.Cnames);
-% iNOtoNO2 = S3.Chem.f(:,iNO)==-1 & ... %use stoichiometric coefficients to ID reactions
-%            S3.Chem.f(:,iNO2)==1 & ...
-%            sum(S3.Chem.f(:,iXO2)==-1,2);
-% PNO2fromXO2 = sum(S3.Chem.Rates(:,iNOtoNO2),2)*3600; %total NO2 production from XO2+NO, ppb/h
-% 
-% figure
-% plot(S3.Time,O3netRate,'k-',S3.Time,PNO2fromXO2,'r--')
-% xlabel('Hour of Day')
-% ylabel('Ozone Production (ppb h^-^1)')
-% legend('O_3 Net','XO_2 + NO')
-% purtyPlot
+XO2names = [S3.Cnames(S3.iRO2);'HO2'];
+[~,iNO]  = ismember('NO',S3.Cnames); %index location of species
+[~,iNO2] = ismember('NO2',S3.Cnames);
+[~,iXO2] = ismember(XO2names,S3.Cnames);
+iNOtoNO2 = S3.Chem.f(:,iNO)==-1 & ... %use stoichiometric coefficients to ID reactions
+           S3.Chem.f(:,iNO2)==1 & ...
+           sum(S3.Chem.f(:,iXO2)==-1,2);
+PNO2fromXO2 = sum(S3.Chem.Rates(:,iNOtoNO2),2)*3600; %total NO2 production from XO2+NO, ppb/h
+
+figure
+plot(S3.Time,O3netRate,'k-',S3.Time,PNO2fromXO2,'r--')
+xlabel('Hour of Day')
+ylabel('Ozone Production (ppb h^-^1)')
+legend('O_3 Net','XO_2 + NO')
+purtyPlot
 % % They don't quite add up. Why? The assumption that P(O3)net = sum(k[NO][XO2]) does not account for:
 % % 1) NO2 production from PANs
 % % 2) O3 losses that do not make NO2, like reaction with VOC or HO2, or dilution
