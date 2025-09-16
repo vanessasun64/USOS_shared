@@ -42,7 +42,7 @@ t_end=datetime(yr,mon,dy,23,30,0);
 %% 
 
 %Set where to store the total file
-savedir = 'C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.3.0.1\Runs\';
+savedir = 'C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.4.2\Runs\';
 runname_str = strcat('USOS','_',num2str(mon), '_', num2str(dy),'_', num2str(yr));
 runnumber = '29';
 chem_mech_str = 'CRACMM';
@@ -386,7 +386,3 @@ for spn=0:1
     
     fclose(fid);
 end
-
-
-
-% fclose(fid);
