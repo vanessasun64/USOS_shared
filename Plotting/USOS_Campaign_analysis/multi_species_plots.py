@@ -18,6 +18,7 @@ import matplotlib
 
 
 #load file for all dates
+#all_days_filepath = '../../CampaignData_and_Merges/R0/CSL_MobileLab_Parked/merged/rev_30min/all_CSL_MobileLab_Parked_rev30minv4.nc'
 all_days_filepath = '../../CampaignData_and_Merges/R0/CSL_MobileLab_Parked/merged/rev_30min/all_CSL_MobileLab_Parked_rev30minv4.nc'
 all_days_filepath_load = xr.open_dataset(all_days_filepath)
 df_alldays = all_days_filepath_load.to_dataframe()
@@ -47,7 +48,7 @@ days_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturda
 
 hour_range = np.arange(0,24,0.5)
 
-def species_campaign_total_monthly_split_plot(species_var, species_name, y_limit, y_ticks, color_map1, color_map2):
+def species_campaign_total_monthly_split_plot(species_var, species_name, y_limit, y_ticks, color_map1, color_map2, plot_name):
     df_species = df_alldays[species_var]
     df_july_species = df_species.iloc[df_species.index.month == 7]
     july_dates = pd.date_range(start='2024-07-14', end='2024-07-31')
@@ -112,7 +113,11 @@ def species_campaign_total_monthly_split_plot(species_var, species_name, y_limit
     ax[1].margins(x=0)
     ax[1].grid()
 
-def ozone_campaign_total_monthly_split_plot(species_var, species_name, y_limit, y_ticks, color_map1, color_map2):
+    plt.tight_layout()
+    #plt.savefig('../haskins-group1/users/vsun/USOS_shared//Plotting/USOS_Campaign_analysis/plots/' + plot_name)
+    plt.show()
+
+def ozone_campaign_total_monthly_split_plot(species_var, species_name, y_limit, y_ticks, color_map1, color_map2, plot_name):
     df_ozone = df_alldays[species_var]
     df_july_ozone = df_ozone.iloc[df_ozone.index.month == 7]
     july_dates = pd.date_range(start='2024-07-14', end='2024-07-31')
@@ -179,7 +184,11 @@ def ozone_campaign_total_monthly_split_plot(species_var, species_name, y_limit, 
     ax[1].margins(x=0)
     ax[1].grid()
 
-def species_by_day_of_week_plot(species_var, species_name, y_limit, y_ticks, color_map):
+    plt.tight_layout()
+    #plt.savefig('../haskins-group1/users/vsun/USOS_shared/Plotting/USOS_Campaign_analysis/plots/' + plot_name)
+    plt.show()
+
+def species_by_day_of_week_plot(species_var, species_name, y_limit, y_ticks, color_map, plot_name):
     day_of_week_species_mean = df_alldays.groupby([day_names_index, hr_of_day_index])[species_var].mean()
 
     fig, ax = plt.subplots(figsize = (15,10))
@@ -199,8 +208,11 @@ def species_by_day_of_week_plot(species_var, species_name, y_limit, y_ticks, col
     plt.title('Average ' + species_name + ' Concentration by Day of Week')
 
     plt.grid()
+    plt.tight_layout()
+    #plt.savefig('../haskins-group1/users/vsun/USOS_shared/Plotting/USOS_Campaign_analysis/plots/' + plot_name)
+    plt.show()
 
-def species_by_day_of_week_monthly_split_plot(species_var, species_name, y_limit, y_ticks, color_map1, color_map2):
+def species_by_day_of_week_monthly_split_plot(species_var, species_name, y_limit, y_ticks, color_map1, color_map2, plot_name):
     day_of_week_species_mean_split_monthly = df_alldays.groupby([month_index, day_names_index, hr_of_day_index])[species_var].mean()
 
     fig, ax = plt.subplots(1,2, figsize = (20,10))
@@ -245,54 +257,63 @@ def species_by_day_of_week_monthly_split_plot(species_var, species_name, y_limit
     ax[1].margins(x=0)
     ax[1].grid()
 
+    plt.tight_layout()
+    #plt.savefig('../haskins-group1/users/vsun/USOS_shared/Plotting/USOS_Campaign_analysis/plots/' + plot_name)
+    plt.show()
+
 
 #####
 #Function calls
 
 # Ozone
-# ozone_campaign_total_monthly_split_plot(
-#     species_var = 'O3_ppbv',
-#     species_name = 'Ozone',
-#     y_limit = [0,100],
-#     y_ticks = np.arange(0,100,5),
-#     color_map1 = 'YlOrRd',
-#     color_map2 = 'YlGnBu'  
-# )
+ozone_campaign_total_monthly_split_plot(
+    species_var = 'O3_ppbv',
+    species_name = 'Ozone',
+    y_limit = [0,100],
+    y_ticks = np.arange(0,100,5),
+    color_map1 = 'YlOrRd',
+    color_map2 = 'YlGnBu',
+    plot_name = 'ozone_monthly_split.png' 
+)
 
-# species_by_day_of_week_plot(
-#     species_var = 'O3_ppbv',
-#     species_name = 'Ozone',
-#     y_limit = [0,85],
-#     y_ticks = np.arange(0,85,5),
-#     color_map = 'Greens'
-# )
+species_by_day_of_week_plot(
+    species_var = 'O3_ppbv',
+    species_name = 'Ozone',
+    y_limit = [0,85],
+    y_ticks = np.arange(0,85,5),
+    color_map = 'Greens',
+    plot_name = 'ozone_day_of_week.png'
+)
 
-# species_by_day_of_week_monthly_split_plot(
-#     species_var = 'O3_ppbv',
-#     species_name = 'Ozone',
-#     y_limit = [0,85],
-#     y_ticks = np.arange(0,85,5),
-#     color_map1 = 'YlOrRd',
-#     color_map2 = 'YlGnBu'
-# )
+species_by_day_of_week_monthly_split_plot(
+    species_var = 'O3_ppbv',
+    species_name = 'Ozone',
+    y_limit = [0,85],
+    y_ticks = np.arange(0,85,5),
+    color_map1 = 'YlOrRd',
+    color_map2 = 'YlGnBu',
+    plot_name = 'ozone_day_of_week_monthly_split.png'
+)
 
 # NOx
-# species_by_day_of_week_plot(
-#     species_var = 'NOx_ppbv',
-#     species_name = 'NOx',
-#     y_limit = [0,50],
-#     y_ticks = np.arange(0,55,5),
-#     color_map = 'Greens'
-# )
+species_by_day_of_week_plot(
+    species_var = 'NOx_ppbv',
+    species_name = 'NOx',
+    y_limit = [0,50],
+    y_ticks = np.arange(0,55,5),
+    color_map = 'Greens',
+    plot_name = 'ozone_day_of_week.png'
+)
 
-# species_campaign_total_monthly_split_plot(
-#     species_var = 'NOx_ppbv',
-#     species_name = 'NOx',
-#     y_limit = [0,50],
-#     y_ticks = np.arange(0,50,5),
-#     color_map1 = 'YlOrRd',
-#     color_map2 = 'YlGnBu'  
-# )
+species_campaign_total_monthly_split_plot(
+    species_var = 'NOx_ppbv',
+    species_name = 'NOx',
+    y_limit = [0,50],
+    y_ticks = np.arange(0,50,5),
+    color_map1 = 'YlOrRd',
+    color_map2 = 'YlGnBu',
+    plot_name = 'nox_monthly_split.png'
+)
 
 #Acetonitrile
 species_campaign_total_monthly_split_plot(
@@ -301,5 +322,6 @@ species_campaign_total_monthly_split_plot(
     y_limit = [0,1],
     y_ticks = np.arange(0,1,0.05),
     color_map1 = 'YlOrRd',
-    color_map2 = 'YlGnBu'  
+    color_map2 = 'YlGnBu',
+    plot_name = 'acetonitrile_monthly_split.png'  
 )
