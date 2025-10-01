@@ -6,12 +6,12 @@ import inspect
 import numpy as np 
 import pandas as pd
 import xarray as xr
-import pubchempy as pcp
-import rdkit
-from rdkit import Chem
-from rdkit.Chem import Fragments
-from rdkit.Chem import rdMolDescriptors
-from rdkit.Chem import AllChem
+# import pubchempy as pcp
+# import rdkit
+# from rdkit import Chem
+# from rdkit.Chem import Fragments
+# from rdkit.Chem import rdMolDescriptors
+# from rdkit.Chem import AllChem
 
 from collections import defaultdict
 
@@ -26,12 +26,12 @@ dirpath = filepath_source('CHPC')
 #define path for Hawthorne data directory
 savepath= dirpath + 'Hawthorne_data/'
 
-#import CRACMM utilities and mapper
-utildir = dirpath +'CRACMM/utilities/'
-sys.path.append(utildir)
+# #import CRACMM utilities and mapper
+# utildir = dirpath +'CRACMM/utilities/'
+# sys.path.append(utildir)
 
-import cracmm1_mapper as cracmm1   # includes: get_cracmm_roc(smiles,koh,log10cstar) (Version 1)
-import cracmm2_mapper as cracmm2   # includes: get_cracmm_roc(smiles,koh,log10cstar) (Version 2)
+# import cracmm1_mapper as cracmm1   # includes: get_cracmm_roc(smiles,koh,log10cstar) (Version 1)
+# import cracmm2_mapper as cracmm2   # includes: get_cracmm_roc(smiles,koh,log10cstar) (Version 2)
 
 ##########################################################################################################################################################
 #FUNCTIONS
@@ -418,6 +418,25 @@ def comptox_extract(comptox_file, pubchem_match_file, save_filename):
     print('Output df of parameters saved at: ' + excel_file)
     print('Output df of parameters saved at: ' + csv_file)
 
+def geoschem_mech_mapping(CRACMM_mapped_file, geoschem_data_file, save_filename):
+    df_cracmm_mapped_data = pd.read_csv(CRACMM_mapped_file)
+    print(df_cracmm_mapped_data.columns)
+    df_geoschem_mech_database = pd.read_csv(geoschem_data_file)
+    print(df_geoschem_mech_database.columns)
+    df_geoschem_mech_database = df_geoschem_mech_database.rename(columns={'NAME':'GEOS-Chem Mapping', 'INCHI':'inchi'})
+    print(df_geoschem_mech_database.columns)
+    df_geoschem_mech_database_clean = df_geoschem_mech_database[df_geoschem_mech_database['inchi'].notna()]
+    print(df_geoschem_mech_database_clean.columns)
+    df_merged_mapping = df_cracmm_mapped_data.merge(df_geoschem_mech_database_clean[['GEOS-Chem Mapping', 'inchi']], on = 'inchi', how='left')
+    print(df_merged_mapping)
+
+    excel_file = savepath + save_filename + '.xlsx'
+    csv_file = savepath +  save_filename + '.csv'
+    
+    df_merged_mapping.to_excel(excel_file, index = False)
+    df_merged_mapping.to_csv(csv_file, index = False)
+    print('Output df of parameters saved at: ' + excel_file)
+    print('Output df of parameters saved at: ' + csv_file)
 
 ###############################################################################################
 #CALL FUNCTIONS
@@ -446,9 +465,15 @@ def comptox_extract(comptox_file, pubchem_match_file, save_filename):
 #     filename = 'EPA_Hawthorne_pubchem_match',
 #     overwrite = False)
 
-comptox_extract(
-    comptox_file = savepath + 'comptox_batch_search_all.csv',
-    pubchem_match_file = savepath + 'EPA_Hawthorne_pubchem_match.csv',
-    save_filename= 'EPA_CRACMM_mapped'     
+# comptox_extract(
+#     comptox_file = dirpath + 'Hawthorne_data/comptox_batch_search_all.csv',
+#     pubchem_match_file = dirpath + 'Hawthorne_data/EPA_Hawthorne_pubchem_match.csv',
+#     save_filename= 'EPA_CRACMM_mapped'     
+# )
+
+geoschem_mech_mapping(
+    CRACMM_mapped_file = dirpath + 'Hawthorne_data/EPA_CRACMM_mapped.csv',
+    geoschem_data_file = dirpath + 'F0AM-4.3.0.1/Chem/GEOSChem/GC_database_final_UPDATED.csv',
+    save_filename = 'EPA_CRACMM_GEOSCHEM_mapped'
 )
 
