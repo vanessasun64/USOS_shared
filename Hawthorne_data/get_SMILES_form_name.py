@@ -4,7 +4,9 @@ import re
 import yaml
 import inspect 
 import numpy as np 
-import pandas as pd 
+import pandas as pd
+
+from dirpath.py import filepath_source
 
 import pubchempy as pcp
 import rdkit
@@ -19,19 +21,23 @@ from rdkit.Chem import AllChem
 
 def csv_retrieve_compounds(data_filepath):
     df_data = pd.read_csv(data_filepath)
+    species_list = []
+    dirpath = filepath_source('CHPC')
+    print(dirpath)
+    
 
 csv_retrieve_compounds(
-    data_filepath = '/Hawthorne_data/'
+    data_filepath = '/Hawthorne_data/epa_parameters_reference.csv'
 )
 
-cmpd_list=['chlorine'] 
-return_df=False
-quiet=False
-out2yaml=False
-out2excel=False
-savepath='/uufs/chpc.utah.edu/common/home/u6044586/'
-filename='BYU_species_info'
-overwrite=False
+# cmpd_list=['chlorine'] 
+# return_df=False
+# quiet=False
+# out2yaml=False
+# out2excel=False
+# savepath='/uufs/chpc.utah.edu/common/home/u6044586/'
+# filename='BYU_species_info'
+# overwrite=False
 
 def get_chem_info(cmpd_list, return_df:bool=False, quiet:bool=False,
                   out2yaml:bool=False, out2excel:bool=False, 
