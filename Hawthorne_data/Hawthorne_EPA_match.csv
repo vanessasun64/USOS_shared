@@ -1,0 +1,60 @@
+Parameter Code,EPA Species,Parameter Alternate Name,CAS Number,Standard Units
+43102,Total NMOC (non-methane organic compound),,,Parts per billion Carbon
+43141,n-Dodecane,Dodecane,112-40-3,Parts per billion Carbon
+43202,Ethane,METHYLMETHANE,74-84-0,Parts per billion Carbon
+43203,Ethylene,Ethene,74-85-1,Parts per billion Carbon
+43204,Propane,DIMETHYLMETHANE,74-98-6,Parts per billion Carbon
+43205,Propylene,1-Propene,115-07-1,Parts per billion Carbon
+43206,Acetylene,Ethyne,74-86-2,Parts per billion Carbon
+43212,n-Butane,Butane,106-97-8,Parts per billion Carbon
+43214,Isobutane,"Propane, 2-methyl-",75-28-5,Parts per billion Carbon
+43216,trans-2-Butene,,624-64-6,Parts per billion Carbon
+43217,cis-2-Butene,,590-18-1,Parts per billion Carbon
+43218,"1,3-Butadiene",,106-99-0,Parts per billion Carbon
+43220,n-Pentane,Pentane,109-66-0,Parts per billion Carbon
+43221,Isopentane,"Butane, 2-methyl-",78-78-4,Parts per billion Carbon
+43224,1-Pentene,1-Pentene,109-67-1,Parts per billion Carbon
+43226,trans-2-Pentene,,646-04-8,Parts per billion Carbon
+43227,cis-2-Pentene,"2-Pentene, (2Z)-",627-20-3,Parts per billion Carbon
+43230,3-Methylpentane,"Pentane,3-methyl-",96-14-0,Parts per billion Carbon
+43231,n-Hexane,Hexane,110-54-3,Parts per billion Carbon
+43232,n-Heptane,,142-82-5,Parts per billion Carbon
+43233,n-Octane,Octane,111-65-9,Parts per billion Carbon
+43235,n-Nonane,Nonane,111-84-2,Parts per billion Carbon
+43238,n-Decane,Decane,124-18-5,Parts per billion Carbon
+43242,Cyclopentane,PENTAMETHYLENE,287-92-3,Parts per billion Carbon
+43243,Isoprene,"1,3-Butadiene,2-methyl-",78-79-5,Parts per billion Carbon
+43244,"2,2-Dimethylbutane","Butane,2,2-dimethyl-",75-83-2,Parts per billion Carbon
+43245,1-Hexene,,592-41-6,Parts per billion Carbon
+43247,"2,4-Dimethylpentane","Pentane, 2,4-dimethyl-",108-08-7,Parts per billion Carbon
+43248,Cyclohexane,,110-82-7,Parts per billion Carbon
+43249,3-Methylhexane,,589-34-4,Parts per billion Carbon
+43250,"2,2,4-Trimethylpentane","Pentane,2,2,4-trimethyl",540-84-1,Parts per billion Carbon
+43252,"2,3,4-Trimethylpentane",,565-75-3,Parts per billion Carbon
+43253,3-Methylheptane,,589-81-1,Parts per billion Carbon
+43261,Methylcyclohexane,"Cyclohexane, methyl-",108-87-2,Parts per billion Carbon
+43262,Methylcyclopentane,"Cyclopentane,mehtyl-",96-37-7,Parts per billion Carbon
+43263,2-Methylhexane,"Hexane,2-methyl-",591-76-4,Parts per billion Carbon
+43280,1-Butene,1-Butene,106-98-9,Parts per billion Carbon
+43284,"2,3-Dimethylbutane","Butane,2,3-dimethyl-",79-29-8,Parts per billion Carbon
+43285,2-Methylpentane,"Pentane, 2-methyl-",107-83-5,Parts per billion Carbon
+43291,"2,3-Dimethylpentane",,565-59-3,Parts per billion Carbon
+43502,Formaldehyde,OXYMETHYLENE,50-00-0,Parts per billion Carbon
+43954,n-Undecane,Undecane,1120-21-4,Parts per billion Carbon
+43960,2-Methylheptane,,592-27-8,Parts per billion Carbon
+45109,m/p Xylene,,,Parts per billion Carbon
+45201,Benzene,,71-43-2,Parts per billion Carbon
+45202,Toluene,"Benzene, methyl-",108-88-3,Parts per billion Carbon
+45203,Ethylbenzene,"Benzene,ethyl-",100-41-4,Parts per billion Carbon
+45204,o-Xylene,"Benzene,1,2-dimethyl-",95-47-6,Parts per billion Carbon
+45207,"1,3,5-Trimethylbenzene","Benzene, 1,3,5-trimethyl-",108-67-8,Parts per billion Carbon
+45208,"1,2,4-Trimethylbenzene","Benzene,1,2,4-trimethyl-",95-63-6,Parts per billion Carbon
+45209,n-Propylbenzene,"Benzene,propyl-",103-65-1,Parts per billion Carbon
+45210,Isopropylbenzene,"Benzene,(1-methylethyl)-",98-82-8,Parts per billion Carbon
+45211,o-Ethyltoluene,"Benzene,1-ethyl-2-methyl-",611-14-3,Parts per billion Carbon
+45212,m-Ethyltoluene,"Benzene,1-ethyl-3-methyl-",620-14-4,Parts per billion Carbon
+45213,p-Ethyltoluene,"Benzene,1-ethyl-4-methyl-",622-96-8,Parts per billion Carbon
+45218,m-Diethylbenzene,"Benzene, 1,3-diehtyl-",141-93-5,Parts per billion Carbon
+45219,p-Diethylbenzene,"Benzene,1,4-diethyl-",105-05-5,Parts per billion Carbon
+45220,Styrene,"Benzene,ethenyl-",100-42-5,Parts per billion Carbon
+45225,"1,2,3-Trimethylbenzene",,526-73-8,Parts per billion Carbon
