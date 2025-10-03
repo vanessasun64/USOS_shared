@@ -122,3 +122,9 @@ Manually, I added colors to the excel spreadsheet to indicate which ones didn't 
 
 
 
+
+
+-------
+
+GEOS-Chem mapped by database spreadsheet provided by Jessica, matching by inchi using new function in mapping\_functions.py, then manual inputs by Vanessa. Saved to EPA\_CRACMM\_GEOSCHEM\_mapped.csv and excel.
+
