@@ -1,0 +1,189 @@
+ParameterCode,Parameter,MethodCode,RecordingMode,CollectionDescription,AnalysisDescription,CollectionType,Units
+42101,Carbon monoxide,54,Continuous,INSTRUMENTAL,NONDISPERSIVE INFRARED,Carbon Monoxide,Parts per million
+42101,Carbon monoxide,554,Continuous,INSTRUMENTAL,Gas Filter Correlation Thermo Electron 48i-TLE,Carbon Monoxide,Parts per million
+42101,Carbon monoxide,593,Continuous,INSTRUMENTAL,Gas Filter Correlation Teledyne API 300 EU,Carbon Monoxide,Parts per million
+42401,Sulfur dioxide,100,Continuous,INSTRUMENTAL,ULTRAVIOLET FLUORESCENCE,Sulfur Dioxide,Parts per billion
+42401,Sulfur dioxide,600,Continuous,Instrumental,Ultraviolet Fluorescence API 100 EU,Sulfur Dioxide,Parts per billion
+42401,Sulfur dioxide,560,Continuous,INSTRUMENTAL,Pulsed Fluorescent 43C-TLE/43i-TLE,Sulfur Dioxide,Parts per billion
+42401,Sulfur dioxide,600,Continuous,Instrumental,Ultraviolet Fluorescence API 100 EU,Sulfur Dioxide,Parts per billion
+42600,Reactive oxides of nitrogen (NOy),674,Continuous,Instrumental,"Chemiluminescence Thermo Electron 42C-Y, 42i-Y",NOy,Parts per billion
+42600,Reactive oxides of nitrogen (NOy),699,Continuous,Instrumental,Chemiluminescence Teledyne API 200 EU/501,NOy,Parts per billion
+42601,Nitric oxide (NO),74,Continuous,INSTRUMENTAL,CHEMILUMINESCENCE,NO-NO2-NOx,Parts per billion
+42601,Nitric oxide (NO),99,Continuous,INSTRUMENTAL,GAS PHASE CHEMILUMINESCENCE,NO-NO2-NOx,Parts per billion
+42601,Nitric oxide (NO),674,Continuous,Instrumental,"Chemiluminescence Thermo Electron 42C-Y, 42i-Y",NO-NO2-NOx,Parts per billion
+42601,Nitric oxide (NO),699,Continuous,Instrumental,Chemiluminescence Teledyne API 200 EU/501,NO-NO2-NOx,Parts per billion
+42601,Nitric oxide (NO),200,Continuous,Teledyne-API Model 200EUP or T200UP,Photolytic-Chemiluminescence,NO-NO2-NOx,Parts per billion
+42601,Nitric oxide (NO),256,Continuous,Instrumental - Teledyne API - Model N500,Cavity-Attenuated Phase-Shift (CAPS) spectroscopy Nitrogen Oxides Analyzer,NO-NO2-NOx,Parts per billion
+42602,Nitrogen dioxide (NO2),74,Continuous,INSTRUMENTAL,CHEMILUMINESCENCE,NO-NO2-NOx,Parts per billion
+42602,Nitrogen dioxide (NO2),99,Continuous,INSTRUMENTAL,GAS PHASE CHEMILUMINESCENCE,NO-NO2-NOx,Parts per billion
+42602,Nitrogen dioxide (NO2),200,Continuous,Teledyne-API Model 200EUP or T200UP,Photolytic-Chemiluminescence,NO-NO2-NOx,Parts per billion
+42602,Nitrogen dioxide (NO2),256,Continuous,Instrumental - Teledyne API - Model N500,Cavity-Attenuated Phase-Shift (CAPS) spectroscopy Nitrogen Oxides Analyzer,NO-NO2-NOx,Parts per billion
+42603,Oxides of nitrogen (NOx),74,Continuous,INSTRUMENTAL,CHEMILUMINESCENCE,NO-NO2-NOx,Parts per billion
+42603,Oxides of nitrogen (NOx),99,Continuous,INSTRUMENTAL,GAS PHASE CHEMILUMINESCENCE,NO-NO2-NOx,Parts per billion
+42603,Oxides of nitrogen (NOx),200,Continuous,Teledyne-API Model 200EUP or T200UP,Photolytic-Chemiluminescence,NO-NO2-NOx,Parts per billion
+42603,Oxides of nitrogen (NOx),256,Continuous,Instrumental - Teledyne API - Model N500,Cavity-Attenuated Phase-Shift (CAPS) spectroscopy Nitrogen Oxides Analyzer,NO-NO2-NOx,Parts per billion
+42612,NOy - NO,674,Continuous,Instrumental,"Chemiluminescence Thermo Electron 42C-Y, 42i-Y",NOy,Parts per billion
+42612,NOy - NO,699,Continuous,Instrumental,Chemiluminescence Teledyne API 200 EU/501,NOy,Parts per billion
+43000,Sum of PAMS target compounds,200,Continuous,INSTRUMENTAL,SUM OF PEAKS,VOC_GC,Parts per billion Carbon
+43102,Total NMOC (non-methane organic compound),228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43141,n-Dodecane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,BP OIL_GC,Parts per billion Carbon
+43202,Ethane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43203,Ethylene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43204,Propane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43205,Propylene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43206,Acetylene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43212,n-Butane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43214,Isobutane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43216,trans-2-Butene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43217,cis-2-Butene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43218,"1,3-Butadiene",228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43220,n-Pentane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43221,Isopentane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43224,1-Pentene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43226,trans-2-Pentene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43227,cis-2-Pentene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43230,3-Methylpentane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43231,n-Hexane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43232,n-Heptane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43233,n-Octane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43235,n-Nonane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43238,n-Decane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43242,Cyclopentane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43243,Isoprene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43244,"2,2-Dimethylbutane",228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43245,1-Hexene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,BP OIL_GC,Parts per billion Carbon
+43246,2-Methyl-1-pentene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,BP OIL_GC,Parts per billion Carbon
+43247,"2,4-Dimethylpentane",228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43248,Cyclohexane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43249,3-Methylhexane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43250,"2,2,4-Trimethylpentane",228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43252,"2,3,4-Trimethylpentane",228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43253,3-Methylheptane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43256,alpha.-Pinene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43257,beta.-Pinene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43261,Methylcyclohexane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43262,Methylcyclopentane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43263,2-Methylhexane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43280,1-Butene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43284,"2,3-Dimethylbutane",228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43285,2-Methylpentane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43291,"2,3-Dimethylpentane",228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43954,n-Undecane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+43960,2-Methylheptane,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+44201,Ozone,19,Continuous,INSTRUMENTAL,ULTRA VIOLET,Ozone,Parts per million
+44201,Ozone,87,Continuous,INSTRUMENTAL,ULTRA VIOLET ABSORPTION,Ozone,Parts per million
+44201,Ozone,19,Continuous,INSTRUMENTAL,ULTRA VIOLET,Ozone,Parts per million
+44201,Ozone,87,Continuous,INSTRUMENTAL,ULTRA VIOLET ABSORPTION,Ozone,Parts per million
+45109,m/p Xylene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+45201,Benzene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+45202,Toluene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+45203,Ethylbenzene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+45204,o-Xylene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+45207,"1,3,5-Trimethylbenzene",228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+45208,"1,2,4-Trimethylbenzene",228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+45209,n-Propylbenzene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+45210,Isopropylbenzene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+45211,o-Ethyltoluene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+45212,m-Ethyltoluene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+45213,p-Ethyltoluene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+45218,m-Diethylbenzene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+45219,p-Diethylbenzene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+45220,Styrene,228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+45225,"1,2,3-Trimethylbenzene",228,Continuous,preconcentrator trap/thermal desorber - electronic drier,Markes CIA TD/Agilent GC dual FID - carbon response,VOC_GC,Parts per billion Carbon
+61101,Wind Speed - Scalar,50,Continuous,INSTRUMENTAL,ELECTRONIC OR MACHINE AVG.,MET,Knots
+61101,Wind Speed - Scalar,68,Continuous,Instrumental,RM Young Ultrasonic Anemometer Model 86004,MET,Knots
+61102,Wind Direction - Scalar,50,Continuous,INSTRUMENTAL,ELECTRONIC OR MACHINE AVERAGE,MET,Degrees Compass
+61102,Wind Direction - Scalar,68,Continuous,Instrumental,RM Young Ultrasonic Anemometer Model 86004,MET,Degrees Compass
+61102,Wind Direction - Scalar,50,Continuous,INSTRUMENTAL,ELECTRONIC OR MACHINE AVERAGE,MET,Degrees Compass
+61103,Wind Speed - Resultant,20,Continuous,INSTRUMENTAL,VECTOR SUMMATION,MET,Knots
+61104,Wind Direction - Resultant,20,Continuous,INSTRUMENTAL,VECTOR SUMMATION,MET,Degrees Compass
+61301,Mixing Height,128,Continuous,Instrumental,Optical Scattering Ceilometer,MET,Meters
+62101,Outdoor Temperature,40,Continuous,INSTRUMENTAL,ELECTRONIC OR MACHINE AVG.,MET,Degrees Fahrenheit
+62201,Relative Humidity ,12,Continuous,INSTRUMENTAL,HYGROSCOPIC PLASTIC FILM,MET,Percent relative humidity
+63301,Solar radiation,11,Continuous,INSTRUMENTAL,PYRANOMETER,MET,Langleys/minute
+64101,Barometric pressure,11,Continuous,INSTRUMENTAL,ANEROID,MET,Millibars
+68101,Sample Flow Rate- CV,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Calculation,PM25 SPECIATION,Percent
+68101,Sample Flow Rate- CV,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential Air Sampler,Calculation,PM25 SPECIATION,Percent
+68101,Sample Flow Rate- CV,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Calculation,PM25 SPECIATION,Percent
+68101,Sample Flow Rate- CV,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential Air Sampler,Calculation,PM25 SPECIATION,Percent
+68101,Sample Flow Rate- CV,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Calculation,PM25 SPECIATION,Percent
+68102,Sample Volume,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Calculation,PM25 SPECIATION,Cubic meter
+68102,Sample Volume,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential Air Sampler,Calculation,PM25 SPECIATION,Cubic meter
+68102,Sample Volume,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Calculation,PM25 SPECIATION,Cubic meter
+68102,Sample Volume,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential Air Sampler,Calculation,PM25 SPECIATION,Cubic meter
+68102,Sample Volume,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Calculation,PM25 SPECIATION,Cubic meter
+68102,Sample Volume,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential Air Sampler,Calculation,PM25 SPECIATION,Cubic meter
+68102,Sample Volume,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Calculation,PM25 SPECIATION,Cubic meter
+68103,Ambient Min Temperature,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Electronic,PM25 SPECIATION,Degrees Centigrade
+68103,Ambient Min Temperature,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential Air Sampler,Electronic,PM25 SPECIATION,Degrees Centigrade
+68103,Ambient Min Temperature,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Electronic,PM25 SPECIATION,Degrees Centigrade
+68103,Ambient Min Temperature,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential Air Sampler,Electronic,PM25 SPECIATION,Degrees Centigrade
+68103,Ambient Min Temperature,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Electronic,PM25 SPECIATION,Degrees Centigrade
+68104,Ambient Max Temperature,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Electronic,PM25 SPECIATION,Degrees Centigrade
+68104,Ambient Max Temperature,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential Air Sampler,Electronic,PM25 SPECIATION,Degrees Centigrade
+68104,Ambient Max Temperature,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Electronic,PM25 SPECIATION,Degrees Centigrade
+68104,Ambient Max Temperature,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential Air Sampler,Electronic,PM25 SPECIATION,Degrees Centigrade
+68104,Ambient Max Temperature,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Electronic,PM25 SPECIATION,Degrees Centigrade
+68105,Average Ambient Temperature,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Electronic,PM25 SPECIATION,Degrees Centigrade
+68105,Average Ambient Temperature,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential Air Sampler,Electronic,PM25 SPECIATION,Degrees Centigrade
+68105,Average Ambient Temperature,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Electronic,PM25 SPECIATION,Degrees Centigrade
+68105,Average Ambient Temperature,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential Air Sampler,Electronic,PM25 SPECIATION,Degrees Centigrade
+68105,Average Ambient Temperature,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Electronic,PM25 SPECIATION,Degrees Centigrade
+68106,Sample Min Baro Pressure,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Barometric Sensor,PM25 SPECIATION,Millimeters (mercury)
+68106,Sample Min Baro Pressure,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential AIr Sampler,Barometric Sensor,PM25 SPECIATION,Millimeters (mercury)
+68106,Sample Min Baro Pressure,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Barometric Sensor,PM25 SPECIATION,Millimeters (mercury)
+68106,Sample Min Baro Pressure,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential AIr Sampler,Barometric Sensor,PM25 SPECIATION,Millimeters (mercury)
+68106,Sample Min Baro Pressure,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Barometric Sensor,PM25 SPECIATION,Millimeters (mercury)
+68107,Sample Max Baro Pressure,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Barometric Sensor,PM25 SPECIATION,Millimeters (mercury)
+68107,Sample Max Baro Pressure,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential Sampler,Barometric Sensor,PM25 SPECIATION,Millimeters (mercury)
+68107,Sample Max Baro Pressure,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Barometric Sensor,PM25 SPECIATION,Millimeters (mercury)
+68107,Sample Max Baro Pressure,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential Sampler,Barometric Sensor,PM25 SPECIATION,Millimeters (mercury)
+68107,Sample Max Baro Pressure,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Barometric Sensor,PM25 SPECIATION,Millimeters (mercury)
+68108,Average Ambient Pressure,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Barometric Sensor,PM25 SPECIATION,Millimeters (mercury)
+68108,Average Ambient Pressure,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential Air Sampler,Barometric Sensor,PM25 SPECIATION,Millimeters (mercury)
+68108,Average Ambient Pressure,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Barometric Sensor,PM25 SPECIATION,Millimeters (mercury)
+68108,Average Ambient Pressure,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential Air Sampler,Barometric Sensor,PM25 SPECIATION,Millimeters (mercury)
+68108,Average Ambient Pressure,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Barometric Sensor,PM25 SPECIATION,Millimeters (mercury)
+68109,Elapsed Sample Time,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Calculation,PM2.5 MASS/QA,Minutes
+68109,Elapsed Sample Time,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential AIr Sampler,Calculation,PM2.5 MASS/QA,Minutes
+68109,Elapsed Sample Time,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Calculation,PM2.5 MASS/QA,Minutes
+68109,Elapsed Sample Time,145,Intermittent,R & P Model 2025 PM-2.5 FEM Sequential AIr Sampler,Calculation,PM2.5 MASS/QA,Minutes
+68109,Elapsed Sample Time,118,Intermittent,R & P Model 2025 PM2.5 Sequent,Calculation,PM2.5 MASS/QA,Minutes
+81102,PM10 Total 0-10um STP,98,Intermittent,R&P Model 2000 Partisol,GRAVIMETRIC,PM10 Filter,Micrograms/cubic meter (25 C)
+81102,PM10 Total 0-10um STP,127,Intermittent,R - P Co Partisol Model 2025,Gravimetric,PM10 Filter,Micrograms/cubic meter (25 C)
+81102,PM10 Total 0-10um STP,98,Intermittent,R&P Model 2000 Partisol,GRAVIMETRIC,PM10 Filter,Micrograms/cubic meter (25 C)
+81102,PM10 Total 0-10um STP,127,Intermittent,R - P Co Partisol Model 2025,Gravimetric,PM10 Filter,Micrograms/cubic meter (25 C)
+81102,PM10 Total 0-10um STP,226,Continuous,Met One E-BAM PLUS,Beta Attenuation,Continuous PM10,Micrograms/cubic meter (25 C)
+85101,PM10 - LC,98,Intermittent,R&P Model 2000 Partisol,GRAVIMETRIC,PM10 Filter,Micrograms/cubic meter (LC)
+85101,PM10 - LC,127,Intermittent,R - P Co Partisol Model 2025,Gravimetric,PM10 Filter,Micrograms/cubic meter (LC)
+85101,PM10 - LC,98,Intermittent,R&P Model 2000 Partisol,GRAVIMETRIC,PM10 Filter,Micrograms/cubic meter (LC)
+85101,PM10 - LC,127,Intermittent,R - P Co Partisol Model 2025,Gravimetric,PM10 Filter,Micrograms/cubic meter (LC)
+85101,PM10 - LC,98,Intermittent,R&P Model 2000 Partisol,GRAVIMETRIC,PM10 Filter,Micrograms/cubic meter (LC)
+85101,PM10 - LC,127,Intermittent,R - P Co Partisol Model 2025,Gravimetric,PM10 Filter,Micrograms/cubic meter (LC)
+85101,PM10 - LC,98,Intermittent,R&P Model 2000 Partisol,GRAVIMETRIC,PM10 Filter,Micrograms/cubic meter (LC)
+85101,PM10 - LC,127,Intermittent,R - P Co Partisol Model 2025,Gravimetric,PM10 Filter,Micrograms/cubic meter (LC)
+85101,PM10 - LC,790,Continuous,Virtual Impactor,FDMS-Gravimetric 1405-DF,Continuous PM10,Micrograms/cubic meter (LC)
+85101,PM10 - LC,790,Continuous,Virtual Impactor,FDMS-Gravimetric 1405-DF,Continuous PM10,Micrograms/cubic meter (LC)
+85101,PM10 - LC,150,Continuous,T A Series FH 62 C14 Continuous,Gravimetric,Continuous PM10,Micrograms/cubic meter (LC)
+85129,Lead PM10 LC FRM/FEM,811,Intermittent,Thermo/R & P 2025 PM10,X-ray Fluorescence (EDXRF) FRM,Lead,Micrograms/cubic meter (LC)
+86101,PM10-2.5 - Local Conditions,176,Intermittent,Thermo Scientific Partisol-Plus Model 2025 Sequential Sampler Pair,Paired Gravimetric,PM10-25 SPECIATION,Micrograms/cubic meter (LC)
+86101,PM10-2.5 - Local Conditions,208,Continuous,Thermo Scientific 14015-D,Gravimetric,PM10-25 SPECIATION,Micrograms/cubic meter (LC)
+88101,PM2.5 - Local Conditions,118,Intermittent,R & P Model 2025 PM2.5 Sequential w/WINS,GRAVIMETRIC,PM25 Filter,Micrograms/cubic meter (LC)
+88101,PM2.5 - Local Conditions,145,Intermittent,R & P Model 2025 PM-2.5 Sequential Air Sampler w/VSCC,Gravimetric,PM25 Filter,Micrograms/cubic meter (LC)
+88101,PM2.5 - Local Conditions,118,Intermittent,R & P Model 2025 PM2.5 Sequential w/WINS,GRAVIMETRIC,PM25 Filter,Micrograms/cubic meter (LC)
+88101,PM2.5 - Local Conditions,145,Intermittent,R & P Model 2025 PM-2.5 Sequential Air Sampler w/VSCC,Gravimetric,PM25 Filter,Micrograms/cubic meter (LC)
+88101,PM2.5 - Local Conditions,118,Intermittent,R & P Model 2025 PM2.5 Sequential w/WINS,GRAVIMETRIC,PM25 Filter,Micrograms/cubic meter (LC)
+88101,PM2.5 - Local Conditions,145,Intermittent,R & P Model 2025 PM-2.5 Sequential Air Sampler w/VSCC,Gravimetric,PM25 Filter,Micrograms/cubic meter (LC)
+88101,PM2.5 - Local Conditions,118,Intermittent,R & P Model 2025 PM2.5 Sequential w/WINS,GRAVIMETRIC,PM25 Filter,Micrograms/cubic meter (LC)
+88101,PM2.5 - Local Conditions,145,Intermittent,R & P Model 2025 PM-2.5 Sequential Air Sampler w/VSCC,Gravimetric,PM25 Filter,Micrograms/cubic meter (LC)
+88101,PM2.5 - Local Conditions,184,Continuous,Thermo Scientific Model 5030 SHARP w/VSCC,Beta Attenuation,Continuous PM25,Micrograms/cubic meter (LC)
+88101,PM2.5 - Local Conditions,184,Continuous,Thermo Scientific Model 5030 SHARP w/VSCC,Beta Attenuation,Continuous PM25,Micrograms/cubic meter (LC)
+88101,PM2.5 - Local Conditions,182,Continuous,Thermo Scientific TEOM 1405-DF Dichotomous FDMS,FDMS Gravimetric,Continuous PM25,Micrograms/cubic meter (LC)
+88101,PM2.5 - Local Conditions,181,Continuous,Thermo Scientific TEOM 1400 FDMS or 1405 8500C FDMS w/VSCC,FDMS Gravimetric,Continuous PM25,Micrograms/cubic meter (LC)
+88501,PM2.5 Raw Data,723,Continuous,PM2.5 WINS w/No Correction Factor,TEOM Gravimetric 30 deg C,Continuous PM25,Micrograms/cubic meter (LC)
+88501,PM2.5 Raw Data,721,Continuous,PM2.5 WINS w/No Correction Factor,TEOM Gravimetric 50 deg C,Continuous PM25,Micrograms/cubic meter (LC)
+88501,PM2.5 Raw Data,723,Continuous,PM2.5 WINS w/No Correction Factor,TEOM Gravimetric 30 deg C,Continuous PM25,Micrograms/cubic meter (LC)
+88501,PM2.5 Raw Data,760,Continuous,PM2.5 SCC,FDMS-Gravimetric,Continuous PM25,Micrograms/cubic meter (LC)
+88502,Acceptable PM2.5 AQI & Speciation Mass,781,Intermittent,SINGLE-FILTR WINS 2.5UM IMPACT,GRAVIMETRIC,PM25 Filter,Micrograms/cubic meter (LC)
+88502,Acceptable PM2.5 AQI & Speciation Mass,760,Continuous,PM2.5 SCC,FDMS-Gravimetric,Continuous PM25,Micrograms/cubic meter (LC)
+88502,Acceptable PM2.5 AQI & Speciation Mass,760,Continuous,PM2.5 SCC,FDMS-Gravimetric,Continuous PM25,Micrograms/cubic meter (LC)
