@@ -1,7 +1,7 @@
 clear all; close all; 
 
 %Load run
-pth_win = "C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.3.0.1\Runs\USOS_8_6_2024\Run29\GEOS-Chem\USOS_8_6_2024_run.mat";
+pth_win = "C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.4.2\Runs\USOS_8_6_2024\Run28\USOS_8_6_2024_run.mat";
 load(pth_win);
 
 %Load USOS observational data
@@ -11,15 +11,18 @@ foam_end=datetime('08/07/2024','InputFormat','MM/dd/yyyy');
 yr=year(foam_start);mon=month(foam_start);dy=day(foam_start); 
 t_start=datetime(yr,mon,dy,0,0,0);
 t_end=datetime(yr,mon,dy,23,30,0);
-[USOS, sun]= get_subset_USOS(t_start, t_end);
+[USOS, sun]= get_subset_USOS_halfhour(t_start, t_end);
+
+%%
 
 figure
-PlotConc('O3', S); hold on 
+PlotConc('O3', S); hold on
 plot(S.Time, USOS.O3_ppbv, 'k')
 legend('Model','Data')
 purtyPlot
 
-O3rates = PlotRates('O3',S,5,'unit','ppb_h','sumEq',1);
+%%
+O3rates = PlotRates('O3',S,7,'unit','ppb_h','sumEq',1);
 O3netRate = sum(sum(O3rates.Prod,2) + sum(O3rates.Loss,2),2); %Net Ozone
 
 figure
@@ -50,6 +53,19 @@ RO2_NO_conversion_rates = S.Chem.Rates(:,iRO2_NO_conversion) .* 3600; %get all t
 RO2_NO_conversion_multiply_rates = RO2_NO_conversion_rates .* cell_coeffs_RO2_NO_conversion; %multiply stoic coeff by each rxn rate for RO2+NO rxns
 RO2_NO_conversion_sum_rates = sum(RO2_NO_conversion_multiply_rates,2); %sum all RO2 species together to get total rate for RO2+NO -> RO + NO2
 
+figure
+plot(S.Time,O3netRate,'k-',S.Time,RO2_NO_conversion_rates,'r--')
+xlabel('Hour of Day')
+ylabel('Ozone Production (ppb h^-^1)')
+legend('O_3 Net','XO_2 + NO')
+purtyPlot
+
+figure
+plot(S.Time,O3netRate,'k-',S.Time,RO2_NO_conversion_sum_rates,'r--')
+xlabel('Hour of Day')
+ylabel('Ozone Production (ppb h^-^1)')
+legend('O_3 Net','XO_2 + NO')
+purtyPlot
 %%
 %Here I was trying to compare our calculated RO2+NO -> RO + NO2 rate to see
 %if it matched the RO2+NO in the mechanism, but the RO2+NO rxn in the
@@ -131,3 +147,64 @@ xlabel('Time (hrs)');
 ylabel('OPE');
 title('Modeled OPE');
 purtyPlot
+
+%%
+% Methane
+% 2 Aldehydes
+% 3 Ethane, Alkanes
+% 4 Ethane, Alkanes
+% 5 Alkanes
+% 6 Alkenes
+% 7 Alkanes
+% 8 Alkanes/Alkenes?
+% 9 Dienes
+% 10 Aldehydes
+% 11 Aldehydes? Dienes?
+% 12 Alkanes
+% 13 Alkanes
+% 14 Isoprene, Monoterpenes
+% 15 Alkanes/Alkenes?
+% 16 Ketones
+% 17 Ketones
+% 18 Alkanes
+% 19 Alkenes
+% 20 Alkanes/Aldehydes
+% 21 Ketones
+% 22 Aldehydes
+% 23 Monoterpenes
+% Monoterpenes
+% Monoterpenes
+% Monoterpenes
+% Monoterpenes
+% Monoterpenes
+% Monoterpenes
+% Monoterpenes
+% Monoterpenes
+% 32 Isoprene
+% 33 Isoprene
+% 34 Isoprene
+% 35 Isoprene
+% 36 Isoprene
+% 37 Isoprene
+% 38 Isoprene
+% 39 Isoprene
+% 40 Isoprene
+% 41 Isoprene
+% 42 Isoprene
+% 43 Isoprene
+% 44 Isoprene
+% 45 Isoprene
+% 46 Isoprene
+% 47 Isoprene
+% 48 Isoprene
+% 49 Aldehydes
+% 50 Aldehydes
+% 51 Aldehydes
+% 52 Aldehydes
+% 53 Aldehydes
+% 54 Aromatics
+% 55 Ethene
+% 56 Aromatics
+% 57 Aromatics
+% 58 Aldehydes
+% 59 Aromatics

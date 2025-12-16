@@ -1,0 +1,55 @@
+Disagreements with Nell's F0AM setup
+* no beta-pinene WAS data used
+* using WAS data for isoprene (I'm using PTR)
+* not constraining HNO3? (probably bc it's secondary)
+* using 0 to replace negative values for styrene and benzaldehyde
+* "using HCHO from 1 min UDAQ data with ML data filled in on times when there is no UDAQ data"
+
+---
+I want to run the identical setup to Nell.
+
+I am missing Formaldehyde data. I need to email Nell and Bart for their respective datasets at 1 min UDAQ formaldehyde at Hawthorne
+- Ask Nell why she didn't use the beta pinene iWAS data
+
+Next Steps
+Check on 15 min interpolation for PTR species for:
+Isoprene
+Benzene
+Toluene
+Styrene
+Methanol
+Acetaldehyde
+Ethanol
+Acrolein
+Benzaldehyde
+MVK_MACR
+ 
+Check on 15 min interpolation for iWAS species for: 
+Alpha pinene
+nButane
+iButane
+nPentane
+iPentane
+nHexane
+nOctane
+nNonane
+nDecane
+Ethane
+Ethene
+Propane
+Propene
+t2Butene
+c2Butene
+x1_Butene
+x2_MethylPentane
+Ethyl
+m_p_Xylene
+o_Xylene
+C2Cl4
+Furan
+
+Check on 15 min interpolation for CIMS species for:
+HCOOH
+Br2
+Cl2
+ISOPN

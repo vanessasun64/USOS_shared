@@ -1,0 +1,64 @@
+clear all 
+
+datapath_mac='/Users/vanessasun/Documents/phd/utah/research/USOS_shared/F0AM-4.3.0.1/Campaign_Data/matlab_merge/';
+datapath_win = 'C:\Users\u1545774\Documents\GitHub\USOS_shared\F0AM-4.3.0.1\Campaign_Data\matlab_merge\';
+parkeddir_mac = 'parked/';
+parkeddir_win = 'parked\';
+drivingdir_mac = 'driving/';
+drivingdir_win = 'driving\';
+originaldir_mac = 'original/';
+originaldir_win = 'original\';
+correcteddir_mac = 'corrected/';
+correcteddir_win = 'corrected\';
+% originalmerge = 'original_merge/';
+matlabstructs_mac = 'matlab_structs/';
+matlabstructs_win = 'matlab_structs\';
+
+udaq_original_win = 'udaq\original\';
+udaq_corrected_win = 'udaq\corrected\';
+
+d=dir(fullfile(datapath_win,parkeddir_win,originaldir_win,'*.mat')); %select parkeddir or drivingdir as needed
+for i=1:numel(d)
+  mat_file = fullfile(datapath_win,parkeddir_win,originaldir_win,d(i).name); %select parkeddir or drivingdir as needed
+  filename_with_extension = d(i).name;
+  filename_without_extension = extractBefore(filename_with_extension, ".");
+  
+  load(mat_file);
+  disp(['Now loading file:', mat_file]);
+  cols=fieldnames(USOS); 
+  for nm=1:length(cols)
+    c=cols(nm);
+    if isa(USOS.(c{1}),'char') ==1 % Turn char arrays into cell arrays. 
+        USOS.(c{1})=cellstr(USOS.(c{1}));
+    end
+    if size(USOS.(c{1}))==[1,length(USOS.(c{1}))] % Make everything Nx1 not 1xN 
+        USOS.(c{1})=USOS.(c{1})'; % So that all our indicies line up later... 
+    end
+  end
+  add_closing = '_struct_for_MATLAB.mat';
+  save(strcat(datapath_win,parkeddir_win,correcteddir_win, filename_without_extension,add_closing),'USOS'); %select parkeddir or drivingdir as needed
+end
+
+d=dir(fullfile(datapath_win,udaq_original_win,'*.mat')); %select parkeddir or drivingdir as needed
+for i=1:numel(d)
+  mat_file = fullfile(datapath_win,udaq_original_win,d(i).name); %select parkeddir or drivingdir as needed
+  filename_with_extension = d(i).name;
+  filename_without_extension = extractBefore(filename_with_extension, ".");
+  
+  load(mat_file);
+  disp(['Now loading file:', mat_file]);
+  cols=fieldnames(UDAQ); 
+  for nm=1:length(cols)
+    c=cols(nm);
+    if isa(UDAQ.(c{1}),'char') ==1 % Turn char arrays into cell arrays. 
+        UDAQ.(c{1})=cellstr(UDAQ.(c{1}));
+    end
+    if size(UDAQ.(c{1}))==[1,length(UDAQ.(c{1}))] % Make everything Nx1 not 1xN 
+        UDAQ.(c{1})=UDAQ.(c{1})'; % So that all our indicies line up later... 
+    end
+  end
+  add_closing = '_struct_for_MATLAB.mat';
+  save(strcat(datapath_win,udaq_corrected_win, filename_without_extension,add_closing),'UDAQ'); %select parkeddir or drivingdir as needed
+end
+
+clear all 

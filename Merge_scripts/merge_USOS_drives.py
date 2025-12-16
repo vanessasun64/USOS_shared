@@ -15,7 +15,7 @@ import re
 import glob
 from datetime import datetime, timedelta
 
-sys.path.insert(0,'/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_merges/icartt_read_and_merge/')
+sys.path.insert(0,'/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/Merge_scripts/icartt_read_and_merge/')
 from icartt_read_and_merge import icartt_merger
 #Note, line above has changed from importing ict to importing icartt_merger so the otter/flight functions need to be changed to reflect this and have  as of June 2025, 
 #since Vanessa is only using parked and drives data
@@ -103,22 +103,23 @@ def merge_drives(res='10s',merge_path=''):
         
     return 
 
-def merge_parked(res='30min',merge_path=''):
+def merge_parked(res,merge_path=''):
     # Path to raw USOS Mobile lab data for each: 
-    usos_path=  '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_merges/R0/CSL_MobileLab_Parked/raw/'
+    usos_path=  '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/CampaignData_and_Merges/R0/CSL_MobileLab_Parked/'
     
     # Set Merged data path: 
     if len(merge_path)==0: 
         merge_path=os.path.join(usos_path,'/merged/',res,'/')
         print('Merged ', res, 'data will be saved at: \n\t', merge_path) 
-        
+    if res=='15min': 
+        interval_s=15*60 # 15mins * 60s = 1800s. 
     if res=='30min': 
         interval_s=30*60 # 30mins * 60s = 1800s. 
     elif res=='1hr': 
         interval_s=60*60 # 60mins * 60s = 3600s. 
    
     # Get a list of all dates of drives: 
-    drive_dates=list_directories(usos_path)
+    drive_dates=list_directories(usos_path + 'raw/')
     
     # Loop over each drive
     for drive_i in drive_dates: 
@@ -127,10 +128,10 @@ def merge_parked(res='30min',merge_path=''):
         master_timeline_i= get_master_timeline(drive_i, interval_s)
     
         # Merge individual data beside one another for this date: 
-        ds, meta, filename= icartt_merger(data_directory=usos_path+drive_i+'/',
+        ds, meta, filename= icartt_merger(data_directory=usos_path+'raw/'+drive_i+'/',
                                               mode_input="Merge_Beside",
                                               master_timeline=master_timeline_i,
-                                              output_directory='/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_merges/R0/CSL_MobileLab_Parked/merged/',
+                                              output_directory='/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/CampaignData_and_Merges/R0/CSL_MobileLab_Parked/merged/',
                                               output_filename= res+'/USOS_'+res+'_Merged_Parked_'+drive_i, # What output file will be named... 
                                               prefix_instr_name=False, # instr name in prefix already! 
                                               units_in_data_info= False,
@@ -309,7 +310,7 @@ def merge_twin_otter(avg_step='10s'):
     return ds
 
 # # Merge all parked indv icartts into single day files w/ 30min average: 
-merge_parked(res='1hr')
+merge_parked(res='15min')
 
 # # Merge all parked indv icartts into single day files w/ 10s average: 
 #merge_drives(res='10s')

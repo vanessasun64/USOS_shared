@@ -18,6 +18,7 @@ from datetime import datetime, timedelta
 sys.path.append('/uufs/chpc.utah.edu/common/home/u6044586/python_scripts/modules/pyMCM/')
 from pyMCM_utils import dict2df
 
+#MAKE SURE TO RUN iwas_convert.py AFTER RUNNING THIS, FOR UPDATED iWAS MEASUREMENTS
 
 def make_initial_var_info_spreadsheet(file, savepath): 
     ds=xr.open_dataset(file)
@@ -277,10 +278,11 @@ def revise_merges_n_add_better_meta(rev_spreadsheet, rev, type_mrg, time_mrg):
     meta_df=query_rdkit_info(meta_df,'InChI',add_functional_groups=False)
     
     # Get list of all raw merged .nc files: 
-    data_dir='/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_merges/'
+    data_dir='/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/CampaignData_and_Merges/'
     dirpath=os.path.join(data_dir, rev, type_mrg, 'merged', time_mrg) 
     # 07072025: Vanessa added sorting because file list was out of order, messing up the dates for the combined merge
     file_list= [os.path.join(dirpath,f) for f in sorted(os.listdir(dirpath)) if f.endswith('.nc')]
+    print(file_list)
     
     # Initialize list to hold all data for "master merge": 
     all_ds=[]
@@ -400,12 +402,12 @@ def revise_merges_n_add_better_meta(rev_spreadsheet, rev, type_mrg, time_mrg):
                         del ds_out[value].attrs[var]
 
         
-        # Convert temp froôm C to K (despite being named correctly already is actually in C).  
+        # Convert temp from C to K (despite being named correctly already is actually in C).  
         ds_out['Temp_K'] = ds_out['Temp_K'] +273.15 
         ds_out['Temp_K'].attrs['UNITS']='degrees Kelvin (K)'
         
         # Save revised merge as its own dataset in same dir/same file name, but with 'rev_' in front of the dirpath. 
-        savepath=os.path.join('/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_merges/', rev, type_mrg, 'merged', 'rev_'+time_mrg)
+        savepath=os.path.join('/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/CampaignData_and_Merges/', rev, type_mrg, 'merged', 'rev_'+time_mrg)
 
         # Check if the directory exists
         if not os.path.exists(savepath):
@@ -448,11 +450,11 @@ def revise_merges_n_add_better_meta(rev_spreadsheet, rev, type_mrg, time_mrg):
 # '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_merges/revised_USOS_parked_vars_updated_062025.xlsx'
 
 # Read in revised spreadsheet with meta data updated / more readable & includes INCHIs of all data: 
-parked_rev_spreadsheet='/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_merges/revised_USOS_parked_vars_updated_062025_r1_was.xlsx'
+parked_rev_spreadsheet='/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/Merge_spreadsheets/revised_USOS_parked_vars_updated_062025_r1_was.xlsx'
 
 # # Call function that does the heavy lifting to revise & combine all merges: 
-revise_merges_n_add_better_meta(parked_rev_spreadsheet, rev='R0', type_mrg='CSL_MobileLab_Parked', time_mrg='1hr')
-
+revise_merges_n_add_better_meta(parked_rev_spreadsheet, rev='R0', type_mrg='CSL_MobileLab_Parked', time_mrg='15min')
+#MAKE SURE TO RUN iwas_convert.py AFTER RUNNING THIS, FOR UPDATED iWAS MEASUREMENTS
   
 # ###############################################################################
 # #    Revise 1min Driving USOS merges: 

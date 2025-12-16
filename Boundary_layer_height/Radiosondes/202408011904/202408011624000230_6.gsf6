@@ -1,0 +1,1175 @@
+<?xml version="1.0"?>
+<SIM xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SENSORDATA>
+    <Frame>
+      <FrameTime>8306230.5895000007</FrameTime>
+      <FrameCounter>36994</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.201509887378</ClockDrift>
+      <BitDrift>4093.623703896626</BitDrift>
+      <MeasValue Value="-50.830514794126117" StatusArgc="0" Status="16384" />
+      <Sensor>2</Sensor>
+      <SensorId>79</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2682.4002275717967</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-6.8307119031662245</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8306431.9041000009</FrameTime>
+      <FrameCounter>36995</FrameCounter>
+      <GPSFrameCounter>8211</GPSFrameCounter>
+      <ClockDrift>395.20051916202067</ClockDrift>
+      <BitDrift>4093.7240977917081</BitDrift>
+      <MeasValue Value="-6.520506844863494" StatusArgc="0" Status="16384" />
+      <Sensor>4</Sensor>
+      <SensorId>7</SensorId>
+      <SatMap>-2067611008</SatMap>
+      <MeasData>3061.1568086169773</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>3</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-5.8116068077292171</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <POSITION Latit="40.7618533" Longit="-111.7921608" PosX="-1801795" PosY="-4506597" PosZ="4155824" Altit="0" Altit_Eli="20498.5" Altit_MSL="20517.2" Altitude="0" EHPE="2.1" EHVE="0" EVPE="3.6" VelX="0" VelY="0" VelZ="0" sog="6.58" cog="343.67" climb_rate="2.65" nav_type="516" />
+      <UTCSec>0</UTCSec>
+      <UTCTSec>42998</UTCTSec>
+      <SATS prn1="23" prn2="18" prn3="10" prn4="48" prn5="27" prn6="46" prn7="15" prn8="32" prn9="24" prn10="8" prn11="16" prn12="13" />
+      <CHANNEL cn01="38" cn02="39" cn03="40" cn04="37" cn05="39" cn06="38" cn07="39" cn08="37" cn09="37" cn010="36" cn011="38" cn012="34" />
+      <SatellitesInView>17</SatellitesInView>
+    </Frame>
+    <Frame>
+      <FrameTime>8306633.2116</FrameTime>
+      <FrameCounter>36996</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.20259932037948</ClockDrift>
+      <BitDrift>4093.8563020478932</BitDrift>
+      <MeasValue Value="-59.035759518601175" StatusArgc="0" Status="16384" />
+      <Sensor>0</Sensor>
+      <SensorId>69</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2842.6616119664532</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-5.7924788699564909</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <CORR Status="0" ARG="0" VALUE="-0.63451480247737668" ELEVATION="66.05" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8306834.7648</FrameTime>
+      <FrameCounter>36997</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.20235492306955</ClockDrift>
+      <BitDrift>4093.964427024865</BitDrift>
+      <MeasValue Value="-4.3186579663922657" StatusArgc="0" Status="16384" />
+      <Sensor>1</Sensor>
+      <SensorId>68</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>17393.704549073729</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-7.3424994384180176</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8307042.1836</FrameTime>
+      <FrameCounter>36998</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.20232160363452</ClockDrift>
+      <BitDrift>4094.0747385135555</BitDrift>
+      <MeasValue Value="-50.802884837640732" StatusArgc="0" Status="16384" />
+      <Sensor>2</Sensor>
+      <SensorId>79</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2686.52923018902</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-4.5731351860948806</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8307344.9581</FrameTime>
+      <FrameCounter>36999</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.20475387631757</ClockDrift>
+      <BitDrift>4094.2105928275646</BitDrift>
+      <MeasValue Value="4455" StatusArgc="0" Status="16384" />
+      <Sensor>5</Sensor>
+      <SensorId>70</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>4455</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-4.3743789497694054</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-95.2" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8307546.4039</FrameTime>
+      <FrameCounter>37000</FrameCounter>
+      <GPSFrameCounter>8212</GPSFrameCounter>
+      <ClockDrift>395.20332607349246</ClockDrift>
+      <BitDrift>4094.3064581213816</BitDrift>
+      <MeasValue Value="-59.071732518373977" StatusArgc="0" Status="16384" />
+      <Sensor>0</Sensor>
+      <SensorId>69</SensorId>
+      <SatMap>-2067611008</SatMap>
+      <MeasData>2836.319570674284</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>3</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-5.8906314280633056</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <CORR Status="0" ARG="0" VALUE="-0.63451480247737668" ELEVATION="66.05" />
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-95.2" ANTENNA="1" />
+      <POSITION Latit="40.7619093" Longit="-111.7921995" PosX="-1801797" PosY="-4506594" PosZ="4155830" Altit="0" Altit_Eli="20501.3" Altit_MSL="20520" Altitude="0" EHPE="2.1" EHVE="0" EVPE="3.6" VelX="0" VelY="0" VelZ="0" sog="7.6" cog="324.92" climb_rate="2.78" nav_type="516" />
+      <UTCSec>0</UTCSec>
+      <UTCTSec>43998</UTCTSec>
+      <SATS prn1="23" prn2="18" prn3="10" prn4="48" prn5="27" prn6="46" prn7="15" prn8="32" prn9="24" prn10="8" prn11="16" prn12="13" />
+      <CHANNEL cn01="38" cn02="39" cn03="40" cn04="36" cn05="39" cn06="36" cn07="36" cn08="36" cn09="37" cn010="37" cn011="37" cn012="29" />
+      <SatellitesInView>17</SatellitesInView>
+    </Frame>
+    <Frame>
+      <FrameTime>8307747.3878000006</FrameTime>
+      <FrameCounter>37001</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.2004335294958</ClockDrift>
+      <BitDrift>4094.3871474869647</BitDrift>
+      <MeasValue Value="-4.3240197409140819" StatusArgc="0" Status="16384" />
+      <Sensor>1</Sensor>
+      <SensorId>68</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>17393.906519297794</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-6.1638535248675552</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-95.2" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8307948.6352</FrameTime>
+      <FrameCounter>37002</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.1995684509838</ClockDrift>
+      <BitDrift>4094.4888409105247</BitDrift>
+      <MeasValue Value="-50.777484453449858" StatusArgc="0" Status="16384" />
+      <Sensor>2</Sensor>
+      <SensorId>79</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2690.3230308827215</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-1.7333484692552692</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-98.3" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8308250.1241000006</FrameTime>
+      <FrameCounter>37003</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19923949719197</ClockDrift>
+      <BitDrift>4094.5960885520867</BitDrift>
+      <MeasValue Value="-6.8199999999999932" StatusArgc="0" Status="16384" />
+      <Sensor>6</Sensor>
+      <SensorId>71</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>26633</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-0.0029162849879057493</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-98.3" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8308451.5463000005</FrameTime>
+      <FrameCounter>37004</FrameCounter>
+      <GPSFrameCounter>8213</GPSFrameCounter>
+      <ClockDrift>395.20177477863507</ClockDrift>
+      <BitDrift>4094.7330126944116</BitDrift>
+      <BitError B0="6" B1="1" B2="0" />
+      <MeasValue Value="-59.121548487141816" StatusArgc="0" Status="16384" />
+      <Sensor>0</Sensor>
+      <SensorId>69</SensorId>
+      <SatMap>-2067611008</SatMap>
+      <MeasData>2827.575941270502</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>3</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-3.4027005861480877</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <CORR Status="0" ARG="0" VALUE="-0.63462652645588769" ELEVATION="66.06" />
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-98.3" ANTENNA="1" />
+      <POSITION Latit="40.7619623" Longit="-111.792258" PosX="-1801801" PosY="-4506591" PosZ="4155837" Altit="0" Altit_Eli="20504.1" Altit_MSL="20522.8" Altitude="0" EHPE="2.1" EHVE="0" EVPE="3.6" VelX="0" VelY="0" VelZ="0" sog="7.81" cog="315.47" climb_rate="2.23" nav_type="516" />
+      <UTCSec>0</UTCSec>
+      <UTCTSec>44998</UTCTSec>
+      <SATS prn1="23" prn2="18" prn3="10" prn4="48" prn5="27" prn6="46" prn7="15" prn8="32" prn9="24" prn10="8" prn11="16" prn12="13" />
+      <CHANNEL cn01="38" cn02="39" cn03="40" cn04="36" cn05="39" cn06="36" cn07="36" cn08="36" cn09="37" cn010="37" cn011="37" cn012="29" />
+      <SatellitesInView>17</SatellitesInView>
+    </Frame>
+    <Frame>
+      <FrameTime>8308652.8988000005</FrameTime>
+      <FrameCounter>37005</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.20168425686211</ClockDrift>
+      <BitDrift>4094.8427312590516</BitDrift>
+      <MeasValue Value="-4.3186579663922657" StatusArgc="0" Status="16384" />
+      <Sensor>1</Sensor>
+      <SensorId>68</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>17393.704549073729</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-4.879136655481231</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-98.3" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8308854.2235</FrameTime>
+      <FrameCounter>37006</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19818313832911</ClockDrift>
+      <BitDrift>4094.9171102607625</BitDrift>
+      <MeasValue Value="-50.754706468176245" StatusArgc="0" Status="16384" />
+      <Sensor>2</Sensor>
+      <SensorId>79</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2693.7289090019772</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-4.0726504652772491</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-97.1" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8309055.6216</FrameTime>
+      <FrameCounter>37007</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19741501212161</ClockDrift>
+      <BitDrift>4095.0198064590045</BitDrift>
+      <MeasValue Value="8272" StatusArgc="0" Status="16384" />
+      <Sensor>7</Sensor>
+      <SensorId>72</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>8272</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-5.6095467310895133</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-97.1" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8309357.5966000007</FrameTime>
+      <FrameCounter>37008</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19983585802646</ClockDrift>
+      <BitDrift>4095.1555471214765</BitDrift>
+      <MeasValue Value="-59.141214386228924" StatusArgc="0" Status="16384" />
+      <Sensor>0</Sensor>
+      <SensorId>69</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2824.1398107788409</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-5.4596609744875471</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <CORR Status="0" ARG="0" VALUE="-0.6347245604666133" ELEVATION="66.06" />
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-97.1" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8309560.0671000006</FrameTime>
+      <FrameCounter>37009</FrameCounter>
+      <GPSFrameCounter>8214</GPSFrameCounter>
+      <ClockDrift>395.20149534335349</ClockDrift>
+      <BitDrift>4095.2833995254068</BitDrift>
+      <MeasValue Value="-4.3240197409140819" StatusArgc="0" Status="16384" />
+      <Sensor>1</Sensor>
+      <SensorId>68</SensorId>
+      <SatMap>-2067611008</SatMap>
+      <MeasData>17393.906519297794</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>3</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-6.0625826363548434</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-97.1" ANTENNA="1" />
+      <POSITION Latit="40.7620063" Longit="-111.7923196" PosX="-1801806" PosY="-4506588" PosZ="4155842" Altit="0" Altit_Eli="20506.8" Altit_MSL="20525.5" Altitude="0" EHPE="2.1" EHVE="0" EVPE="3.6" VelX="0" VelY="0" VelZ="0" sog="6.41" cog="312.76" climb_rate="2.68" nav_type="516" />
+      <UTCSec>0</UTCSec>
+      <UTCTSec>45998</UTCTSec>
+      <SATS prn1="23" prn2="18" prn3="10" prn4="48" prn5="27" prn6="46" prn7="15" prn8="32" prn9="24" prn10="8" prn11="16" prn12="13" />
+      <CHANNEL cn01="37" cn02="38" cn03="40" cn04="38" cn05="40" cn06="38" cn07="37" cn08="39" cn09="35" cn010="39" cn011="30" cn012="32" />
+      <SatellitesInView>17</SatellitesInView>
+    </Frame>
+    <Frame>
+      <FrameTime>8309761.511</FrameTime>
+      <FrameCounter>37010</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19947836275878</ClockDrift>
+      <BitDrift>4095.3731543775962</BitDrift>
+      <MeasValue Value="-50.735340758205652" StatusArgc="0" Status="16384" />
+      <Sensor>2</Sensor>
+      <SensorId>79</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2696.6273641677249</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-5.7102449810356815</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-97.1" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8309962.588</FrameTime>
+      <FrameCounter>37011</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.1977111596803</ClockDrift>
+      <BitDrift>4095.4654965646596</BitDrift>
+      <MeasValue Value="29490" StatusArgc="0" Status="16384" />
+      <Sensor>8</Sensor>
+      <SensorId>81</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>29490</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-7.6965346655424538</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-91.1" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8310264.5963</FrameTime>
+      <FrameCounter>37012</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19654470401525</ClockDrift>
+      <BitDrift>4095.5640635238037</BitDrift>
+      <MeasValue Value="-59.138014873799868" StatusArgc="0" Status="16384" />
+      <Sensor>0</Sensor>
+      <SensorId>69</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2824.7180066290534</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-7.9159642583969543</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <CORR Status="0" ARG="0" VALUE="-0.63481909818475446" ELEVATION="66.06" />
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-91.1" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8310465.6551</FrameTime>
+      <FrameCounter>37013</FrameCounter>
+      <GPSFrameCounter>8215</GPSFrameCounter>
+      <ClockDrift>395.19607251889931</ClockDrift>
+      <BitDrift>4095.6698249997653</BitDrift>
+      <MeasValue Value="-4.3286156499818844" StatusArgc="0" Status="16384" />
+      <Sensor>1</Sensor>
+      <SensorId>68</SensorId>
+      <SatMap>-2067611008</SatMap>
+      <MeasData>17394.079640365937</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>3</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-7.4756143598701748</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-91.1" ANTENNA="1" />
+      <POSITION Latit="40.7620398" Longit="-111.7923668" PosX="-1801809" PosY="-4506586" PosZ="4155847" Altit="0" Altit_Eli="20509.6" Altit_MSL="20528.3" Altitude="0" EHPE="2.1" EHVE="0" EVPE="3.6" VelX="0" VelY="0" VelZ="0" sog="4.37" cog="313.93" climb_rate="2.76" nav_type="516" />
+      <UTCSec>0</UTCSec>
+      <UTCTSec>46998</UTCTSec>
+      <SATS prn1="23" prn2="18" prn3="10" prn4="48" prn5="27" prn6="46" prn7="15" prn8="32" prn9="24" prn10="8" prn11="16" prn12="13" />
+      <CHANNEL cn01="37" cn02="38" cn03="40" cn04="38" cn05="40" cn06="38" cn07="37" cn08="39" cn09="35" cn010="39" cn011="30" cn012="32" />
+      <SatellitesInView>17</SatellitesInView>
+    </Frame>
+    <Frame>
+      <FrameTime>8310666.3345000008</FrameTime>
+      <FrameCounter>37014</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19680632430595</ClockDrift>
+      <BitDrift>4095.7880850006013</BitDrift>
+      <MeasValue Value="-50.7194744954286" StatusArgc="0" Status="16384" />
+      <Sensor>2</Sensor>
+      <SensorId>79</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2699.0039762700485</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-8.4679265706848525</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-91.1" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8310867.6075000009</FrameTime>
+      <FrameCounter>37015</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19704450230535</ClockDrift>
+      <BitDrift>4095.901208630793</BitDrift>
+      <MeasValue Value="0" StatusArgc="0" Status="16384" />
+      <Sensor>9</Sensor>
+      <SensorId>253</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>0</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-8.128232787706736</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-91.1" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8311068.6329000005</FrameTime>
+      <FrameCounter>37016</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19784170793218</ClockDrift>
+      <BitDrift>4096.020126425029</BitDrift>
+      <MeasValue Value="-59.117394277872279" StatusArgc="0" Status="16384" />
+      <Sensor>0</Sensor>
+      <SensorId>69</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2828.3569367810264</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-8.2076557229918947</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <CORR Status="0" ARG="0" VALUE="-0.63491714240451458" ELEVATION="66.06" />
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-88.2" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8311370.3096</FrameTime>
+      <FrameCounter>37017</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19982767293391</ClockDrift>
+      <BitDrift>4096.1513658713193</BitDrift>
+      <MeasValue Value="-4.3224877922166343" StatusArgc="0" Status="16384" />
+      <Sensor>1</Sensor>
+      <SensorId>68</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>17393.848813040877</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-8.5661531115182026</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-88.2" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8311571.5707</FrameTime>
+      <FrameCounter>37018</FrameCounter>
+      <GPSFrameCounter>8216</GPSFrameCounter>
+      <ClockDrift>395.19944612189664</ClockDrift>
+      <BitDrift>4096.2580670313037</BitDrift>
+      <MeasValue Value="-50.703628922154124" StatusArgc="0" Status="16384" />
+      <Sensor>2</Sensor>
+      <SensorId>79</SensorId>
+      <SatMap>-2067611008</SatMap>
+      <MeasData>2701.3792136915604</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>3</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-8.9282233994729445</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-88.2" ANTENNA="1" />
+      <POSITION Latit="40.7620666" Longit="-111.7923948" PosX="-1801812" PosY="-4506585" PosZ="4155851" Altit="0" Altit_Eli="20512.4" Altit_MSL="20531.100000000002" Altitude="0" EHPE="2.1" EHVE="0" EVPE="3.6" VelX="0" VelY="0" VelZ="0" sog="3.25" cog="321.64" climb_rate="2.2" nav_type="516" />
+      <UTCSec>0</UTCSec>
+      <UTCTSec>47998</UTCTSec>
+      <SATS prn1="23" prn2="18" prn3="10" prn4="48" prn5="27" prn6="46" prn7="15" prn8="32" prn9="24" prn10="8" prn11="16" prn12="13" />
+      <CHANNEL cn01="37" cn02="38" cn03="41" cn04="37" cn05="40" cn06="37" cn07="38" cn08="39" cn09="37" cn010="36" cn011="37" cn012="32" />
+      <SatellitesInView>17</SatellitesInView>
+    </Frame>
+    <Frame>
+      <FrameTime>8311772.6429</FrameTime>
+      <FrameCounter>37019</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19941640851437</ClockDrift>
+      <BitDrift>4096.3684148875027</BitDrift>
+      <MeasValue Value="24000230" StatusArgc="0" Status="16384" />
+      <Sensor>10</Sensor>
+      <SensorId>254</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>0</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-7.5341054202165081</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-89.6" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8311973.7082</FrameTime>
+      <FrameCounter>37020</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.20113215438118</ClockDrift>
+      <BitDrift>4096.4968554594534</BitDrift>
+      <MeasValue Value="-59.10060274716917" StatusArgc="0" Status="16384" />
+      <Sensor>0</Sensor>
+      <SensorId>69</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2831.3262121032112</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-6.7340627686152</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <CORR Status="0" ARG="0" VALUE="-0.63501519182200972" ELEVATION="66.06" />
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-89.6" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8312275.3745000008</FrameTime>
+      <FrameCounter>37021</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19945552602678</ClockDrift>
+      <BitDrift>4096.59013204813</BitDrift>
+      <MeasValue Value="-4.3240197409140819" StatusArgc="0" Status="16384" />
+      <Sensor>1</Sensor>
+      <SensorId>68</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>17393.906519297794</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-5.91521291747827</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-89.6" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8312476.7599</FrameTime>
+      <FrameCounter>37022</FrameCounter>
+      <GPSFrameCounter>8217</GPSFrameCounter>
+      <ClockDrift>395.19777880517745</ClockDrift>
+      <BitDrift>4096.6834067390782</BitDrift>
+      <MeasValue Value="-50.683417835672273" StatusArgc="0" Status="16384" />
+      <Sensor>2</Sensor>
+      <SensorId>79</SensorId>
+      <SatMap>-2067611008</SatMap>
+      <MeasData>2704.411339908389</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>3</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-5.55410362169066</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-89.6" ANTENNA="1" />
+      <POSITION Latit="40.7620935" Longit="-111.7924121" PosX="-1801813" PosY="-4506585" PosZ="4155855" Altit="0" Altit_Eli="20514.9" Altit_MSL="20533.600000000002" Altitude="0" EHPE="2.1" EHVE="0" EVPE="3.6" VelX="0" VelY="0" VelZ="0" sog="3.62" cog="330.74" climb_rate="2.72" nav_type="516" />
+      <UTCSec>0</UTCSec>
+      <UTCTSec>48998</UTCTSec>
+      <SATS prn1="23" prn2="18" prn3="10" prn4="48" prn5="27" prn6="46" prn7="15" prn8="32" prn9="24" prn10="8" prn11="16" prn12="13" />
+      <CHANNEL cn01="37" cn02="38" cn03="41" cn04="37" cn05="40" cn06="37" cn07="38" cn08="39" cn09="37" cn010="36" cn011="37" cn012="32" />
+      <SatellitesInView>0</SatellitesInView>
+    </Frame>
+    <Frame>
+      <FrameTime>8312678.8501</FrameTime>
+      <FrameCounter>37023</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19854604958897</ClockDrift>
+      <BitDrift>4096.802015710301</BitDrift>
+      <MeasValue Value="-37.118921024251961" StatusArgc="0" Status="16384" />
+      <Sensor>3</Sensor>
+      <SensorId>6</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>49378.795263558175</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-5.8333707711980871</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-89.6" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8312879.9848000007</FrameTime>
+      <FrameCounter>37024</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19966802534714</ClockDrift>
+      <BitDrift>4096.9243025117266</BitDrift>
+      <MeasValue Value="-59.081934485004737" StatusArgc="0" Status="16384" />
+      <Sensor>0</Sensor>
+      <SensorId>69</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2834.6265971158919</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-6.5936240305221</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <CORR Status="0" ARG="0" VALUE="-0.63510274033721625" ELEVATION="66.06" />
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-94.7" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8313080.9983</FrameTime>
+      <FrameCounter>37025</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19961155936664</ClockDrift>
+      <BitDrift>4097.0343730359546</BitDrift>
+      <MeasValue Value="-4.3286156499818844" StatusArgc="0" Status="16384" />
+      <Sensor>1</Sensor>
+      <SensorId>68</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>17394.079640365937</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-5.4661242451727032</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-94.7" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8313382.7046000008</FrameTime>
+      <FrameCounter>37026</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.199181563361</ClockDrift>
+      <BitDrift>4097.1405710382014</BitDrift>
+      <MeasValue Value="-50.6619515555321" StatusArgc="0" Status="16384" />
+      <Sensor>2</Sensor>
+      <SensorId>79</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2707.6348477430524</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-5.5375394652617782</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-94.7" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8313583.8647000007</FrameTime>
+      <FrameCounter>37027</FrameCounter>
+      <GPSFrameCounter>8218</GPSFrameCounter>
+      <ClockDrift>395.197743341524</ClockDrift>
+      <BitDrift>4097.2363159578508</BitDrift>
+      <MeasValue Value="-6.520506844863494" StatusArgc="0" Status="16384" />
+      <Sensor>4</Sensor>
+      <SensorId>7</SensorId>
+      <SatMap>-2067611008</SatMap>
+      <MeasData>3061.1568086169773</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>3</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-7.31353514800106</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-94.7" ANTENNA="1" />
+      <POSITION Latit="40.7621276" Longit="-111.792435" PosX="-1801815" PosY="-4506584" PosZ="4155860" Altit="0" Altit_Eli="20518.1" Altit_MSL="20536.8" Altitude="0" EHPE="2.1" EHVE="0" EVPE="3.6" VelX="0" VelY="0" VelZ="0" sog="4.96" cog="329.83" climb_rate="3.39" nav_type="516" />
+      <UTCSec>0</UTCSec>
+      <UTCTSec>49998</UTCTSec>
+      <SATS prn1="23" prn2="18" prn3="10" prn4="48" prn5="27" prn6="46" prn7="15" prn8="32" prn9="24" prn10="8" prn11="16" prn12="13" />
+      <CHANNEL cn01="37" cn02="38" cn03="40" cn04="38" cn05="39" cn06="38" cn07="39" cn08="38" cn09="38" cn010="38" cn011="34" cn012="32" />
+      <SatellitesInView>17</SatellitesInView>
+    </Frame>
+    <Frame>
+      <FrameTime>8313785.0773</FrameTime>
+      <FrameCounter>37028</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19735571807405</ClockDrift>
+      <BitDrift>4097.3429525080774</BitDrift>
+      <MeasValue Value="-59.082151016444513" StatusArgc="0" Status="16384" />
+      <Sensor>0</Sensor>
+      <SensorId>69</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2834.6082063326262</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-6.3182830752275621</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <CORR Status="0" ARG="0" VALUE="-0.63521480848365919" ELEVATION="66.06" />
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-94.7" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8313986.6295000007</FrameTime>
+      <FrameCounter>37029</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19783072442181</ClockDrift>
+      <BitDrift>4097.4585326904926</BitDrift>
+      <MeasValue Value="-4.3347436756841944" StatusArgc="0" Status="16384" />
+      <Sensor>1</Sensor>
+      <SensorId>68</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>17394.310473817528</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-6.9614703309227</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-94.4" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8314288.0831</FrameTime>
+      <FrameCounter>37030</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19712217500381</ClockDrift>
+      <BitDrift>4097.56184155931</BitDrift>
+      <MeasValue Value="-50.647276188174111" StatusArgc="0" Status="16384" />
+      <Sensor>2</Sensor>
+      <SensorId>79</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2709.840413985019</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-6.1930062677828337</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-94.4" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8314489.1110000005</FrameTime>
+      <FrameCounter>37031</FrameCounter>
+      <GPSFrameCounter>8219</GPSFrameCounter>
+      <ClockDrift>395.19642783537137</ClockDrift>
+      <BitDrift>4097.6652973680584</BitDrift>
+      <MeasValue Value="4457" StatusArgc="0" Status="16384" />
+      <Sensor>5</Sensor>
+      <SensorId>70</SensorId>
+      <SatMap>-2067611008</SatMap>
+      <MeasData>4457</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>3</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-5.7728777091798094</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-94.4" ANTENNA="1" />
+      <POSITION Latit="40.7621701" Longit="-111.7924725" PosX="-1801817" PosY="-4506582" PosZ="4155865" Altit="0" Altit_Eli="20521.3" Altit_MSL="20540" Altitude="0" EHPE="2.1" EHVE="0" EVPE="3.6" VelX="0" VelY="0" VelZ="0" sog="6.4" cog="325.38" climb_rate="2.57" nav_type="516" />
+      <UTCSec>0</UTCSec>
+      <UTCTSec>50998</UTCTSec>
+      <SATS prn1="23" prn2="18" prn3="10" prn4="48" prn5="27" prn6="46" prn7="15" prn8="32" prn9="24" prn10="8" prn11="16" prn12="13" />
+      <CHANNEL cn01="37" cn02="38" cn03="40" cn04="38" cn05="39" cn06="38" cn07="39" cn08="38" cn09="38" cn010="38" cn011="34" cn012="32" />
+      <SatellitesInView>0</SatellitesInView>
+    </Frame>
+    <Frame>
+      <FrameTime>8314691.1174000008</FrameTime>
+      <FrameCounter>37032</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19676634665814</ClockDrift>
+      <BitDrift>4097.7794623778436</BitDrift>
+      <MeasValue Value="-59.1068594413961" StatusArgc="0" Status="16384" />
+      <Sensor>0</Sensor>
+      <SensorId>69</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2830.280756457485</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-4.86288181115263</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <CORR Status="0" ARG="0" VALUE="-0.63532688342007293" ELEVATION="66.06" />
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-94.4" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8314892.8375</FrameTime>
+      <FrameCounter>37033</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19552125483648</ClockDrift>
+      <BitDrift>4097.8772068165008</BitDrift>
+      <MeasValue Value="-4.3378077515135374" StatusArgc="0" Status="16384" />
+      <Sensor>1</Sensor>
+      <SensorId>68</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>17394.425892840849</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-5.7148500299929248</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-92.4" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8315094.2067</FrameTime>
+      <FrameCounter>37034</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19429078539025</ClockDrift>
+      <BitDrift>4097.97510218492</BitDrift>
+      <MeasValue Value="-50.637062191229283" StatusArgc="0" Status="16384" />
+      <Sensor>2</Sensor>
+      <SensorId>79</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2711.3763536505903</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-7.8489624330738783</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-92.4" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8315396.2034</FrameTime>
+      <FrameCounter>37035</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19504262346004</ClockDrift>
+      <BitDrift>4098.0935529967555</BitDrift>
+      <MeasValue Value="-6.8899999999999864" StatusArgc="0" Status="16384" />
+      <Sensor>6</Sensor>
+      <SensorId>71</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>26626</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-7.5720517000452769</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-92.4" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8315597.5619</FrameTime>
+      <FrameCounter>37036</FrameCounter>
+      <GPSFrameCounter>8220</GPSFrameCounter>
+      <ClockDrift>395.19545496703984</ClockDrift>
+      <BitDrift>4098.2084836446</BitDrift>
+      <MeasValue Value="-59.110717098979684" StatusArgc="0" Status="16384" />
+      <Sensor>0</Sensor>
+      <SensorId>69</SensorId>
+      <SatMap>-2067611008</SatMap>
+      <MeasData>2829.60254049398</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>3</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-7.6478058441161672</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <CORR Status="0" ARG="0" VALUE="-0.63532688342007293" ELEVATION="66.06" />
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-92.4" ANTENNA="1" />
+      <POSITION Latit="40.7622185" Longit="-111.7925203" PosX="-1801821" PosY="-4506579" PosZ="4155871" Altit="0" Altit_Eli="20523.9" Altit_MSL="20542.600000000002" Altitude="0" EHPE="2" EHVE="0" EVPE="3.6" VelX="0" VelY="0" VelZ="0" sog="7.03" cog="323.07" climb_rate="2.58" nav_type="516" />
+      <UTCSec>0</UTCSec>
+      <UTCTSec>51998</UTCTSec>
+      <SATS prn1="23" prn2="18" prn3="10" prn4="48" prn5="27" prn6="46" prn7="15" prn8="32" prn9="24" prn10="8" prn11="16" prn12="13" />
+      <CHANNEL cn01="38" cn02="38" cn03="40" cn04="38" cn05="39" cn06="38" cn07="38" cn08="38" cn09="34" cn010="39" cn011="33" cn012="32" />
+      <SatellitesInView>17</SatellitesInView>
+    </Frame>
+    <Frame>
+      <FrameTime>8315798.8152</FrameTime>
+      <FrameCounter>37037</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19675277234188</ClockDrift>
+      <BitDrift>4098.3325970801834</BitDrift>
+      <MeasValue Value="-4.3301476406631991" StatusArgc="0" Status="16384" />
+      <Sensor>1</Sensor>
+      <SensorId>68</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>17394.137348154465</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-5.5762384155573486</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.49013" SIGNAL="-92.4" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8315999.8439000007</FrameTime>
+      <FrameCounter>37038</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.196872893907</ClockDrift>
+      <BitDrift>4098.4444979084683</BitDrift>
+      <MeasValue Value="-50.626132393701837" StatusArgc="0" Status="16384" />
+      <Sensor>2</Sensor>
+      <SensorId>79</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2713.0207276836904</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-8.0441740505423791</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.490131" SIGNAL="-90.2" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8316301.3823000006</FrameTime>
+      <FrameCounter>37039</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19547582437332</ClockDrift>
+      <BitDrift>4098.54066413651</BitDrift>
+      <MeasValue Value="8280" StatusArgc="0" Status="16384" />
+      <Sensor>7</Sensor>
+      <SensorId>72</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>8280</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-8.5484043423400831</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.490131" SIGNAL="-90.2" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8316502.5018000007</FrameTime>
+      <FrameCounter>37040</FrameCounter>
+      <GPSFrameCounter>8221</GPSFrameCounter>
+      <ClockDrift>395.19524637303959</ClockDrift>
+      <BitDrift>4098.6489391840687</BitDrift>
+      <MeasValue Value="-59.082354157266693" StatusArgc="0" Status="16384" />
+      <Sensor>0</Sensor>
+      <SensorId>69</SensorId>
+      <SatMap>-2067611008</SatMap>
+      <MeasData>2834.6082063326262</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>3</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-8.2658150343206529</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <CORR Status="0" ARG="0" VALUE="-0.63541794930583961" ELEVATION="66.06" />
+      <RECEIVER FREQUENCY="405.490131" SIGNAL="-90.2" ANTENNA="1" />
+      <POSITION Latit="40.7622668" Longit="-111.7925706" PosX="-1801824" PosY="-4506576" PosZ="4155877" Altit="0" Altit_Eli="20527" Altit_MSL="20545.7" Altitude="0" EHPE="2" EHVE="0" EVPE="3.6" VelX="0" VelY="0" VelZ="0" sog="6.66" cog="322.05" climb_rate="3.27" nav_type="516" />
+      <UTCSec>0</UTCSec>
+      <UTCTSec>52998</UTCTSec>
+      <SATS prn1="23" prn2="18" prn3="10" prn4="48" prn5="27" prn6="46" prn7="15" prn8="32" prn9="24" prn10="8" prn11="16" prn12="13" />
+      <CHANNEL cn01="38" cn02="38" cn03="40" cn04="38" cn05="39" cn06="38" cn07="38" cn08="38" cn09="34" cn010="39" cn011="33" cn012="32" />
+      <SatellitesInView>0</SatellitesInView>
+    </Frame>
+    <Frame>
+      <FrameTime>8316703.6394000007</FrameTime>
+      <FrameCounter>37041</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19572604859383</ClockDrift>
+      <BitDrift>4098.7645687984705</BitDrift>
+      <MeasValue Value="-4.3316796418407648" StatusArgc="0" Status="16384" />
+      <Sensor>1</Sensor>
+      <SensorId>68</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>17394.1950563259</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-8.2692483280283717</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.490131" SIGNAL="-90.2" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8316904.7208</FrameTime>
+      <FrameCounter>37042</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19446756973065</ClockDrift>
+      <BitDrift>4098.8621709610306</BitDrift>
+      <MeasValue Value="-50.613327540532183" StatusArgc="0" Status="16384" />
+      <Sensor>2</Sensor>
+      <SensorId>79</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2714.9482475418358</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-7.853544116422376</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.490131" SIGNAL="-89.3" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8317106.0762</FrameTime>
+      <FrameCounter>37043</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19391624274175</ClockDrift>
+      <BitDrift>4098.9671070263666</BitDrift>
+      <MeasValue Value="29490" StatusArgc="0" Status="16384" />
+      <Sensor>8</Sensor>
+      <SensorId>81</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>29490</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-7.5511607342471629</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.490131" SIGNAL="-89.3" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8317409.0342000006</FrameTime>
+      <FrameCounter>37044</FrameCounter>
+      <GPSFrameCounter>8222</GPSFrameCounter>
+      <ClockDrift>395.19480563537508</ClockDrift>
+      <BitDrift>4099.0869863879134</BitDrift>
+      <MeasValue Value="-59.060926484019525" StatusArgc="0" Status="16384" />
+      <Sensor>0</Sensor>
+      <SensorId>69</SensorId>
+      <SatMap>-2067611008</SatMap>
+      <MeasData>2838.4017532120206</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>3</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-8.9067630435503578</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <CORR Status="0" ARG="0" VALUE="-0.63552653372094681" ELEVATION="66.06" />
+      <RECEIVER FREQUENCY="405.490131" SIGNAL="-89.3" ANTENNA="1" />
+      <POSITION Latit="40.7623093" Longit="-111.7926178" PosX="-1801828" PosY="-4506574" PosZ="4155883" Altit="0" Altit_Eli="20530.2" Altit_MSL="20548.9" Altitude="0" EHPE="2.1" EHVE="0" EVPE="3.6" VelX="0" VelY="0" VelZ="0" sog="5.73" cog="320.12" climb_rate="2.75" nav_type="516" />
+      <UTCSec>0</UTCSec>
+      <UTCTSec>53998</UTCTSec>
+      <SATS prn1="23" prn2="18" prn3="10" prn4="48" prn5="27" prn6="46" prn7="15" prn8="32" prn9="24" prn10="8" prn11="16" prn12="13" />
+      <CHANNEL cn01="37" cn02="39" cn03="40" cn04="38" cn05="38" cn06="38" cn07="41" cn08="40" cn09="36" cn010="33" cn011="37" cn012="37" />
+      <SatellitesInView>17</SatellitesInView>
+    </Frame>
+    <Frame>
+      <FrameTime>8317610.0546</FrameTime>
+      <FrameCounter>37045</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19475986851529</ClockDrift>
+      <BitDrift>4099.1971662121614</BitDrift>
+      <MeasValue Value="-4.3385737770311152" StatusArgc="0" Status="16384" />
+      <Sensor>1</Sensor>
+      <SensorId>68</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>17394.454747836011</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-8.6110415299672489</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.490131" SIGNAL="-89.3" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+    <Frame>
+      <FrameTime>8317811.0742000006</FrameTime>
+      <FrameCounter>37046</FrameCounter>
+      <GPSFrameCounter>0</GPSFrameCounter>
+      <ClockDrift>395.19495030242416</ClockDrift>
+      <BitDrift>4099.30979609301</BitDrift>
+      <MeasValue Value="-50.598082180454696" StatusArgc="0" Status="16384" />
+      <Sensor>2</Sensor>
+      <SensorId>79</SensorId>
+      <SatMap>0</SatMap>
+      <MeasData>2717.2446104761689</MeasData>
+      <MaskAngle>0</MaskAngle>
+      <GPSValid>0</GPSValid>
+      <Pressure>0</Pressure>
+      <RecLevel>-8.7232025772211657</RecLevel>
+      <SyncQuality>1</SyncQuality>
+      <ErrorID>0</ErrorID>
+      <RECEIVER FREQUENCY="405.490131" SIGNAL="-89.3" ANTENNA="1" />
+      <UTCSec xsi:nil="true" />
+      <UTCTSec xsi:nil="true" />
+    </Frame>
+  </SENSORDATA>
+</SIM>

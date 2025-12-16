@@ -315,8 +315,20 @@ def subset_days_with_pan_interp(date_time_start, date_time_stop,file_subset_name
 
     # Get names of vars we need to fill nans in: 
     vars2fill = [key for key,value in need2fill.items() if value ==True]
+
+    df_subsetdays_resample = df_alldays.resample('1h').mean()
+    print(df_subsetdays_resample.index)
     
-    df_subsetdays = df_alldays.sort_index().loc[date_time_start:date_time_stop]
+    #adds padding of NaNs for first day and last day of campaign, since they need to have the same length of time as the other days in order to plot
+    new_start_time = pd.Timestamp('2024-07-15 00:00:00')
+    new_end_time = pd.Timestamp('2024-08-18 23:00:00')
+
+    # Create a new datetime index from new_start to the end of existing index with same frequency
+    new_index = pd.date_range(start=new_start_time, end=new_end_time, freq='1h')
+
+    # Reindex the dataframe to include new rows
+    df_subsetdays = df_subsetdays_resample.reindex(new_index)
+    df_subsetdays = df_subsetdays.sort_index().loc[date_time_start:date_time_stop]
     df_interp_subset=df_subsetdays.copy()
 
     df_interp_subset['PAN_CIMS'] = df_interp_subset['PAN_CIMS'].fillna(value = 0.14)
@@ -362,12 +374,17 @@ df_alldays.set_index('time_local', inplace=True)
 #07/07/2025 Subset for smokefree days for first F0AM run, with varname set to Campaign Name.
 # x
 
-subset_days_with_pan_interp(date_time_start = "2024-08-04 00:00:00", 
-            date_time_stop= "2024-08-08 23:00:00", 
-            file_subset_name ='20240804_20240808_30min_CSL_mobile_lab_parked_with_interp_pan_interp',
-            var_name = 'USOS')
+# subset_days_with_pan_interp(date_time_start = "2024-08-04 00:00:00", 
+#             date_time_stop= "2024-08-08 23:00:00", 
+#             file_subset_name ='20240804_20240808_30min_CSL_mobile_lab_parked_with_interp_pan_interp',
+#             var_name = 'USOS')
 # subset_days(date_time_start = "2024-08-04 00:00:00", 
 #             date_time_stop= "2024-08-08 23:30:00", 
 #             file_subset_name ='20240804_20240808_30min_CSL_mobile_lab_parked_with_interp',
 #             var_name = 'USOS')
 # all_days(file_alldays_name = "30min_USOS_CSL_mobile_lab_parked_with_interp")
+
+subset_days_with_pan_interp(date_time_start = "2024-07-19 00:00:00", 
+            date_time_stop= "2024-07-21 23:00:00", 
+            file_subset_name ='20240719_20240721_1hr_CSL_mobile_lab_parked_with_interp_pan_interp',
+            var_name = 'USOS')

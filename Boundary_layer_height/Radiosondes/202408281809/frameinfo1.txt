@@ -1,0 +1,1899 @@
+2024-08-28 16:52:20,866 - Frame could not corrected with id:0xFF and time: 1 seconds
+2024-08-28 16:52:22,276 - Frame could not corrected with id:0x4F and time: 1 seconds
+2024-08-28 16:52:22,281 - Frame could not corrected with id:0x45 and time: 2 seconds
+2024-08-28 16:52:22,293 - Frame could not corrected with id:0x4F and time: 2 seconds
+2024-08-28 16:52:22,415 - Frame could not corrected with id:0x45 and time: 2 seconds
+2024-08-28 16:52:22,936 - Frame could not corrected with id:0x4F and time: 3 seconds
+2024-08-28 16:52:23,137 - Frame could not corrected with id:0xFE and time: 3 seconds
+2024-08-28 16:52:23,338 - Frame could not corrected with id:0x45 and time: 3 seconds
+2024-08-28 16:52:23,842 - Frame could not corrected with id:0x4F and time: 4 seconds
+2024-08-28 16:52:24,256 - Frame could not corrected with id:0x45 and time: 4 seconds
+2024-08-28 16:52:24,761 - Frame could not corrected with id:0x4F and time: 5 seconds
+2024-08-28 16:52:37,528 - Frame corrected with id:0xFE time: 17 seconds 
+2024-08-28 16:52:37,528 - old value:0.0 new value:24000285.0
+2024-08-28 16:52:37,528 - old status: 100 new status:4000
+2024-08-28 16:52:51,896 - Frame corrected with id:0xFE time: 32 seconds 
+2024-08-28 16:52:51,896 - old value:0.0 new value:24000285.0
+2024-08-28 16:52:51,896 - old status: 100 new status:4000
+2024-08-28 16:53:06,140 - Frame corrected with id:0xFE time: 46 seconds 
+2024-08-28 16:53:06,140 - old value:0.0 new value:24000285.0
+2024-08-28 16:53:06,140 - old status: 100 new status:4000
+2024-08-28 16:53:20,418 - Frame corrected with id:0xFE time: 60 seconds 
+2024-08-28 16:53:20,418 - old value:0.0 new value:24000285.0
+2024-08-28 16:53:20,418 - old status: 100 new status:4000
+2024-08-28 16:53:34,805 - Frame corrected with id:0xFE time: 75 seconds 
+2024-08-28 16:53:34,805 - old value:0.0 new value:24000285.0
+2024-08-28 16:53:34,805 - old status: 100 new status:4000
+2024-08-28 16:53:49,184 - Frame corrected with id:0xFE time: 89 seconds 
+2024-08-28 16:53:49,184 - old value:0.0 new value:24000285.0
+2024-08-28 16:53:49,184 - old status: 100 new status:4000
+2024-08-28 16:54:03,513 - Frame corrected with id:0xFE time: 103 seconds 
+2024-08-28 16:54:03,514 - old value:0.0 new value:24000285.0
+2024-08-28 16:54:03,514 - old status: 100 new status:4000
+2024-08-28 16:54:17,865 - Frame corrected with id:0xFE time: 118 seconds 
+2024-08-28 16:54:17,865 - old value:0.0 new value:24000285.0
+2024-08-28 16:54:17,865 - old status: 100 new status:4000
+2024-08-28 16:54:32,137 - Frame corrected with id:0xFE time: 132 seconds 
+2024-08-28 16:54:32,137 - old value:0.0 new value:24000285.0
+2024-08-28 16:54:32,137 - old status: 100 new status:4000
+2024-08-28 16:54:46,531 - Frame corrected with id:0xFE time: 146 seconds 
+2024-08-28 16:54:46,532 - old value:0.0 new value:24000285.0
+2024-08-28 16:54:46,532 - old status: 100 new status:4000
+2024-08-28 16:55:00,876 - Frame corrected with id:0xFE time: 161 seconds 
+2024-08-28 16:55:00,876 - old value:0.0 new value:24000285.0
+2024-08-28 16:55:00,876 - old status: 100 new status:4000
+2024-08-28 16:55:15,136 - Frame corrected with id:0xFE time: 175 seconds 
+2024-08-28 16:55:15,136 - old value:0.0 new value:24000285.0
+2024-08-28 16:55:15,136 - old status: 100 new status:4000
+2024-08-28 16:55:29,494 - Frame corrected with id:0xFE time: 189 seconds 
+2024-08-28 16:55:29,494 - old value:0.0 new value:24000285.0
+2024-08-28 16:55:29,494 - old status: 100 new status:4000
+2024-08-28 16:55:43,856 - Frame corrected with id:0xFE time: 204 seconds 
+2024-08-28 16:55:43,856 - old value:0.0 new value:24000285.0
+2024-08-28 16:55:43,856 - old status: 100 new status:4000
+2024-08-28 16:55:58,167 - Frame corrected with id:0xFE time: 218 seconds 
+2024-08-28 16:55:58,167 - old value:0.0 new value:24000285.0
+2024-08-28 16:55:58,167 - old status: 100 new status:4000
+2024-08-28 16:56:12,571 - Frame corrected with id:0xFE time: 232 seconds 
+2024-08-28 16:56:12,571 - old value:0.0 new value:24000285.0
+2024-08-28 16:56:12,571 - old status: 100 new status:4000
+2024-08-28 16:56:26,854 - Frame corrected with id:0xFE time: 247 seconds 
+2024-08-28 16:56:26,854 - old value:0.0 new value:24000285.0
+2024-08-28 16:56:26,854 - old status: 100 new status:4000
+2024-08-28 16:56:41,100 - Frame corrected with id:0xFE time: 261 seconds 
+2024-08-28 16:56:41,100 - old value:0.0 new value:24000285.0
+2024-08-28 16:56:41,100 - old status: 100 new status:4000
+2024-08-28 16:56:55,509 - Frame corrected with id:0xFE time: 275 seconds 
+2024-08-28 16:56:55,509 - old value:0.0 new value:24000285.0
+2024-08-28 16:56:55,509 - old status: 100 new status:4000
+2024-08-28 16:57:09,908 - Frame corrected with id:0xFE time: 290 seconds 
+2024-08-28 16:57:09,908 - old value:0.0 new value:24000285.0
+2024-08-28 16:57:09,908 - old status: 100 new status:4000
+2024-08-28 16:57:24,228 - Frame corrected with id:0xFE time: 304 seconds 
+2024-08-28 16:57:24,228 - old value:0.0 new value:24000285.0
+2024-08-28 16:57:24,228 - old status: 100 new status:4000
+2024-08-28 16:57:38,466 - Frame corrected with id:0xFE time: 318 seconds 
+2024-08-28 16:57:38,466 - old value:0.0 new value:24000285.0
+2024-08-28 16:57:38,466 - old status: 100 new status:4000
+2024-08-28 16:57:52,892 - Frame corrected with id:0xFE time: 333 seconds 
+2024-08-28 16:57:52,892 - old value:0.0 new value:24000285.0
+2024-08-28 16:57:52,892 - old status: 100 new status:4000
+2024-08-28 16:58:07,234 - Frame corrected with id:0xFE time: 347 seconds 
+2024-08-28 16:58:07,234 - old value:0.0 new value:24000285.0
+2024-08-28 16:58:07,234 - old status: 100 new status:4000
+2024-08-28 16:58:21,582 - Frame corrected with id:0xFE time: 361 seconds 
+2024-08-28 16:58:21,582 - old value:0.0 new value:24000285.0
+2024-08-28 16:58:21,582 - old status: 100 new status:4000
+2024-08-28 16:58:35,904 - Frame corrected with id:0xFE time: 376 seconds 
+2024-08-28 16:58:35,904 - old value:0.0 new value:24000285.0
+2024-08-28 16:58:35,904 - old status: 100 new status:4000
+2024-08-28 16:58:50,241 - Frame corrected with id:0xFE time: 390 seconds 
+2024-08-28 16:58:50,241 - old value:0.0 new value:24000285.0
+2024-08-28 16:58:50,241 - old status: 100 new status:4000
+2024-08-28 16:59:04,547 - Frame corrected with id:0xFE time: 404 seconds 
+2024-08-28 16:59:04,547 - old value:0.0 new value:24000285.0
+2024-08-28 16:59:04,547 - old status: 100 new status:4000
+2024-08-28 16:59:14,624 - Frame corrected with id:0xFD time: 415 seconds 
+2024-08-28 16:59:14,624 - old value:0.0 new value:0.0
+2024-08-28 16:59:14,624 - old status: 2900 new status:4000
+2024-08-28 16:59:19,365 - Frame could not corrected with id:0xFF and time: 419 seconds
+2024-08-28 16:59:26,017 - Frame corrected with id:0xFE time: 426 seconds 
+2024-08-28 16:59:26,017 - old value:0.0 new value:24000285.0
+2024-08-28 16:59:26,017 - old status: 100 new status:4000
+2024-08-28 16:59:33,069 - Frame corrected with id:0xFE time: 433 seconds 
+2024-08-28 16:59:33,069 - old value:0.0 new value:24000285.0
+2024-08-28 16:59:33,069 - old status: 2900 new status:4000
+2024-08-28 16:59:33,271 - Frame corrected with id:0xFE time: 433 seconds 
+2024-08-28 16:59:33,271 - old value:0.0 new value:24000285.0
+2024-08-28 16:59:33,271 - old status: 100 new status:4000
+2024-08-28 16:59:47,609 - Frame corrected with id:0xFE time: 447 seconds 
+2024-08-28 16:59:47,609 - old value:0.0 new value:24000285.0
+2024-08-28 16:59:47,609 - old status: 100 new status:4000
+2024-08-28 17:00:01,835 - Frame corrected with id:0xFE time: 462 seconds 
+2024-08-28 17:00:01,835 - old value:0.0 new value:24000285.0
+2024-08-28 17:00:01,835 - old status: 100 new status:4000
+2024-08-28 17:00:08,007 - Frame could not corrected with id:0xFF and time: 468 seconds
+2024-08-28 17:00:16,272 - Frame corrected with id:0xFE time: 476 seconds 
+2024-08-28 17:00:16,272 - old value:0.0 new value:24000285.0
+2024-08-28 17:00:16,272 - old status: 100 new status:4000
+2024-08-28 17:00:30,580 - Frame corrected with id:0xFE time: 490 seconds 
+2024-08-28 17:00:30,580 - old value:0.0 new value:24000285.0
+2024-08-28 17:00:30,580 - old status: 100 new status:4000
+2024-08-28 17:00:44,928 - Frame corrected with id:0xFE time: 505 seconds 
+2024-08-28 17:00:44,928 - old value:0.0 new value:24000285.0
+2024-08-28 17:00:44,928 - old status: 100 new status:4000
+2024-08-28 17:00:59,258 - Frame corrected with id:0xFE time: 519 seconds 
+2024-08-28 17:00:59,258 - old value:0.0 new value:24000285.0
+2024-08-28 17:00:59,258 - old status: 100 new status:4000
+2024-08-28 17:01:13,689 - Frame corrected with id:0xFE time: 534 seconds 
+2024-08-28 17:01:13,689 - old value:0.0 new value:24000285.0
+2024-08-28 17:01:13,689 - old status: 100 new status:4000
+2024-08-28 17:01:27,809 - Frame corrected with id:0xFE time: 548 seconds 
+2024-08-28 17:01:27,809 - old value:0.0 new value:24000285.0
+2024-08-28 17:01:27,809 - old status: 100 new status:4000
+2024-08-28 17:01:42,252 - Frame corrected with id:0xFE time: 562 seconds 
+2024-08-28 17:01:42,252 - old value:0.0 new value:24000285.0
+2024-08-28 17:01:42,252 - old status: 100 new status:4000
+2024-08-28 17:01:56,684 - Frame corrected with id:0xFE time: 577 seconds 
+2024-08-28 17:01:56,684 - old value:0.0 new value:24000285.0
+2024-08-28 17:01:56,684 - old status: 100 new status:4000
+2024-08-28 17:02:10,904 - Frame corrected with id:0xFE time: 591 seconds 
+2024-08-28 17:02:10,904 - old value:0.0 new value:24000285.0
+2024-08-28 17:02:10,904 - old status: 100 new status:4000
+2024-08-28 17:02:25,223 - Frame corrected with id:0xFE time: 605 seconds 
+2024-08-28 17:02:25,223 - old value:0.0 new value:24000285.0
+2024-08-28 17:02:25,223 - old status: 100 new status:4000
+2024-08-28 17:02:30,466 - Frame could not corrected with id:0xFF and time: 610 seconds
+2024-08-28 17:02:39,653 - Frame corrected with id:0xFE time: 620 seconds 
+2024-08-28 17:02:39,653 - old value:0.0 new value:24000285.0
+2024-08-28 17:02:39,654 - old status: 100 new status:4000
+2024-08-28 17:02:53,870 - Frame corrected with id:0xFE time: 634 seconds 
+2024-08-28 17:02:53,871 - old value:0.0 new value:24000285.0
+2024-08-28 17:02:53,871 - old status: 100 new status:4000
+2024-08-28 17:03:08,198 - Frame corrected with id:0xFE time: 648 seconds 
+2024-08-28 17:03:08,198 - old value:0.0 new value:24000285.0
+2024-08-28 17:03:08,198 - old status: 100 new status:4000
+2024-08-28 17:03:22,630 - Frame corrected with id:0xFE time: 663 seconds 
+2024-08-28 17:03:22,630 - old value:0.0 new value:24000285.0
+2024-08-28 17:03:22,630 - old status: 100 new status:4000
+2024-08-28 17:03:37,064 - Frame corrected with id:0xFE time: 677 seconds 
+2024-08-28 17:03:37,064 - old value:0.0 new value:24000285.0
+2024-08-28 17:03:37,064 - old status: 100 new status:4000
+2024-08-28 17:03:51,291 - Frame corrected with id:0xFE time: 691 seconds 
+2024-08-28 17:03:51,291 - old value:0.0 new value:24000285.0
+2024-08-28 17:03:51,291 - old status: 100 new status:4000
+2024-08-28 17:04:05,618 - Frame corrected with id:0xFE time: 705 seconds 
+2024-08-28 17:04:05,618 - old value:0.0 new value:24000285.0
+2024-08-28 17:04:05,618 - old status: 100 new status:4000
+2024-08-28 17:04:19,973 - Frame corrected with id:0xFE time: 720 seconds 
+2024-08-28 17:04:19,974 - old value:0.0 new value:24000285.0
+2024-08-28 17:04:19,974 - old status: 100 new status:4000
+2024-08-28 17:04:34,200 - Frame corrected with id:0xFE time: 734 seconds 
+2024-08-28 17:04:34,200 - old value:0.0 new value:24000285.0
+2024-08-28 17:04:34,200 - old status: 100 new status:4000
+2024-08-28 17:04:48,636 - Frame corrected with id:0xFE time: 749 seconds 
+2024-08-28 17:04:48,636 - old value:0.0 new value:24000285.0
+2024-08-28 17:04:48,636 - old status: 100 new status:4000
+2024-08-28 17:05:02,931 - Frame corrected with id:0xFE time: 763 seconds 
+2024-08-28 17:05:02,931 - old value:0.0 new value:24000285.0
+2024-08-28 17:05:02,931 - old status: 100 new status:4000
+2024-08-28 17:05:17,264 - Frame corrected with id:0xFE time: 777 seconds 
+2024-08-28 17:05:17,264 - old value:0.0 new value:24000285.0
+2024-08-28 17:05:17,264 - old status: 100 new status:4000
+2024-08-28 17:05:31,599 - Frame corrected with id:0xFE time: 792 seconds 
+2024-08-28 17:05:31,599 - old value:0.0 new value:24000285.0
+2024-08-28 17:05:31,599 - old status: 100 new status:4000
+2024-08-28 17:05:35,099 - Frame could not corrected with id:0xFF and time: 795 seconds
+2024-08-28 17:05:35,210 - Frame corrected with id:0x47 time: 795 seconds 
+2024-08-28 17:05:35,211 - old value:0.0 new value:44.5
+2024-08-28 17:05:35,211 - old status: 2900 new status:4000
+2024-08-28 17:05:35,321 - Frame corrected with id:0x07 time: 795 seconds 
+2024-08-28 17:05:35,321 - old value:0.0 new value:-4.2
+2024-08-28 17:05:35,321 - old status: 2900 new status:4000
+2024-08-28 17:05:36,767 - Frame corrected with id:0x4F time: 797 seconds 
+2024-08-28 17:05:36,767 - old value:0.0 new value:14.3
+2024-08-28 17:05:36,767 - old status: 2900 new status:4000
+2024-08-28 17:05:36,988 - Frame could not corrected with id:0xFF and time: 797 seconds
+2024-08-28 17:05:38,655 - Frame corrected with id:0x4F time: 799 seconds 
+2024-08-28 17:05:38,655 - old value:0.0 new value:14.2
+2024-08-28 17:05:38,655 - old status: 2900 new status:4000
+2024-08-28 17:05:40,208 - Frame could not corrected with id:0xFF and time: 800 seconds
+2024-08-28 17:05:40,430 - Frame corrected with id:0x06 time: 800 seconds 
+2024-08-28 17:05:40,430 - old value:0.0 new value:-42.1
+2024-08-28 17:05:40,430 - old status: 2900 new status:4000
+2024-08-28 17:05:41,760 - Frame corrected with id:0x47 time: 802 seconds 
+2024-08-28 17:05:41,760 - old value:0.0 new value:44.5
+2024-08-28 17:05:41,760 - old status: 2900 new status:4000
+2024-08-28 17:05:44,865 - Frame corrected with id:0x4F time: 805 seconds 
+2024-08-28 17:05:44,865 - old value:0.0 new value:13.9
+2024-08-28 17:05:44,865 - old status: 2900 new status:4000
+2024-08-28 17:05:45,198 - Frame corrected with id:0xFD time: 805 seconds 
+2024-08-28 17:05:45,198 - old value:0.0 new value:0.0
+2024-08-28 17:05:45,198 - old status: 2900 new status:4000
+2024-08-28 17:05:45,976 - Frame corrected with id:0xFE time: 806 seconds 
+2024-08-28 17:05:45,976 - old value:0.0 new value:24000285.0
+2024-08-28 17:05:45,976 - old status: 100 new status:4000
+2024-08-28 17:05:46,864 - Frame could not corrected with id:0xFF and time: 807 seconds
+2024-08-28 17:05:48,528 - Frame corrected with id:0x45 time: 808 seconds 
+2024-08-28 17:05:48,528 - old value:0.0 new value:12.0
+2024-08-28 17:05:48,528 - old status: 2900 new status:4000
+2024-08-28 17:05:48,640 - Frame corrected with id:0x46 time: 809 seconds 
+2024-08-28 17:05:48,640 - old value:0.0 new value:5327.0
+2024-08-28 17:05:48,640 - old status: 2900 new status:4000
+2024-08-28 17:05:48,972 - Frame could not corrected with id:0xFF and time: 809 seconds
+2024-08-28 17:05:50,079 - Frame corrected with id:0x45 time: 810 seconds 
+2024-08-28 17:05:50,079 - old value:0.0 new value:12.0
+2024-08-28 17:05:50,079 - old status: 2900 new status:4000
+2024-08-28 17:05:50,301 - Frame corrected with id:0x4F time: 810 seconds 
+2024-08-28 17:05:50,301 - old value:0.0 new value:13.8
+2024-08-28 17:05:50,301 - old status: 2900 new status:4000
+2024-08-28 17:05:51,425 - Frame corrected with id:0x51 time: 811 seconds 
+2024-08-28 17:05:51,425 - old value:0.0 new value:32160.0
+2024-08-28 17:05:51,425 - old status: 2900 new status:4000
+2024-08-28 17:05:51,646 - Frame could not corrected with id:0xFF and time: 812 seconds
+2024-08-28 17:05:51,866 - Frame corrected with id:0x44 time: 812 seconds 
+2024-08-28 17:05:51,866 - old value:0.0 new value:22.7
+2024-08-28 17:05:51,866 - old status: 2900 new status:4000
+2024-08-28 17:05:52,973 - Frame corrected with id:0x4F time: 813 seconds 
+2024-08-28 17:05:52,973 - old value:0.0 new value:13.8
+2024-08-28 17:05:52,973 - old status: 2900 new status:4000
+2024-08-28 17:05:54,306 - Frame corrected with id:0x45 time: 814 seconds 
+2024-08-28 17:05:54,306 - old value:0.0 new value:11.8
+2024-08-28 17:05:54,306 - old status: 2900 new status:4000
+2024-08-28 17:05:54,752 - Frame corrected with id:0x4F time: 815 seconds 
+2024-08-28 17:05:54,752 - old value:0.0 new value:13.7
+2024-08-28 17:05:54,752 - old status: 2900 new status:4000
+2024-08-28 17:05:54,973 - Frame corrected with id:0xFE time: 815 seconds 
+2024-08-28 17:05:54,974 - old value:0.0 new value:24000285.0
+2024-08-28 17:05:54,974 - old status: 2900 new status:4000
+2024-08-28 17:05:56,306 - Frame could not corrected with id:0xFF and time: 816 seconds
+2024-08-28 17:05:56,528 - Frame corrected with id:0x4F time: 816 seconds 
+2024-08-28 17:05:56,528 - old value:0.0 new value:13.6
+2024-08-28 17:05:56,528 - old status: 2900 new status:4000
+2024-08-28 17:06:00,404 - Frame corrected with id:0xFE time: 820 seconds 
+2024-08-28 17:06:00,404 - old value:0.0 new value:24000285.0
+2024-08-28 17:06:00,404 - old status: 100 new status:4000
+2024-08-28 17:06:00,846 - Frame corrected with id:0x45 time: 821 seconds 
+2024-08-28 17:06:00,846 - old value:0.0 new value:11.5
+2024-08-28 17:06:00,846 - old status: 2900 new status:4000
+2024-08-28 17:06:01,067 - Frame corrected with id:0x4F time: 821 seconds 
+2024-08-28 17:06:01,067 - old value:0.0 new value:13.4
+2024-08-28 17:06:01,067 - old status: 2900 new status:4000
+2024-08-28 17:06:02,622 - Frame corrected with id:0x06 time: 822 seconds 
+2024-08-28 17:06:02,622 - old value:0.0 new value:-41.3
+2024-08-28 17:06:02,622 - old status: 2900 new status:4000
+2024-08-28 17:06:04,176 - Frame corrected with id:0x45 time: 824 seconds 
+2024-08-28 17:06:04,176 - old value:0.0 new value:11.3
+2024-08-28 17:06:04,176 - old status: 2900 new status:4000
+2024-08-28 17:06:04,396 - Frame could not corrected with id:0xFF and time: 824 seconds
+2024-08-28 17:06:04,620 - Frame corrected with id:0x45 time: 824 seconds 
+2024-08-28 17:06:04,620 - old value:0.0 new value:11.3
+2024-08-28 17:06:04,620 - old status: 2900 new status:4000
+2024-08-28 17:06:05,952 - Frame corrected with id:0x45 time: 826 seconds 
+2024-08-28 17:06:05,953 - old value:0.0 new value:11.3
+2024-08-28 17:06:05,953 - old status: 2900 new status:4000
+2024-08-28 17:06:06,174 - Frame corrected with id:0x44 time: 826 seconds 
+2024-08-28 17:06:06,174 - old value:0.0 new value:23.1
+2024-08-28 17:06:06,174 - old status: 2900 new status:4000
+2024-08-28 17:06:06,396 - Frame could not corrected with id:0xFF and time: 826 seconds
+2024-08-28 17:06:07,729 - Frame corrected with id:0x45 time: 828 seconds 
+2024-08-28 17:06:07,729 - old value:0.0 new value:11.3
+2024-08-28 17:06:07,729 - old status: 2900 new status:4000
+2024-08-28 17:06:07,951 - Frame corrected with id:0x07 time: 828 seconds 
+2024-08-28 17:06:07,951 - old value:0.0 new value:-4.1
+2024-08-28 17:06:07,951 - old status: 2900 new status:4000
+2024-08-28 17:06:08,173 - Frame corrected with id:0x4F time: 828 seconds 
+2024-08-28 17:06:08,173 - old value:0.0 new value:13.2
+2024-08-28 17:06:08,173 - old status: 2900 new status:4000
+2024-08-28 17:06:09,281 - Frame corrected with id:0x06 time: 829 seconds 
+2024-08-28 17:06:09,281 - old value:0.0 new value:-42.6
+2024-08-28 17:06:09,281 - old status: 2900 new status:4000
+2024-08-28 17:06:09,723 - Frame corrected with id:0x46 time: 830 seconds 
+2024-08-28 17:06:09,723 - old value:0.0 new value:5328.0
+2024-08-28 17:06:09,723 - old status: 2900 new status:4000
+2024-08-28 17:06:10,827 - Frame corrected with id:0x4F time: 831 seconds 
+2024-08-28 17:06:10,827 - old value:0.0 new value:13.0
+2024-08-28 17:06:10,827 - old status: 2900 new status:4000
+2024-08-28 17:06:12,044 - Frame corrected with id:0x07 time: 832 seconds 
+2024-08-28 17:06:12,044 - old value:0.0 new value:-4.1
+2024-08-28 17:06:12,044 - old status: 2900 new status:4000
+2024-08-28 17:06:12,264 - Frame corrected with id:0x45 time: 832 seconds 
+2024-08-28 17:06:12,264 - old value:0.0 new value:11.0
+2024-08-28 17:06:12,264 - old status: 2900 new status:4000
+2024-08-28 17:06:13,149 - Frame could not corrected with id:0xFF and time: 833 seconds
+2024-08-28 17:06:13,371 - Frame could not corrected with id:0xFF and time: 833 seconds
+2024-08-28 17:06:14,700 - Frame corrected with id:0x4F time: 835 seconds 
+2024-08-28 17:06:14,700 - old value:0.0 new value:12.8
+2024-08-28 17:06:14,700 - old status: 2900 new status:4000
+2024-08-28 17:06:16,253 - Frame corrected with id:0x4F time: 836 seconds 
+2024-08-28 17:06:16,257 - old value:0.0 new value:12.8
+2024-08-28 17:06:16,257 - old status: 2900 new status:4000
+2024-08-28 17:06:16,475 - Frame corrected with id:0xFE time: 836 seconds 
+2024-08-28 17:06:16,475 - old value:0.0 new value:24000285.0
+2024-08-28 17:06:16,475 - old status: 2900 new status:4000
+2024-08-28 17:06:17,708 - Frame corrected with id:0x51 time: 838 seconds 
+2024-08-28 17:06:17,708 - old value:0.0 new value:32160.0
+2024-08-28 17:06:17,708 - old status: 2900 new status:4000
+2024-08-28 17:06:17,820 - Frame corrected with id:0x44 time: 838 seconds 
+2024-08-28 17:06:17,820 - old value:0.0 new value:23.4
+2024-08-28 17:06:17,820 - old status: 2900 new status:4000
+2024-08-28 17:06:18,926 - Frame corrected with id:0x4F time: 839 seconds 
+2024-08-28 17:06:18,926 - old value:0.0 new value:12.7
+2024-08-28 17:06:18,926 - old status: 2900 new status:4000
+2024-08-28 17:06:19,148 - Frame corrected with id:0x48 time: 839 seconds 
+2024-08-28 17:06:19,148 - old value:0.0 new value:1672.0
+2024-08-28 17:06:19,148 - old status: 2900 new status:4000
+2024-08-28 17:06:20,364 - Frame corrected with id:0x45 time: 840 seconds 
+2024-08-28 17:06:20,364 - old value:0.0 new value:10.8
+2024-08-28 17:06:20,364 - old status: 2900 new status:4000
+2024-08-28 17:06:20,585 - Frame could not corrected with id:0xFF and time: 840 seconds
+2024-08-28 17:06:21,357 - Frame corrected with id:0x47 time: 841 seconds 
+2024-08-28 17:06:21,357 - old value:0.0 new value:44.3
+2024-08-28 17:06:21,357 - old status: 2900 new status:4000
+2024-08-28 17:06:21,689 - Frame corrected with id:0x06 time: 842 seconds 
+2024-08-28 17:06:21,689 - old value:0.0 new value:-41.7
+2024-08-28 17:06:21,689 - old status: 2900 new status:4000
+2024-08-28 17:06:21,911 - Frame corrected with id:0xFE time: 842 seconds 
+2024-08-28 17:06:21,911 - old value:0.0 new value:24000285.0
+2024-08-28 17:06:21,911 - old status: 100 new status:4000
+2024-08-28 17:06:22,572 - Frame corrected with id:0x4F time: 842 seconds 
+2024-08-28 17:06:22,572 - old value:0.0 new value:12.6
+2024-08-28 17:06:22,572 - old status: 2900 new status:4000
+2024-08-28 17:06:23,791 - Frame corrected with id:0x46 time: 844 seconds 
+2024-08-28 17:06:23,791 - old value:0.0 new value:5328.0
+2024-08-28 17:06:23,791 - old status: 2900 new status:4000
+2024-08-28 17:06:23,903 - Frame corrected with id:0x07 time: 844 seconds 
+2024-08-28 17:06:23,903 - old value:0.0 new value:-4.1
+2024-08-28 17:06:23,903 - old status: 2900 new status:4000
+2024-08-28 17:06:24,125 - Frame corrected with id:0x45 time: 844 seconds 
+2024-08-28 17:06:24,125 - old value:0.0 new value:10.7
+2024-08-28 17:06:24,125 - old status: 2900 new status:4000
+2024-08-28 17:06:25,249 - Frame corrected with id:0x4F time: 845 seconds 
+2024-08-28 17:06:25,249 - old value:0.0 new value:12.6
+2024-08-28 17:06:25,249 - old status: 2900 new status:4000
+2024-08-28 17:06:25,471 - Frame corrected with id:0x47 time: 845 seconds 
+2024-08-28 17:06:25,471 - old value:0.0 new value:44.3
+2024-08-28 17:06:25,471 - old status: 2900 new status:4000
+2024-08-28 17:06:25,693 - Frame corrected with id:0x45 time: 846 seconds 
+2024-08-28 17:06:25,693 - old value:0.0 new value:10.7
+2024-08-28 17:06:25,693 - old status: 2900 new status:4000
+2024-08-28 17:06:25,916 - Frame could not corrected with id:0xFF and time: 846 seconds
+2024-08-28 17:06:27,247 - Frame could not corrected with id:0xFF and time: 847 seconds
+2024-08-28 17:06:27,468 - Frame corrected with id:0x44 time: 847 seconds 
+2024-08-28 17:06:27,468 - old value:0.0 new value:23.9
+2024-08-28 17:06:27,468 - old status: 2900 new status:4000
+2024-08-28 17:06:28,800 - Frame could not corrected with id:0xFF and time: 849 seconds
+2024-08-28 17:06:29,134 - Frame corrected with id:0xFE time: 849 seconds 
+2024-08-28 17:06:29,134 - old value:0.0 new value:24000285.0
+2024-08-28 17:06:29,134 - old status: 100 new status:4000
+2024-08-28 17:06:29,245 - Frame could not corrected with id:0xFF and time: 849 seconds
+2024-08-28 17:06:30,351 - Frame corrected with id:0x44 time: 850 seconds 
+2024-08-28 17:06:30,351 - old value:0.0 new value:24.2
+2024-08-28 17:06:30,351 - old status: 2900 new status:4000
+2024-08-28 17:06:32,236 - Frame could not corrected with id:0xFE and time: 852 seconds
+2024-08-28 17:06:32,460 - Frame corrected with id:0x44 time: 852 seconds 
+2024-08-28 17:06:32,460 - old value:-220.5 new value:24.3
+2024-08-28 17:06:32,460 - old status: 3001 new status:4000
+2024-08-28 17:06:33,580 - Frame corrected with id:0x45 time: 853 seconds 
+2024-08-28 17:06:33,580 - old value:0.0 new value:10.5
+2024-08-28 17:06:33,580 - old status: 2900 new status:4000
+2024-08-28 17:06:34,687 - Frame corrected with id:0x45 time: 855 seconds 
+2024-08-28 17:06:34,687 - old value:0.0 new value:10.5
+2024-08-28 17:06:34,687 - old status: 2900 new status:4000
+2024-08-28 17:06:35,020 - Frame corrected with id:0x44 time: 855 seconds 
+2024-08-28 17:06:35,020 - old value:0.0 new value:24.9
+2024-08-28 17:06:35,020 - old status: 2900 new status:4000
+2024-08-28 17:06:36,016 - Frame could not corrected with id:0xFF and time: 856 seconds
+2024-08-28 17:06:36,238 - Frame corrected with id:0x4F time: 856 seconds 
+2024-08-28 17:06:36,238 - old value:0.0 new value:12.1
+2024-08-28 17:06:36,238 - old status: 2900 new status:4000
+2024-08-28 17:06:36,459 - Frame corrected with id:0x07 time: 856 seconds 
+2024-08-28 17:06:36,459 - old value:0.0 new value:-4.1
+2024-08-28 17:06:36,459 - old status: 2900 new status:4000
+2024-08-28 17:06:37,787 - Frame corrected with id:0x44 time: 858 seconds 
+2024-08-28 17:06:37,787 - old value:0.0 new value:25.0
+2024-08-28 17:06:37,787 - old status: 2900 new status:4000
+2024-08-28 17:06:38,008 - Frame corrected with id:0x07 time: 858 seconds 
+2024-08-28 17:06:38,008 - old value:0.0 new value:-4.1
+2024-08-28 17:06:38,008 - old status: 2900 new status:4000
+2024-08-28 17:06:39,117 - Frame corrected with id:0x44 time: 859 seconds 
+2024-08-28 17:06:39,117 - old value:0.0 new value:25.3
+2024-08-28 17:06:39,117 - old status: 2900 new status:4000
+2024-08-28 17:06:40,116 - Frame corrected with id:0x06 time: 860 seconds 
+2024-08-28 17:06:40,116 - old value:0.0 new value:-41.3
+2024-08-28 17:06:40,116 - old status: 2900 new status:4000
+2024-08-28 17:06:40,447 - Frame corrected with id:0x47 time: 860 seconds 
+2024-08-28 17:06:40,447 - old value:0.0 new value:44.2
+2024-08-28 17:06:40,447 - old status: 2900 new status:4000
+2024-08-28 17:06:40,778 - Frame corrected with id:0x44 time: 861 seconds 
+2024-08-28 17:06:40,778 - old value:0.0 new value:25.4
+2024-08-28 17:06:40,778 - old status: 2900 new status:4000
+2024-08-28 17:06:41,458 - Frame could not corrected with id:0xFF and time: 861 seconds
+2024-08-28 17:06:41,794 - Frame corrected with id:0x44 time: 862 seconds 
+2024-08-28 17:06:41,794 - old value:0.0 new value:25.4
+2024-08-28 17:06:41,794 - old status: 2900 new status:4000
+2024-08-28 17:06:42,029 - Frame corrected with id:0x44 time: 862 seconds 
+2024-08-28 17:06:42,029 - old value:0.0 new value:25.4
+2024-08-28 17:06:42,029 - old status: 2900 new status:4000
+2024-08-28 17:06:42,141 - Frame corrected with id:0x45 time: 862 seconds 
+2024-08-28 17:06:42,141 - old value:0.0 new value:10.4
+2024-08-28 17:06:42,141 - old status: 2900 new status:4000
+2024-08-28 17:06:43,374 - Frame could not corrected with id:0xFE and time: 863 seconds
+2024-08-28 17:06:43,595 - Frame corrected with id:0x48 time: 863 seconds 
+2024-08-28 17:06:43,595 - old value:0.0 new value:1679.0
+2024-08-28 17:06:43,595 - old status: 2900 new status:4000
+2024-08-28 17:06:44,716 - Frame could not corrected with id:0xFF and time: 865 seconds
+2024-08-28 17:06:45,596 - Frame could not corrected with id:0xFE and time: 865 seconds
+2024-08-28 17:06:46,926 - Frame corrected with id:0x47 time: 867 seconds 
+2024-08-28 17:06:46,926 - old value:0.0 new value:44.2
+2024-08-28 17:06:46,926 - old status: 2900 new status:4000
+2024-08-28 17:06:48,479 - Frame corrected with id:0x45 time: 868 seconds 
+2024-08-28 17:06:48,480 - old value:0.0 new value:10.3
+2024-08-28 17:06:48,480 - old status: 2900 new status:4000
+2024-08-28 17:06:48,703 - Frame corrected with id:0x51 time: 869 seconds 
+2024-08-28 17:06:48,703 - old value:0.0 new value:32160.0
+2024-08-28 17:06:48,703 - old status: 2900 new status:4000
+2024-08-28 17:06:50,478 - Frame could not corrected with id:0xFF and time: 870 seconds
+2024-08-28 17:06:50,813 - Frame corrected with id:0x06 time: 871 seconds 
+2024-08-28 17:06:50,813 - old value:0.0 new value:-41.9
+2024-08-28 17:06:50,813 - old status: 2900 new status:4000
+2024-08-28 17:06:52,156 - Frame could not corrected with id:0xFF and time: 872 seconds
+2024-08-28 17:06:52,266 - Frame corrected with id:0x06 time: 872 seconds 
+2024-08-28 17:06:52,266 - old value:0.0 new value:-41.7
+2024-08-28 17:06:52,266 - old status: 2900 new status:4000
+2024-08-28 17:06:53,500 - Frame corrected with id:0x45 time: 873 seconds 
+2024-08-28 17:06:53,500 - old value:0.0 new value:10.2
+2024-08-28 17:06:53,500 - old status: 2900 new status:4000
+2024-08-28 17:06:55,068 - Frame corrected with id:0x48 time: 875 seconds 
+2024-08-28 17:06:55,068 - old value:0.0 new value:1701.0
+2024-08-28 17:06:55,068 - old status: 2900 new status:4000
+2024-08-28 17:06:55,290 - Frame corrected with id:0x45 time: 875 seconds 
+2024-08-28 17:06:55,290 - old value:0.0 new value:10.2
+2024-08-28 17:06:55,291 - old status: 2900 new status:4000
+2024-08-28 17:06:56,400 - Frame corrected with id:0x44 time: 876 seconds 
+2024-08-28 17:06:56,401 - old value:0.0 new value:25.7
+2024-08-28 17:06:56,401 - old status: 2900 new status:4000
+2024-08-28 17:06:56,621 - Frame corrected with id:0x4F time: 876 seconds 
+2024-08-28 17:06:56,621 - old value:0.0 new value:11.7
+2024-08-28 17:06:56,621 - old status: 2900 new status:4000
+2024-08-28 17:06:56,841 - Frame corrected with id:0xFD time: 877 seconds 
+2024-08-28 17:06:56,841 - old value:0.0 new value:0.0
+2024-08-28 17:06:56,841 - old status: 2900 new status:4000
+2024-08-28 17:06:57,729 - Frame could not corrected with id:0xFE and time: 878 seconds
+2024-08-28 17:06:57,951 - Frame corrected with id:0x45 time: 878 seconds 
+2024-08-28 17:06:57,951 - old value:0.0 new value:10.1
+2024-08-28 17:06:57,951 - old status: 2900 new status:4000
+2024-08-28 17:06:58,172 - Frame corrected with id:0x44 time: 878 seconds 
+2024-08-28 17:06:58,172 - old value:0.0 new value:25.7
+2024-08-28 17:06:58,172 - old status: 2900 new status:4000
+2024-08-28 17:06:58,394 - Frame corrected with id:0x4F time: 878 seconds 
+2024-08-28 17:06:58,394 - old value:0.0 new value:11.7
+2024-08-28 17:06:58,394 - old status: 2900 new status:4000
+2024-08-28 17:06:59,504 - Frame corrected with id:0x07 time: 879 seconds 
+2024-08-28 17:06:59,504 - old value:0.0 new value:-4.1
+2024-08-28 17:06:59,504 - old status: 2900 new status:4000
+2024-08-28 17:06:59,725 - Frame corrected with id:0x47 time: 880 seconds 
+2024-08-28 17:06:59,725 - old value:0.0 new value:44.1
+2024-08-28 17:06:59,725 - old status: 2900 new status:4000
+2024-08-28 17:07:00,831 - Frame corrected with id:0x44 time: 881 seconds 
+2024-08-28 17:07:00,831 - old value:0.0 new value:26.2
+2024-08-28 17:07:00,831 - old status: 2900 new status:4000
+2024-08-28 17:07:01,052 - Frame corrected with id:0x4F time: 881 seconds 
+2024-08-28 17:07:01,052 - old value:0.0 new value:11.6
+2024-08-28 17:07:01,052 - old status: 2900 new status:4000
+2024-08-28 17:07:02,275 - Frame could not corrected with id:0xFF and time: 882 seconds
+2024-08-28 17:07:02,605 - Frame corrected with id:0x44 time: 882 seconds 
+2024-08-28 17:07:02,605 - old value:0.0 new value:26.3
+2024-08-28 17:07:02,605 - old status: 2900 new status:4000
+2024-08-28 17:07:04,045 - Frame corrected with id:0xFD time: 884 seconds 
+2024-08-28 17:07:04,045 - old value:0.0 new value:0.0
+2024-08-28 17:07:04,045 - old status: 2900 new status:4000
+2024-08-28 17:07:04,267 - Frame corrected with id:0x45 time: 884 seconds 
+2024-08-28 17:07:04,267 - old value:0.0 new value:9.9
+2024-08-28 17:07:04,267 - old status: 2900 new status:4000
+2024-08-28 17:07:05,489 - Frame corrected with id:0x4F time: 885 seconds 
+2024-08-28 17:07:05,489 - old value:0.0 new value:11.5
+2024-08-28 17:07:05,489 - old status: 2900 new status:4000
+2024-08-28 17:07:06,922 - Frame corrected with id:0x45 time: 887 seconds 
+2024-08-28 17:07:06,922 - old value:0.0 new value:9.7
+2024-08-28 17:07:06,923 - old status: 2900 new status:4000
+2024-08-28 17:07:08,035 - Frame corrected with id:0x45 time: 888 seconds 
+2024-08-28 17:07:08,035 - old value:0.0 new value:9.7
+2024-08-28 17:07:08,035 - old status: 2900 new status:4000
+2024-08-28 17:07:08,256 - Frame corrected with id:0x4F time: 888 seconds 
+2024-08-28 17:07:08,256 - old value:0.0 new value:11.4
+2024-08-28 17:07:08,256 - old status: 2900 new status:4000
+2024-08-28 17:07:08,479 - Frame corrected with id:0x47 time: 888 seconds 
+2024-08-28 17:07:08,479 - old value:0.0 new value:44.0
+2024-08-28 17:07:08,479 - old status: 2900 new status:4000
+2024-08-28 17:07:08,702 - Frame corrected with id:0x45 time: 889 seconds 
+2024-08-28 17:07:08,702 - old value:0.0 new value:9.7
+2024-08-28 17:07:08,703 - old status: 2900 new status:4000
+2024-08-28 17:07:08,925 - Frame corrected with id:0x44 time: 889 seconds 
+2024-08-28 17:07:08,926 - old value:0.0 new value:26.4
+2024-08-28 17:07:08,926 - old status: 2900 new status:4000
+2024-08-28 17:07:10,028 - Frame corrected with id:0x4F time: 890 seconds 
+2024-08-28 17:07:10,028 - old value:0.0 new value:11.4
+2024-08-28 17:07:10,028 - old status: 2900 new status:4000
+2024-08-28 17:07:11,132 - Frame could not corrected with id:0xFF and time: 891 seconds
+2024-08-28 17:07:11,924 - Frame corrected with id:0xFE time: 892 seconds 
+2024-08-28 17:07:11,924 - old value:0.0 new value:24000285.0
+2024-08-28 17:07:11,924 - old status: 100 new status:4000
+2024-08-28 17:07:12,366 - Frame corrected with id:0x44 time: 892 seconds 
+2024-08-28 17:07:12,366 - old value:0.0 new value:26.6
+2024-08-28 17:07:12,366 - old status: 2900 new status:4000
+2024-08-28 17:07:13,697 - Frame corrected with id:0x07 time: 894 seconds 
+2024-08-28 17:07:13,697 - old value:0.0 new value:-4.1
+2024-08-28 17:07:13,697 - old status: 2900 new status:4000
+2024-08-28 17:07:14,030 - Frame corrected with id:0x44 time: 894 seconds 
+2024-08-28 17:07:14,030 - old value:0.0 new value:26.6
+2024-08-28 17:07:14,030 - old status: 2900 new status:4000
+2024-08-28 17:07:15,580 - Frame corrected with id:0x47 time: 895 seconds 
+2024-08-28 17:07:15,580 - old value:0.0 new value:44.0
+2024-08-28 17:07:15,580 - old status: 2900 new status:4000
+2024-08-28 17:07:16,463 - Frame could not corrected with id:0xFF and time: 896 seconds
+2024-08-28 17:07:17,789 - Frame could not corrected with id:0xFF and time: 898 seconds
+2024-08-28 17:07:18,896 - Frame corrected with id:0x4F time: 899 seconds 
+2024-08-28 17:07:18,896 - old value:0.0 new value:11.1
+2024-08-28 17:07:18,896 - old status: 2900 new status:4000
+2024-08-28 17:07:19,117 - Frame corrected with id:0xFE time: 899 seconds 
+2024-08-28 17:07:19,117 - old value:0.0 new value:24000285.0
+2024-08-28 17:07:19,117 - old status: 2900 new status:4000
+2024-08-28 17:07:20,448 - Frame could not corrected with id:0xFF and time: 900 seconds
+2024-08-28 17:07:20,670 - Frame corrected with id:0x4F time: 901 seconds 
+2024-08-28 17:07:20,670 - old value:0.0 new value:11.1
+2024-08-28 17:07:20,670 - old status: 2900 new status:4000
+2024-08-28 17:07:22,338 - Frame corrected with id:0x44 time: 902 seconds 
+2024-08-28 17:07:22,338 - old value:0.0 new value:27.2
+2024-08-28 17:07:22,338 - old status: 2900 new status:4000
+2024-08-28 17:07:22,448 - Frame corrected with id:0x4F time: 902 seconds 
+2024-08-28 17:07:22,449 - old value:0.0 new value:11.0
+2024-08-28 17:07:22,449 - old status: 2900 new status:4000
+2024-08-28 17:07:22,668 - Frame corrected with id:0x47 time: 903 seconds 
+2024-08-28 17:07:22,669 - old value:0.0 new value:44.0
+2024-08-28 17:07:22,669 - old status: 2900 new status:4000
+2024-08-28 17:07:23,772 - Frame corrected with id:0x48 time: 904 seconds 
+2024-08-28 17:07:23,772 - old value:0.0 new value:1737.0
+2024-08-28 17:07:23,772 - old status: 2900 new status:4000
+2024-08-28 17:07:23,882 - Frame corrected with id:0x45 time: 904 seconds 
+2024-08-28 17:07:23,882 - old value:0.0 new value:9.0
+2024-08-28 17:07:23,882 - old status: 2900 new status:4000
+2024-08-28 17:07:24,763 - Frame corrected with id:0x06 time: 905 seconds 
+2024-08-28 17:07:24,764 - old value:0.0 new value:-41.9
+2024-08-28 17:07:24,764 - old status: 2900 new status:4000
+2024-08-28 17:07:25,869 - Frame corrected with id:0x44 time: 906 seconds 
+2024-08-28 17:07:25,869 - old value:0.0 new value:27.7
+2024-08-28 17:07:25,869 - old status: 2900 new status:4000
+2024-08-28 17:07:26,311 - Frame corrected with id:0xFE time: 906 seconds 
+2024-08-28 17:07:26,311 - old value:0.0 new value:24000285.0
+2024-08-28 17:07:26,311 - old status: 100 new status:4000
+2024-08-28 17:07:27,200 - Frame could not corrected with id:0xFF and time: 907 seconds
+2024-08-28 17:07:27,419 - Frame corrected with id:0x45 time: 907 seconds 
+2024-08-28 17:07:27,419 - old value:0.0 new value:8.9
+2024-08-28 17:07:27,419 - old status: 2900 new status:4000
+2024-08-28 17:07:28,525 - Frame corrected with id:0x48 time: 908 seconds 
+2024-08-28 17:07:28,525 - old value:0.0 new value:1737.0
+2024-08-28 17:07:28,525 - old status: 2900 new status:4000
+2024-08-28 17:07:30,190 - Frame could not corrected with id:0xFF and time: 910 seconds
+2024-08-28 17:07:30,300 - Frame corrected with id:0x44 time: 910 seconds 
+2024-08-28 17:07:30,300 - old value:0.0 new value:27.8
+2024-08-28 17:07:30,300 - old status: 2900 new status:4000
+2024-08-28 17:07:31,424 - Frame corrected with id:0x46 time: 911 seconds 
+2024-08-28 17:07:31,424 - old value:0.0 new value:5330.0
+2024-08-28 17:07:31,424 - old status: 2900 new status:4000
+2024-08-28 17:07:31,758 - Frame corrected with id:0x45 time: 912 seconds 
+2024-08-28 17:07:31,758 - old value:0.0 new value:8.7
+2024-08-28 17:07:31,758 - old status: 2900 new status:4000
+2024-08-28 17:07:31,869 - Frame could not corrected with id:0xFE and time: 912 seconds
+2024-08-28 17:07:33,086 - Frame corrected with id:0x44 time: 913 seconds 
+2024-08-28 17:07:33,086 - old value:24414300.5 new value:28.3
+2024-08-28 17:07:33,086 - old status: 3002 new status:4000
+2024-08-28 17:07:33,195 - Frame could not corrected with id:0xFF and time: 913 seconds
+2024-08-28 17:07:33,966 - Frame could not corrected with id:0xFF and time: 914 seconds
+2024-08-28 17:07:34,188 - Frame corrected with id:0x45 time: 914 seconds 
+2024-08-28 17:07:34,188 - old value:0.0 new value:8.6
+2024-08-28 17:07:34,188 - old status: 2900 new status:4000
+2024-08-28 17:07:35,743 - Frame corrected with id:0x44 time: 916 seconds 
+2024-08-28 17:07:35,743 - old value:0.0 new value:28.4
+2024-08-28 17:07:35,743 - old status: 2900 new status:4000
+2024-08-28 17:07:35,964 - Frame corrected with id:0x51 time: 916 seconds 
+2024-08-28 17:07:35,964 - old value:0.0 new value:32160.0
+2024-08-28 17:07:35,964 - old status: 2900 new status:4000
+2024-08-28 17:07:37,297 - Frame could not corrected with id:0xFF and time: 917 seconds
+2024-08-28 17:07:37,518 - Frame corrected with id:0x06 time: 917 seconds 
+2024-08-28 17:07:37,518 - old value:0.0 new value:-42.4
+2024-08-28 17:07:37,518 - old status: 2900 new status:4000
+2024-08-28 17:07:39,069 - Frame corrected with id:0x45 time: 919 seconds 
+2024-08-28 17:07:39,069 - old value:0.0 new value:8.4
+2024-08-28 17:07:39,069 - old status: 2900 new status:4000
+2024-08-28 17:07:40,513 - Frame corrected with id:0x4F time: 920 seconds 
+2024-08-28 17:07:40,514 - old value:0.0 new value:10.3
+2024-08-28 17:07:40,514 - old status: 2900 new status:4000
+2024-08-28 17:07:40,623 - Frame corrected with id:0x45 time: 921 seconds 
+2024-08-28 17:07:40,623 - old value:0.0 new value:8.3
+2024-08-28 17:07:40,623 - old status: 2900 new status:4000
+2024-08-28 17:07:42,507 - Frame corrected with id:0x07 time: 922 seconds 
+2024-08-28 17:07:42,507 - old value:0.0 new value:-3.9
+2024-08-28 17:07:42,507 - old status: 2900 new status:4000
+2024-08-28 17:07:43,280 - Frame corrected with id:0x46 time: 923 seconds 
+2024-08-28 17:07:43,280 - old value:0.0 new value:5331.0
+2024-08-28 17:07:43,280 - old status: 2900 new status:4000
+2024-08-28 17:07:43,612 - Frame corrected with id:0x45 time: 924 seconds 
+2024-08-28 17:07:43,612 - old value:0.0 new value:8.2
+2024-08-28 17:07:43,612 - old status: 2900 new status:4000
+2024-08-28 17:07:45,374 - Frame corrected with id:0xFE time: 925 seconds 
+2024-08-28 17:07:45,375 - old value:0.0 new value:24000285.0
+2024-08-28 17:07:45,375 - old status: 2900 new status:4000
+2024-08-28 17:07:45,595 - Frame corrected with id:0x45 time: 925 seconds 
+2024-08-28 17:07:45,595 - old value:0.0 new value:8.2
+2024-08-28 17:07:45,595 - old status: 2900 new status:4000
+2024-08-28 17:07:46,479 - Frame corrected with id:0x44 time: 926 seconds 
+2024-08-28 17:07:46,479 - old value:0.0 new value:30.2
+2024-08-28 17:07:46,479 - old status: 2900 new status:4000
+2024-08-28 17:07:47,790 - Frame corrected with id:0xFE time: 928 seconds 
+2024-08-28 17:07:47,790 - old value:0.0 new value:24000285.0
+2024-08-28 17:07:47,790 - old status: 100 new status:4000
+2024-08-28 17:07:52,470 - Frame corrected with id:0x45 time: 932 seconds 
+2024-08-28 17:07:52,471 - old value:0.0 new value:7.8
+2024-08-28 17:07:52,471 - old status: 2900 new status:4000
+2024-08-28 17:07:54,959 - Frame corrected with id:0xFE time: 935 seconds 
+2024-08-28 17:07:54,961 - old value:0.0 new value:24000285.0
+2024-08-28 17:07:54,961 - old status: 2900 new status:4000
+2024-08-28 17:07:58,411 - Frame corrected with id:0xFD time: 938 seconds 
+2024-08-28 17:07:58,411 - old value:0.0 new value:0.0
+2024-08-28 17:07:58,411 - old status: 2900 new status:4000
+2024-08-28 17:08:00,048 - Frame corrected with id:0x51 time: 940 seconds 
+2024-08-28 17:08:00,048 - old value:0.0 new value:32150.0
+2024-08-28 17:08:00,048 - old status: 2900 new status:4000
+2024-08-28 17:08:01,127 - Frame corrected with id:0x45 time: 941 seconds 
+2024-08-28 17:08:01,127 - old value:0.0 new value:7.4
+2024-08-28 17:08:01,127 - old status: 2900 new status:4000
+2024-08-28 17:08:01,773 - Frame corrected with id:0x06 time: 942 seconds 
+2024-08-28 17:08:01,773 - old value:0.0 new value:-42.3
+2024-08-28 17:08:01,773 - old status: 2900 new status:4000
+2024-08-28 17:08:02,210 - Frame could not corrected with id:0xFE and time: 942 seconds
+2024-08-28 17:08:02,736 - Frame corrected with id:0x44 time: 943 seconds 
+2024-08-28 17:08:02,736 - old value:0.0 new value:31.5
+2024-08-28 17:08:02,736 - old status: 2900 new status:4000
+2024-08-28 17:08:02,737 - Frame corrected with id:0x4F time: 943 seconds 
+2024-08-28 17:08:02,737 - old value:0.0 new value:9.6
+2024-08-28 17:08:02,737 - old status: 2900 new status:4000
+2024-08-28 17:08:03,495 - Frame corrected with id:0x48 time: 943 seconds 
+2024-08-28 17:08:03,495 - old value:0.0 new value:1787.0
+2024-08-28 17:08:03,495 - old status: 2900 new status:4000
+2024-08-28 17:08:06,159 - Frame corrected with id:0x44 time: 946 seconds 
+2024-08-28 17:08:06,159 - old value:0.0 new value:31.9
+2024-08-28 17:08:06,159 - old status: 2900 new status:4000
+2024-08-28 17:08:07,345 - Frame corrected with id:0x4F time: 947 seconds 
+2024-08-28 17:08:07,345 - old value:0.0 new value:9.3
+2024-08-28 17:08:07,345 - old status: 2900 new status:4000
+2024-08-28 17:08:08,178 - Frame corrected with id:0x4F time: 948 seconds 
+2024-08-28 17:08:08,178 - old value:0.0 new value:9.3
+2024-08-28 17:08:08,178 - old status: 2900 new status:4000
+2024-08-28 17:08:08,394 - Frame corrected with id:0xFD time: 948 seconds 
+2024-08-28 17:08:08,394 - old value:0.0 new value:0.0
+2024-08-28 17:08:08,394 - old status: 2900 new status:4000
+2024-08-28 17:08:08,826 - Frame could not corrected with id:0xFF and time: 949 seconds
+2024-08-28 17:08:09,359 - Frame could not corrected with id:0xFE and time: 949 seconds
+2024-08-28 17:08:09,789 - Frame corrected with id:0x44 time: 950 seconds 
+2024-08-28 17:08:09,789 - old value:0.0 new value:31.9
+2024-08-28 17:08:09,789 - old status: 2900 new status:4000
+2024-08-28 17:08:11,107 - Frame corrected with id:0x07 time: 951 seconds 
+2024-08-28 17:08:11,108 - old value:0.0 new value:-3.8
+2024-08-28 17:08:11,108 - old status: 2900 new status:4000
+2024-08-28 17:08:12,755 - Frame corrected with id:0x06 time: 953 seconds 
+2024-08-28 17:08:12,755 - old value:0.0 new value:-41.4
+2024-08-28 17:08:12,755 - old status: 2900 new status:4000
+2024-08-28 17:08:12,975 - Frame corrected with id:0x47 time: 953 seconds 
+2024-08-28 17:08:12,975 - old value:0.0 new value:43.7
+2024-08-28 17:08:12,975 - old status: 2900 new status:4000
+2024-08-28 17:08:13,201 - Frame corrected with id:0x45 time: 953 seconds 
+2024-08-28 17:08:13,201 - old value:0.0 new value:6.9
+2024-08-28 17:08:13,201 - old status: 2900 new status:4000
+2024-08-28 17:08:13,317 - Frame corrected with id:0x44 time: 953 seconds 
+2024-08-28 17:08:13,317 - old value:0.0 new value:33.1
+2024-08-28 17:08:13,317 - old status: 2900 new status:4000
+2024-08-28 17:08:13,744 - Frame corrected with id:0x45 time: 954 seconds 
+2024-08-28 17:08:13,744 - old value:0.0 new value:6.9
+2024-08-28 17:08:13,744 - old status: 2900 new status:4000
+2024-08-28 17:08:14,192 - Frame corrected with id:0xFD time: 954 seconds 
+2024-08-28 17:08:14,192 - old value:0.0 new value:0.0
+2024-08-28 17:08:14,192 - old status: 2900 new status:4000
+2024-08-28 17:08:14,404 - Frame corrected with id:0x07 time: 954 seconds 
+2024-08-28 17:08:14,404 - old value:0.0 new value:-3.8
+2024-08-28 17:08:14,404 - old status: 2900 new status:4000
+2024-08-28 17:08:14,947 - Frame corrected with id:0x4F time: 955 seconds 
+2024-08-28 17:08:14,947 - old value:0.0 new value:9.0
+2024-08-28 17:08:14,947 - old status: 2900 new status:4000
+2024-08-28 17:08:15,172 - Frame corrected with id:0x47 time: 955 seconds 
+2024-08-28 17:08:15,172 - old value:0.0 new value:43.7
+2024-08-28 17:08:15,172 - old status: 2900 new status:4000
+2024-08-28 17:08:15,393 - Frame corrected with id:0x47 time: 955 seconds 
+2024-08-28 17:08:15,393 - old value:0.0 new value:43.7
+2024-08-28 17:08:15,393 - old status: 2900 new status:4000
+2024-08-28 17:08:15,508 - Frame corrected with id:0xFD time: 955 seconds 
+2024-08-28 17:08:15,509 - old value:0.0 new value:0.0
+2024-08-28 17:08:15,509 - old status: 2900 new status:4000
+2024-08-28 17:08:16,059 - Frame corrected with id:0x46 time: 956 seconds 
+2024-08-28 17:08:16,059 - old value:0.0 new value:5332.0
+2024-08-28 17:08:16,059 - old status: 2900 new status:4000
+2024-08-28 17:08:16,508 - Frame could not corrected with id:0xFF and time: 956 seconds
+2024-08-28 17:08:16,958 - Frame could not corrected with id:0xFF and time: 957 seconds
+2024-08-28 17:08:17,392 - Frame corrected with id:0x06 time: 957 seconds 
+2024-08-28 17:08:17,392 - old value:0.0 new value:-41.4
+2024-08-28 17:08:17,392 - old status: 2900 new status:4000
+2024-08-28 17:08:17,841 - Frame could not corrected with id:0xFF and time: 958 seconds
+2024-08-28 17:08:18,733 - Frame corrected with id:0x44 time: 959 seconds 
+2024-08-28 17:08:18,733 - old value:0.0 new value:33.1
+2024-08-28 17:08:18,733 - old status: 2900 new status:4000
+2024-08-28 17:08:18,943 - Frame corrected with id:0x4F time: 959 seconds 
+2024-08-28 17:08:18,943 - old value:0.0 new value:-79.4
+2024-08-28 17:08:18,943 - old status: 2900 new status:4000
+2024-08-28 17:08:20,222 - Frame corrected with id:0x45 time: 960 seconds 
+2024-08-28 17:08:20,222 - old value:0.0 new value:6.7
+2024-08-28 17:08:20,222 - old status: 2900 new status:4000
+2024-08-28 17:08:20,974 - Frame corrected with id:0x48 time: 961 seconds 
+2024-08-28 17:08:20,974 - old value:0.0 new value:1794.0
+2024-08-28 17:08:20,974 - old status: 2900 new status:4000
+2024-08-28 17:08:22,508 - Frame could not corrected with id:0xFF and time: 962 seconds
+2024-08-28 17:08:23,027 - Frame corrected with id:0x47 time: 963 seconds 
+2024-08-28 17:08:23,027 - old value:0.0 new value:43.7
+2024-08-28 17:08:23,027 - old status: 2900 new status:4000
+2024-08-28 17:08:23,778 - Frame could not corrected with id:0xFE and time: 964 seconds
+2024-08-28 17:08:24,193 - Frame corrected with id:0x44 time: 964 seconds 
+2024-08-28 17:08:24,193 - old value:0.0 new value:33.3
+2024-08-28 17:08:24,193 - old status: 2900 new status:4000
+2024-08-28 17:08:25,044 - Frame corrected with id:0x44 time: 965 seconds 
+2024-08-28 17:08:25,044 - old value:0.0 new value:33.3
+2024-08-28 17:08:25,044 - old status: 2900 new status:4000
+2024-08-28 17:08:26,111 - Frame corrected with id:0x4F time: 966 seconds 
+2024-08-28 17:08:26,111 - old value:0.0 new value:8.5
+2024-08-28 17:08:26,111 - old status: 2900 new status:4000
+2024-08-28 17:08:26,543 - Frame corrected with id:0x46 time: 966 seconds 
+2024-08-28 17:08:26,543 - old value:0.0 new value:5332.0
+2024-08-28 17:08:26,543 - old status: 2900 new status:4000
+2024-08-28 17:08:27,709 - Frame could not corrected with id:0xFF and time: 968 seconds
+2024-08-28 17:08:28,144 - Frame corrected with id:0x48 time: 968 seconds 
+2024-08-28 17:08:28,144 - old value:0.0 new value:1794.0
+2024-08-28 17:08:28,144 - old status: 2900 new status:4000
+2024-08-28 17:08:29,753 - Frame corrected with id:0x4F time: 970 seconds 
+2024-08-28 17:08:29,753 - old value:0.0 new value:8.4
+2024-08-28 17:08:29,753 - old status: 2900 new status:4000
+2024-08-28 17:08:30,695 - Frame corrected with id:0x48 time: 971 seconds 
+2024-08-28 17:08:30,695 - old value:0.0 new value:1794.0
+2024-08-28 17:08:30,695 - old status: 2900 new status:4000
+2024-08-28 17:08:30,911 - Frame could not corrected with id:0xFE and time: 971 seconds
+2024-08-28 17:08:31,344 - Frame corrected with id:0x45 time: 971 seconds 
+2024-08-28 17:08:31,344 - old value:0.0 new value:6.2
+2024-08-28 17:08:31,344 - old status: 2900 new status:4000
+2024-08-28 17:08:31,861 - Frame corrected with id:0x06 time: 972 seconds 
+2024-08-28 17:08:31,861 - old value:0.0 new value:-42.3
+2024-08-28 17:08:31,861 - old status: 2900 new status:4000
+2024-08-28 17:08:32,294 - Frame corrected with id:0x44 time: 972 seconds 
+2024-08-28 17:08:32,294 - old value:0.0 new value:32.5
+2024-08-28 17:08:32,294 - old status: 2900 new status:4000
+2024-08-28 17:08:32,626 - Frame corrected with id:0x51 time: 973 seconds 
+2024-08-28 17:08:32,627 - old value:0.0 new value:32160.0
+2024-08-28 17:08:32,627 - old status: 2900 new status:4000
+2024-08-28 17:08:33,061 - Frame corrected with id:0x44 time: 973 seconds 
+2024-08-28 17:08:33,061 - old value:0.0 new value:32.5
+2024-08-28 17:08:33,061 - old status: 2900 new status:4000
+2024-08-28 17:08:33,277 - Frame corrected with id:0x46 time: 973 seconds 
+2024-08-28 17:08:33,277 - old value:0.0 new value:5332.0
+2024-08-28 17:08:33,277 - old status: 2900 new status:4000
+2024-08-28 17:08:33,811 - Frame could not corrected with id:0xFF and time: 974 seconds
+2024-08-28 17:08:34,245 - Frame corrected with id:0x4F time: 974 seconds 
+2024-08-28 17:08:34,245 - old value:0.0 new value:8.3
+2024-08-28 17:08:34,245 - old status: 2900 new status:4000
+2024-08-28 17:08:35,326 - Frame corrected with id:0x45 time: 975 seconds 
+2024-08-28 17:08:35,326 - old value:0.0 new value:6.1
+2024-08-28 17:08:35,327 - old status: 2900 new status:4000
+2024-08-28 17:08:35,861 - Frame corrected with id:0x44 time: 976 seconds 
+2024-08-28 17:08:35,861 - old value:0.0 new value:32.6
+2024-08-28 17:08:35,861 - old status: 2900 new status:4000
+2024-08-28 17:08:37,261 - Frame corrected with id:0x4F time: 977 seconds 
+2024-08-28 17:08:37,261 - old value:0.0 new value:8.0
+2024-08-28 17:08:37,261 - old status: 2900 new status:4000
+2024-08-28 17:08:37,894 - Frame could not corrected with id:0xFF and time: 978 seconds
+2024-08-28 17:08:38,111 - Frame could not corrected with id:0xFE and time: 978 seconds
+2024-08-28 17:08:38,443 - Frame corrected with id:0x44 time: 978 seconds 
+2024-08-28 17:08:38,443 - old value:0.0 new value:31.7
+2024-08-28 17:08:38,443 - old status: 2900 new status:4000
+2024-08-28 17:08:38,877 - Frame corrected with id:0x06 time: 979 seconds 
+2024-08-28 17:08:38,877 - old value:0.0 new value:-42.3
+2024-08-28 17:08:38,877 - old status: 2900 new status:4000
+2024-08-28 17:08:39,311 - Frame corrected with id:0x47 time: 979 seconds 
+2024-08-28 17:08:39,311 - old value:0.0 new value:43.5
+2024-08-28 17:08:39,311 - old status: 2900 new status:4000
+2024-08-28 17:08:39,844 - Frame corrected with id:0x07 time: 980 seconds 
+2024-08-28 17:08:39,844 - old value:0.0 new value:-3.7
+2024-08-28 17:08:39,844 - old status: 2900 new status:4000
+2024-08-28 17:08:40,511 - Frame corrected with id:0x4F time: 980 seconds 
+2024-08-28 17:08:40,511 - old value:0.0 new value:8.0
+2024-08-28 17:08:40,511 - old status: 2900 new status:4000
+2024-08-28 17:08:40,943 - Frame corrected with id:0x45 time: 981 seconds 
+2024-08-28 17:08:40,943 - old value:0.0 new value:5.9
+2024-08-28 17:08:40,943 - old status: 2900 new status:4000
+2024-08-28 17:08:41,360 - Frame corrected with id:0x4F time: 981 seconds 
+2024-08-28 17:08:41,360 - old value:0.0 new value:8.0
+2024-08-28 17:08:41,360 - old status: 2900 new status:4000
+2024-08-28 17:08:41,909 - Frame corrected with id:0x45 time: 982 seconds 
+2024-08-28 17:08:41,909 - old value:0.0 new value:5.9
+2024-08-28 17:08:41,909 - old status: 2900 new status:4000
+2024-08-28 17:08:42,112 - Frame corrected with id:0x44 time: 982 seconds 
+2024-08-28 17:08:42,112 - old value:0.0 new value:31.9
+2024-08-28 17:08:42,112 - old status: 2900 new status:4000
+2024-08-28 17:08:42,343 - Frame corrected with id:0x06 time: 982 seconds 
+2024-08-28 17:08:42,343 - old value:0.0 new value:-42.3
+2024-08-28 17:08:42,343 - old status: 2900 new status:4000
+2024-08-28 17:08:42,560 - Frame could not corrected with id:0x48 and time: 982 seconds
+2024-08-28 17:08:42,975 - Frame corrected with id:0x44 time: 983 seconds 
+2024-08-28 17:08:42,975 - old value:0.0 new value:31.9
+2024-08-28 17:08:42,975 - old status: 2900 new status:4000
+2024-08-28 17:08:43,393 - Frame could not corrected with id:0xFF and time: 983 seconds
+2024-08-28 17:08:44,494 - Frame corrected with id:0x45 time: 984 seconds 
+2024-08-28 17:08:44,494 - old value:0.0 new value:5.8
+2024-08-28 17:08:44,495 - old status: 2900 new status:4000
+2024-08-28 17:08:44,928 - Frame corrected with id:0x4F time: 985 seconds 
+2024-08-28 17:08:44,928 - old value:0.0 new value:7.7
+2024-08-28 17:08:44,928 - old status: 2900 new status:4000
+2024-08-28 17:08:45,361 - Frame corrected with id:0x4F time: 985 seconds 
+2024-08-28 17:08:45,361 - old value:0.0 new value:7.7
+2024-08-28 17:08:45,361 - old status: 2900 new status:4000
+2024-08-28 17:08:45,910 - Frame corrected with id:0x51 time: 986 seconds 
+2024-08-28 17:08:45,910 - old value:0.0 new value:32150.0
+2024-08-28 17:08:45,910 - old status: 2900 new status:4000
+2024-08-28 17:08:46,561 - Frame could not corrected with id:0x48 and time: 986 seconds
+2024-08-28 17:08:46,994 - Frame could not corrected with id:0xFF and time: 987 seconds
+2024-08-28 17:08:50,110 - Frame corrected with id:0x45 time: 990 seconds 
+2024-08-28 17:08:50,110 - old value:0.0 new value:5.7
+2024-08-28 17:08:50,110 - old status: 2900 new status:4000
+2024-08-28 17:08:50,544 - Frame corrected with id:0xFE time: 990 seconds 
+2024-08-28 17:08:50,544 - old value:0.0 new value:24000285.0
+2024-08-28 17:08:50,544 - old status: 2900 new status:4000
+2024-08-28 17:08:50,962 - Frame corrected with id:0x44 time: 991 seconds 
+2024-08-28 17:08:50,962 - old value:0.0 new value:34.2
+2024-08-28 17:08:50,962 - old status: 2900 new status:4000
+2024-08-28 17:08:51,611 - Frame corrected with id:0x45 time: 992 seconds 
+2024-08-28 17:08:51,611 - old value:0.0 new value:5.7
+2024-08-28 17:08:51,611 - old status: 2900 new status:4000
+2024-08-28 17:08:52,361 - Frame corrected with id:0xFE time: 992 seconds 
+2024-08-28 17:08:52,362 - old value:0.0 new value:24000285.0
+2024-08-28 17:08:52,362 - old status: 100 new status:4000
+2024-08-28 17:08:52,577 - Frame corrected with id:0x07 time: 992 seconds 
+2024-08-28 17:08:52,578 - old value:0.0 new value:-3.7
+2024-08-28 17:08:52,578 - old status: 2900 new status:4000
+2024-08-28 17:08:53,644 - Frame corrected with id:0xFD time: 994 seconds 
+2024-08-28 17:08:53,645 - old value:0.0 new value:0.0
+2024-08-28 17:08:53,645 - old status: 2900 new status:4000
+2024-08-28 17:08:54,195 - Frame corrected with id:0x4F time: 994 seconds 
+2024-08-28 17:08:54,195 - old value:0.0 new value:7.4
+2024-08-28 17:08:54,196 - old status: 2900 new status:4000
+2024-08-28 17:08:54,612 - Frame corrected with id:0x44 time: 994 seconds 
+2024-08-28 17:08:54,612 - old value:0.0 new value:34.5
+2024-08-28 17:08:54,612 - old status: 2900 new status:4000
+2024-08-28 17:08:55,694 - Frame corrected with id:0xFE time: 996 seconds 
+2024-08-28 17:08:55,694 - old value:0.0 new value:24000285.0
+2024-08-28 17:08:55,694 - old status: 2900 new status:4000
+2024-08-28 17:08:56,133 - Frame corrected with id:0x46 time: 996 seconds 
+2024-08-28 17:08:56,133 - old value:0.0 new value:5331.0
+2024-08-28 17:08:56,133 - old status: 2900 new status:4000
+2024-08-28 17:08:56,661 - Frame corrected with id:0x4F time: 997 seconds 
+2024-08-28 17:08:56,662 - old value:0.0 new value:7.4
+2024-08-28 17:08:56,662 - old status: 2900 new status:4000
+2024-08-28 17:08:57,312 - Frame corrected with id:0x44 time: 997 seconds 
+2024-08-28 17:08:57,312 - old value:0.0 new value:35.2
+2024-08-28 17:08:57,312 - old status: 2900 new status:4000
+2024-08-28 17:08:58,161 - Frame corrected with id:0x47 time: 998 seconds 
+2024-08-28 17:08:58,162 - old value:0.0 new value:43.3
+2024-08-28 17:08:58,162 - old status: 2900 new status:4000
+2024-08-28 17:08:58,594 - Frame corrected with id:0x48 time: 999 seconds 
+2024-08-28 17:08:58,594 - old value:0.0 new value:1844.0
+2024-08-28 17:08:58,594 - old status: 2900 new status:4000
+2024-08-28 17:08:59,361 - Frame corrected with id:0x4F time: 999 seconds 
+2024-08-28 17:08:59,361 - old value:0.0 new value:7.4
+2024-08-28 17:08:59,361 - old status: 2900 new status:4000
+2024-08-28 17:08:59,795 - Frame corrected with id:0x45 time: 1000 seconds 
+2024-08-28 17:08:59,795 - old value:0.0 new value:5.3
+2024-08-28 17:08:59,795 - old status: 2900 new status:4000
+2024-08-28 17:09:00,228 - Frame corrected with id:0x46 time: 1000 seconds 
+2024-08-28 17:09:00,228 - old value:0.0 new value:5331.0
+2024-08-28 17:09:00,228 - old status: 2900 new status:4000
+2024-08-28 17:09:01,310 - Frame corrected with id:0x07 time: 1001 seconds 
+2024-08-28 17:09:01,310 - old value:0.0 new value:-3.7
+2024-08-28 17:09:01,310 - old status: 2900 new status:4000
+2024-08-28 17:09:01,728 - Frame corrected with id:0x44 time: 1002 seconds 
+2024-08-28 17:09:01,728 - old value:0.0 new value:36.8
+2024-08-28 17:09:01,728 - old status: 2900 new status:4000
+2024-08-28 17:09:02,161 - Frame corrected with id:0x46 time: 1002 seconds 
+2024-08-28 17:09:02,162 - old value:0.0 new value:5331.0
+2024-08-28 17:09:02,162 - old status: 2900 new status:4000
+2024-08-28 17:09:03,330 - Frame corrected with id:0x45 time: 1003 seconds 
+2024-08-28 17:09:03,330 - old value:0.0 new value:5.2
+2024-08-28 17:09:03,330 - old status: 2900 new status:4000
+2024-08-28 17:09:04,194 - Frame corrected with id:0x45 time: 1004 seconds 
+2024-08-28 17:09:04,194 - old value:0.0 new value:5.2
+2024-08-28 17:09:04,194 - old status: 2900 new status:4000
+2024-08-28 17:09:04,961 - Frame could not corrected with id:0xFF and time: 1005 seconds
+2024-08-28 17:09:05,394 - Frame corrected with id:0x48 time: 1005 seconds 
+2024-08-28 17:09:05,394 - old value:0.0 new value:1851.0
+2024-08-28 17:09:05,394 - old status: 2900 new status:4000
+2024-08-28 17:09:05,727 - Frame corrected with id:0xFD time: 1006 seconds 
+2024-08-28 17:09:05,727 - old value:0.0 new value:0.0
+2024-08-28 17:09:05,727 - old status: 2900 new status:4000
+2024-08-28 17:09:06,694 - Frame corrected with id:0xFE time: 1007 seconds 
+2024-08-28 17:09:06,695 - old value:0.0 new value:24000285.0
+2024-08-28 17:09:06,695 - old status: 100 new status:4000
+2024-08-28 17:09:06,911 - Frame corrected with id:0x4F time: 1007 seconds 
+2024-08-28 17:09:06,911 - old value:0.0 new value:7.1
+2024-08-28 17:09:06,911 - old status: 2900 new status:4000
+2024-08-28 17:09:07,345 - Frame could not corrected with id:0x07 and time: 1007 seconds
+2024-08-28 17:09:08,962 - Frame corrected with id:0xFE time: 1009 seconds 
+2024-08-28 17:09:08,962 - old value:0.0 new value:24000285.0
+2024-08-28 17:09:08,962 - old status: 2900 new status:4000
+2024-08-28 17:09:09,496 - Frame could not corrected with id:0x46 and time: 1009 seconds
+2024-08-28 17:09:10,143 - Frame corrected with id:0x4F time: 1010 seconds 
+2024-08-28 17:09:10,143 - old value:0.0 new value:7.0
+2024-08-28 17:09:10,143 - old status: 2900 new status:4000
+2024-08-28 17:09:10,562 - Frame corrected with id:0x44 time: 1010 seconds 
+2024-08-28 17:09:10,562 - old value:0.0 new value:32.8
+2024-08-28 17:09:10,562 - old status: 2900 new status:4000
+2024-08-28 17:09:10,995 - Frame corrected with id:0x4F time: 1011 seconds 
+2024-08-28 17:09:10,995 - old value:0.0 new value:7.0
+2024-08-28 17:09:10,995 - old status: 2900 new status:4000
+2024-08-28 17:09:11,327 - Frame corrected with id:0x45 time: 1011 seconds 
+2024-08-28 17:09:11,327 - old value:0.0 new value:5.1
+2024-08-28 17:09:11,327 - old status: 2900 new status:4000
+2024-08-28 17:09:12,511 - Frame corrected with id:0x44 time: 1012 seconds 
+2024-08-28 17:09:12,512 - old value:0.0 new value:31.2
+2024-08-28 17:09:12,512 - old status: 2900 new status:4000
+2024-08-28 17:09:12,945 - Frame corrected with id:0x51 time: 1013 seconds 
+2024-08-28 17:09:12,945 - old value:0.0 new value:32150.0
+2024-08-28 17:09:12,945 - old status: 2900 new status:4000
+2024-08-28 17:09:14,128 - Frame could not corrected with id:0xFF and time: 1014 seconds
+2024-08-28 17:09:14,561 - Frame corrected with id:0x48 time: 1014 seconds 
+2024-08-28 17:09:14,561 - old value:0.0 new value:1851.0
+2024-08-28 17:09:14,561 - old status: 2900 new status:4000
+2024-08-28 17:09:14,994 - Frame could not corrected with id:0xFF and time: 1015 seconds
+2024-08-28 17:09:15,528 - Frame corrected with id:0x4F time: 1015 seconds 
+2024-08-28 17:09:15,528 - old value:0.0 new value:6.7
+2024-08-28 17:09:15,528 - old status: 2900 new status:4000
+2024-08-28 17:09:15,628 - Frame could not corrected with id:0xFF and time: 1015 seconds
+2024-08-28 17:09:16,162 - Frame corrected with id:0x44 time: 1016 seconds 
+2024-08-28 17:09:16,162 - old value:0.0 new value:30.9
+2024-08-28 17:09:16,162 - old status: 2900 new status:4000
+2024-08-28 17:09:16,594 - Frame could not corrected with id:0x46 and time: 1016 seconds
+2024-08-28 17:09:17,012 - Frame could not corrected with id:0xFF and time: 1017 seconds
+2024-08-28 17:09:18,184 - Frame corrected with id:0xFE time: 1018 seconds 
+2024-08-28 17:09:18,185 - old value:0.0 new value:24000285.0
+2024-08-28 17:09:18,185 - old status: 2900 new status:4000
+2024-08-28 17:09:19,045 - Frame corrected with id:0xFD time: 1019 seconds 
+2024-08-28 17:09:19,045 - old value:0.0 new value:0.0
+2024-08-28 17:09:19,046 - old status: 2900 new status:4000
+2024-08-28 17:09:19,579 - Frame corrected with id:0x07 time: 1020 seconds 
+2024-08-28 17:09:19,579 - old value:0.0 new value:-3.7
+2024-08-28 17:09:19,579 - old status: 2900 new status:4000
+2024-08-28 17:09:20,112 - Frame corrected with id:0x06 time: 1020 seconds 
+2024-08-28 17:09:20,112 - old value:0.0 new value:-42.0
+2024-08-28 17:09:20,112 - old status: 2900 new status:4000
+2024-08-28 17:09:20,545 - Frame corrected with id:0x44 time: 1020 seconds 
+2024-08-28 17:09:20,545 - old value:0.0 new value:30.7
+2024-08-28 17:09:20,545 - old status: 2900 new status:4000
+2024-08-28 17:09:21,310 - Frame could not corrected with id:0xFF and time: 1021 seconds
+2024-08-28 17:09:21,528 - Frame could not corrected with id:0xFF and time: 1021 seconds
+2024-08-28 17:09:21,745 - Frame corrected with id:0x48 time: 1022 seconds 
+2024-08-28 17:09:21,745 - old value:0.0 new value:1859.0
+2024-08-28 17:09:21,745 - old status: 2900 new status:4000
+2024-08-28 17:09:21,962 - Frame could not corrected with id:0xFF and time: 1022 seconds
+2024-08-28 17:09:22,078 - Frame could not corrected with id:0xFE and time: 1022 seconds
+2024-08-28 17:09:22,194 - Frame corrected with id:0x44 time: 1022 seconds 
+2024-08-28 17:09:22,195 - old value:0.0 new value:30.7
+2024-08-28 17:09:22,195 - old status: 2900 new status:4000
+2024-08-28 17:09:22,311 - Frame could not corrected with id:0xFF and time: 1022 seconds
+2024-08-28 17:09:22,413 - Frame could not corrected with id:0xFF and time: 1022 seconds
+2024-08-28 17:09:22,743 - Frame could not corrected with id:0xFD and time: 1023 seconds
+2024-08-28 17:09:23,795 - Frame could not corrected with id:0xFD and time: 1024 seconds
+2024-08-28 17:09:24,128 - Frame corrected with id:0x44 time: 1024 seconds 
+2024-08-28 17:09:24,128 - old value:97970378.8 new value:31.5
+2024-08-28 17:09:24,128 - old status: 3002 new status:4000
+2024-08-28 17:09:24,894 - Frame corrected with id:0x45 time: 1025 seconds 
+2024-08-28 17:09:24,894 - old value:0.0 new value:4.8
+2024-08-28 17:09:24,894 - old status: 2900 new status:4000
+2024-08-28 17:09:25,312 - Frame corrected with id:0x4F time: 1025 seconds 
+2024-08-28 17:09:25,312 - old value:0.0 new value:6.5
+2024-08-28 17:09:25,312 - old status: 2900 new status:4000
+2024-08-28 17:09:25,745 - Frame could not corrected with id:0xFF and time: 1026 seconds
+2024-08-28 17:09:26,179 - Frame could not corrected with id:0xFF and time: 1026 seconds
+2024-08-28 17:09:26,828 - Frame corrected with id:0x44 time: 1027 seconds 
+2024-08-28 17:09:26,828 - old value:0.0 new value:33.0
+2024-08-28 17:09:26,828 - old status: 2900 new status:4000
+2024-08-28 17:09:27,362 - Frame corrected with id:0x51 time: 1027 seconds 
+2024-08-28 17:09:27,363 - old value:0.0 new value:32150.0
+2024-08-28 17:09:27,363 - old status: 2900 new status:4000
+2024-08-28 17:09:27,795 - Frame corrected with id:0x44 time: 1028 seconds 
+2024-08-28 17:09:27,795 - old value:0.0 new value:33.0
+2024-08-28 17:09:27,795 - old status: 2900 new status:4000
+2024-08-28 17:09:28,229 - Frame could not corrected with id:0xFE and time: 1028 seconds
+2024-08-28 17:09:28,979 - Frame could not corrected with id:0xFF and time: 1029 seconds
+2024-08-28 17:09:29,311 - Frame corrected with id:0x45 time: 1029 seconds 
+2024-08-28 17:09:29,311 - old value:0.0 new value:4.5
+2024-08-28 17:09:29,311 - old status: 2900 new status:4000
+2024-08-28 17:09:29,745 - Frame could not corrected with id:0xFF and time: 1030 seconds
+2024-08-28 17:09:30,945 - Frame could not corrected with id:0x46 and time: 1031 seconds
+2024-08-28 17:09:31,378 - Frame corrected with id:0x45 time: 1031 seconds 
+2024-08-28 17:09:31,378 - old value:0.0 new value:4.5
+2024-08-28 17:09:31,378 - old status: 2900 new status:4000
+2024-08-28 17:09:31,812 - Frame corrected with id:0x47 time: 1032 seconds 
+2024-08-28 17:09:31,812 - old value:0.0 new value:43.1
+2024-08-28 17:09:31,812 - old status: 2900 new status:4000
+2024-08-28 17:09:32,343 - Frame corrected with id:0x44 time: 1032 seconds 
+2024-08-28 17:09:32,343 - old value:0.0 new value:33.6
+2024-08-28 17:09:32,343 - old status: 2900 new status:4000
+2024-08-28 17:09:32,977 - Frame could not corrected with id:0xFF and time: 1033 seconds
+2024-08-28 17:09:33,294 - Frame corrected with id:0x06 time: 1033 seconds 
+2024-08-28 17:09:33,295 - old value:0.0 new value:-42.0
+2024-08-28 17:09:33,295 - old status: 2900 new status:4000
+2024-08-28 17:09:33,729 - Frame could not corrected with id:0xFD and time: 1034 seconds
+2024-08-28 17:09:34,912 - Frame corrected with id:0x44 time: 1035 seconds 
+2024-08-28 17:09:34,912 - old value:0.0 new value:36.3
+2024-08-28 17:09:34,913 - old status: 2900 new status:4000
+2024-08-28 17:09:35,345 - Frame could not corrected with id:0xFF and time: 1035 seconds
+2024-08-28 17:09:36,095 - Frame corrected with id:0x06 time: 1036 seconds 
+2024-08-28 17:09:36,095 - old value:0.0 new value:-42.0
+2024-08-28 17:09:36,095 - old status: 2900 new status:4000
+2024-08-28 17:09:36,529 - Frame corrected with id:0x45 time: 1036 seconds 
+2024-08-28 17:09:36,529 - old value:0.0 new value:4.4
+2024-08-28 17:09:36,529 - old status: 2900 new status:4000
+2024-08-28 17:09:37,062 - Frame corrected with id:0x4F time: 1037 seconds 
+2024-08-28 17:09:37,062 - old value:0.0 new value:6.1
+2024-08-28 17:09:37,062 - old status: 2900 new status:4000
+2024-08-28 17:09:37,395 - Frame corrected with id:0x44 time: 1037 seconds 
+2024-08-28 17:09:37,395 - old value:0.0 new value:38.6
+2024-08-28 17:09:37,395 - old status: 2900 new status:4000
+2024-08-28 17:09:37,728 - Frame corrected with id:0x4F time: 1038 seconds 
+2024-08-28 17:09:37,728 - old value:0.0 new value:6.1
+2024-08-28 17:09:37,728 - old status: 2900 new status:4000
+2024-08-28 17:09:38,478 - Frame corrected with id:0x44 time: 1038 seconds 
+2024-08-28 17:09:38,478 - old value:0.0 new value:38.6
+2024-08-28 17:09:38,478 - old status: 2900 new status:4000
+2024-08-28 17:09:38,912 - Frame corrected with id:0x47 time: 1039 seconds 
+2024-08-28 17:09:38,912 - old value:0.0 new value:43.1
+2024-08-28 17:09:38,912 - old status: 2900 new status:4000
+2024-08-28 17:09:39,344 - Frame corrected with id:0x44 time: 1039 seconds 
+2024-08-28 17:09:39,345 - old value:0.0 new value:38.6
+2024-08-28 17:09:39,345 - old status: 2900 new status:4000
+2024-08-28 17:09:40,095 - Frame corrected with id:0x45 time: 1040 seconds 
+2024-08-28 17:09:40,095 - old value:0.0 new value:4.3
+2024-08-28 17:09:40,095 - old status: 2900 new status:4000
+2024-08-28 17:09:40,528 - Frame corrected with id:0x4F time: 1040 seconds 
+2024-08-28 17:09:40,528 - old value:0.0 new value:6.0
+2024-08-28 17:09:40,528 - old status: 2900 new status:4000
+2024-08-28 17:09:40,946 - Frame corrected with id:0x45 time: 1041 seconds 
+2024-08-28 17:09:40,946 - old value:0.0 new value:4.3
+2024-08-28 17:09:40,946 - old status: 2900 new status:4000
+2024-08-28 17:09:41,695 - Frame corrected with id:0xFD time: 1042 seconds 
+2024-08-28 17:09:41,695 - old value:0.0 new value:0.0
+2024-08-28 17:09:41,695 - old status: 2900 new status:4000
+2024-08-28 17:09:42,129 - Frame corrected with id:0x44 time: 1042 seconds 
+2024-08-28 17:09:42,129 - old value:0.0 new value:38.8
+2024-08-28 17:09:42,129 - old status: 2900 new status:4000
+2024-08-28 17:09:42,461 - Frame could not corrected with id:0xFE and time: 1042 seconds
+2024-08-28 17:09:43,011 - Frame corrected with id:0x44 time: 1043 seconds 
+2024-08-28 17:09:43,011 - old value:0.0 new value:38.8
+2024-08-28 17:09:43,011 - old status: 2900 new status:4000
+2024-08-28 17:09:44,526 - Frame could not corrected with id:0xFF and time: 1044 seconds
+2024-08-28 17:09:45,695 - Frame corrected with id:0x44 time: 1046 seconds 
+2024-08-28 17:09:45,695 - old value:0.0 new value:39.1
+2024-08-28 17:09:45,695 - old status: 2900 new status:4000
+2024-08-28 17:09:46,129 - Frame corrected with id:0x47 time: 1046 seconds 
+2024-08-28 17:09:46,129 - old value:0.0 new value:43.1
+2024-08-28 17:09:46,129 - old status: 2900 new status:4000
+2024-08-28 17:09:46,562 - Frame corrected with id:0x48 time: 1046 seconds 
+2024-08-28 17:09:46,562 - old value:0.0 new value:1880.0
+2024-08-28 17:09:46,562 - old status: 2900 new status:4000
+2024-08-28 17:09:47,646 - Frame corrected with id:0x4F time: 1048 seconds 
+2024-08-28 17:09:47,646 - old value:0.0 new value:5.7
+2024-08-28 17:09:47,646 - old status: 2900 new status:4000
+2024-08-28 17:09:48,078 - Frame corrected with id:0x45 time: 1048 seconds 
+2024-08-28 17:09:48,078 - old value:0.0 new value:4.0
+2024-08-28 17:09:48,078 - old status: 2900 new status:4000
+2024-08-28 17:09:49,718 - Frame could not corrected with id:0xFE and time: 1050 seconds
+2024-08-28 17:09:50,378 - Frame corrected with id:0x4F time: 1050 seconds 
+2024-08-28 17:09:50,379 - old value:0.0 new value:5.6
+2024-08-28 17:09:50,382 - old status: 2900 new status:4000
+2024-08-28 17:09:51,487 - Frame corrected with id:0x51 time: 1051 seconds 
+2024-08-28 17:09:51,488 - old value:0.0 new value:32150.0
+2024-08-28 17:09:51,488 - old status: 2900 new status:4000
+2024-08-28 17:09:51,710 - Frame corrected with id:0x45 time: 1052 seconds 
+2024-08-28 17:09:51,710 - old value:0.0 new value:3.7
+2024-08-28 17:09:51,710 - old status: 2900 new status:4000
+2024-08-28 17:09:52,926 - Frame corrected with id:0x44 time: 1053 seconds 
+2024-08-28 17:09:52,926 - old value:0.0 new value:39.5
+2024-08-28 17:09:52,926 - old status: 2900 new status:4000
+2024-08-28 17:09:53,147 - Frame could not corrected with id:0xFE and time: 1053 seconds
+2024-08-28 17:09:53,920 - Frame corrected with id:0x4F time: 1054 seconds 
+2024-08-28 17:09:53,920 - old value:0.0 new value:5.5
+2024-08-28 17:09:53,920 - old status: 2900 new status:4000
+2024-08-28 17:10:04,034 - Frame corrected with id:0xFE time: 1064 seconds 
+2024-08-28 17:10:04,034 - old value:0.0 new value:24000285.0
+2024-08-28 17:10:04,034 - old status: 100 new status:4000
+2024-08-28 17:10:18,369 - Frame corrected with id:0xFE time: 1078 seconds 
+2024-08-28 17:10:18,369 - old value:0.0 new value:24000285.0
+2024-08-28 17:10:18,369 - old status: 100 new status:4000
+2024-08-28 17:10:32,706 - Frame corrected with id:0xFE time: 1093 seconds 
+2024-08-28 17:10:32,707 - old value:0.0 new value:24000285.0
+2024-08-28 17:10:32,707 - old status: 100 new status:4000
+2024-08-28 17:10:39,970 - Frame corrected with id:0x06 time: 1100 seconds 
+2024-08-28 17:10:39,970 - old value:0.0 new value:-42.0
+2024-08-28 17:10:39,970 - old status: 2900 new status:4000
+2024-08-28 17:10:47,027 - Frame corrected with id:0xFE time: 1107 seconds 
+2024-08-28 17:10:47,027 - old value:0.0 new value:24000285.0
+2024-08-28 17:10:47,027 - old status: 100 new status:4000
+2024-08-28 17:11:01,371 - Frame corrected with id:0xFE time: 1121 seconds 
+2024-08-28 17:11:01,371 - old value:0.0 new value:24000285.0
+2024-08-28 17:11:01,371 - old status: 100 new status:4000
+2024-08-28 17:11:15,699 - Frame corrected with id:0xFE time: 1136 seconds 
+2024-08-28 17:11:15,699 - old value:0.0 new value:24000285.0
+2024-08-28 17:11:15,699 - old status: 100 new status:4000
+2024-08-28 17:11:30,040 - Frame corrected with id:0xFE time: 1150 seconds 
+2024-08-28 17:11:30,040 - old value:0.0 new value:24000285.0
+2024-08-28 17:11:30,040 - old status: 100 new status:4000
+2024-08-28 17:11:44,370 - Frame corrected with id:0xFE time: 1164 seconds 
+2024-08-28 17:11:44,370 - old value:0.0 new value:24000285.0
+2024-08-28 17:11:44,370 - old status: 100 new status:4000
+2024-08-28 17:11:58,796 - Frame corrected with id:0xFE time: 1179 seconds 
+2024-08-28 17:11:58,796 - old value:0.0 new value:24000285.0
+2024-08-28 17:11:58,796 - old status: 100 new status:4000
+2024-08-28 17:12:13,024 - Frame corrected with id:0xFE time: 1193 seconds 
+2024-08-28 17:12:13,024 - old value:0.0 new value:24000285.0
+2024-08-28 17:12:13,024 - old status: 100 new status:4000
+2024-08-28 17:12:27,357 - Frame corrected with id:0xFE time: 1207 seconds 
+2024-08-28 17:12:27,357 - old value:0.0 new value:24000285.0
+2024-08-28 17:12:27,357 - old status: 100 new status:4000
+2024-08-28 17:12:41,787 - Frame corrected with id:0xFE time: 1222 seconds 
+2024-08-28 17:12:41,787 - old value:0.0 new value:24000285.0
+2024-08-28 17:12:41,787 - old status: 100 new status:4000
+2024-08-28 17:12:56,018 - Frame corrected with id:0xFE time: 1236 seconds 
+2024-08-28 17:12:56,019 - old value:0.0 new value:24000285.0
+2024-08-28 17:12:56,019 - old status: 100 new status:4000
+2024-08-28 17:13:10,346 - Frame corrected with id:0xFE time: 1250 seconds 
+2024-08-28 17:13:10,346 - old value:0.0 new value:24000285.0
+2024-08-28 17:13:10,347 - old status: 100 new status:4000
+2024-08-28 17:13:24,772 - Frame corrected with id:0xFE time: 1265 seconds 
+2024-08-28 17:13:24,772 - old value:0.0 new value:24000285.0
+2024-08-28 17:13:24,772 - old status: 100 new status:4000
+2024-08-28 17:13:38,988 - Frame corrected with id:0xFE time: 1279 seconds 
+2024-08-28 17:13:38,989 - old value:0.0 new value:24000285.0
+2024-08-28 17:13:38,989 - old status: 100 new status:4000
+2024-08-28 17:13:53,412 - Frame corrected with id:0xFE time: 1293 seconds 
+2024-08-28 17:13:53,412 - old value:0.0 new value:24000285.0
+2024-08-28 17:13:53,412 - old status: 100 new status:4000
+2024-08-28 17:14:07,755 - Frame corrected with id:0xFE time: 1308 seconds 
+2024-08-28 17:14:07,755 - old value:0.0 new value:24000285.0
+2024-08-28 17:14:07,755 - old status: 100 new status:4000
+2024-08-28 17:14:22,070 - Frame corrected with id:0xFE time: 1322 seconds 
+2024-08-28 17:14:22,070 - old value:0.0 new value:24000285.0
+2024-08-28 17:14:22,070 - old status: 100 new status:4000
+2024-08-28 17:14:36,380 - Frame corrected with id:0xFE time: 1336 seconds 
+2024-08-28 17:14:36,380 - old value:0.0 new value:24000285.0
+2024-08-28 17:14:36,380 - old status: 100 new status:4000
+2024-08-28 17:14:50,717 - Frame corrected with id:0xFE time: 1351 seconds 
+2024-08-28 17:14:50,717 - old value:0.0 new value:24000285.0
+2024-08-28 17:14:50,717 - old status: 100 new status:4000
+2024-08-28 17:15:05,152 - Frame corrected with id:0xFE time: 1365 seconds 
+2024-08-28 17:15:05,152 - old value:0.0 new value:24000285.0
+2024-08-28 17:15:05,152 - old status: 100 new status:4000
+2024-08-28 17:15:19,367 - Frame corrected with id:0xFE time: 1379 seconds 
+2024-08-28 17:15:19,367 - old value:0.0 new value:24000285.0
+2024-08-28 17:15:19,368 - old status: 100 new status:4000
+2024-08-28 17:15:33,684 - Frame corrected with id:0xFE time: 1394 seconds 
+2024-08-28 17:15:33,684 - old value:0.0 new value:24000285.0
+2024-08-28 17:15:33,684 - old status: 100 new status:4000
+2024-08-28 17:15:48,106 - Frame corrected with id:0xFE time: 1408 seconds 
+2024-08-28 17:15:48,106 - old value:0.0 new value:24000285.0
+2024-08-28 17:15:48,106 - old status: 100 new status:4000
+2024-08-28 17:15:48,810 - Frame corrected with id:0x45 time: 1409 seconds 
+2024-08-28 17:15:48,810 - old value:0.0 new value:-5.3
+2024-08-28 17:15:48,810 - old status: 2900 new status:4000
+2024-08-28 17:15:51,228 - Frame corrected with id:0x06 time: 1411 seconds 
+2024-08-28 17:15:51,228 - old value:0.0 new value:-42.7
+2024-08-28 17:15:51,228 - old status: 2900 new status:4000
+2024-08-28 17:16:02,527 - Frame corrected with id:0xFE time: 1422 seconds 
+2024-08-28 17:16:02,527 - old value:0.0 new value:24000285.0
+2024-08-28 17:16:02,527 - old status: 100 new status:4000
+2024-08-28 17:16:16,751 - Frame corrected with id:0xFE time: 1437 seconds 
+2024-08-28 17:16:16,751 - old value:0.0 new value:24000285.0
+2024-08-28 17:16:16,751 - old status: 100 new status:4000
+2024-08-28 17:16:31,068 - Frame corrected with id:0xFE time: 1451 seconds 
+2024-08-28 17:16:31,068 - old value:0.0 new value:24000285.0
+2024-08-28 17:16:31,068 - old status: 100 new status:4000
+2024-08-28 17:16:45,496 - Frame corrected with id:0xFE time: 1465 seconds 
+2024-08-28 17:16:45,496 - old value:0.0 new value:24000285.0
+2024-08-28 17:16:45,496 - old status: 100 new status:4000
+2024-08-28 17:16:59,736 - Frame corrected with id:0xFE time: 1480 seconds 
+2024-08-28 17:16:59,736 - old value:0.0 new value:24000285.0
+2024-08-28 17:16:59,736 - old status: 100 new status:4000
+2024-08-28 17:17:14,062 - Frame corrected with id:0xFE time: 1494 seconds 
+2024-08-28 17:17:14,062 - old value:0.0 new value:24000285.0
+2024-08-28 17:17:14,062 - old status: 100 new status:4000
+2024-08-28 17:17:28,487 - Frame corrected with id:0xFE time: 1508 seconds 
+2024-08-28 17:17:28,487 - old value:0.0 new value:24000285.0
+2024-08-28 17:17:28,488 - old status: 100 new status:4000
+2024-08-28 17:17:42,728 - Frame corrected with id:0xFE time: 1523 seconds 
+2024-08-28 17:17:42,729 - old value:0.0 new value:24000285.0
+2024-08-28 17:17:42,729 - old status: 100 new status:4000
+2024-08-28 17:17:57,061 - Frame corrected with id:0xFE time: 1537 seconds 
+2024-08-28 17:17:57,061 - old value:0.0 new value:24000285.0
+2024-08-28 17:17:57,061 - old status: 100 new status:4000
+2024-08-28 17:18:11,483 - Frame corrected with id:0xFE time: 1551 seconds 
+2024-08-28 17:18:11,483 - old value:0.0 new value:24000285.0
+2024-08-28 17:18:11,483 - old status: 100 new status:4000
+2024-08-28 17:18:25,712 - Frame corrected with id:0xFE time: 1566 seconds 
+2024-08-28 17:18:25,713 - old value:0.0 new value:24000285.0
+2024-08-28 17:18:25,713 - old status: 100 new status:4000
+2024-08-28 17:18:40,133 - Frame corrected with id:0xFE time: 1580 seconds 
+2024-08-28 17:18:40,133 - old value:0.0 new value:24000285.0
+2024-08-28 17:18:40,133 - old status: 100 new status:4000
+2024-08-28 17:18:54,462 - Frame corrected with id:0xFE time: 1594 seconds 
+2024-08-28 17:18:54,462 - old value:0.0 new value:24000285.0
+2024-08-28 17:18:54,462 - old status: 100 new status:4000
+2024-08-28 17:19:08,789 - Frame corrected with id:0xFE time: 1609 seconds 
+2024-08-28 17:19:08,789 - old value:0.0 new value:24000285.0
+2024-08-28 17:19:08,789 - old status: 100 new status:4000
+2024-08-28 17:19:23,150 - Frame corrected with id:0xFE time: 1623 seconds 
+2024-08-28 17:19:23,150 - old value:0.0 new value:24000285.0
+2024-08-28 17:19:23,150 - old status: 100 new status:4000
+2024-08-28 17:19:37,471 - Frame corrected with id:0xFE time: 1637 seconds 
+2024-08-28 17:19:37,471 - old value:0.0 new value:24000285.0
+2024-08-28 17:19:37,471 - old status: 100 new status:4000
+2024-08-28 17:19:51,792 - Frame corrected with id:0xFE time: 1652 seconds 
+2024-08-28 17:19:51,792 - old value:0.0 new value:24000285.0
+2024-08-28 17:19:51,792 - old status: 100 new status:4000
+2024-08-28 17:20:06,123 - Frame corrected with id:0xFE time: 1666 seconds 
+2024-08-28 17:20:06,123 - old value:0.0 new value:24000285.0
+2024-08-28 17:20:06,123 - old status: 100 new status:4000
+2024-08-28 17:20:07,734 - Frame corrected with id:0x4F time: 1668 seconds 
+2024-08-28 17:20:07,734 - old value:0.0 new value:-9.3
+2024-08-28 17:20:07,734 - old status: 2900 new status:4000
+2024-08-28 17:20:20,541 - Frame corrected with id:0xFE time: 1680 seconds 
+2024-08-28 17:20:20,541 - old value:0.0 new value:24000285.0
+2024-08-28 17:20:20,541 - old status: 100 new status:4000
+2024-08-28 17:20:34,858 - Frame corrected with id:0xFE time: 1695 seconds 
+2024-08-28 17:20:34,858 - old value:0.0 new value:24000285.0
+2024-08-28 17:20:34,858 - old status: 100 new status:4000
+2024-08-28 17:20:49,075 - Frame corrected with id:0xFE time: 1709 seconds 
+2024-08-28 17:20:49,076 - old value:0.0 new value:24000285.0
+2024-08-28 17:20:49,076 - old status: 100 new status:4000
+2024-08-28 17:21:03,495 - Frame corrected with id:0xFE time: 1723 seconds 
+2024-08-28 17:21:03,496 - old value:0.0 new value:24000285.0
+2024-08-28 17:21:03,496 - old status: 100 new status:4000
+2024-08-28 17:21:17,822 - Frame corrected with id:0xFE time: 1738 seconds 
+2024-08-28 17:21:17,822 - old value:0.0 new value:24000285.0
+2024-08-28 17:21:17,822 - old status: 100 new status:4000
+2024-08-28 17:21:32,249 - Frame corrected with id:0xFE time: 1752 seconds 
+2024-08-28 17:21:32,249 - old value:0.0 new value:24000285.0
+2024-08-28 17:21:32,249 - old status: 100 new status:4000
+2024-08-28 17:21:46,469 - Frame corrected with id:0xFE time: 1766 seconds 
+2024-08-28 17:21:46,470 - old value:0.0 new value:24000285.0
+2024-08-28 17:21:46,470 - old status: 100 new status:4000
+2024-08-28 17:22:00,802 - Frame corrected with id:0xFE time: 1781 seconds 
+2024-08-28 17:22:00,802 - old value:0.0 new value:24000285.0
+2024-08-28 17:22:00,802 - old status: 100 new status:4000
+2024-08-28 17:22:15,231 - Frame corrected with id:0xFE time: 1795 seconds 
+2024-08-28 17:22:15,232 - old value:0.0 new value:24000285.0
+2024-08-28 17:22:15,232 - old status: 100 new status:4000
+2024-08-28 17:22:29,449 - Frame corrected with id:0xFE time: 1809 seconds 
+2024-08-28 17:22:29,449 - old value:0.0 new value:24000285.0
+2024-08-28 17:22:29,449 - old status: 100 new status:4000
+2024-08-28 17:22:43,778 - Frame corrected with id:0xFE time: 1824 seconds 
+2024-08-28 17:22:43,778 - old value:0.0 new value:24000285.0
+2024-08-28 17:22:43,778 - old status: 100 new status:4000
+2024-08-28 17:22:45,895 - Frame corrected with id:0x46 time: 1826 seconds 
+2024-08-28 17:22:45,895 - old value:0.0 new value:5292.0
+2024-08-28 17:22:45,895 - old status: 2900 new status:4000
+2024-08-28 17:22:58,197 - Frame corrected with id:0xFE time: 1838 seconds 
+2024-08-28 17:22:58,197 - old value:0.0 new value:24000285.0
+2024-08-28 17:22:58,197 - old status: 100 new status:4000
+2024-08-28 17:23:12,521 - Frame corrected with id:0xFE time: 1852 seconds 
+2024-08-28 17:23:12,522 - old value:0.0 new value:24000285.0
+2024-08-28 17:23:12,522 - old status: 100 new status:4000
+2024-08-28 17:23:26,749 - Frame corrected with id:0xFE time: 1867 seconds 
+2024-08-28 17:23:26,749 - old value:0.0 new value:24000285.0
+2024-08-28 17:23:26,749 - old status: 100 new status:4000
+2024-08-28 17:23:31,078 - Frame could not corrected with id:0xFF and time: 1871 seconds
+2024-08-28 17:23:41,157 - Frame corrected with id:0xFE time: 1881 seconds 
+2024-08-28 17:23:41,157 - old value:0.0 new value:24000285.0
+2024-08-28 17:23:41,157 - old status: 100 new status:4000
+2024-08-28 17:23:47,209 - Frame could not corrected with id:0xFF and time: 1887 seconds
+2024-08-28 17:23:55,495 - Frame corrected with id:0xFE time: 1895 seconds 
+2024-08-28 17:23:55,495 - old value:0.0 new value:24000285.0
+2024-08-28 17:23:55,495 - old status: 100 new status:4000
+2024-08-28 17:24:09,830 - Frame corrected with id:0xFE time: 1910 seconds 
+2024-08-28 17:24:09,830 - old value:0.0 new value:24000285.0
+2024-08-28 17:24:09,830 - old status: 100 new status:4000
+2024-08-28 17:24:24,151 - Frame corrected with id:0xFE time: 1924 seconds 
+2024-08-28 17:24:24,152 - old value:0.0 new value:24000285.0
+2024-08-28 17:24:24,152 - old status: 100 new status:4000
+2024-08-28 17:24:38,573 - Frame corrected with id:0xFE time: 1938 seconds 
+2024-08-28 17:24:38,573 - old value:0.0 new value:24000285.0
+2024-08-28 17:24:38,573 - old status: 100 new status:4000
+2024-08-28 17:24:52,894 - Frame corrected with id:0xFE time: 1953 seconds 
+2024-08-28 17:24:52,894 - old value:0.0 new value:24000285.0
+2024-08-28 17:24:52,894 - old status: 100 new status:4000
+2024-08-28 17:25:07,111 - Frame corrected with id:0xFE time: 1967 seconds 
+2024-08-28 17:25:07,112 - old value:0.0 new value:24000285.0
+2024-08-28 17:25:07,112 - old status: 100 new status:4000
+2024-08-28 17:25:21,523 - Frame corrected with id:0xFE time: 1981 seconds 
+2024-08-28 17:25:21,523 - old value:0.0 new value:24000285.0
+2024-08-28 17:25:21,523 - old status: 100 new status:4000
+2024-08-28 17:25:35,955 - Frame corrected with id:0xFE time: 1996 seconds 
+2024-08-28 17:25:35,955 - old value:0.0 new value:24000285.0
+2024-08-28 17:25:35,955 - old status: 100 new status:4000
+2024-08-28 17:25:50,282 - Frame corrected with id:0xFE time: 2010 seconds 
+2024-08-28 17:25:50,282 - old value:0.0 new value:24000285.0
+2024-08-28 17:25:50,282 - old status: 100 new status:4000
+2024-08-28 17:26:04,500 - Frame corrected with id:0xFE time: 2024 seconds 
+2024-08-28 17:26:04,500 - old value:0.0 new value:24000285.0
+2024-08-28 17:26:04,500 - old status: 100 new status:4000
+2024-08-28 17:26:18,833 - Frame corrected with id:0xFE time: 2039 seconds 
+2024-08-28 17:26:18,833 - old value:0.0 new value:24000285.0
+2024-08-28 17:26:18,833 - old status: 100 new status:4000
+2024-08-28 17:26:33,252 - Frame corrected with id:0xFE time: 2053 seconds 
+2024-08-28 17:26:33,252 - old value:0.0 new value:24000285.0
+2024-08-28 17:26:33,252 - old status: 100 new status:4000
+2024-08-28 17:26:47,480 - Frame corrected with id:0xFE time: 2067 seconds 
+2024-08-28 17:26:47,480 - old value:0.0 new value:24000285.0
+2024-08-28 17:26:47,480 - old status: 100 new status:4000
+2024-08-28 17:27:01,895 - Frame corrected with id:0xFE time: 2082 seconds 
+2024-08-28 17:27:01,895 - old value:0.0 new value:24000285.0
+2024-08-28 17:27:01,895 - old status: 100 new status:4000
+2024-08-28 17:27:16,239 - Frame corrected with id:0xFE time: 2096 seconds 
+2024-08-28 17:27:16,239 - old value:0.0 new value:24000285.0
+2024-08-28 17:27:16,239 - old status: 100 new status:4000
+2024-08-28 17:27:30,472 - Frame corrected with id:0xFE time: 2110 seconds 
+2024-08-28 17:27:30,473 - old value:0.0 new value:24000285.0
+2024-08-28 17:27:30,473 - old status: 100 new status:4000
+2024-08-28 17:27:44,895 - Frame corrected with id:0xFE time: 2125 seconds 
+2024-08-28 17:27:44,895 - old value:0.0 new value:24000285.0
+2024-08-28 17:27:44,895 - old status: 100 new status:4000
+2024-08-28 17:27:59,218 - Frame corrected with id:0xFE time: 2139 seconds 
+2024-08-28 17:27:59,218 - old value:0.0 new value:24000285.0
+2024-08-28 17:27:59,218 - old status: 100 new status:4000
+2024-08-28 17:28:13,534 - Frame corrected with id:0xFE time: 2153 seconds 
+2024-08-28 17:28:13,534 - old value:0.0 new value:24000285.0
+2024-08-28 17:28:13,534 - old status: 100 new status:4000
+2024-08-28 17:28:27,956 - Frame corrected with id:0xFE time: 2168 seconds 
+2024-08-28 17:28:27,956 - old value:0.0 new value:24000285.0
+2024-08-28 17:28:27,956 - old status: 100 new status:4000
+2024-08-28 17:28:42,280 - Frame corrected with id:0xFE time: 2182 seconds 
+2024-08-28 17:28:42,280 - old value:0.0 new value:24000285.0
+2024-08-28 17:28:42,280 - old status: 100 new status:4000
+2024-08-28 17:28:56,607 - Frame corrected with id:0xFE time: 2196 seconds 
+2024-08-28 17:28:56,607 - old value:0.0 new value:24000285.0
+2024-08-28 17:28:56,607 - old status: 100 new status:4000
+2024-08-28 17:29:10,928 - Frame corrected with id:0xFE time: 2211 seconds 
+2024-08-28 17:29:10,928 - old value:0.0 new value:24000285.0
+2024-08-28 17:29:10,928 - old status: 100 new status:4000
+2024-08-28 17:29:25,248 - Frame corrected with id:0xFE time: 2225 seconds 
+2024-08-28 17:29:25,248 - old value:0.0 new value:24000285.0
+2024-08-28 17:29:25,248 - old status: 100 new status:4000
+2024-08-28 17:29:39,573 - Frame corrected with id:0xFE time: 2239 seconds 
+2024-08-28 17:29:39,573 - old value:0.0 new value:24000285.0
+2024-08-28 17:29:39,573 - old status: 100 new status:4000
+2024-08-28 17:29:53,916 - Frame corrected with id:0xFE time: 2254 seconds 
+2024-08-28 17:29:53,916 - old value:0.0 new value:24000285.0
+2024-08-28 17:29:53,916 - old status: 100 new status:4000
+2024-08-28 17:30:08,335 - Frame corrected with id:0xFE time: 2268 seconds 
+2024-08-28 17:30:08,335 - old value:0.0 new value:24000285.0
+2024-08-28 17:30:08,335 - old status: 100 new status:4000
+2024-08-28 17:30:22,554 - Frame corrected with id:0xFE time: 2282 seconds 
+2024-08-28 17:30:22,554 - old value:0.0 new value:24000285.0
+2024-08-28 17:30:22,554 - old status: 100 new status:4000
+2024-08-28 17:30:36,882 - Frame corrected with id:0xFE time: 2297 seconds 
+2024-08-28 17:30:36,882 - old value:0.0 new value:24000285.0
+2024-08-28 17:30:36,883 - old status: 100 new status:4000
+2024-08-28 17:30:51,304 - Frame corrected with id:0xFE time: 2311 seconds 
+2024-08-28 17:30:51,304 - old value:0.0 new value:24000285.0
+2024-08-28 17:30:51,304 - old status: 100 new status:4000
+2024-08-28 17:31:05,621 - Frame corrected with id:0xFE time: 2325 seconds 
+2024-08-28 17:31:05,621 - old value:0.0 new value:24000285.0
+2024-08-28 17:31:05,621 - old status: 100 new status:4000
+2024-08-28 17:31:19,936 - Frame corrected with id:0xFE time: 2340 seconds 
+2024-08-28 17:31:19,936 - old value:0.0 new value:24000285.0
+2024-08-28 17:31:19,936 - old status: 100 new status:4000
+2024-08-28 17:31:34,250 - Frame corrected with id:0xFE time: 2354 seconds 
+2024-08-28 17:31:34,250 - old value:0.0 new value:24000285.0
+2024-08-28 17:31:34,250 - old status: 100 new status:4000
+2024-08-28 17:31:48,670 - Frame corrected with id:0xFE time: 2369 seconds 
+2024-08-28 17:31:48,670 - old value:0.0 new value:24000285.0
+2024-08-28 17:31:48,670 - old status: 100 new status:4000
+2024-08-28 17:32:02,914 - Frame corrected with id:0xFE time: 2383 seconds 
+2024-08-28 17:32:02,914 - old value:0.0 new value:24000285.0
+2024-08-28 17:32:02,914 - old status: 100 new status:4000
+2024-08-28 17:32:08,061 - Frame corrected with id:0x44 time: 2388 seconds 
+2024-08-28 17:32:08,061 - old value:0.0 new value:12.0
+2024-08-28 17:32:08,061 - old status: 2900 new status:4000
+2024-08-28 17:32:17,235 - Frame corrected with id:0xFE time: 2397 seconds 
+2024-08-28 17:32:17,235 - old value:0.0 new value:24000285.0
+2024-08-28 17:32:17,235 - old status: 100 new status:4000
+2024-08-28 17:32:31,656 - Frame corrected with id:0xFE time: 2412 seconds 
+2024-08-28 17:32:31,656 - old value:0.0 new value:24000285.0
+2024-08-28 17:32:31,656 - old status: 100 new status:4000
+2024-08-28 17:32:45,976 - Frame corrected with id:0xFE time: 2426 seconds 
+2024-08-28 17:32:45,976 - old value:0.0 new value:24000285.0
+2024-08-28 17:32:45,976 - old status: 100 new status:4000
+2024-08-28 17:33:00,288 - Frame corrected with id:0xFE time: 2440 seconds 
+2024-08-28 17:33:00,288 - old value:0.0 new value:24000285.0
+2024-08-28 17:33:00,288 - old status: 100 new status:4000
+2024-08-28 17:33:14,621 - Frame corrected with id:0xFE time: 2454 seconds 
+2024-08-28 17:33:14,622 - old value:0.0 new value:24000285.0
+2024-08-28 17:33:14,622 - old status: 100 new status:4000
+2024-08-28 17:33:29,041 - Frame corrected with id:0xFE time: 2469 seconds 
+2024-08-28 17:33:29,042 - old value:0.0 new value:24000285.0
+2024-08-28 17:33:29,042 - old status: 100 new status:4000
+2024-08-28 17:33:43,264 - Frame corrected with id:0xFE time: 2483 seconds 
+2024-08-28 17:33:43,264 - old value:0.0 new value:24000285.0
+2024-08-28 17:33:43,264 - old status: 100 new status:4000
+2024-08-28 17:33:57,581 - Frame corrected with id:0xFE time: 2497 seconds 
+2024-08-28 17:33:57,581 - old value:0.0 new value:24000285.0
+2024-08-28 17:33:57,581 - old status: 100 new status:4000
+2024-08-28 17:34:12,034 - Frame corrected with id:0xFE time: 2512 seconds 
+2024-08-28 17:34:12,034 - old value:0.0 new value:24000285.0
+2024-08-28 17:34:12,035 - old status: 100 new status:4000
+2024-08-28 17:34:26,257 - Frame corrected with id:0xFE time: 2526 seconds 
+2024-08-28 17:34:26,257 - old value:0.0 new value:24000285.0
+2024-08-28 17:34:26,257 - old status: 100 new status:4000
+2024-08-28 17:34:40,567 - Frame corrected with id:0xFE time: 2540 seconds 
+2024-08-28 17:34:40,567 - old value:0.0 new value:24000285.0
+2024-08-28 17:34:40,567 - old status: 100 new status:4000
+2024-08-28 17:34:56,504 - Frame corrected with id:0xFE time: 2556 seconds 
+2024-08-28 17:34:56,504 - old value:0.0 new value:24000285.0
+2024-08-28 17:34:56,504 - old status: 100 new status:4000
+2024-08-28 17:35:09,313 - Frame corrected with id:0xFE time: 2569 seconds 
+2024-08-28 17:35:09,313 - old value:0.0 new value:24000285.0
+2024-08-28 17:35:09,313 - old status: 100 new status:4000
+2024-08-28 17:35:23,628 - Frame corrected with id:0xFE time: 2583 seconds 
+2024-08-28 17:35:23,628 - old value:0.0 new value:24000285.0
+2024-08-28 17:35:23,628 - old status: 100 new status:4000
+2024-08-28 17:35:38,057 - Frame corrected with id:0xFE time: 2598 seconds 
+2024-08-28 17:35:38,057 - old value:0.0 new value:24000285.0
+2024-08-28 17:35:38,057 - old status: 100 new status:4000
+2024-08-28 17:35:52,290 - Frame corrected with id:0xFE time: 2612 seconds 
+2024-08-28 17:35:52,290 - old value:0.0 new value:24000285.0
+2024-08-28 17:35:52,290 - old status: 100 new status:4000
+2024-08-28 17:36:06,618 - Frame corrected with id:0xFE time: 2627 seconds 
+2024-08-28 17:36:06,618 - old value:0.0 new value:24000285.0
+2024-08-28 17:36:06,618 - old status: 100 new status:4000
+2024-08-28 17:36:21,036 - Frame corrected with id:0xFE time: 2641 seconds 
+2024-08-28 17:36:21,036 - old value:0.0 new value:24000285.0
+2024-08-28 17:36:21,036 - old status: 100 new status:4000
+2024-08-28 17:36:35,359 - Frame corrected with id:0xFE time: 2655 seconds 
+2024-08-28 17:36:35,359 - old value:0.0 new value:24000285.0
+2024-08-28 17:36:35,359 - old status: 100 new status:4000
+2024-08-28 17:36:49,579 - Frame corrected with id:0xFE time: 2670 seconds 
+2024-08-28 17:36:49,579 - old value:0.0 new value:24000285.0
+2024-08-28 17:36:49,579 - old status: 100 new status:4000
+2024-08-28 17:37:03,998 - Frame corrected with id:0xFE time: 2684 seconds 
+2024-08-28 17:37:03,998 - old value:0.0 new value:24000285.0
+2024-08-28 17:37:03,998 - old status: 100 new status:4000
+2024-08-28 17:37:18,322 - Frame corrected with id:0xFE time: 2698 seconds 
+2024-08-28 17:37:18,322 - old value:0.0 new value:24000285.0
+2024-08-28 17:37:18,322 - old status: 100 new status:4000
+2024-08-28 17:37:32,648 - Frame corrected with id:0xFE time: 2712 seconds 
+2024-08-28 17:37:32,648 - old value:0.0 new value:24000285.0
+2024-08-28 17:37:32,648 - old status: 100 new status:4000
+2024-08-28 17:37:46,982 - Frame corrected with id:0xFE time: 2727 seconds 
+2024-08-28 17:37:46,982 - old value:0.0 new value:24000285.0
+2024-08-28 17:37:46,982 - old status: 100 new status:4000
+2024-08-28 17:38:01,410 - Frame corrected with id:0xFE time: 2741 seconds 
+2024-08-28 17:38:01,410 - old value:0.0 new value:24000285.0
+2024-08-28 17:38:01,410 - old status: 100 new status:4000
+2024-08-28 17:38:15,725 - Frame corrected with id:0xFE time: 2756 seconds 
+2024-08-28 17:38:15,725 - old value:0.0 new value:24000285.0
+2024-08-28 17:38:15,725 - old status: 100 new status:4000
+2024-08-28 17:38:29,949 - Frame corrected with id:0xFE time: 2770 seconds 
+2024-08-28 17:38:29,950 - old value:0.0 new value:24000285.0
+2024-08-28 17:38:29,950 - old status: 100 new status:4000
+2024-08-28 17:38:44,367 - Frame corrected with id:0xFE time: 2784 seconds 
+2024-08-28 17:38:44,367 - old value:0.0 new value:24000285.0
+2024-08-28 17:38:44,367 - old status: 100 new status:4000
+2024-08-28 17:38:58,784 - Frame corrected with id:0xFE time: 2799 seconds 
+2024-08-28 17:38:58,784 - old value:0.0 new value:24000285.0
+2024-08-28 17:38:58,784 - old status: 100 new status:4000
+2024-08-28 17:39:09,773 - Frame corrected with id:0x07 time: 2810 seconds 
+2024-08-28 17:39:09,774 - old value:0.0 new value:-3.1
+2024-08-28 17:39:09,774 - old status: 2900 new status:4000
+2024-08-28 17:39:13,002 - Frame corrected with id:0xFE time: 2813 seconds 
+2024-08-28 17:39:13,002 - old value:0.0 new value:24000285.0
+2024-08-28 17:39:13,002 - old status: 100 new status:4000
+2024-08-28 17:39:27,324 - Frame corrected with id:0xFE time: 2827 seconds 
+2024-08-28 17:39:27,324 - old value:0.0 new value:24000285.0
+2024-08-28 17:39:27,324 - old status: 100 new status:4000
+2024-08-28 17:39:41,745 - Frame corrected with id:0xFE time: 2842 seconds 
+2024-08-28 17:39:41,745 - old value:0.0 new value:24000285.0
+2024-08-28 17:39:41,745 - old status: 100 new status:4000
+2024-08-28 17:39:56,067 - Frame corrected with id:0xFE time: 2856 seconds 
+2024-08-28 17:39:56,067 - old value:0.0 new value:24000285.0
+2024-08-28 17:39:56,067 - old status: 100 new status:4000
+2024-08-28 17:40:10,387 - Frame corrected with id:0xFE time: 2870 seconds 
+2024-08-28 17:40:10,387 - old value:0.0 new value:24000285.0
+2024-08-28 17:40:10,387 - old status: 100 new status:4000
+2024-08-28 17:40:24,706 - Frame corrected with id:0xFE time: 2885 seconds 
+2024-08-28 17:40:24,706 - old value:0.0 new value:24000285.0
+2024-08-28 17:40:24,706 - old status: 100 new status:4000
+2024-08-28 17:40:39,029 - Frame corrected with id:0xFE time: 2899 seconds 
+2024-08-28 17:40:39,029 - old value:0.0 new value:24000285.0
+2024-08-28 17:40:39,029 - old status: 100 new status:4000
+2024-08-28 17:40:53,349 - Frame corrected with id:0xFE time: 2913 seconds 
+2024-08-28 17:40:53,349 - old value:0.0 new value:24000285.0
+2024-08-28 17:40:53,349 - old status: 100 new status:4000
+2024-08-28 17:41:07,768 - Frame corrected with id:0xFE time: 2928 seconds 
+2024-08-28 17:41:07,768 - old value:0.0 new value:24000285.0
+2024-08-28 17:41:07,768 - old status: 100 new status:4000
+2024-08-28 17:41:22,054 - Frame corrected with id:0xFE time: 2942 seconds 
+2024-08-28 17:41:22,054 - old value:0.0 new value:24000285.0
+2024-08-28 17:41:22,054 - old status: 100 new status:4000
+2024-08-28 17:41:36,583 - Frame corrected with id:0x4F time: 2956 seconds 
+2024-08-28 17:41:36,584 - old value:0.0 new value:-52.6
+2024-08-28 17:41:36,584 - old status: 2900 new status:4000
+2024-08-28 17:41:43,543 - Frame corrected with id:0xFE time: 2963 seconds 
+2024-08-28 17:41:43,543 - old value:0.0 new value:24000285.0
+2024-08-28 17:41:43,543 - old status: 100 new status:4000
+2024-08-28 17:41:50,700 - Frame corrected with id:0xFE time: 2971 seconds 
+2024-08-28 17:41:50,701 - old value:0.0 new value:24000285.0
+2024-08-28 17:41:50,701 - old status: 100 new status:4000
+2024-08-28 17:42:05,118 - Frame corrected with id:0xFE time: 2985 seconds 
+2024-08-28 17:42:05,118 - old value:0.0 new value:24000285.0
+2024-08-28 17:42:05,118 - old status: 100 new status:4000
+2024-08-28 17:42:19,440 - Frame corrected with id:0xFE time: 2999 seconds 
+2024-08-28 17:42:19,440 - old value:0.0 new value:24000285.0
+2024-08-28 17:42:19,440 - old status: 100 new status:4000
+2024-08-28 17:42:33,664 - Frame corrected with id:0xFE time: 3014 seconds 
+2024-08-28 17:42:33,664 - old value:0.0 new value:24000285.0
+2024-08-28 17:42:33,664 - old status: 100 new status:4000
+2024-08-28 17:42:48,088 - Frame corrected with id:0xFE time: 3028 seconds 
+2024-08-28 17:42:48,088 - old value:0.0 new value:24000285.0
+2024-08-28 17:42:48,088 - old status: 100 new status:4000
+2024-08-28 17:43:02,416 - Frame corrected with id:0xFE time: 3042 seconds 
+2024-08-28 17:43:02,416 - old value:0.0 new value:24000285.0
+2024-08-28 17:43:02,416 - old status: 100 new status:4000
+2024-08-28 17:43:16,738 - Frame corrected with id:0xFE time: 3057 seconds 
+2024-08-28 17:43:16,738 - old value:0.0 new value:24000285.0
+2024-08-28 17:43:16,738 - old status: 100 new status:4000
+2024-08-28 17:43:31,056 - Frame corrected with id:0xFE time: 3071 seconds 
+2024-08-28 17:43:31,056 - old value:0.0 new value:24000285.0
+2024-08-28 17:43:31,056 - old status: 100 new status:4000
+2024-08-28 17:43:45,478 - Frame corrected with id:0xFE time: 3085 seconds 
+2024-08-28 17:43:45,478 - old value:0.0 new value:24000285.0
+2024-08-28 17:43:45,478 - old status: 100 new status:4000
+2024-08-28 17:43:59,695 - Frame corrected with id:0xFE time: 3100 seconds 
+2024-08-28 17:43:59,695 - old value:0.0 new value:24000285.0
+2024-08-28 17:43:59,695 - old status: 100 new status:4000
+2024-08-28 17:44:14,114 - Frame corrected with id:0xFE time: 3114 seconds 
+2024-08-28 17:44:14,114 - old value:0.0 new value:24000285.0
+2024-08-28 17:44:14,114 - old status: 100 new status:4000
+2024-08-28 17:44:28,428 - Frame corrected with id:0xFE time: 3128 seconds 
+2024-08-28 17:44:28,429 - old value:0.0 new value:24000285.0
+2024-08-28 17:44:28,429 - old status: 100 new status:4000
+2024-08-28 17:44:42,738 - Frame corrected with id:0xFE time: 3143 seconds 
+2024-08-28 17:44:42,738 - old value:0.0 new value:24000285.0
+2024-08-28 17:44:42,738 - old status: 100 new status:4000
+2024-08-28 17:44:57,152 - Frame corrected with id:0xFE time: 3157 seconds 
+2024-08-28 17:44:57,152 - old value:0.0 new value:24000285.0
+2024-08-28 17:44:57,152 - old status: 100 new status:4000
+2024-08-28 17:45:11,372 - Frame corrected with id:0xFE time: 3171 seconds 
+2024-08-28 17:45:11,372 - old value:0.0 new value:24000285.0
+2024-08-28 17:45:11,372 - old status: 100 new status:4000
+2024-08-28 17:45:25,688 - Frame corrected with id:0xFE time: 3186 seconds 
+2024-08-28 17:45:25,688 - old value:0.0 new value:24000285.0
+2024-08-28 17:45:25,688 - old status: 100 new status:4000
+2024-08-28 17:45:40,056 - Frame corrected with id:0xFE time: 3200 seconds 
+2024-08-28 17:45:40,056 - old value:0.0 new value:24000285.0
+2024-08-28 17:45:40,056 - old status: 100 new status:4000
+2024-08-28 17:45:54,378 - Frame corrected with id:0xFE time: 3214 seconds 
+2024-08-28 17:45:54,378 - old value:0.0 new value:24000285.0
+2024-08-28 17:45:54,378 - old status: 100 new status:4000
+2024-08-28 17:46:08,801 - Frame corrected with id:0xFE time: 3229 seconds 
+2024-08-28 17:46:08,801 - old value:0.0 new value:24000285.0
+2024-08-28 17:46:08,801 - old status: 100 new status:4000
+2024-08-28 17:46:23,623 - Frame corrected with id:0xFE time: 3244 seconds 
+2024-08-28 17:46:23,623 - old value:0.0 new value:24000285.0
+2024-08-28 17:46:23,623 - old status: 100 new status:4000
+2024-08-28 17:46:37,372 - Frame corrected with id:0xFE time: 3257 seconds 
+2024-08-28 17:46:37,372 - old value:0.0 new value:24000285.0
+2024-08-28 17:46:37,372 - old status: 100 new status:4000
+2024-08-28 17:46:51,797 - Frame corrected with id:0xFE time: 3272 seconds 
+2024-08-28 17:46:51,797 - old value:0.0 new value:24000285.0
+2024-08-28 17:46:51,797 - old status: 100 new status:4000
+2024-08-28 17:47:06,131 - Frame corrected with id:0xFE time: 3286 seconds 
+2024-08-28 17:47:06,131 - old value:0.0 new value:24000285.0
+2024-08-28 17:47:06,131 - old status: 100 new status:4000
+2024-08-28 17:47:20,452 - Frame corrected with id:0xFE time: 3300 seconds 
+2024-08-28 17:47:20,452 - old value:0.0 new value:24000285.0
+2024-08-28 17:47:20,452 - old status: 100 new status:4000
+2024-08-28 17:47:34,766 - Frame corrected with id:0xFE time: 3315 seconds 
+2024-08-28 17:47:34,766 - old value:0.0 new value:24000285.0
+2024-08-28 17:47:34,766 - old status: 100 new status:4000
+2024-08-28 17:47:49,085 - Frame corrected with id:0xFE time: 3329 seconds 
+2024-08-28 17:47:49,085 - old value:0.0 new value:24000285.0
+2024-08-28 17:47:49,085 - old status: 100 new status:4000
+2024-08-28 17:48:03,507 - Frame corrected with id:0xFE time: 3343 seconds 
+2024-08-28 17:48:03,507 - old value:0.0 new value:24000285.0
+2024-08-28 17:48:03,507 - old status: 100 new status:4000
+2024-08-28 17:48:17,827 - Frame corrected with id:0xFE time: 3358 seconds 
+2024-08-28 17:48:17,827 - old value:0.0 new value:24000285.0
+2024-08-28 17:48:17,827 - old status: 100 new status:4000
+2024-08-28 17:48:26,509 - Frame corrected with id:0x51 time: 3366 seconds 
+2024-08-28 17:48:26,509 - old value:0.0 new value:30410.0
+2024-08-28 17:48:26,509 - old status: 2900 new status:4000
+2024-08-28 17:48:32,061 - Frame corrected with id:0xFE time: 3372 seconds 
+2024-08-28 17:48:32,061 - old value:0.0 new value:24000285.0
+2024-08-28 17:48:32,061 - old status: 100 new status:4000
+2024-08-28 17:48:46,490 - Frame corrected with id:0xFE time: 3386 seconds 
+2024-08-28 17:48:46,491 - old value:0.0 new value:24000285.0
+2024-08-28 17:48:46,491 - old status: 100 new status:4000
+2024-08-28 17:49:00,802 - Frame corrected with id:0xFE time: 3401 seconds 
+2024-08-28 17:49:00,802 - old value:0.0 new value:24000285.0
+2024-08-28 17:49:00,802 - old status: 100 new status:4000
+2024-08-28 17:49:15,218 - Frame corrected with id:0xFE time: 3415 seconds 
+2024-08-28 17:49:15,218 - old value:0.0 new value:24000285.0
+2024-08-28 17:49:15,218 - old status: 100 new status:4000
+2024-08-28 17:49:29,437 - Frame corrected with id:0xFE time: 3429 seconds 
+2024-08-28 17:49:29,437 - old value:0.0 new value:24000285.0
+2024-08-28 17:49:29,437 - old status: 100 new status:4000
+2024-08-28 17:49:43,747 - Frame corrected with id:0xFE time: 3444 seconds 
+2024-08-28 17:49:43,747 - old value:0.0 new value:24000285.0
+2024-08-28 17:49:43,747 - old status: 100 new status:4000
+2024-08-28 17:49:58,168 - Frame corrected with id:0xFE time: 3458 seconds 
+2024-08-28 17:49:58,168 - old value:0.0 new value:24000285.0
+2024-08-28 17:49:58,168 - old status: 100 new status:4000
+2024-08-28 17:50:12,493 - Frame corrected with id:0xFE time: 3472 seconds 
+2024-08-28 17:50:12,493 - old value:0.0 new value:24000285.0
+2024-08-28 17:50:12,493 - old status: 100 new status:4000
+2024-08-28 17:50:26,710 - Frame corrected with id:0xFE time: 3487 seconds 
+2024-08-28 17:50:26,710 - old value:0.0 new value:24000285.0
+2024-08-28 17:50:26,710 - old status: 100 new status:4000
+2024-08-28 17:50:41,184 - Frame corrected with id:0xFE time: 3501 seconds 
+2024-08-28 17:50:41,184 - old value:0.0 new value:24000285.0
+2024-08-28 17:50:41,184 - old status: 100 new status:4000
+2024-08-28 17:50:55,417 - Frame corrected with id:0xFE time: 3515 seconds 
+2024-08-28 17:50:55,417 - old value:0.0 new value:24000285.0
+2024-08-28 17:50:55,417 - old status: 100 new status:4000
+2024-08-28 17:51:09,828 - Frame corrected with id:0xFE time: 3530 seconds 
+2024-08-28 17:51:09,828 - old value:0.0 new value:24000285.0
+2024-08-28 17:51:09,828 - old status: 100 new status:4000
+2024-08-28 17:51:24,147 - Frame corrected with id:0xFE time: 3544 seconds 
+2024-08-28 17:51:24,147 - old value:0.0 new value:24000285.0
+2024-08-28 17:51:24,147 - old status: 100 new status:4000
+2024-08-28 17:51:38,581 - Frame corrected with id:0xFE time: 3558 seconds 
+2024-08-28 17:51:38,581 - old value:0.0 new value:24000285.0
+2024-08-28 17:51:38,581 - old status: 100 new status:4000
+2024-08-28 17:51:52,796 - Frame corrected with id:0xFE time: 3573 seconds 
+2024-08-28 17:51:52,796 - old value:0.0 new value:24000285.0
+2024-08-28 17:51:52,796 - old status: 100 new status:4000
+2024-08-28 17:52:07,104 - Frame corrected with id:0xFE time: 3587 seconds 
+2024-08-28 17:52:07,104 - old value:0.0 new value:24000285.0
+2024-08-28 17:52:07,104 - old status: 100 new status:4000
+2024-08-28 17:52:21,511 - Frame corrected with id:0xFE time: 3601 seconds 
+2024-08-28 17:52:21,511 - old value:0.0 new value:24000285.0
+2024-08-28 17:52:21,511 - old status: 100 new status:4000
+2024-08-28 17:52:35,828 - Frame corrected with id:0xFE time: 3616 seconds 
+2024-08-28 17:52:35,828 - old value:0.0 new value:24000285.0
+2024-08-28 17:52:35,828 - old status: 100 new status:4000
+2024-08-28 17:52:50,267 - Frame corrected with id:0xFE time: 3630 seconds 
+2024-08-28 17:52:50,267 - old value:0.0 new value:24000285.0
+2024-08-28 17:52:50,267 - old status: 100 new status:4000
+2024-08-28 17:53:04,507 - Frame corrected with id:0xFE time: 3644 seconds 
+2024-08-28 17:53:04,508 - old value:0.0 new value:24000285.0
+2024-08-28 17:53:04,508 - old status: 100 new status:4000
+2024-08-28 17:53:18,831 - Frame corrected with id:0xFE time: 3659 seconds 
+2024-08-28 17:53:18,831 - old value:0.0 new value:24000285.0
+2024-08-28 17:53:18,831 - old status: 100 new status:4000
+2024-08-28 17:53:33,146 - Frame corrected with id:0xFE time: 3673 seconds 
+2024-08-28 17:53:33,146 - old value:0.0 new value:24000285.0
+2024-08-28 17:53:33,146 - old status: 100 new status:4000
+2024-08-28 17:53:47,480 - Frame corrected with id:0xFE time: 3687 seconds 
+2024-08-28 17:53:47,480 - old value:0.0 new value:24000285.0
+2024-08-28 17:53:47,480 - old status: 100 new status:4000
+2024-08-28 17:54:01,899 - Frame corrected with id:0xFE time: 3702 seconds 
+2024-08-28 17:54:01,899 - old value:0.0 new value:24000285.0
+2024-08-28 17:54:01,899 - old status: 100 new status:4000
+2024-08-28 17:54:16,131 - Frame corrected with id:0xFE time: 3716 seconds 
+2024-08-28 17:54:16,131 - old value:0.0 new value:24000285.0
+2024-08-28 17:54:16,132 - old status: 100 new status:4000
+2024-08-28 17:54:30,445 - Frame corrected with id:0xFE time: 3730 seconds 
+2024-08-28 17:54:30,445 - old value:0.0 new value:24000285.0
+2024-08-28 17:54:30,445 - old status: 100 new status:4000
+2024-08-28 17:54:42,642 - Frame corrected with id:0x07 time: 3743 seconds 
+2024-08-28 17:54:42,642 - old value:0.0 new value:-4.5
+2024-08-28 17:54:42,642 - old status: 2900 new status:4000
+2024-08-28 17:54:44,860 - Frame corrected with id:0xFE time: 3745 seconds 
+2024-08-28 17:54:44,860 - old value:0.0 new value:24000285.0
+2024-08-28 17:54:44,860 - old status: 100 new status:4000
+2024-08-28 17:54:59,178 - Frame corrected with id:0xFE time: 3759 seconds 
+2024-08-28 17:54:59,178 - old value:0.0 new value:24000285.0
+2024-08-28 17:54:59,178 - old status: 100 new status:4000
+2024-08-28 17:55:13,595 - Frame corrected with id:0xFE time: 3773 seconds 
+2024-08-28 17:55:13,595 - old value:0.0 new value:24000285.0
+2024-08-28 17:55:13,595 - old status: 100 new status:4000
+2024-08-28 17:55:27,813 - Frame corrected with id:0xFE time: 3788 seconds 
+2024-08-28 17:55:27,813 - old value:0.0 new value:24000285.0
+2024-08-28 17:55:27,813 - old status: 100 new status:4000
+2024-08-28 17:55:42,123 - Frame corrected with id:0xFE time: 3802 seconds 
+2024-08-28 17:55:42,123 - old value:0.0 new value:24000285.0
+2024-08-28 17:55:42,123 - old status: 100 new status:4000
+2024-08-28 17:55:56,549 - Frame corrected with id:0xFE time: 3816 seconds 
+2024-08-28 17:55:56,549 - old value:0.0 new value:24000285.0
+2024-08-28 17:55:56,549 - old status: 100 new status:4000
+2024-08-28 17:56:10,888 - Frame corrected with id:0xFE time: 3831 seconds 
+2024-08-28 17:56:10,888 - old value:0.0 new value:24000285.0
+2024-08-28 17:56:10,888 - old status: 100 new status:4000
+2024-08-28 17:56:25,112 - Frame corrected with id:0xFE time: 3845 seconds 
+2024-08-28 17:56:25,112 - old value:0.0 new value:24000285.0
+2024-08-28 17:56:25,112 - old status: 100 new status:4000
+2024-08-28 17:56:39,535 - Frame corrected with id:0xFE time: 3859 seconds 
+2024-08-28 17:56:39,535 - old value:0.0 new value:24000285.0
+2024-08-28 17:56:39,535 - old status: 100 new status:4000
+2024-08-28 17:56:53,854 - Frame corrected with id:0xFE time: 3874 seconds 
+2024-08-28 17:56:53,855 - old value:0.0 new value:24000285.0
+2024-08-28 17:56:53,855 - old status: 100 new status:4000
+2024-08-28 17:57:08,296 - Frame corrected with id:0xFE time: 3888 seconds 
+2024-08-28 17:57:08,296 - old value:0.0 new value:24000285.0
+2024-08-28 17:57:08,296 - old status: 100 new status:4000
+2024-08-28 17:57:22,518 - Frame corrected with id:0xFE time: 3902 seconds 
+2024-08-28 17:57:22,518 - old value:0.0 new value:24000285.0
+2024-08-28 17:57:22,518 - old status: 100 new status:4000
+2024-08-28 17:57:36,938 - Frame corrected with id:0xFE time: 3917 seconds 
+2024-08-28 17:57:36,938 - old value:0.0 new value:24000285.0
+2024-08-28 17:57:36,938 - old status: 100 new status:4000
+2024-08-28 17:57:51,258 - Frame corrected with id:0xFE time: 3931 seconds 
+2024-08-28 17:57:51,258 - old value:0.0 new value:24000285.0
+2024-08-28 17:57:51,258 - old status: 100 new status:4000
+2024-08-28 17:58:05,488 - Frame corrected with id:0xFE time: 3945 seconds 
+2024-08-28 17:58:05,488 - old value:0.0 new value:24000285.0
+2024-08-28 17:58:05,488 - old status: 100 new status:4000
+2024-08-28 17:58:19,907 - Frame corrected with id:0xFE time: 3960 seconds 
+2024-08-28 17:58:19,907 - old value:0.0 new value:24000285.0
+2024-08-28 17:58:19,907 - old status: 100 new status:4000
+2024-08-28 17:58:34,228 - Frame corrected with id:0xFE time: 3974 seconds 
+2024-08-28 17:58:34,228 - old value:0.0 new value:24000285.0
+2024-08-28 17:58:34,228 - old status: 100 new status:4000
+2024-08-28 17:58:48,554 - Frame corrected with id:0xFE time: 3988 seconds 
+2024-08-28 17:58:48,554 - old value:0.0 new value:24000285.0
+2024-08-28 17:58:48,554 - old status: 100 new status:4000
+2024-08-28 17:59:02,887 - Frame corrected with id:0xFE time: 4003 seconds 
+2024-08-28 17:59:02,887 - old value:0.0 new value:24000285.0
+2024-08-28 17:59:02,887 - old status: 100 new status:4000
+2024-08-28 17:59:17,210 - Frame corrected with id:0xFE time: 4017 seconds 
+2024-08-28 17:59:17,210 - old value:0.0 new value:24000285.0
+2024-08-28 17:59:17,210 - old status: 100 new status:4000
+2024-08-28 17:59:31,630 - Frame corrected with id:0xFE time: 4031 seconds 
+2024-08-28 17:59:31,630 - old value:0.0 new value:24000285.0
+2024-08-28 17:59:31,630 - old status: 100 new status:4000
+2024-08-28 17:59:45,851 - Frame corrected with id:0xFE time: 4046 seconds 
+2024-08-28 17:59:45,851 - old value:0.0 new value:24000285.0
+2024-08-28 17:59:45,851 - old status: 100 new status:4000
+2024-08-28 18:00:00,331 - Frame corrected with id:0xFE time: 4060 seconds 
+2024-08-28 18:00:00,331 - old value:0.0 new value:24000285.0
+2024-08-28 18:00:00,331 - old status: 100 new status:4000
+2024-08-28 18:00:14,618 - Frame corrected with id:0xFE time: 4075 seconds 
+2024-08-28 18:00:14,618 - old value:0.0 new value:24000285.0
+2024-08-28 18:00:14,618 - old status: 100 new status:4000
+2024-08-28 18:00:28,928 - Frame corrected with id:0xFE time: 4089 seconds 
+2024-08-28 18:00:28,928 - old value:0.0 new value:24000285.0
+2024-08-28 18:00:28,928 - old status: 100 new status:4000
+2024-08-28 18:00:43,244 - Frame corrected with id:0xFE time: 4103 seconds 
+2024-08-28 18:00:43,244 - old value:0.0 new value:24000285.0
+2024-08-28 18:00:43,244 - old status: 100 new status:4000
+2024-08-28 18:00:57,655 - Frame corrected with id:0xFE time: 4118 seconds 
+2024-08-28 18:00:57,655 - old value:0.0 new value:24000285.0
+2024-08-28 18:00:57,655 - old status: 100 new status:4000
+2024-08-28 18:01:11,961 - Frame corrected with id:0xFE time: 4132 seconds 
+2024-08-28 18:01:11,962 - old value:0.0 new value:24000285.0
+2024-08-28 18:01:11,962 - old status: 100 new status:4000
+2024-08-28 18:01:26,254 - Frame corrected with id:0xFE time: 4146 seconds 
+2024-08-28 18:01:26,254 - old value:0.0 new value:24000285.0
+2024-08-28 18:01:26,254 - old status: 100 new status:4000
+2024-08-28 18:01:40,573 - Frame corrected with id:0xFE time: 4161 seconds 
+2024-08-28 18:01:40,573 - old value:0.0 new value:24000285.0
+2024-08-28 18:01:40,573 - old status: 100 new status:4000
+2024-08-28 18:01:54,885 - Frame corrected with id:0xFE time: 4175 seconds 
+2024-08-28 18:01:54,885 - old value:0.0 new value:24000285.0
+2024-08-28 18:01:54,885 - old status: 100 new status:4000
+2024-08-28 18:02:09,297 - Frame corrected with id:0xFE time: 4189 seconds 
+2024-08-28 18:02:09,297 - old value:0.0 new value:24000285.0
+2024-08-28 18:02:09,297 - old status: 100 new status:4000
+2024-08-28 18:02:23,615 - Frame corrected with id:0xFE time: 4203 seconds 
+2024-08-28 18:02:23,615 - old value:0.0 new value:24000285.0
+2024-08-28 18:02:23,615 - old status: 100 new status:4000
+2024-08-28 18:02:38,038 - Frame corrected with id:0xFE time: 4218 seconds 
+2024-08-28 18:02:38,039 - old value:0.0 new value:24000285.0
+2024-08-28 18:02:38,039 - old status: 100 new status:4000
+2024-08-28 18:02:52,259 - Frame corrected with id:0xFE time: 4232 seconds 
+2024-08-28 18:02:52,259 - old value:0.0 new value:24000285.0
+2024-08-28 18:02:52,259 - old status: 100 new status:4000
+2024-08-28 18:03:06,571 - Frame corrected with id:0xFE time: 4246 seconds 
+2024-08-28 18:03:06,571 - old value:0.0 new value:24000285.0
+2024-08-28 18:03:06,571 - old status: 100 new status:4000
+2024-08-28 18:03:20,987 - Frame corrected with id:0xFE time: 4261 seconds 
+2024-08-28 18:03:20,987 - old value:0.0 new value:24000285.0
+2024-08-28 18:03:20,987 - old status: 100 new status:4000
+2024-08-28 18:03:35,289 - Frame corrected with id:0xFE time: 4275 seconds 
+2024-08-28 18:03:35,289 - old value:0.0 new value:24000285.0
+2024-08-28 18:03:35,289 - old status: 100 new status:4000
+2024-08-28 18:03:49,607 - Frame corrected with id:0xFE time: 4289 seconds 
+2024-08-28 18:03:49,608 - old value:0.0 new value:24000285.0
+2024-08-28 18:03:49,608 - old status: 100 new status:4000
+2024-08-28 18:04:03,960 - Frame corrected with id:0xFE time: 4304 seconds 
+2024-08-28 18:04:03,960 - old value:0.0 new value:24000285.0
+2024-08-28 18:04:03,960 - old status: 100 new status:4000
+2024-08-28 18:04:18,277 - Frame corrected with id:0xFE time: 4318 seconds 
+2024-08-28 18:04:18,277 - old value:0.0 new value:24000285.0
+2024-08-28 18:04:18,277 - old status: 100 new status:4000
+2024-08-28 18:04:32,690 - Frame corrected with id:0xFE time: 4333 seconds 
+2024-08-28 18:04:32,690 - old value:0.0 new value:24000285.0
+2024-08-28 18:04:32,690 - old status: 100 new status:4000
+2024-08-28 18:04:46,907 - Frame corrected with id:0xFE time: 4347 seconds 
+2024-08-28 18:04:46,907 - old value:0.0 new value:24000285.0
+2024-08-28 18:04:46,907 - old status: 100 new status:4000
+2024-08-28 18:05:01,222 - Frame corrected with id:0xFE time: 4361 seconds 
+2024-08-28 18:05:01,222 - old value:0.0 new value:24000285.0
+2024-08-28 18:05:01,222 - old status: 100 new status:4000
+2024-08-28 18:05:15,641 - Frame corrected with id:0xFE time: 4376 seconds 
+2024-08-28 18:05:15,641 - old value:0.0 new value:24000285.0
+2024-08-28 18:05:15,641 - old status: 100 new status:4000
+2024-08-28 18:05:29,974 - Frame corrected with id:0xFE time: 4390 seconds 
+2024-08-28 18:05:29,974 - old value:0.0 new value:24000285.0
+2024-08-28 18:05:29,974 - old status: 100 new status:4000
+2024-08-28 18:05:44,291 - Frame corrected with id:0xFE time: 4404 seconds 
+2024-08-28 18:05:44,291 - old value:0.0 new value:24000285.0
+2024-08-28 18:05:44,291 - old status: 100 new status:4000
+2024-08-28 18:05:58,612 - Frame corrected with id:0xFE time: 4419 seconds 
+2024-08-28 18:05:58,612 - old value:0.0 new value:24000285.0
+2024-08-28 18:05:58,612 - old status: 100 new status:4000
+2024-08-28 18:06:12,988 - Frame corrected with id:0xFE time: 4433 seconds 
+2024-08-28 18:06:12,988 - old value:0.0 new value:24000285.0
+2024-08-28 18:06:12,988 - old status: 100 new status:4000
+2024-08-28 18:06:27,301 - Frame corrected with id:0xFE time: 4447 seconds 
+2024-08-28 18:06:27,301 - old value:0.0 new value:24000285.0
+2024-08-28 18:06:27,301 - old status: 100 new status:4000
+2024-08-28 18:06:41,614 - Frame corrected with id:0xFE time: 4461 seconds 
+2024-08-28 18:06:41,614 - old value:0.0 new value:24000285.0
+2024-08-28 18:06:41,614 - old status: 100 new status:4000
+2024-08-28 18:06:55,952 - Frame corrected with id:0xFE time: 4476 seconds 
+2024-08-28 18:06:55,952 - old value:0.0 new value:24000285.0
+2024-08-28 18:06:55,952 - old status: 100 new status:4000
+2024-08-28 18:07:10,384 - Frame corrected with id:0xFE time: 4490 seconds 
+2024-08-28 18:07:10,384 - old value:0.0 new value:24000285.0
+2024-08-28 18:07:10,384 - old status: 100 new status:4000
+2024-08-28 18:07:24,705 - Frame corrected with id:0xFE time: 4505 seconds 
+2024-08-28 18:07:24,705 - old value:0.0 new value:24000285.0
+2024-08-28 18:07:24,705 - old status: 100 new status:4000
+2024-08-28 18:07:39,020 - Frame corrected with id:0xFE time: 4519 seconds 
+2024-08-28 18:07:39,020 - old value:0.0 new value:24000285.0
+2024-08-28 18:07:39,020 - old status: 100 new status:4000
+2024-08-28 18:07:53,338 - Frame corrected with id:0xFE time: 4533 seconds 
+2024-08-28 18:07:53,338 - old value:0.0 new value:24000285.0
+2024-08-28 18:07:53,338 - old status: 100 new status:4000
+2024-08-28 18:07:59,597 - Frame could not corrected with id:0xFF and time: 4539 seconds
+2024-08-28 18:08:07,676 - Frame corrected with id:0xFE time: 4548 seconds 
+2024-08-28 18:08:07,676 - old value:0.0 new value:24000285.0
+2024-08-28 18:08:07,676 - old status: 100 new status:4000
+2024-08-28 18:08:21,992 - Frame corrected with id:0xFE time: 4562 seconds 
+2024-08-28 18:08:21,992 - old value:0.0 new value:24000285.0
+2024-08-28 18:08:21,992 - old status: 100 new status:4000
+2024-08-28 18:08:36,389 - Frame corrected with id:0xFE time: 4576 seconds 
+2024-08-28 18:08:36,389 - old value:0.0 new value:24000285.0
+2024-08-28 18:08:36,389 - old status: 100 new status:4000
+2024-08-28 18:08:50,704 - Frame corrected with id:0xFE time: 4591 seconds 
+2024-08-28 18:08:50,704 - old value:0.0 new value:24000285.0
+2024-08-28 18:08:50,704 - old status: 100 new status:4000
+2024-08-28 18:09:04,940 - Frame corrected with id:0xFE time: 4605 seconds 
+2024-08-28 18:09:04,940 - old value:0.0 new value:24000285.0
+2024-08-28 18:09:04,940 - old status: 100 new status:4000
+2024-08-28 18:09:19,358 - Frame corrected with id:0xFE time: 4619 seconds 
+2024-08-28 18:09:19,358 - old value:0.0 new value:24000285.0
+2024-08-28 18:09:19,358 - old status: 100 new status:4000
+2024-08-28 18:09:33,783 - Frame corrected with id:0xFE time: 4634 seconds 
+2024-08-28 18:09:33,783 - old value:0.0 new value:24000285.0
+2024-08-28 18:09:33,783 - old status: 100 new status:4000

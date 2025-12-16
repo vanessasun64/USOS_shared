@@ -1,0 +1,84 @@
+Log Runs for USOS Campaign for date USOS_7_19_2024
+For Run 30 with chemical mechanism GEOS-Chem
+
+F0AM run on: 21-Oct-2025 04:27:22
+
+kdil values:
+1.041667e-05, 1.048460e-05, 1.049675e-05, 1.050478e-05, 1.053954e-05, 1.055886e-05, 1.057802e-05, 1.059527e-05, 1.059807e-05, 1.060772e-05, 1.066767e-05, 1.075672e-05, 1.084049e-05, 1.086936e-05, 1.093067e-05, 1.098699e-05, 1.105605e-05, 1.109139e-05, 1.120760e-05, 1.121206e-05, 1.131028e-05, 1.141120e-05, 1.203000e-05, 1.215278e-05
+
+Species held:
+ACR, ALD2, BENZ, Br2, BrCl, BrO, CH2O, CH4, CO, Cl2, DMS, EOH, HCOOH, HNO2, HNO3, ISOP, MOH, MTPA, NAP, NO, NO2, O3, PAN, PPN, STYR, TOLU
+
+Species evolved:
+O3
+--------------------------------------------------
+Log Runs for USOS Campaign for date USOS_7_19_2024
+For Run 30 with chemical mechanism GEOS-Chem
+
+F0AM run on: 21-Oct-2025 04:28:20
+
+kdil values:
+1.041667e-05, 1.048460e-05, 1.049675e-05, 1.050478e-05, 1.053954e-05, 1.055886e-05, 1.057802e-05, 1.059527e-05, 1.059807e-05, 1.060772e-05, 1.066767e-05, 1.075672e-05, 1.084049e-05, 1.086936e-05, 1.093067e-05, 1.098699e-05, 1.105605e-05, 1.109139e-05, 1.120760e-05, 1.121206e-05, 1.131028e-05, 1.141120e-05, 1.203000e-05, 1.215278e-05
+
+Species held:
+ACR, ALD2, BENZ, Br2, BrCl, BrO, CH2O, CH4, CO, Cl2, DMS, EOH, HCOOH, HNO2, HNO3, ISOP, MOH, MTPA, NAP, NO, NO2, PAN, PPN, STYR, TOLU
+
+Species evolved:
+O3
+--------------------------------------------------
+Log Runs for USOS Campaign for date USOS_7_19_2024
+For Run 30 with chemical mechanism GEOS-Chem
+
+F0AM run on: 21-Oct-2025 04:38:52
+
+kdil values:
+1.041667e-05, 1.048460e-05, 1.049675e-05, 1.050478e-05, 1.053954e-05, 1.055886e-05, 1.057802e-05, 1.059527e-05, 1.059807e-05, 1.060772e-05, 1.066767e-05, 1.075672e-05, 1.084049e-05, 1.086936e-05, 1.093067e-05, 1.098699e-05, 1.105605e-05, 1.109139e-05, 1.120760e-05, 1.121206e-05, 1.131028e-05, 1.141120e-05, 1.203000e-05, 1.215278e-05
+
+Species held:
+ACR, ALD2, ALK4, ALK6, BENZ, Br2, BrCl, BrO, C2H2, C2H4, C2H6, C3H8, C4H6, CH2O, CH4, CO, Cl2, DMS, EBZ, EOH, HCOOH, HNO2, HNO3, ISOP, MOH, MTPA, NAP, NO, NO2, O3, PAN, PPN, PRPE, STYR, TMB, TOLU, XYLE
+
+Species evolved:
+O3
+--------------------------------------------------
+Log Runs for USOS Campaign for date USOS_7_19_2024
+For Run 30 with chemical mechanism GEOS-Chem
+
+F0AM run on: 21-Oct-2025 04:39:17
+
+kdil values:
+1.041667e-05, 1.048460e-05, 1.049675e-05, 1.050478e-05, 1.053954e-05, 1.055886e-05, 1.057802e-05, 1.059527e-05, 1.059807e-05, 1.060772e-05, 1.066767e-05, 1.075672e-05, 1.084049e-05, 1.086936e-05, 1.093067e-05, 1.098699e-05, 1.105605e-05, 1.109139e-05, 1.120760e-05, 1.121206e-05, 1.131028e-05, 1.141120e-05, 1.203000e-05, 1.215278e-05
+
+Species held:
+ACR, ALD2, ALK4, ALK6, BENZ, Br2, BrCl, BrO, C2H2, C2H4, C2H6, C3H8, C4H6, CH2O, CH4, CO, Cl2, DMS, EBZ, EOH, HCOOH, HNO2, HNO3, ISOP, MOH, MTPA, NAP, NO, NO2, PAN, PPN, PRPE, STYR, TMB, TOLU, XYLE
+
+Species evolved:
+O3
+--------------------------------------------------
+Log Runs for USOS Campaign for date USOS_7_19_2024
+For Run 30 with chemical mechanism GEOS-Chem
+
+F0AM run on: 22-Oct-2025 14:52:18
+
+kdil values:
+1.041667e-05, 1.048460e-05, 1.049675e-05, 1.050478e-05, 1.053954e-05, 1.055886e-05, 1.057802e-05, 1.059527e-05, 1.059807e-05, 1.060772e-05, 1.066767e-05, 1.075672e-05, 1.084049e-05, 1.086936e-05, 1.093067e-05, 1.098699e-05, 1.105605e-05, 1.109139e-05, 1.120760e-05, 1.121206e-05, 1.131028e-05, 1.141120e-05, 1.203000e-05, 1.215278e-05
+
+Species held:
+ACR, ALD2, ALK4, ALK6, BENZ, Br2, BrCl, BrO, C2H2, C2H4, C2H6, C3H8, C4H6, CH4, CO, Cl2, DMS, EBZ, EOH, HCOOH, HNO2, HNO3, ISOP, MOH, MTPA, NO, NO2, O3, PAN, PPN, PRPE, STYR, TMB, TOLU, XYLE
+
+Species evolved:
+O3
+--------------------------------------------------
+Log Runs for USOS Campaign for date USOS_7_19_2024
+For Run 30 with chemical mechanism GEOS-Chem
+
+F0AM run on: 22-Oct-2025 14:52:29
+
+kdil values:
+1.041667e-05, 1.048460e-05, 1.049675e-05, 1.050478e-05, 1.053954e-05, 1.055886e-05, 1.057802e-05, 1.059527e-05, 1.059807e-05, 1.060772e-05, 1.066767e-05, 1.075672e-05, 1.084049e-05, 1.086936e-05, 1.093067e-05, 1.098699e-05, 1.105605e-05, 1.109139e-05, 1.120760e-05, 1.121206e-05, 1.131028e-05, 1.141120e-05, 1.203000e-05, 1.215278e-05
+
+Species held:
+ACR, ALD2, ALK4, ALK6, BENZ, Br2, BrCl, BrO, C2H2, C2H4, C2H6, C3H8, C4H6, CH4, CO, Cl2, DMS, EBZ, EOH, HCOOH, HNO2, HNO3, ISOP, MOH, MTPA, NO, NO2, PAN, PPN, PRPE, STYR, TMB, TOLU, XYLE
+
+Species evolved:
+O3
+--------------------------------------------------

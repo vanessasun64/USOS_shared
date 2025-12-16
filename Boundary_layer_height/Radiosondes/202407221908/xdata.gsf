@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ArrayOfXdataOutputString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XdataOutputString>
+    <Time>6022.5447658</Time>
+    <XdataValue byte00="0" byte01="0" byte02="0" byte03="0" byte04="0" byte05="0" byte06="0" byte07="0" byte08="0" byte09="0" byte10="0" byte11="0" byte12="0" byte13="0" byte14="0" byte15="0" byte16="0" byte17="0" byte18="0" byte19="0" byte20="0" byte21="0" byte22="0" byte23="0" byte24="0" byte25="0" />
+  </XdataOutputString>
+</ArrayOfXdataOutputString>

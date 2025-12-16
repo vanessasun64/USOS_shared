@@ -1,0 +1,10 @@
+ALDX | Aldehyde | C=O double bond, that C bonded to single hydrogen, C also bonded to C unless it's formaldehyde (bonded to H) | represents 2 C's, additional C's represented as alkyl groups (mostly PAR) |  propionaldehyde = ALDX + PAR
+IOLE | Internal olefin | alkenes (hydrocarbon with C=C double bond) with double bond not on outside | represents 4's, additional C's represented as alkyl groups (mostly PAR) |  2-pentene isomers = IOLE + PAR
+KET | Ketone | R−C(=O)−R' | represents 1 C's, additional C's represented as alkyl groups (mostly PAR) | butanone = 3 PAR + KET
+OLE | Terminal olefin | alkenes (hydrocarbon with C=C double bond) with double bond at alpha (1- or primary position) | propene = OLE + PAR, butyne isomers = OLE + 2 PAR
+PAR | Alkanes, alkyl groups | represents 1 C | butane = 4 PAR | HAS UNR EXCEPTIONS
+UNR | Unreactive carbons | quaternary alkyl groups (neo-pentane = 4 PAR + UNR), carboxylic acid groups (acetic acid = PAR + UNR), ester groups (methyl acetate = 2 PAR + UNR), halogenated carbons (trichloroethane isomers = 2 UNR), carbons of nitrile groups (-C≡N)
+TERP | Monoterpenes | 1 TERP
+TOL | Toluene, monoalkyl aromatics | represents 7 C's, additional C's represented as alkyl groups (mostly PAR) | ethylbenzene = TOL + PAR | cresols represented as TOL and PAR, Styrenes represented as TOL, OLE, PAR
+
+XYL | Xylene isomers, polyalkyl aromatics | represents 8 C's, additional C's represented as alkyl groups (mostly PAR) | trimethylbenzene isomers = XYL + PAR

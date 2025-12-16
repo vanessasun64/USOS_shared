@@ -1,0 +1,174 @@
+2024-08-24 16:45:24,994 - Load Profile Settings was successful!
+2024-08-24 16:45:24,999 - Moving Avarage: 2
+2024-08-24 16:45:24,999 - Moving Avarage Increasing Intervall: 0.003
+2024-08-24 16:45:24,999 - Ice Limit: 15
+2024-08-24 16:45:24,999 - IcingTime Constant: 400
+2024-08-24 16:45:24,999 - CheckIcing: True
+2024-08-24 16:45:24,999 - High Resolution Profile: False
+2024-08-24 16:45:24,999 - Grawmet 5 create logfile.....
+2024-08-24 16:45:25,003 - USE [GrawmetSql4]
+GO
+Select count(*) from ascentdata
+GO
+
+2024-08-24 16:45:25,094 - result from process-> (1 rows affected)
+2024-08-24 16:45:25,094 - result from process-> Changed database context to 'GrawmetSQL4'.
+2024-08-24 16:45:25,094 - result from process-> -----------
+2024-08-24 16:45:25,094 - result from process->            
+2024-08-24 16:45:25,094 - result from process->          22
+2024-08-24 16:45:25,098 - result from process-> Process exited
+2024-08-24 16:45:25,098 - Process exited
+2024-08-24 16:45:25,099 - 0
+2024-08-24 16:45:25,100 - Use Remote database: localhost
+2024-08-24 16:45:26,161 - error result from process-> Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+2024-08-24 16:45:26,164 - result from process-> Process exited
+2024-08-24 16:45:26,164 - 1
+2024-08-24 16:45:26,283 - RTS server started on port 30871.
+2024-08-24 16:45:26,351 - Version: 5.17.1.1
+2024-08-24 16:45:28,563 - Grawmet license:
+Registration is valid
+License: W7TS1u0R9q5axGfGv7kLxpK3yO6xp1fuWgv9W3HchnWyFqX55ql2pSOYMOuCOh5tZOoy87v6VERofO9yQYf6FjVCcPgrAn/OmWYq7At00Sas8QBaZwb3Pdm8+IeduAtyD+SRsCf5r4mDe1OOk/5q+aPca95lKlgiEHFijWE63Sicbupd96jzQPZhut0BJmv9AxqPistNXINxOLV26FhNijcO96hwI0UurHWPEP2SvomkDfFo7Yoex8Q0tArgfikb7Ks2xhgrCB1LGz32istjCgr/XcgrOJj6DFend8KRl1jE35rPkGzQan3HkN429wkAbyrQT2mdI3rKA4qQOT318gINU2Ir9RK0y2ZgJBzVrtl7pnaRWQR9Pwv1qjVmqTmjmKSW8oMfT8PXz8cEsFk0BTlAZiFU54vgJcsV++iEez14qD+uQ6ET9b7IZ5EZkupkwWEpBjvujx/v4vJv5uzHjcEVpkM4DF7jeZJN1aBGUeanlQcdtqvUMHz8ZsLWM9aeW9r/ZOhu1RvXmL5h2qGR+CH4aabABapCyaIHPD/Xcz8Oerz4ZyYEmPEsHpqv09Hl1yvSkUahTnZzZ3DR7qDkJb769CKBvvMoh/8BC68rhYxQVqvt2ga2GIEkWjIv6LUwN89JTeqFhnakMy2D4WkMrO/NsrwQlF/4JG2WRgkYQ8LxDfgiex1JXYwjBPdIM1gNVNQeD0N5F/fYq7Sj3DFePrAZS/xGBN/AoOlKbB5Huk/EOL/onIOtWeSKJUZdDjsv6FeKZOemW0LWBRHUO+VZ1MIPiSt18XhQj3vZM466uHbXTXMn/Ml+p4mXh0BqheqxGV6PW2z2x15IyeoVIfkq88p8gc2E4vOQJ7RwcK4XWCi4JVmruQqHOq95t0D78heKJbfUjmaQm6sQOvEiyfNuNiN+zWShFZC0CqvM0Azc3X9JhlxIT39yqqlsvspa8Vb7MO8qaSAUt/YsmsmAXwtKos2JjCU6zULFcz5wUeuuHMv8f3yv8hG+3ee3lqfJZ3TZ8s1/dE1H6mK/zHtl/kK4Hj8pJUGxZNhEsNkL+0aw9LEJdy1rJF8s9QZnO9adlbTikvZzIhovzETnD5caUZGwHBDT+Z0VULmC1bkhHRJ+0I5QR+uPNtxJ2eHpTZiSYUJFyQpyS9Xu7RiFN0zaCVeBpWh7w4jz9atCkKPZiaFnxTdg2sm5buCAgRRNo3sf3Sva84lWbmCI5Uzkq3Ty/qwh0rY4jC5RA+DHKj9TekxCSWvllAVkBbmU1Kvscyl9DBFcnHkDbx792kaZCoU3ZyWRuVgssuMGuSg2wx/dlABJEUs4OHxBbvnjcRsfZjQt+UmPi0ODjCqzLxXdHyDnG7ObkGP2pB0SwKSmrf/CBo9w7U12R7EiRc2BdZbPXydIvuQBApeH2BXWuN5Q7mJDkqcK8hTEIQlrmg5fDjDkPWZAnLfMvtkyrPsaidjFnqyQjFQs
+Key: LJF4-7FED-44DS-2QKH-R7DW-LH34
+Customer: 66122
+Order: 323B0145
+Conversion result: -100 - ConversionAlreadyExecuted
+Activation result: -3 - NoKeyInKeyFileDirectory
+
+2024-08-24 16:45:28,564 - Cloud license:
+Cloud license is not registered!
+License: -
+Load result: 7 - RegistrationNotAvailable
+Conversion result: -100 - ConversionAlreadyExecuted
+Activation result: -3 - NoKeyInKeyFileDirectory
+
+2024-08-24 16:45:28,651 - USE [GrawmetSql7]
+GO
+Select count(*) from ascentdata
+GO
+
+2024-08-24 16:45:28,687 - result from process-> Changed database context to 'GrawmetSql7'.
+2024-08-24 16:45:28,689 - result from process->            
+2024-08-24 16:45:28,689 - result from process-> -----------
+2024-08-24 16:45:28,689 - result from process->           0
+2024-08-24 16:45:28,689 - result from process-> (1 rows affected)
+2024-08-24 16:45:28,693 - result from process-> Process exited
+2024-08-24 16:45:28,693 - Process exited
+2024-08-24 16:45:28,693 - 0
+2024-08-24 16:45:31,743 - GrawDevelop.Lib.Receiver, Version=1.13.0.0, Culture=neutral, PublicKeyToken=null
+2024-08-24 16:45:36,949 - AppCenter enabled is:  True
+2024-08-24 16:45:37,125 - Result from NTP server: time1.google.com
+2024-08-24 16:45:37,125 - System time: 2024-08-24 16:45:37.125
+2024-08-24 16:45:37,125 - Corrected Time: 2024-08-24 16:45:37.156
+2024-08-24 16:45:37,125 - Time difference: 0.0306782
+2024-08-24 16:45:40,266 - The Form:FormNavigationInitialisation was opened
+2024-08-24 16:45:42,437 - GrawDevelopment.Communication, Version=3.4.1.1, Culture=neutral, PublicKeyToken=null
+2024-08-24 16:45:43,140 - sensor 53 not found
+2024-08-24 16:45:43,299 - Data Control: 2
+2024-08-24 16:45:43,315 - Data Control: 2
+2024-08-24 16:45:43,331 - Data Control: 2
+2024-08-24 16:45:43,347 - Data Control: 2
+2024-08-24 16:45:43,364 - Decoding XDATA stream......
+2024-08-24 16:45:43,364 - data byte[0] = 0
+2024-08-24 16:45:43,364 - data byte[1] = 0
+2024-08-24 16:45:43,364 - data byte[2] = 0
+2024-08-24 16:45:43,364 - data byte[3] = 0
+2024-08-24 16:45:43,364 - data byte[4] = 0
+2024-08-24 16:45:43,364 - data byte[5] = 0
+2024-08-24 16:45:43,364 - data byte[6] = 0
+2024-08-24 16:45:43,364 - data byte[7] = 0
+2024-08-24 16:45:43,364 - data byte[8] = 0
+2024-08-24 16:45:43,364 - data byte[9] = 0
+2024-08-24 16:45:43,364 - data byte[10] = 0
+2024-08-24 16:45:43,364 - data byte[11] = 0
+2024-08-24 16:45:43,364 - data byte[12] = 0
+2024-08-24 16:45:43,364 - data byte[13] = 0
+2024-08-24 16:45:43,364 - data byte[14] = 0
+2024-08-24 16:45:43,364 - data byte[15] = 0
+2024-08-24 16:45:43,364 - data byte[16] = 0
+2024-08-24 16:45:43,364 - data byte[17] = 0
+2024-08-24 16:45:43,364 - data byte[18] = 0
+2024-08-24 16:45:43,364 - data byte[19] = 0
+2024-08-24 16:45:43,364 - data byte[20] = 0
+2024-08-24 16:45:43,364 - data byte[21] = 0
+2024-08-24 16:45:43,364 - data byte[22] = 0
+2024-08-24 16:45:43,364 - data byte[23] = 0
+2024-08-24 16:45:43,364 - data byte[24] = 0
+2024-08-24 16:45:43,364 - data byte[25] = 0
+2024-08-24 16:45:43,365 - XDATA was found!
+2024-08-24 16:45:44,164 - GrawDevelop.Lib.Processing, Version=1.66.0.0, Culture=neutral, PublicKeyToken=null
+2024-08-24 16:45:47,780 - Start reading calibration files
+2024-08-24 16:45:47,780 - Calibration file could not be found or file name is wrong: CalibrationCorrection.txt
+2024-08-24 16:47:42,257 - GrawDevelop.Lib.Demodulation, Version=1.9.0.0, Culture=neutral, PublicKeyToken=null
+2024-08-24 16:47:42,270 - GrawDevelopment.DSP, Version=3.5.1.1, Culture=neutral, PublicKeyToken=null
+2024-08-24 16:47:42,312 - GrawDevelop.Lib.Processing, Version=1.66.0.0, Culture=neutral, PublicKeyToken=null
+2024-08-24 16:47:42,369 - beforeDashboard
+2024-08-24 16:47:42,815 - The Form:FrmDiagramTemplate was opened
+2024-08-24 16:47:43,101 - The Form:FrmDiagramTemplate was opened
+2024-08-24 16:47:43,157 - The Form:FrmDiagramTemplate was opened
+2024-08-24 16:47:43,163 - Creating new AscentData entry...
+2024-08-24 16:47:43,333 - Created new AscentData entry successful: 2
+2024-08-24 16:47:43,391 - The Form:FormNavigationInitialisation was closed
+2024-08-24 16:48:19,994 - Grid loaded
+2024-08-24 16:48:20,066 - The Form:FrmRawPlain was opened
+2024-08-24 16:48:41,920 - Receiving Groundposition from Radiosonde
+2024-08-24 16:48:41,921 - Longitude: -111.9550663
+2024-08-24 16:48:41,921 - Latitude: 40.7725863
+2024-08-24 16:48:41,921 - Altitude: 1288.1
+2024-08-24 16:55:41,018 - Startdetect check: 2 10
+2024-08-24 17:02:01,025 - Startdetect check: 2 10
+2024-08-24 17:02:02,921 - Startdetect check: 3 10
+2024-08-24 17:02:05,000 - Startdetect check: 4 10
+2024-08-24 17:02:06,085 - Startdetect check: 5 10
+2024-08-24 17:02:07,806 - Startdetect check: 6 10
+2024-08-24 17:02:09,015 - Startdetect check: 7 10
+2024-08-24 17:02:09,831 - Startdetect check: 8 10
+2024-08-24 17:02:11,051 - Startdetect check: 9 10
+2024-08-24 17:02:11,958 - Startdetect check: 10 10
+2024-08-24 17:02:11,963 - ground position: X:-86.82786814274327 Y:490.9613596795083
+2024-08-24 17:02:11,970 - Start detected at: 852 seconds
+2024-08-24 17:02:11,970 - Manual start was set to: False
+2024-08-24 17:02:12,211 - Enter Update Ground Data Window
+2024-08-24 17:02:12,262 - The Form:FormUpdateGroundValues was opened
+2024-08-24 17:07:30,024 - First 5 minute check succeeded.
+2024-08-24 17:09:16,614 - METTA message created
+2024-08-24 18:01:08,228 - PILOT A message created
+2024-08-24 18:01:08,370 - PILOT B message created
+2024-08-24 18:01:08,417 - TEMP A message created
+2024-08-24 18:01:08,563 - TEMP B message created
+2024-08-24 18:09:38,860 - bufr will be created 60 False HUNDRED_MILLIBAR
+2024-08-24 18:09:38,860 - bufr will be created 61 False HUNDRED_MILLIBAR
+2024-08-24 18:09:38,860 - bufr will be created 62 False HUNDRED_MILLIBAR
+2024-08-24 18:09:38,860 - bufr will be created 63 False HUNDRED_MILLIBAR
+2024-08-24 18:09:38,860 - bufr will be created 64 False HUNDRED_MILLIBAR
+2024-08-24 18:09:38,860 - bufr will be created 65 False HUNDRED_MILLIBAR
+2024-08-24 18:09:38,860 - bufr will be created 66 False HUNDRED_MILLIBAR
+2024-08-24 18:09:38,860 - bufr will be created 67 False HUNDRED_MILLIBAR
+2024-08-24 18:09:38,860 - bufr will be created 68 False HUNDRED_MILLIBAR
+2024-08-24 18:09:38,860 - bufr will be created 69 False HUNDRED_MILLIBAR
+2024-08-24 18:09:38,860 - bufr will be created 70 False HUNDRED_MILLIBAR
+2024-08-24 18:09:38,860 - bufr will be created 71 False HUNDRED_MILLIBAR
+2024-08-24 18:09:38,860 - bufr will be created 72 False HUNDRED_MILLIBAR
+2024-08-24 18:09:38,860 - bufr will be created 73 False HUNDRED_MILLIBAR
+2024-08-24 18:09:38,860 - bufr will be created 74 False HUNDRED_MILLIBAR
+2024-08-24 18:09:38,860 - bufr will be created 75 False HUNDRED_MILLIBAR
+2024-08-24 18:09:38,860 - bufr will be created 76 False HUNDRED_MILLIBAR
+2024-08-24 18:11:32,029 - Ascent is terminated by balloon burst auto setting
+2024-08-24 18:11:33,069 - DoWork Thread DSP ended
+2024-08-24 18:11:34,005 - bufr will be created 60 False BURST
+2024-08-24 18:11:34,005 - bufr will be created 61 False BURST
+2024-08-24 18:11:34,005 - bufr will be created 62 False BURST
+2024-08-24 18:11:34,005 - bufr will be created 63 False BURST
+2024-08-24 18:11:34,005 - bufr will be created 64 False BURST
+2024-08-24 18:11:34,005 - bufr will be created 65 False BURST
+2024-08-24 18:11:34,005 - bufr will be created 66 False BURST
+2024-08-24 18:11:34,005 - bufr will be created 67 False BURST
+2024-08-24 18:11:34,005 - bufr will be created 68 False BURST
+2024-08-24 18:11:34,005 - bufr will be created 69 False BURST
+2024-08-24 18:11:34,005 - bufr will be created 70 False BURST
+2024-08-24 18:11:34,005 - bufr will be created 71 False BURST
+2024-08-24 18:11:34,005 - bufr will be created 72 False BURST
+2024-08-24 18:11:34,005 - bufr will be created 73 False BURST
+2024-08-24 18:11:34,005 - bufr will be created 74 False BURST
+2024-08-24 18:11:34,005 - bufr will be created 75 False BURST
+2024-08-24 18:11:34,005 - bufr will be created 76 False BURST
+2024-08-24 18:11:34,014 - TEMP A message created

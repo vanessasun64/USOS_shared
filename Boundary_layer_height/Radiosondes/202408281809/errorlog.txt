@@ -1,0 +1,68 @@
+2024-08-28 16:24:31,998 [11] ERROR Static_GrawMet.CommonLib - Sqlcmd: Error: Microsoft ODBC Driver 17 for SQL Server : Login failed for user 'sa'..
+2024-08-28 16:24:32,186 [1] ERROR Static_GrawMet.CommonLib - Version: 5.17.1.1
+2024-08-28 16:24:34,324 [1] ERROR Static_GrawMet.CommonLib - Grawmet license:
+Registration is valid
+License: oTejl5nhU0qEtKcN5D859+OQE+TzUjZcrh2TfxsvGkOXSEdSoO6Sz5mkn5QABAW0D0NTgoAYn0Gf1r8jVXWqwGZRtcDe9pl458ZOKZJ7HBlwd4olhts0rZpJluSj3slCj32qu5WhN+Ebr7QcZ/rwS12Lm87ucsThVEZm5fYdyYJUdD8Wc/Fr+ZaftpiT8NwbAd6jTUPSYp45s4Qmes4rdmx1NnXLRf/ijQAFCpyFudnNmlSm6z7+ot9Yo7+lPQsLdcFgxB/3o58dRqmvzMd7L3zC85yYPS86W8HMwYWtg8Bgk3HCsTdlwCOL1WzEHBliA2AwZOME1Ltg/4cEHXZB1oEY5utK/4xkneaJmZTEzNIjRbVWbV0Zw/etnSW9GdyBEncY2gw5GKSwpUuzm4/w8cOF7FL2zL9NVgblImCe2+awxmcrmMfedN4+MSDYRP7n5sPzGLZ6y0JlC0ZnS+qGq4Ai+rEtKWQCGSnRaN9KJWizie9qwJ3KjcAvLPPPaUP2v0AUVGykSApEA3n+rBo5YK7tKYK5uLr+D/A3LwV1Pl6Ca2yRArLmcD5ynFmcSDOFlnS/7Y/p3nQml76UtXr6diGqlYuw1hS/JAy3MgkQFSRR59aBMovwf2Yiv8AZ1IkA3h6/aK8NdB/KkJrYRAZ9hn+nOuZrlRgokx7khJaCTAUmA7KTBC+su5aiIIqXXeCoqgcW3+e4z++wiESK0I2EzCrf/1EPa33CTCo7dvt/NlZr8ydFqTzCFw8kB8k1h07z8+0sq0zqu0GCP7TTaNkKBYtQNqkFsYul3Iyc4toGI6nYZ/DyI0BLVmpHMGhqWlVzyelJdaap7FwKhbjvMWfXyFGF+sUcse5x7pELt48uAe2s2Katmw51Itxzhzpo1dk1GxIkdUggglR7eO+xC4dDZbQa2y8dHZTPPCNDtqkZy0a62CrdQW9lKnRcWTVsVN4Lvt+5xN9zBDNKnDfbpysJ/38bBvpthLfjF3R82yEaOrgpDQUM0a4Ky5PC41Db5F5Ui4tgoZD3RGMTVp0cHTZy27238eF87vRTrU4Wnr0u0GIK+sPv++9KvkQypNHHeCs6z7O8r7XgXzDJ5TjoGc5nUNb8C2QjaBZYnOGcjvwIlT+S0qmbf6xTVSsOUBd7yzeR6vf9ffiLEMSjmpZRXTpuBfeGNbhj8FL7rDCxwP5MPI/9BK8fSxqP4Oje5qujdxWTCC9Zxx9Am/eYo0qSdjx6fDq91pI8KsFgT7cqMsz/yl5Mx6NmTATdfwFTM/jQiUif26qQquORgzwnSIIZ7lJ5rersW9L0/Dbb5mYYGwWCdZNx6U2Nj6wTdLNZ0heyrARbU/20KJ32KaReZCJf2kntK7cIBFBhQmGEkMb86S8K15PlaMkU0EpkxHisRU9SVou+h0UihehthXXN19WjaPTmO666zauLfb66X7N00AwtpvUe0krYTbm3ifigkv0hl+ru
+Key: LJF4-7FED-44DS-2QKH-R7DW-LH34
+Customer: 66122
+Order: 323B0145
+Conversion result: -100 - ConversionAlreadyExecuted
+Activation result: -3 - NoKeyInKeyFileDirectory
+
+2024-08-28 16:24:34,325 [1] ERROR Static_GrawMet.CommonLib - Cloud license:
+Cloud license is not registered!
+License: -
+Load result: 7 - RegistrationNotAvailable
+Conversion result: -100 - ConversionAlreadyExecuted
+Activation result: -3 - NoKeyInKeyFileDirectory
+
+2024-08-28 16:24:34,977 [1] ERROR Static_GrawMet.CommonLib - Enter User Login
+2024-08-28 16:24:42,306 [MainGui] ERROR Static_GrawDevelop.Lib.GeneralTypes.Base.LocLogBase - System.IO.FileNotFoundException: Could not find file 'COM0'.
+File name: 'COM0'
+   at System.IO.Ports.SerialStream..ctor(String portName, Int32 baudRate, Parity parity, Int32 dataBits, StopBits stopBits, Int32 readTimeout, Int32 writeTimeout, Handshake handshake, Boolean dtrEnable, Boolean rtsEnable, Boolean discardNull, Byte parityReplace)
+   at System.IO.Ports.SerialPort.Open()
+   at GrawDevelopment.GPS.GpsBase.OpenComPortAsync(Boolean synchronize)
+2024-08-28 16:25:00,360 [MainGui] ERROR Static_GrawDevelop.Lib.GeneralTypes.Base.LocLogBase - System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.CollectionBase.System.Collections.IList.get_Item(Int32 index)
+   at GrawMet.Forms.Initialisation.New.ControlAdditionalGroundValues.LoadMe(Boolean forceLoadConfig)
+2024-08-28 16:25:00,362 [MainGui] ERROR Static_GrawDevelop.Lib.GeneralTypes.Base.LocLogBase - System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.CollectionBase.System.Collections.IList.get_Item(Int32 index)
+   at GrawMet.Forms.Initialisation.New.ControlAdditionalGroundValues.LoadMe(Boolean forceLoadConfig)
+2024-08-28 16:25:00,362 [MainGui] ERROR Static_GrawDevelop.Lib.GeneralTypes.Base.LocLogBase - System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.CollectionBase.System.Collections.IList.get_Item(Int32 index)
+   at GrawMet.Forms.Initialisation.New.ControlAdditionalGroundValues.LoadMe(Boolean forceLoadConfig)
+2024-08-28 16:52:22,257 [MainGui] ERROR Static_GrawMet.CommonLib - 
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Aggregate[TSource](IEnumerable`1 source, Func`3 func)
+   at GrawDevelop.Lib.GeneralTypes.Extension.Extensions.MaxByEx[T,R](IEnumerable`1 en, Func`2 evaluate)
+   at GrawDevelopment.DataSources.SoundingData.SoundingDataCollection.GetBurstData(Boolean highestPoint)
+   at GrawDevelopment.DataSources.SoundingData.SoundingDataCollection.GetAscentDataOnly(Boolean onlyTillHundred, Int32 skip)
+   at GrawDevelopment.Charts.ChartView.SkewT.<>c__DisplayClass33_0.<GetHundredDataAsync>b__0()
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at GrawDevelopment.Charts.ChartView.SkewT.GetHundredDataAsync()
+   at GrawDevelopment.Charts.ChartView.SkewT.DrawProfileAsync()
+2024-08-28 16:52:22,258 [MainGui] ERROR Static_GrawMet.CommonLib - 
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Aggregate[TSource](IEnumerable`1 source, Func`3 func)
+   at GrawDevelop.Lib.GeneralTypes.Extension.Extensions.MaxByEx[T,R](IEnumerable`1 en, Func`2 evaluate)
+   at GrawDevelopment.DataSources.SoundingData.SoundingDataCollection.GetBurstData(Boolean highestPoint)
+   at GrawDevelopment.DataSources.SoundingData.SoundingDataCollection.GetAscentDataOnly(Boolean onlyTillHundred, Int32 skip)
+   at GrawDevelopment.Charts.ChartView.SkewT.<>c__DisplayClass33_0.<GetHundredDataAsync>b__0()
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at GrawDevelopment.Charts.ChartView.SkewT.GetHundredDataAsync()
+   at GrawDevelopment.Charts.ChartView.SkewT.DrawProfileAsync()
+2024-08-28 18:09:39,326 [MainGui] ERROR Static_GrawMet.CommonLib - System.Threading.ThreadStateException: Thread has not been started.
+   at System.Threading.Thread.Join(Int32 millisecondsTimeout)
+   at GrawDevelopment.Dsp.DspProcessing.StopProcessing()
