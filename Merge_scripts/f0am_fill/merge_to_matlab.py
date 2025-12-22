@@ -10,23 +10,6 @@ import matplotlib.dates as mdates
 import matplotlib.ticker as ticker
 import matplotlib as mpl
 
-def find_files(directory, search_string, ext):
-    matches = []
-    for root, dirs, files in os.walk(directory):
-        for filename in files:
-            if search_string in filename and filename.endswith(ext):
-                matches.append(os.path.join(root, filename))
-    return matches
-
-def dataframe_to_nested_dict(df):
-    nested_dict = {}
-    for column in df.columns:
-        nested_dict[column] = df[column][0:-1].to_numpy()
-        
-    # Add the index as a key-value pair
-    nested_dict['time_local'] = df.index[0:-1].to_numpy()
-    return nested_dict
-
 #region: Plot formatting
 mpl.rcParams['xtick.labelsize'] = 15
 mpl.rcParams['ytick.labelsize'] = 15
@@ -46,27 +29,15 @@ mpl.rcParams['axes.unicode_minus'] = False
 #region: filepaths
 #Filepaths for loading
 dirpath = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/'
-merged_data_dir = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/CampaignData_and_Merges/R0/CSL_MobileLab_Parked/merged/rev_15min/'
+merged_data_dir = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/CampaignData_and_Merges/R0/CSL_MobileLab_Parked/merged/'
+merged_data_dir_15min = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/CampaignData_and_Merges/R0/CSL_MobileLab_Parked/merged/rev_15min/'
 #endregion
 
-alt_load = xr.open_dataset(merged_data_dir +'all_CSL_MobileLab_Parked_rev15min.nc')
-df_alt = alt_load.to_dataframe()
-
-# print(df_alt)
-
-#region: load files
-ml_voc_data = xr.open_dataset(merged_data_dir +'all_CSL_MobileLab_Parked_rev15min_iWASupdated.nc')
-
+#Read in data
+ml_voc_data = xr.open_dataset(merged_data_dir_15min +'all_CSL_MobileLab_Parked_rev15min_iWASupdated_formaldehydeupdated.nc')
 df_ml_data = ml_voc_data.to_dataframe()
-
-pd.set_option('display.max_rows', None)
-print(df_ml_data['Beta_Pinene_WAS'])
-print(df_ml_data['Alpha_Pinene_WAS'])
-# print(df_ml_data.columns.values)
-# df_ml_data.set_index('time_local', inplace=True)
-# print(df_ml_data)
-# print(df_ml_data.columns.values)
-# #endregion
+df_ml_data.reset_index(inplace=True)
+df_ml_data.set_index('time_local', inplace=True)
 
 # Define which variables we need to make sure don't have Nans/ negs since we'll be using then as constraints in F0AM: 
 # True means we can't have holes in them!
@@ -77,7 +48,6 @@ need2fill= {
     'NO_LIF':True,
     'NO2_LIF':True,
     'HONO_CIMS':True,
-    'Isoprene_PTR':True,
     'Alpha_Pinene_WAS':True,
     'Benzene_PTR':True,
     'Toluene_PTR':True,
@@ -85,11 +55,11 @@ need2fill= {
     'Methanol_PTR':True,
     'Acetaldehyde_PTR':True,
     'Ethanol_PTR':True,
-    'HCHO_CRDS':True,
     'HCOOH_CIMS':True,
     'Acrolein_PTR':True,
     'Br2_CIMS':True,
     'Cl2_CIMS':True,
+    'Isoprene_WAS':True,
     'nButane_WAS':True,
     'iButane_WAS':True,
     'nPentane_WAS':True,
@@ -117,6 +87,7 @@ need2fill= {
     'Benzaldehyde_PTR':True,
     'MVK_MACR_PTR':True,
     'ISOPN_CIMS':True,
+    'HCHO_CRDS':True,
     ###### End of Nell Matching
     ###### Need to be true for F0AM to run:
     'Temp_K':True,
@@ -164,6 +135,7 @@ need2fill= {
     'DMS_PTR':False,
     'C8Aromatics_PTR':False,
     'C9Aromatics_PTR':False,
+    'Isoprene_PTR':False,
     'Naphthalene_PTR':False,
     'Octanal_PTR':False,
     'Monoterpenes_PTR':False,
@@ -198,7 +170,6 @@ need2fill= {
     'CH3Br_WAS':False,
     'CycloPentane_WAS':False,
     'Ethyne_WAS':False,
-    'Isoprene_WAS':False,
     'Limonene_WAS':False,
     'MACR_WAS':False,
     'MethylCycloHexane_WAS':False,
@@ -269,12 +240,23 @@ need2fill= {
 # Get names of vars we need to fill nans in: 
 vars2fill=[key for key,value in need2fill.items() if value ==True]
 
-#region: plotting interps
-df_interp=df_ml_data.copy()
+
 def plot_interps():
+    """
+    This function shows the interpolation plots for our 15 minute revised merges. Currently, any time there is data missing from the USOS Campaign, 
+    there is a NaN as the value. These plots will show what it looks like to fill a NaN with an interpolated value.
+    """
+    df_interp=df_ml_data.copy()
+
+    #Nell turned all benzaldehyde, styrene, HONO negative values into NaNs = 0
+    neg_species = ['Benzaldehyde_PTR','Styrene_PTR', 'HONO_CIMS']
+
     for i,col in enumerate(vars2fill):
-        # Set any negative values to NaN so we can interp them... 
-        df_interp[col] = df_interp[col].mask(df_interp[col] < 0, np.nan)
+        if col in neg_species:
+            df_interp[col] = df_interp[col].mask(df_interp[col] < 0, 0)
+        else:
+            # Set any negative values to NaN so we can interp them... 
+            df_interp[col] = df_interp[col].mask(df_interp[col] < 0, np.nan)
                                 
         # Calc number of points that are negative or Nans: 
         n_baddies= len([item for item in df_ml_data[col] if item <0 or np.isnan(item)]) 
@@ -286,6 +268,7 @@ def plot_interps():
             #Plot it so we can take a look at it... 
             fig, (ax1, ax2, ax3, ax4) = plt.subplots(4,1, figsize = (30,20), tight_layout=True)
 
+            #Each subplot shows approximately 1 week
             xlim_start_w1 = pd.to_datetime('2024-07-15 00:00:00')
             xlim_end_w1 = pd.to_datetime('2024-07-23 23:00:00')
             xlim_start_w2 = pd.to_datetime('2024-07-24 00:00:00')
@@ -298,12 +281,6 @@ def plot_interps():
             ax1.plot(df_ml_data.index, df_ml_data[col], color='k', marker='o',label=f'Original (baddies={n_baddies})')
             ax1.plot(df_interp.index, df_interp[col], color='r', marker='x', label='Interpolated')
 
-            # #Mark midnight for every day
-            # midnight_vals = []
-            # for midnight_idx in range(0,len(df_ml_data.index),120):
-            #     midnight_vals.append(df_ml_data.index[midnight_idx])
-            # for day_pos in midnight_vals:
-            #     ax1.axvline(day_pos, color = 'black', linestyle = 'dotted', alpha = 0.7)
             #Set x ticks
             ax1.xaxis.set_major_locator(mdates.DayLocator())
             ax1.xaxis.set_major_formatter(mdates.DateFormatter('%m-%d'))
@@ -317,12 +294,7 @@ def plot_interps():
 
             ax2.plot(df_ml_data.index, df_ml_data[col], color='k', marker='o',label=f'Original (baddies={n_baddies})')
             ax2.plot(df_interp.index, df_interp[col], color='r', marker='x', label='Interpolated')
-            #Mark midnight for every day
-            # midnight_vals = []
-            # for midnight_idx in range(0,len(df_ml_data.index),120):
-            #     midnight_vals.append(df_ml_data.index[midnight_idx])
-            # for day_pos in midnight_vals:
-            #     ax2.axvline(day_pos, color = 'black', linestyle = 'dotted', alpha = 0.7)
+
             # #Set x ticks
             ax2.xaxis.set_major_locator(mdates.DayLocator())
             ax2.xaxis.set_major_formatter(mdates.DateFormatter('%m-%d'))
@@ -336,12 +308,7 @@ def plot_interps():
 
             ax3.plot(df_ml_data.index, df_ml_data[col], color='k', marker='o',label=f'Original (baddies={n_baddies})')
             ax3.plot(df_interp.index, df_interp[col], color='r', marker='x', label='Interpolated')
-            #Mark midnight for every day
-            # midnight_vals = []
-            # for midnight_idx in range(0,len(df_ml_data.index),120):
-            #     midnight_vals.append(df_ml_data.index[midnight_idx])
-            # for day_pos in midnight_vals:
-            #     ax3.axvline(day_pos, color = 'black', linestyle = 'dotted', alpha = 0.7)
+  
             # #Set x ticks
             ax3.xaxis.set_major_locator(mdates.DayLocator())
             ax3.xaxis.set_major_formatter(mdates.DateFormatter('%m-%d'))
@@ -355,12 +322,7 @@ def plot_interps():
 
             ax4.plot(df_ml_data.index, df_ml_data[col], color='k', marker='o',label=f'Original (baddies={n_baddies})')
             ax4.plot(df_interp.index, df_interp[col], color='r', marker='x', label='Interpolated')
-            #Mark midnight for every day
-            # midnight_vals = []
-            # for midnight_idx in range(0,len(df_ml_data.index),120):
-            #     midnight_vals.append(df_ml_data.index[midnight_idx])
-            # for day_pos in midnight_vals:
-            #     ax4.axvline(day_pos, color = 'black', linestyle = 'dotted', alpha = 0.7)
+
             # #Set x ticks
             ax4.xaxis.set_major_locator(mdates.DayLocator())
             ax4.xaxis.set_major_formatter(mdates.DateFormatter('%m-%d'))
@@ -374,7 +336,23 @@ def plot_interps():
 
             plt.suptitle(col)
             plt.show()
-
+#region: extra functions needed to export to matlab
+def find_files(directory, search_string, ext):
+    matches = []
+    for root, dirs, files in os.walk(directory):
+        for filename in files:
+            if search_string in filename and filename.endswith(ext):
+                matches.append(os.path.join(root, filename))
+    return matches
+def dataframe_to_nested_dict(df):
+    nested_dict = {}
+    for column in df.columns:
+        nested_dict[column] = df[column][0:-1].to_numpy()
+        
+    # Add the index as a key-value pair
+    nested_dict['time_local'] = df.index[0:-1].to_numpy()
+    return nested_dict
+#endregion
 def subset_day(date_time_start, date_time_stop,file_subset_name, var_name):
     """
     This function is for if you want to interpolate a subset of the days for the campaign.
@@ -394,16 +372,23 @@ def subset_day(date_time_start, date_time_stop,file_subset_name, var_name):
     """
     df_subsetdays = df_ml_data.sort_index().loc[date_time_start:date_time_stop]
     df_interp_subset=df_subsetdays.copy()
+
+    #Nell turned all benzaldehyde, styrene, HONO negative values into NaNs = 0
+    neg_species = ['Benzaldehyde_PTR','Styrene_PTR', 'HONO_CIMS']
+
     for i,col in enumerate(vars2fill):
-        # Set any negative values to NaN so we can interp them... 
-        df_interp_subset[col] = df_interp_subset[col].mask(df_interp[col] < 0, np.nan)
-                                
-        # Calc number of points that are negative or Nans: 
-        n_baddies= len([item for item in df_ml_data[col] if item <0 or np.isnan(item)]) 
-        
-        if n_baddies > 0: 
-            #apply the linear interpolation
-            df_interp_subset[col] = df_interp_subset[col].interpolate(method='linear')
+        if col in neg_species:
+            df_interp_subset[col] = df_interp_subset[col].mask(df_interp_subset[col] < 0, 0)
+        else:
+            # Set any negative values to NaN so we can interp them... 
+            df_interp_subset[col] = df_interp_subset[col].mask(df_interp_subset[col] < 0, np.nan)
+                                    
+    # Calc number of points that are negative or Nans: 
+    n_baddies= len([item for item in df_ml_data[col] if item <0 or np.isnan(item)]) 
+    
+    if n_baddies > 0: 
+        #apply the linear interpolation
+        df_interp_subset[col] = df_interp_subset[col].interpolate(method='linear')
 
     #get a ratio for jNO2 measured to TUV
     df_interp_subset['jNO2_ratio'] = df_interp_subset['jNO2_meas']/df_interp_subset['jNO2']
@@ -423,11 +408,11 @@ def subset_day(date_time_start, date_time_stop,file_subset_name, var_name):
     savemat(outpath+matfilename,{var_name: ddict})
     print('Saved MATLAB file to:' + outpath + matfilename)
 
-
 ###### CALL FUNCTIONS #########
+#plot_interps()
 
-# subset_day(
-#      date_time_start = '2024-08-05 00:00:00', 
-#      date_time_stop = '2024-08-07 23:45:00',
-#      file_subset_name = '20240805_20240807_15min_CSL_mobile_lab_parked_with_interp_nell_match_no_formaldehyde', 
-#      var_name = 'USOS')
+subset_day(
+     date_time_start = '2024-08-05 00:00:00', 
+     date_time_stop = '2024-08-07 23:45:00',
+     file_subset_name = '20240805_20240807_15min_CSL_mobile_lab_parked_with_interp_nell_match_with_formaldehyde', 
+     var_name = 'USOS')

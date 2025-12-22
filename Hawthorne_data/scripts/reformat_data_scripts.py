@@ -16,6 +16,9 @@ from scipy.io import savemat
 from collections import OrderedDict
 dirpath = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/'
 mappings_filepath = dirpath + 'Hawthorne_data/mappings/manually_edited/UDAQ_Hawthorne_CRACMM_GEOSCHEM_CB6r5h_mapped_updated_11172025.csv'
+merged_data_dir = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/CampaignData_and_Merges/R0/CSL_MobileLab_Parked/merged/'
+merged_data_dir_15min = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/CampaignData_and_Merges/R0/CSL_MobileLab_Parked/merged/rev_15min/'
+hawthorne_data_dir = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/Hawthorne_data/data/'
 
 def resave_hourly_ozone(filename):
     udaq_o3_filepath = dirpath + 'Hawthorne_data/data/hawthorne_udaq_o3_2024.csv'
@@ -311,7 +314,64 @@ def compare_qc_and_verbose_vocs():
         #plt.savefig(dirpath + '/Compare_UDAQ_MobileLab/plots/hawthorne_udaq_mobilelab_o3_comparison_full_campaign.png', dpi =300)
         plt.show()
 
+def formaldehyde_extract(time_interval):
+    """
+    The USOS Campaign did not have many formaldehyde measurements taken. Here, we consider replacing the formaldhyde measurements with those taken by UDAQ.
+    """
+    load_15min_iwas_merge = merged_data_dir_15min + 'all_CSL_MobileLab_Parked_rev15min_iWASupdated.nc'
+    ds_newmerge = xr.open_dataset(load_15min_iwas_merge)
+    #plot existing NOAA HCHO data
+    #plot existing UDAQ HCHO data
+    #read UDAQ Formaldehyde data, provided by Nell Schafer (CU Boulder/NOAA) and Bart (UDAQ)
+    udaq_formaldehyde_load = hawthorne_data_dir + 'hw_zero_corrected_data_formaldehyde.csv'
+    df_udaq_formaldehyde = pd.read_csv(udaq_formaldehyde_load, index_col='dt', parse_dates=True)
+    
+    #shift data by one hour
+    df_udaq_formaldehyde = df_udaq_formaldehyde.shift(freq= '1h')
+    df_udaq_formaldehyde.index = df_udaq_formaldehyde.index.rename('time_local')
+    df_udaq_formaldehyde['time_local']=df_udaq_formaldehyde.index
+    #Change index to UTC time
+    df_udaq_formaldehyde.index = df_udaq_formaldehyde.index + pd.Timedelta(hours=6)
+    df_udaq_formaldehyde['time_UTC']=df_udaq_formaldehyde.index
+    df_udaq_formaldehyde.index = df_udaq_formaldehyde.index.rename('time_UTC')
+    df_udaq_formaldehyde_usos_only = df_udaq_formaldehyde.sort_index().loc['2024-07-15 00:00:00':'2024-08-18 23:59:00']
 
+    df_udaq_formaldehyde_revised = df_udaq_formaldehyde_usos_only.copy()
+    keep_colnames = ['H2CO_Values', 'H2CO_Corrected', 'time_local', 'time_UTC']
+    df_udaq_formaldehyde_revised = df_udaq_formaldehyde_revised[keep_colnames]
+
+    # Get the average native sampling frequency in total seconds:
+    tseries = df_udaq_formaldehyde_revised.index.to_series()
+    min_sep = int(np.round(tseries.diff().median().total_seconds()))
+    step_S = time_interval
+    
+    new_start_time = pd.Timestamp('2024-07-15 00:00:00')
+    new_end_time = pd.Timestamp('2024-08-18 23:45:00')
+    dts = pd.date_range(new_start_time, new_end_time, freq=str(min_sep) + 's')
+
+    dfn = df_udaq_formaldehyde_revised.reindex(dts, method='nearest', fill_value=np.nan)
+
+    # Take a centered boxcar average around the 900s avg. (for numerical columns only)!    
+    #NOTE: .mean() handles Nans like np.nanmean() in this context!!! 
+    df_nums=dfn.select_dtypes(exclude=['datetime64'])
+    df_nums_new = df_nums.rolling(str(int(step_S)) + 's').mean().resample(str(step_S) + 's').mean()
+    dtss=df_nums_new.index.rename('time_UTC')
+
+    df_nonums=dfn.select_dtypes(include=['datetime64'])
+    df_nonums_new = df_nonums.reindex(dtss, method='nearest', fill_value=np.nan)
+    df_nonums_new.index = df_nonums_new.index.rename('time_UTC')
+    
+    #our combined df_new dataframe now has our averaged 15 min intervals (in UTC)
+    #The column 'time_UTC' is used mostly to check that the index is correct (they should match)
+    #while time_local should be UTC -6 hrs to represent Mountain Daylight Time.
+    df_new_formaldehyde=pd.concat([df_nums_new, df_nonums_new], axis=1, join="inner")
+    df_new_formaldehyde.index = df_new_formaldehyde.index.index.rename('time_UTC')
+    print(df_new_formaldehyde)
+
+
+
+ 
+    
 # resave_hourly_ozone(
 #     filename = 'hawthorne_udaq_o3_2024_timezone_updated'
 # )
@@ -326,6 +386,10 @@ def compare_qc_and_verbose_vocs():
 #     filename = 'hawthorne_udaq_all_vocs_hourly_timezone_carbon_number_updated'
 # )
 
-resave_all_voc_species_15min_reindexed(
-    filename = 'hawthorne_udaq_all_vocs_15min_timezone_carbon_number_updated'
+# resave_all_voc_species_15min_reindexed(
+#     filename = 'hawthorne_udaq_all_vocs_15min_timezone_carbon_number_updated'
+# )
+
+formaldehyde_extract(
+    time_interval = 15*60
 )

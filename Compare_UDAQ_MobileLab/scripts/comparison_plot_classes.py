@@ -1108,7 +1108,7 @@ class mean_bias_plots:
             else:
                 pass
         
-        plt.ylabel('Normalized Mean Bias (%)')
+        plt.ylabel('Mean Normalized Bias (%)')
         plt.xlabel('Hour (MDT)')
         plt.xlim([0, 23])
         plt.xticks(hour_range)
