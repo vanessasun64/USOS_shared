@@ -381,12 +381,12 @@ def bias_and_error_analysis(time_interval_used):
     ax1.set_title('Model vs Obs')
 
     #Plot regression line
-    O_reshaped = df_clean_nocorr['Observed'].values.reshape(-1,1)
-    model_nocorr = LinearRegression().fit(O_reshaped, df_clean_nocorr['Modeled'].values)
+    O_reshaped_nocorr = df_clean_nocorr['Observed'].values.reshape(-1,1)
+    model_nocorr = LinearRegression().fit(O_reshaped_nocorr, df_clean_nocorr['Modeled'].values)
     slope_nocorr = model_nocorr.coef_[0]
     intercept_nocorr = model_nocorr.intercept_
     # Predicted M based on regression
-    M_pred_nocorr = model_nocorr.predict(O_reshaped)
+    M_pred_nocorr = model_nocorr.predict(O_reshaped_nocorr)
     # Regression line
     ax1.plot(df_clean_nocorr['Observed'].values, M_pred_nocorr, color='k', linewidth=2, label=f'Regression line: y={intercept_nocorr:.2f}+{slope_nocorr:.2f}x')
     # 1:1 line
@@ -456,11 +456,12 @@ def bias_and_error_analysis(time_interval_used):
     ax1.set_title('Model vs Obs')
 
     #Plot regression line
-    model_corr = LinearRegression().fit(O_reshaped, df_clean_corr['Modeled'].values)
+    O_reshaped_corr = df_clean_corr['Observed'].values.reshape(-1,1)
+    model_corr = LinearRegression().fit(O_reshaped_corr, df_clean_corr['Modeled'].values)
     slope_corr = model_corr.coef_[0]
     intercept_corr = model_corr.intercept_
     # Predicted M based on regression
-    M_pred_corr = model_corr.predict(O_reshaped)
+    M_pred_corr = model_corr.predict(O_reshaped_corr)
     # Regression line
     ax1.plot(df_clean_corr['Observed'].values, M_pred_corr, color='k', linewidth=2, label=f'Regression line: y={intercept_corr:.2f}+{slope_corr:.2f}x')
     # 1:1 line
@@ -682,19 +683,19 @@ def fill_formaldehyde_holes_with_calibrated_adj_vals(time_interval_used, savefil
 #     time_interval = 15*60
 # )
 
-# formaldehyde_correction_compare(
-#     time_interval_used = 15*60
+formaldehyde_correction_compare(
+    time_interval_used = 15*60
 
-# )
-
-# bias_and_error_analysis(
-#     time_interval_used = 15*60
-# )
-
-# calibration_adjustment(
-#     time_interval_used =  15*60
-# )
-fill_formaldehyde_holes_with_calibrated_adj_vals(
-    time_interval_used = 15*60,
-    savefilename = 'all_CSL_MobileLab_Parked_rev15min_iWASupdated_formaldehydeupdated'
 )
+
+bias_and_error_analysis(
+    time_interval_used = 15*60
+)
+
+calibration_adjustment(
+    time_interval_used =  15*60
+)
+# fill_formaldehyde_holes_with_calibrated_adj_vals(
+#     time_interval_used = 15*60,
+#     savefilename = 'all_CSL_MobileLab_Parked_rev15min_iWASupdated_formaldehydeupdated'
+# )

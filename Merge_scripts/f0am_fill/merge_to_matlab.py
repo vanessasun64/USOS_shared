@@ -39,6 +39,19 @@ df_ml_data = ml_voc_data.to_dataframe()
 df_ml_data.reset_index(inplace=True)
 df_ml_data.set_index('time_local', inplace=True)
 
+blh_filepath = dirpath+'Boundary_layer_height/BLH_Nell.csv'
+df_blh = pd.read_csv(blh_filepath)
+#Convert from Igor Pro Time to local time
+df_blh['time_local'] = (pd.to_datetime("1904-01-01") + pd.to_timedelta(df_blh['Time_start_15min_local'], unit="s"))
+print(df_blh)
+df_blh = df_blh.rename(columns={'UDAQ_mixing_height_m_15min_avg':'BLH_Nell_m', 'UDAQ_mixing_height_m_15min_avg_smoothed':'BLH_Nell_m_smoothed'})
+df_blh = df_blh.set_index(['time_local'])
+df_blh = df_blh.drop(columns=['Time_start_15min_local'])
+print(df_blh)
+df_ml_data = df_ml_data.join(df_blh, how="inner")   # only matching index values
+print(df_ml_data.columns)
+
+
 # Define which variables we need to make sure don't have Nans/ negs since we'll be using then as constraints in F0AM: 
 # True means we can't have holes in them!
 need2fill= {
@@ -86,8 +99,11 @@ need2fill= {
     'Furan_WAS':True,
     'Benzaldehyde_PTR':True,
     'MVK_MACR_PTR':True,
+    'iPropylONO2_WAS':True,
     'ISOPN_CIMS':True,
     'HCHO_CRDS':True,
+    'BLH_Nell_m_smoothed':True,
+    'BLH_Nell_m':True,
     ###### End of Nell Matching
     ###### Need to be true for F0AM to run:
     'Temp_K':True,
@@ -113,6 +129,7 @@ need2fill= {
     'jNO3b':True,
     'jN2O5':True,
     'jO3':True,
+    'Surface_area_conc_POPS':True,
     #####
     'BrO_CIMS':False,
     'ClNO2_CIMS':False,
@@ -177,7 +194,6 @@ need2fill= {
     'Toluene_WAS':False,
     'Beta_Pinene_WAS':False,
     'iPropylBenzene_WAS':False,
-    'iPropylONO2_WAS':False,
     'nHeptane_WAS':False,
     'nPropylBenzene_WAS':False,
     'nPropylONO2_WAS':False,
@@ -382,19 +398,27 @@ def subset_day(date_time_start, date_time_stop,file_subset_name, var_name):
         else:
             # Set any negative values to NaN so we can interp them... 
             df_interp_subset[col] = df_interp_subset[col].mask(df_interp_subset[col] < 0, np.nan)
-                                    
-    # Calc number of points that are negative or Nans: 
-    n_baddies= len([item for item in df_ml_data[col] if item <0 or np.isnan(item)]) 
-    
-    if n_baddies > 0: 
-        #apply the linear interpolation
-        df_interp_subset[col] = df_interp_subset[col].interpolate(method='linear')
+        #Benzaldehyde has all NaNs so substitute with zeros instead
+        if col == 'Benzaldehyde_PTR':
+            df_interp_subset[col] =  df_interp_subset[col].mask(np.isnan(df_interp_subset[col]), 0)
+        else:
+            pass
+        # Calc number of points that are negative or Nans: 
+        n_baddies= len([item for item in df_ml_data[col] if item <0 or np.isnan(item)]) 
+        
+        if n_baddies > 0: 
+            #apply the linear interpolation
+            df_interp_subset[col] = df_interp_subset[col].interpolate(method='linear')
 
     #get a ratio for jNO2 measured to TUV
     df_interp_subset['jNO2_ratio'] = df_interp_subset['jNO2_meas']/df_interp_subset['jNO2']
     #level out the inf values and values that are too high for the jNO2 ratio
     msk = ((df_interp_subset['jNO2_ratio'] ==np.inf)  | (df_interp_subset['jNO2_ratio'] >10) )
     df_interp_subset.loc[msk,'jNO2_ratio'] = 1.0
+
+    savepath = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/CampaignData_and_Merges/R0/CSL_MobileLab_Parked/' + 'F0AM_filled/' + file_subset_name + '.csv'
+    df_interp_subset.to_csv(savepath)
+    print('Saved CSV to:' + savepath)
 
     # Convert the dataframe to a nested dictionary (so scipy can output to a matlab structure!) 
     ddict=dataframe_to_nested_dict(df_interp_subset)
@@ -411,8 +435,12 @@ def subset_day(date_time_start, date_time_stop,file_subset_name, var_name):
 ###### CALL FUNCTIONS #########
 #plot_interps()
 
+start_month = '07'
+start_day = '19'
+end_month = '07'
+end_day = '21'
 subset_day(
-     date_time_start = '2024-08-05 00:00:00', 
-     date_time_stop = '2024-08-07 23:45:00',
-     file_subset_name = '20240805_20240807_15min_CSL_mobile_lab_parked_with_interp_nell_match_with_formaldehyde', 
+     date_time_start = '2024-' + start_month + '-' + start_day + ' 00:00:00', 
+     date_time_stop = '2024-' + end_month + '-' + end_day + ' 23:45:00',
+     file_subset_name = '2024' + start_month + start_day +'_' + '2024' + end_month + end_day + '_15min_CSL_mobile_lab_parked_with_interp_nell_match_with_formaldehyde', 
      var_name = 'USOS')

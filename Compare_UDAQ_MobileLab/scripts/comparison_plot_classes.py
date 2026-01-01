@@ -654,6 +654,7 @@ class mda8_ozone:
         plt.savefig(compare_udaq_ml_savepath + 'hawthorne_udaq_ml_' + SavePlotSpeciesName + '.png', dpi =300)
         plt.show()
     def mda8_ozone_frequency_histogram_udaq(self, SavePlotSpeciesName):
+        #Only counting the hour that is the MDA8 ozone peak per day
         idx_max_8hr_rolling_avg = df_mda8_o3_data['8hr_rolling_avg_UDAQ O3'].groupby(df_mda8_o3_data.index.date).idxmax()
         hrs_for_max8hr_rollingavg = []
         for val in idx_max_8hr_rolling_avg:
@@ -677,6 +678,8 @@ class mda8_ozone:
         plt.xticks(hour_range)
         plt.ylabel('Contribution to MDA8')
         plt.show()
+
+        #Now counting all 8 hours that contribute to MDA8 ozone
 
         ranges = idx_max_8hr_rolling_avg.to_frame(name='end')
 
@@ -1117,4 +1120,123 @@ class mean_bias_plots:
         plt.savefig(compare_udaq_ml_savepath + 'hawthorne_udaq_ml_' + 'mean_normalized_bias_' + SavePlotSpeciesName + '.png', dpi =300)
         plt.show()
 
+    def combined_bias_and_freq_histogram(self, legend_loc, SavePlotSpeciesName, InstrumentUncertaintyUDAQ=None):
+        hour_range = np.arange(0,24,1)
+        fig5 = plt.figure(figsize = (20,7), constrained_layout=True)
+        widths = [10, 10]
+        heights = [5, 2]
+        spec5 = fig5.add_gridspec(ncols=2, nrows=2, width_ratios=widths,
+                                height_ratios=heights)
         
+        ax1 = fig5.add_subplot(spec5[0,0])
+        #mean bias plot
+        df_o3 = pd.DataFrame({'obs O3':df_mda8_o3_data['Mobile Lab O3'], 'model O3':df_mda8_o3_data['UDAQ O3']})
+        df_o3['O3_diff']= df_o3['model O3']-df_o3['obs O3']
+        mb_total = df_o3['O3_diff'].dropna().mean()
+        df_o3['hour']=df_o3.index.hour 
+        hourly_MB = df_o3.groupby(df_o3.index.hour)['O3_diff'].mean()
+
+        # Plot the hourly Mean Bias and the average over time: 
+        ax1.plot(hourly_MB.index, hourly_MB, color='g', marker='.', label=f"Hrly MB (Min.={np.min(hourly_MB):.2f} ppb)")
+        ax1.hlines(y=0, xmin=hourly_MB.index[0], xmax= hourly_MB.index[len(hourly_MB)-1], linestyle='solid', color = 'k')
+        ax1.plot(hourly_MB.index, np.ones(len(hourly_MB.index))*mb_total, linestyle = 'dashed', color='g',label=f"Avg. MB={mb_total:.2f} ppb")
+        ax1.fill_between(hourly_MB.index, -1.5, 1.5,  color = 'm', alpha = 0.2, label = 'Instrum. Uncertainty = $\pm$ 1.5 ppb')
+
+        ax1.set_ylabel('Mean Bias (ppb)')
+        ax1.set_xlabel('Hour (MDT)')
+        ax1.set_xlim([0, 23])
+        ax1.set_xticks(hour_range)
+        #plt.yticks(np.arange(-7, 3, 1))
+        ax1.grid()
+        ax1.legend(loc=legend_loc)
+
+        #Plot hourly MNB
+        ax2 = fig5.add_subplot(spec5[0,1])
+        df_mnb_species = pd.DataFrame({'obs':df_mda8_o3_data['Mobile Lab O3'], 'model':df_mda8_o3_data['UDAQ O3']})
+        df_mnb_species['species_diff']= df_mnb_species['model']-df_mnb_species['obs']
+        df_mnb_div = df_mnb_species['species_diff']/df_mnb_species['obs']
+        mnb_total = df_mnb_div.dropna().mean()
+
+        df_mnb_div = pd.DataFrame({'mnb_div':df_mnb_div})
+        df_mnb_div['hour']=df_mnb_div.index.hour 
+        mnb_hrly = df_mnb_div.groupby('hour')['mnb_div'].mean()
+        
+        ax2.plot(mnb_hrly.index, mnb_hrly*100, color='b', marker='.', label=f"Hrly MNB (Min. ={np.min(mnb_hrly)*100:.2f}%)")
+        ax2.plot(mnb_hrly.index, np.ones(len(mnb_hrly.index))*mnb_total*100, linestyle='dashed', color='b',label=f"Avg. MNB ={mnb_total*100:.2f}%")
+    
+        if self.species_name == "Ozone":
+            ax2.fill_between(mnb_hrly.index, -2, 2,  color = 'c', alpha = 0.2, label = 'Instrum. Uncertainty = $\pm$2%')
+        else:
+            pass
+        
+        udaq_instr_uncertainty = InstrumentUncertaintyUDAQ
+        if udaq_instr_uncertainty is not None:
+        #plot uncertainty in shaded
+            ax2.fill_between(mnb_hrly.index, -1*udaq_instr_uncertainty, udaq_instr_uncertainty,  color = 'b', alpha = 0.2, label = 'Instrum. Uncertainty = $\pm$ '+ str(udaq_instr_uncertainty)+'%')
+            if any(val > 0 for val in mnb_hrly.values) or udaq_instr_uncertainty >= 0: 
+                ax2.hlines(y=0, xmin=mnb_hrly.index[0], xmax= mnb_hrly.index[len(mnb_hrly)-1], linestyle='solid', color = 'k')
+            else:
+                pass
+        else:
+            if any(val > 0 for val in mnb_hrly.values):
+                ax2.hlines(y=0, xmin=mnb_hrly.index[0], xmax= mnb_hrly.index[len(mnb_hrly)-1], linestyle='solid', color = 'k')
+            else:
+                pass
+        
+        ax2.set_ylabel('Mean Normalized Bias (%)')
+        ax2.set_xlabel('Hour (MDT)')
+        ax2.set_xlim([0, 23])
+        ax2.set_xticks(hour_range)
+        ax2.grid()
+        ax2.legend(loc=legend_loc)
+        
+        #Plot frequency histogram for UDAQ MDA8
+        ax3 = fig5.add_subplot(spec5[1,0])
+        #Only counting the hour that is the MDA8 ozone peak per day
+        idx_max_8hr_rolling_avg = df_mda8_o3_data['8hr_rolling_avg_UDAQ O3'].groupby(df_mda8_o3_data.index.date).idxmax()
+        print(idx_max_8hr_rolling_avg)
+        hrs_for_max8hr_rollingavg = []
+        for val in idx_max_8hr_rolling_avg:
+            hrs_for_max8hr_rollingavg.append(val.hour)
+
+        # Count the occurrences of each hour
+        hour_counts_max8hr_rollingavg = pd.Series(hrs_for_max8hr_rollingavg).value_counts().sort_index()
+        # print(hour_counts_max8hr_rollingavg)
+
+        all_hours = pd.Index(range(24), name='hour')
+
+        hour_counts_max8hr_rollingavg = hour_counts_max8hr_rollingavg.reindex(all_hours, fill_value=0)
+
+        hour_range = np.arange(0,24,1)
+        print(hour_counts_max8hr_rollingavg)
+        
+        ax3.bar(hour_counts_max8hr_rollingavg.index, hour_counts_max8hr_rollingavg.values, width = 1.0)
+        # ax3.hist(hour_counts_max8hr_rollingavg.index, 
+        #          bins=hour_range, 
+        #          weights = hour_counts_max8hr_rollingavg.values,
+        #          edgecolor='black')
+        
+        ax3.set_xmargin(0)
+        ax3.set_xlabel('Hour (MDT)')
+        ax3.set_xticks(hour_range)
+        ax3.set_ylabel('Frequency of \n MDA8 (days)')
+
+        # #ax4 is a duplicate of ax3
+        ax4 = fig5.add_subplot(spec5[1,1])
+        ax4.bar(hour_counts_max8hr_rollingavg.index, hour_counts_max8hr_rollingavg.values, width = 1.0)
+        ax4.set_xmargin(0)
+        ax4.set_xlabel('Hour (MDT)')
+        ax4.set_xticks(hour_range)
+        ax4.set_ylabel('Frequency of \n MDA8 (days)')
+        
+        # ax4.hist(hour_counts_max8hr_rollingavg.index, 
+        #          bins=hour_range, 
+        #          weights = hour_counts_max8hr_rollingavg.values,
+        #          edgecolor='black')
+        # ax4.set_xmargin(0)
+        # ax4.set_xlabel('Hour (MDT)')
+        # ax4.set_xticks(np.arange(0,25,1))
+        # ax4.set_ylabel('Frequency of MDA8')
+
+        plt.savefig(compare_udaq_ml_savepath + 'hawthorne_udaq_ml_' + 'mean_bias_mnb_with_freq_hist_' + SavePlotSpeciesName + '.png', dpi =300)
+        plt.show()

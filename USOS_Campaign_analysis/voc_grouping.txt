@@ -1,0 +1,24 @@
+groups:
+Acetaldehyde = ['Acetaldehyde_PTR']
+Acetone = ['Acetone_WAS']
+Aromatics = ['Benzene_PTR','Toluene_PTR','C8Aromatics_PTR','C9Aromatics_PTR', 'm_p_Xylene_WAS', 'o_Xylene_WAS']
+Ethanol = ['Ethanol_PTR']
+Formaldehyde = ['HCHO_CRDS']
+Furanoids = ['Furan_WAS']
+Methanol = ['Methanol_PTR']
+Organic acids = ['HCOOH_CIMS']
+Other = ['Acetonitrile_PTR', 'Methanethiol_PTR', 'DMS_PTR', 'MVK_MACR_PTR', 'D5_siloxane_PTR', 'C2Cl4_WAS','CCl4_WAS',
+'CF2Cl2_WAS','CFCl3_WAS','CH2Cl2_WAS','CH3Br_WAS','CycloPentane_WAS','Ethyl_WAS','Ethene_WAS','Ethyne_WAS',
+'MethylCycloHexane_WAS','MethylCycloPentane_WAS','Propane_WAS','Propene_WAS', 'c2Butene_WAS','c2Pentene_WAS','iButane_WAS','iPentane_WAS',
+'nButane_WAS','nDecane_WAS','nHeptane_WAS','nHexane_WAS','nNonane_WAS','nOctane_WAS','nPentane_WAS','t2Butene_WAS','t2Pentene_WAS',
+'x13_Butadiene_WAS','x1_Butene_WAS','x1_Pentene_WAS','x224_TriMethylPentane_WAS','x22_DiMethylButane_WAS','x2_MethylPentane_WAS',
+'x3_MethylPentane_WAS', 'iPropylONO2_WAS']
+Other Aldehydes = ['Acrolein_PTR', 'Octanal_PTR', 'Nonanal_PTR']
+Terpenes = ['Monoterpenes_PTR', 'Isoprene_WAS']
+
+Ethane = ['Ethane_WAS']
+
+#'Toluene_WAS'
+#'Alpha_Pinene_WAS', 'Beta_Pinene_WAS', 'Limonene_WAS' (repeats with Monoterpenes)
+# 'iPropylBenzene_WAS', 'nPropylBenzene_WAS', 'x123_TriMethylBenzene_WAS','x124_TriMethylBenzene_WAS','x135_TriMethylBenzene_WAS', 'x2_EthylToluene_WAS','x3_x4_EthylToluene_WAS' (repeats with C9 Aromatics)
+# 'Styrene_PTR' (repeats with C8 Aromatics)
