@@ -90,10 +90,42 @@ def ozone_background_estimate():
     ml_ozone_vars_subset = ml_data[['O3_ppbv', 'time_local']]
     df_ml_ozone = ml_ozone_vars_subset.to_dataframe()
     df_ml_ozone.set_index('time_local', inplace=True)
-    ozone_df = df_ml_ozone.between_time('08:00', '11:00')
+    #smokefree dates
+    smokefree_dates = (
+        pd.date_range("2024-07-19", "2024-07-21").tolist() +
+        pd.to_datetime([
+            "2024-07-24",
+            "2024-07-25",
+            "2024-07-27",
+            "2024-07-29"
+        ]).tolist() +
+        pd.date_range("2024-08-04", "2024-08-07").tolist() + 
+        pd.date_range("2024-08-10", "2024-08-14").tolist() +
+        pd.to_datetime(["2024-08-18"]).tolist()
+    )
+
+    smokedays = pd.to_datetime([
+            "2024-07-31",
+            "2024-08-02",
+            "2024-08-08",
+            "2024-08-09"
+        ]).tolist()
+
+    df_smokefree = df_ml_ozone[df_ml_ozone.index.normalize().isin(smokefree_dates)]
+    df_smokedays = df_ml_ozone[df_ml_ozone.index.normalize().isin(smokedays)]
+    #get median ozone between midnight and 5 AM
+    df_smokefree_early_ozone = df_smokefree.between_time('00:00', '5:00')
+    df_smokedays_early_ozone = df_smokedays.between_time('00:00', '5:00')
+    df_alldays_early_ozone = df_ml_ozone.between_time('00:00', '5:00')
     # Column-wise mean
-    ozone_mean = ozone_df.mean()
-    print(ozone_mean)
+    smokefree_ozone_median = df_smokefree_early_ozone.median()
+    smokedays_ozone_median = df_smokedays_early_ozone.median()
+    alldays_ozone_median = df_alldays_early_ozone.median()
+    print('smokefree O3 median (12-5 AM): ', smokefree_ozone_median)
+    print('smokedays O3 median (12-5 AM): ', smokedays_ozone_median)
+    print('All days O3 median (12-5 AM): ', alldays_ozone_median)
+
+
 ozone_background_estimate()
 
 

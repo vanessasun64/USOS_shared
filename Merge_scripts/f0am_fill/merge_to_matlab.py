@@ -34,22 +34,23 @@ merged_data_dir_15min = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vs
 #endregion
 
 #Read in data
-ml_voc_data = xr.open_dataset(merged_data_dir_15min +'all_CSL_MobileLab_Parked_rev15min_iWASupdated_formaldehydeupdated.nc')
+#ml_voc_data = xr.open_dataset(merged_data_dir_15min +'all_CSL_MobileLab_Parked_rev15min_iWASupdated_formaldehydeupdated.nc')
+ml_voc_data = xr.open_dataset(merged_data_dir_15min +'all_CSL_MobileLab_Parked_rev15min_iWASupdated_formaldehydeupdated_raw_noadjustment.nc')
 df_ml_data = ml_voc_data.to_dataframe()
 df_ml_data.reset_index(inplace=True)
 df_ml_data.set_index('time_local', inplace=True)
+
 
 blh_filepath = dirpath+'Boundary_layer_height/BLH_Nell.csv'
 df_blh = pd.read_csv(blh_filepath)
 #Convert from Igor Pro Time to local time
 df_blh['time_local'] = (pd.to_datetime("1904-01-01") + pd.to_timedelta(df_blh['Time_start_15min_local'], unit="s"))
-print(df_blh)
 df_blh = df_blh.rename(columns={'UDAQ_mixing_height_m_15min_avg':'BLH_Nell_m', 'UDAQ_mixing_height_m_15min_avg_smoothed':'BLH_Nell_m_smoothed'})
 df_blh = df_blh.set_index(['time_local'])
 df_blh = df_blh.drop(columns=['Time_start_15min_local'])
-print(df_blh)
 df_ml_data = df_ml_data.join(df_blh, how="inner")   # only matching index values
 print(df_ml_data.columns)
+
 
 
 # Define which variables we need to make sure don't have Nans/ negs since we'll be using then as constraints in F0AM: 
@@ -58,6 +59,7 @@ need2fill= {
     #Nell constrained
     'O3_ppbv':True,
     'CO_Piccaro':True,
+    'CH4_Piccaro':True,
     'NO_LIF':True,
     'NO2_LIF':True,
     'HONO_CIMS':True,
@@ -70,6 +72,7 @@ need2fill= {
     'Ethanol_PTR':True,
     'HCOOH_CIMS':True,
     'Acrolein_PTR':True,
+    'Monoterpenes_PTR':True,
     'Br2_CIMS':True,
     'Cl2_CIMS':True,
     'Isoprene_WAS':True,
@@ -108,6 +111,7 @@ need2fill= {
     ###### Need to be true for F0AM to run:
     'Temp_K':True,
     'Pressure_mb':True,
+    'Altitude_m':True,
     'WindSpd_ms':True,
     'jNO2_meas':True,
     'RH_percent':True,
@@ -130,6 +134,8 @@ need2fill= {
     'jN2O5':True,
     'jO3':True,
     'Surface_area_conc_POPS':True,
+    'Lat':True,
+    'Lon':True,
     #####
     'BrO_CIMS':False,
     'ClNO2_CIMS':False,
@@ -155,22 +161,17 @@ need2fill= {
     'Isoprene_PTR':False,
     'Naphthalene_PTR':False,
     'Octanal_PTR':False,
-    'Monoterpenes_PTR':False,
     'Nonanal_PTR':False,
     'C7H4ClF3_PTR':False,
     'D5_siloxane_PTR':False,
     'PAN_CIMS':False,
     'APAN_CIMS':False,
     'PPN_CIMS':False,
-    'Altitude_m':False,
     'Course_deg':False,
     'GndSpd_ms':False,
     'Heading_deg':False,
-    'Lat':False,
-    'Lon':False,
     'WindDir_deg':False,
     'CO2_Piccaro':False,
-    'CH4_Piccaro':False,
     'H2O_CRDS':False,
     'CH4_CRDS':False,
     'Time_Start_WAS':False,
@@ -264,7 +265,7 @@ def plot_interps():
     """
     df_interp=df_ml_data.copy()
 
-    #Nell turned all benzaldehyde, styrene, HONO negative values into NaNs = 0
+    #Nell turned all benzaldehyde, styrene, HONO negative values into 0
     neg_species = ['Benzaldehyde_PTR','Styrene_PTR', 'HONO_CIMS']
 
     for i,col in enumerate(vars2fill):
@@ -395,6 +396,8 @@ def subset_day(date_time_start, date_time_stop,file_subset_name, var_name):
     for i,col in enumerate(vars2fill):
         if col in neg_species:
             df_interp_subset[col] = df_interp_subset[col].mask(df_interp_subset[col] < 0, 0)
+        elif col == 'Lon': #avoids making longitude points into NaNs
+            df_interp_subset['Lon'] = df_interp_subset['Lon'].interpolate(method='linear')
         else:
             # Set any negative values to NaN so we can interp them... 
             df_interp_subset[col] = df_interp_subset[col].mask(df_interp_subset[col] < 0, np.nan)
@@ -432,15 +435,73 @@ def subset_day(date_time_start, date_time_stop,file_subset_name, var_name):
     savemat(outpath+matfilename,{var_name: ddict})
     print('Saved MATLAB file to:' + outpath + matfilename)
 
-###### CALL FUNCTIONS #########
-#plot_interps()
+def all_days(file_name, var_name):
+    df_interp_alldays=df_ml_data.copy()
 
-start_month = '07'
-start_day = '19'
-end_month = '07'
-end_day = '21'
-subset_day(
-     date_time_start = '2024-' + start_month + '-' + start_day + ' 00:00:00', 
-     date_time_stop = '2024-' + end_month + '-' + end_day + ' 23:45:00',
-     file_subset_name = '2024' + start_month + start_day +'_' + '2024' + end_month + end_day + '_15min_CSL_mobile_lab_parked_with_interp_nell_match_with_formaldehyde', 
-     var_name = 'USOS')
+    #Nell turned all benzaldehyde, styrene, HONO negative values into NaNs = 0
+    neg_species = ['Benzaldehyde_PTR','Styrene_PTR', 'HONO_CIMS']
+
+    for i,col in enumerate(vars2fill):
+        if col in neg_species:
+            df_interp_alldays[col] = df_interp_alldays[col].mask(df_interp_alldays[col] < 0, 0)
+        elif col == 'Lon':
+            df_interp_alldays['Lon'] = df_interp_alldays['Lon'].interpolate(method='linear')
+        else:
+            # Set any negative values to NaN so we can interp them... 
+            df_interp_alldays[col] = df_interp_alldays[col].mask(df_interp_alldays[col] < 0, np.nan)
+        #Benzaldehyde has all NaNs so substitute with zeros instead
+        if col == 'Benzaldehyde_PTR':
+            df_interp_alldays[col] =  df_interp_alldays[col].mask(np.isnan(df_interp_alldays[col]), 0)
+        else:
+            pass
+        # Calc number of points that are negative or Nans: 
+        n_baddies= len([item for item in df_ml_data[col] if item <0 or np.isnan(item)]) 
+        
+        if n_baddies > 0: 
+            #apply the linear interpolation
+            df_interp_alldays[col] = df_interp_alldays[col].interpolate(method='linear')
+        
+        else:
+            pass
+
+    #get a ratio for jNO2 measured to TUV
+    df_interp_alldays['jNO2_ratio'] = df_interp_alldays['jNO2_meas']/df_interp_alldays['jNO2']
+    #level out the inf values and values that are too high for the jNO2 ratio
+    msk = ((df_interp_alldays['jNO2_ratio'] ==np.inf)  | (df_interp_alldays['jNO2_ratio'] >10) )
+    df_interp_alldays.loc[msk,'jNO2_ratio'] = 1.0
+
+    print(df_interp_alldays['Lon'].values)
+    savepath = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/CampaignData_and_Merges/R0/CSL_MobileLab_Parked/' + 'F0AM_filled/' + file_name + '.csv'
+    df_interp_alldays.to_csv(savepath)
+    print('Saved CSV to:' + savepath)
+
+    # Convert the dataframe to a nested dictionary (so scipy can output to a matlab structure!) 
+    ddict=dataframe_to_nested_dict(df_interp_alldays)
+
+    # Sort alphabetically so not annoying in MATLAB...  
+    ddict= OrderedDict(sorted(ddict.items())) 
+
+    # Save the USOS data in an output .mat file: 
+    outpath = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/F0AM-4.4.2/Campaign_Data/matlab_merge/parked/original/'
+    matfilename = file_name + '.mat'
+    savemat(outpath+matfilename,{var_name: ddict})
+    print('Saved MATLAB file to:' + outpath + matfilename)
+
+###### CALL FUNCTIONS #########
+# plot_interps()
+
+# start_month = '08'
+# start_day = '05'
+# end_month = '08'
+# end_day = '07'
+# # subset_day(
+# #      date_time_start = '2024-' + start_month + '-' + start_day + ' 00:00:00', 
+# #      date_time_stop = '2024-' + end_month + '-' + end_day + ' 23:45:00',
+# #      file_subset_name = '2024' + start_month + start_day +'_' + '2024' + end_month + end_day + '_15min_CSL_mobile_lab_parked_with_interp_nell_match_with_formaldehyde_raw_noadjustment', 
+# #      var_name = 'USOS'
+# # )
+
+all_days(
+    file_name = 'alldays_15min_CSL_mobile_lab_parked_with_interp_nell_match_with_formaldehyde_raw_noadjustment',
+    var_name = 'USOS'
+)

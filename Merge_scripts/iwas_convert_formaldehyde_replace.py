@@ -673,6 +673,37 @@ def fill_formaldehyde_holes_with_calibrated_adj_vals(time_interval_used, savefil
     print(ds_new['HCHO_CRDS'].values)
 
 
+def fill_formaldehyde_raw_data_no_adjustment(time_interval_used, savefilename):
+    averaging_func_output = formaldehyde_averaging(time_interval = time_interval_used)
+    df_ml_data = averaging_func_output[0]
+    df_formaldehyde_averaged = averaging_func_output[1]
+    udaq_form_corr = df_formaldehyde_averaged['H2CO_UDAQ_NoCorrection']
+    ml_form = df_ml_data['HCHO_CRDS']
+
+    df_merged = ml_form.fillna(udaq_form_corr)
+    print(df_merged)
+
+    ds_nc = xr.open_dataset('/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/CampaignData_and_Merges/R0/CSL_MobileLab_Parked/merged/rev_15min/all_CSL_MobileLab_Parked_rev15min_iWASupdated.nc')
+    print(ds_nc['HCHO_CRDS'].values)
+    # Remove old variable completely
+    ds_nc = ds_nc.drop_vars('HCHO_CRDS')
+
+    # Assign as a DataArray with explicit dims and coords
+    da_new = xr.DataArray(
+        data=df_merged,
+        dims=["time_UTC"],           # specify the correct dimension
+        coords={"time_UTC": ds_nc.time_UTC},  # assign coordinate explicitly
+        name='HCHO_CRDS'
+    )
+    ds_nc['HCHO_CRDS'] = da_new
+
+    save_ncfilename = savefilename + '.nc'
+    full_savepath = merged_data_dir_15min + save_ncfilename
+    ds_nc.to_netcdf(full_savepath, format = 'NETCDF4',mode='w')
+    print('Saved netCDF file with updated Formaldehyde measurements to: ', full_savepath)
+
+    ds_new = xr.open_dataset(full_savepath)
+    print(ds_new['HCHO_CRDS'].values)
 
 
 ## CALL FUNCTIONS HERE
@@ -688,14 +719,19 @@ formaldehyde_correction_compare(
 
 )
 
-bias_and_error_analysis(
-    time_interval_used = 15*60
-)
+# bias_and_error_analysis(
+#     time_interval_used = 15*60
+# )
 
-calibration_adjustment(
-    time_interval_used =  15*60
-)
+# calibration_adjustment(
+#     time_interval_used =  15*60
+# )
 # fill_formaldehyde_holes_with_calibrated_adj_vals(
 #     time_interval_used = 15*60,
 #     savefilename = 'all_CSL_MobileLab_Parked_rev15min_iWASupdated_formaldehydeupdated'
 # )
+
+fill_formaldehyde_raw_data_no_adjustment(
+    time_interval_used = 15*60,
+     savefilename = 'all_CSL_MobileLab_Parked_rev15min_iWASupdated_formaldehydeupdated_raw_noadjustment'
+)
