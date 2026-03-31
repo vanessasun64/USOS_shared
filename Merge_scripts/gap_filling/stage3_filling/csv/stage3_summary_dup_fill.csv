@@ -1,0 +1,170 @@
+,Varname,Duplicate_name,filled_with_name,fillcase1,before_change_gap_count1,after_change_gap_count1,number_gaps_filled_by_change1,percent_of_gaps_filled_by_change1,odr_eq_adj_used_for_correction,rmse_used,r2_used
+0,Br2_CIMS,,,No dup so stays vars,563,563,0,0.0,,,
+1,BrO_CIMS,,,No dup so stays vars,1012,1012,0,0.0,,,
+2,Cl2_CIMS,,,No dup so stays vars,524,524,0,0.0,,,
+3,ClNO2_CIMS,,,No dup so stays vars,537,537,0,0.0,,,
+4,BrCl_CIMS,,,No dup so stays vars,559,559,0,0.0,,,
+5,NCl3_CIMS,,,No dup so stays vars,701,701,0,0.0,,,
+6,NO_LIF,NO,NO initial,Filled with duplicate initial,260,231,29,11.153846153846155,,0.8577816174239329,0.5637922209362046
+7,NO2_LIF,NO2,NO2 corrected,Filled with duplicate corrected,260,212,48,18.461538461538463,Correction applied: O_hat = -1.2949 + 1.0029 * M,1.822183203689276,0.7800482818748249
+8,NOy_LIF,NOy,NOy corrected,Filled with duplicate corrected,277,230,47,16.967509025270758,Correction applied: O_hat = 0.5014 + 1.3346 * M,2.4805365809479363,0.7633877274875721
+9,N2O5_CIMS,,,No dup so stays vars,1676,1676,0,0.0,,,
+10,C4H7NO5_CIMS,,,No dup so stays vars,519,519,0,0.0,,,
+11,ISOPN_CIMS,,,No dup so stays vars,520,520,0,0.0,,,
+12,C5H10O3_CIMS,,,No dup so stays vars,524,524,0,0.0,,,
+13,C5H9NO5_CIMS,,,No dup so stays vars,527,527,0,0.0,,,
+14,C10H17NO4_CIMS,,,No dup so stays vars,528,528,0,0.0,,,
+15,HNO3_CIMS,,,No dup so stays vars,527,527,0,0.0,,,
+16,Methanol_PTR,,,No dup so stays vars,702,702,0,0.0,,,
+17,Acetonitrile_PTR,,,No dup so stays vars,702,702,0,0.0,,,
+18,Acetaldehyde_PTR,,,No dup so stays vars,706,706,0,0.0,,,
+19,Ethanol_PTR,,,No dup so stays vars,702,702,0,0.0,,,
+20,Methanethiol_PTR,,,No dup so stays vars,711,711,0,0.0,,,
+21,Acrolein_PTR,Acrolein_WAS,,No fill from dup due to low r squared,702,702,0,0.0,,,
+22,Acetone_Propanal_PTR,,,No dup so stays vars,702,702,0,0.0,,,
+23,DMS_PTR,,,No dup so stays vars,750,750,0,0.0,,,
+24,MVK_MACR_PTR,,,No dup so stays vars,702,702,0,0.0,,,
+25,Benzene_PTR,"['Benzene_WAS', 'Benzene']","[nan, nan]","['No fill from dup due to low r squared', 'No fill from dup due to low r squared']","[np.int64(704), np.int64(704)]","[np.int64(704), np.int64(704)]","[np.int64(0), np.int64(0)]","[np.float64(0.0), np.float64(0.0)]","[nan, nan]","[nan, nan]","[nan, nan]"
+26,Toluene_PTR,"['Toluene_WAS', 'Toluene']","['Toluene_WAS', nan]","['Filled with duplicate corrected', 'No fill from dup due to low r squared']","[np.int64(702), np.int64(629)]","[np.int64(629), np.int64(629)]","[np.int64(73), np.int64(0)]","[np.float64(10.3988603988604), np.float64(0.0)]","['Correction applied: O_hat = 0.0183 + 1.3266 * M', nan]","[np.float64(0.16814723626406422), nan]","[0.7319619121655672, nan]"
+27,Styrene_PTR,Styrene,,No dup so stays vars,726,726,0,0.0,,,
+28,Benzaldehyde_PTR,,,No dup so stays vars,2209,2209,0,0.0,,,
+29,C8Aromatics_PTR,,,No dup so stays vars,702,702,0,0.0,,,
+30,C9Aromatics_PTR,,,No dup so stays vars,702,702,0,0.0,,,
+31,Naphthalene_PTR,,,No dup so stays vars,1783,1783,0,0.0,,,
+32,Octanal_PTR,,,No dup so stays vars,702,702,0,0.0,,,
+33,Monoterpenes_PTR,,,No dup so stays vars,702,702,0,0.0,,,
+34,Nonanal_PTR,,,No dup so stays vars,702,702,0,0.0,,,
+35,C7H4ClF3_PTR,,,No dup so stays vars,714,714,0,0.0,,,
+36,D5_siloxane_PTR,,,No dup so stays vars,703,703,0,0.0,,,
+37,PAN_CIMS,,,No dup so stays vars,2129,2129,0,0.0,,,
+38,APAN_CIMS,,,No dup so stays vars,2154,2154,0,0.0,,,
+39,PPN_CIMS,,,No dup so stays vars,2143,2143,0,0.0,,,
+40,HCOOH_CIMS,,,No dup so stays vars,526,526,0,0.0,,,
+41,HONO_CIMS,,,No dup so stays vars,541,541,0,0.0,,,
+42,O3_ppbv,O3,O3 corrected,Filled with duplicate corrected,370,311,59,15.945945945945947,Correction applied: O_hat = -1.2559 + 1.0828 * M,4.144124043829285,0.9231642330814551
+43,CO2_Piccaro,,,No dup so stays vars,224,224,0,0.0,,,
+44,CH4_Piccaro,CH4_CRDS,CH4_CRDS corrected,Filled with duplicate corrected,224,199,25,11.160714285714286,Correction applied: O_hat = 41.2942 + 1.0051 * M,8.681566828441458,0.9874600647223368
+45,CO_Piccaro,,,No dup so stays vars,256,256,0,0.0,,,
+46,H2O_Piccaro,H2O_CRDS,H2O_CRDS corrected,Filled with duplicate corrected,224,198,26,11.607142857142858,Correction applied: O_hat = 0.0000 + 1.0141 * M,84226.11182813034,0.9994366689173192
+47,HCHO_CRDS,Formaldehyde,Formaldehyde corrected,Filled with duplicate corrected,1556,0,1556,100.0,Correction applied: O_hat = -0.1990 + 1.0465 * M,0.229452870988377,0.964340412823113
+48,H2O_CRDS,H2O_Piccaro,H2O_Piccaro corrected,Filled with duplicate corrected,1556,198,1358,87.27506426735219,Correction applied: O_hat = 0.0000 + 0.9861 * M,83057.07791445445,0.9994209572293469
+49,CH4_CRDS,CH4_Piccaro,CH4_Piccaro corrected,Filled with duplicate corrected,1560,199,1361,87.24358974358975,Correction applied: O_hat = -41.0862 + 0.9949 * M,8.637150847183449,0.9874608921248911
+50,Acetone_WAS,,,No dup so stays vars,2990,2990,0,0.0,,,
+51,Benzene_WAS,"['Benzene_PTR', 'Benzene']","['Benzene', 'Benzene_PTR']","['Filled with duplicate corrected', 'Filled with duplicate corrected']","[np.int64(2990), np.int64(2689)]","[np.int64(2689), np.int64(585)]","[np.int64(301), np.int64(2104)]","[np.float64(10.066889632107024), np.float64(78.24470063220528)]","['Correction applied: O_hat = -0.0174 + 0.9752 * M', 'Correction applied: O_hat = 0.0564 + 0.4415 * M']","[np.float64(0.055979785598007294), np.float64(0.0801801926137678)]","[0.7246305301076212, 0.4569184302368644]"
+52,C2Cl4_WAS,,,No dup so stays vars,2990,2990,0,0.0,,,
+53,C2HCl3_WAS,,,No dup so stays vars,3159,3159,0,0.0,,,
+54,CCl4_WAS,,,No dup so stays vars,2990,2990,0,0.0,,,
+55,CF2Cl2_WAS,,,No dup so stays vars,2990,2990,0,0.0,,,
+56,CH2Cl2_WAS,,,No dup so stays vars,2990,2990,0,0.0,,,
+57,Ethyl_WAS,Ethylbenzene,,No fill from dup due to low r squared,2990,2990,0,0.0,,,
+58,Ethane_WAS,Ethane,Ethane corrected,Filled with duplicate corrected,2990,2683,307,10.267558528428093,Correction applied: O_hat = -0.3290 + 1.0237 * M,0.5032151807274235,0.8672747050654703
+59,Ethene_WAS,Ethylene,Ethylene corrected,Filled with duplicate corrected,2990,2687,303,10.133779264214047,Correction applied: O_hat = -0.1852 + 1.1189 * M,0.18973142945881383,0.774050355437628
+60,Ethyne_WAS,Acetylene,Acetylene initial,Filled with duplicate initial,2990,2683,307,10.267558528428093,,0.15101388017954093,0.4490524691976516
+61,Isoprene_WAS,Isoprene,Isoprene corrected,Filled with duplicate corrected,2990,2689,301,10.066889632107024,Correction applied: O_hat = -0.0097 + 0.8478 * M,0.1649955438691404,0.7741512566303962
+62,Limonene_WAS,,,No dup so stays vars,3077,3077,0,0.0,,,
+63,MACR_WAS,,,No dup so stays vars,2990,2990,0,0.0,,,
+64,Propane_WAS,Propane,Propane initial,Filled with duplicate initial,2990,2683,307,10.267558528428093,,0.7400578033875057,0.7090757969706363
+65,Propene_WAS,Propylene,Propylene corrected,Filled with duplicate corrected,2990,2723,267,8.929765886287626,Correction applied: O_hat = -0.1273 + 1.3716 * M,0.08408682309004645,0.7128900225419772
+66,Toluene_WAS,"['Toluene_PTR', 'Toluene']","['Toluene_PTR', nan]","['Filled with duplicate corrected', 'No fill from dup due to low r squared']","[np.int64(2990), np.int64(629)]","[np.int64(629), np.int64(629)]","[np.int64(2361), np.int64(0)]","[np.float64(78.96321070234113), np.float64(0.0)]","['Correction applied: O_hat = -0.0138 + 0.7538 * M', nan]","[np.float64(0.12674703212285518), nan]","[0.7503837541106351, nan]"
+67,Alpha_Pinene_WAS,Alphapinene,Alphapinene corrected,Filled with duplicate corrected,2990,2923,67,2.240802675585284,Correction applied: O_hat = 0.0181 + 2.5112 * M,0.018833073731067226,0.8559749741541962
+68,Beta_Pinene_WAS,Betapinene,,No dup so stays vars,2990,2990,0,0.0,,,
+69,iButane_WAS,Isobutane,Isobutane initial,Filled with duplicate initial,2990,2683,307,10.267558528428093,,0.21873113777786857,0.5732309814442772
+70,iPentane_WAS,Isopentane,Isopentane corrected,Filled with duplicate corrected,2990,2761,229,7.6588628762541795,Correction applied: O_hat = -0.5206 + 1.5590 * M,0.4874976820910316,0.6653996541406128
+71,m_p_Xylene_WAS,mpXylene,,No fill from dup due to low r squared,2990,2990,0,0.0,,,
+72,nButane_WAS,nButane,nButane corrected,Filled with duplicate corrected,2990,2743,247,8.26086956521739,Correction applied: O_hat = -0.3622 + 1.5803 * M,0.3842926014555043,0.7217750791495954
+73,nHeptane_WAS,nHeptane,nHeptane initial,Filled with duplicate initial,3001,2694,307,10.229923358880374,,0.034814078580412085,0.7919541651545479
+74,nHexane_WAS,nHexane,nHexane corrected,Filled with duplicate corrected,2990,2700,290,9.698996655518394,Correction applied: O_hat = -0.0355 + 1.0462 * M,0.07421118721223997,0.7538839887820445
+75,nNonane_WAS,nNonane,,No fill from dup due to low r squared,2990,2990,0,0.0,,,
+76,nOctane_WAS,nOctane,nOctane corrected,Filled with duplicate corrected,2991,2783,208,6.954195921096623,Correction applied: O_hat = -0.0005 + 1.7617 * M,0.02012609051118544,0.8375182456545508
+77,nPentane_WAS,nPentane,nPentane corrected,Filled with duplicate corrected,2990,2753,237,7.926421404682274,Correction applied: O_hat = -0.3186 + 1.4688 * M,0.2992136757226374,0.6779605554852179
+78,o_Xylene_WAS,oXylene,,No fill from dup due to low r squared,2990,2990,0,0.0,,,
+79,x135_TriMethylBenzene_WAS,x135_Trimethylbenzene,,No fill from dup due to low r squared,3000,3000,0,0.0,,,
+80,x224_TriMethylPentane_WAS,x224_Trimethylpentane,x224_Trimethylpentane corrected,Filled with duplicate corrected,2990,2683,307,10.267558528428093,Correction applied: O_hat = 0.0089 + 0.8235 * M,0.05007183924006144,0.6719596337438758
+81,nDecane_WAS,nDecane,,No fill from dup due to low r squared,2990,2990,0,0.0,,,
+82,x3_x4_EthylToluene_WAS,mpEthyltoluene,mpEthyltoluene corrected,Filled with duplicate corrected,2990,2926,64,2.140468227424749,Correction applied: O_hat = 0.0062 + 0.3006 * M,0.009650024248878113,0.45749537614064906
+83,x13_Butadiene_WAS,buta13diene,,No fill from dup due to low r squared,3045,3045,0,0.0,,,
+84,nPropylBenzene_WAS,nPropylbenzene,,No fill from dup due to low r squared,2990,2990,0,0.0,,,
+85,x2_EthylToluene_WAS,oEthyltoluene,,No fill from dup due to low r squared,2992,2992,0,0.0,,,
+86,x124_TriMethylBenzene_WAS,x124_Trimethylbenzene,,No fill from dup due to low r squared,2990,2990,0,0.0,,,
+87,iPropylBenzene_WAS,Isopropylbenzene,,No fill from dup due to low r squared,3074,3074,0,0.0,,,
+88,x123_TriMethylBenzene_WAS,x123_Trimethylbenzene,,No fill from dup due to low r squared,3009,3009,0,0.0,,,
+89,MethylCycloPentane_WAS,Methylcyclopentane,Methylcyclopentane corrected,Filled with duplicate corrected,2993,2686,307,10.257266956231206,Correction applied: O_hat = 0.0046 + 0.8803 * M,0.0440450985675949,0.5781445172860223
+90,x3_MethylPentane_WAS,x3_Methylpentane,x3_Methylpentane corrected,Filled with duplicate corrected,2990,2717,273,9.130434782608695,Correction applied: O_hat = -0.0362 + 1.0909 * M,0.044371698559166575,0.7072121080039391
+91,x2_MethylPentane_WAS,x2_Methylpentane,x2_Methylpentane corrected,Filled with duplicate corrected,2990,2698,292,9.765886287625419,Correction applied: O_hat = -0.0290 + 0.6903 * M,0.04999270209713157,0.726425824448349
+92,x1_Butene_WAS,But1ene,But1ene corrected,Filled with duplicate corrected,2990,2723,267,8.929765886287626,Correction applied: O_hat = -0.0385 + 1.5511 * M,0.016102263909265085,0.6211560326611976
+93,CycloPentane_WAS,Cyclopentane,Cyclopentane initial,Filled with duplicate initial,2994,2687,307,10.253841015364062,,0.021775496623751413,0.6765626891802354
+94,x22_DiMethylButane_WAS,x22_Dimethylbutane,x22_Dimethylbutane initial,Filled with duplicate initial,2990,2683,307,10.267558528428093,,0.0160741368630464,0.5124718888079107
+95,x1_Pentene_WAS,Pent1ene,Pent1ene corrected,Filled with duplicate corrected,2991,2734,257,8.592443998662654,Correction applied: O_hat = -0.0332 + 1.2058 * M,0.01531671444195538,0.4594507158121204
+96,MethylCycloHexane_WAS,Methylcyclohexane,Methylcyclohexane corrected,Filled with duplicate corrected,2990,2683,307,10.267558528428093,Correction applied: O_hat = 0.0067 + 1.5734 * M,0.023047671838252067,0.8889625817429071
+97,c2Pentene_WAS,cis2Pentene,,No fill from dup due to low r squared,2991,2991,0,0.0,,,
+98,t2Pentene_WAS,trans2Pentene,,No fill from dup due to low r squared,2990,2990,0,0.0,,,
+99,c2Butene_WAS,cis2Butene,cis2Butene corrected,Filled with duplicate corrected,3029,2913,116,3.829646748101684,Correction applied: O_hat = -0.0001 + 2.2183 * M,0.014292366049513611,0.6010265397282595
+100,t2Butene_WAS,trans2Butene,,No fill from dup due to low r squared,3042,3042,0,0.0,,,
+101,iPropylONO2_WAS,,,No dup so stays vars,2997,2997,0,0.0,,,
+102,CFCl3_WAS,,,No dup so stays vars,2990,2990,0,0.0,,,
+103,nPropylONO2_WAS,,,No dup so stays vars,3262,3262,0,0.0,,,
+104,Furan_WAS,,,No dup so stays vars,3009,3009,0,0.0,,,
+105,CH3Br_WAS,,,No dup so stays vars,2990,2990,0,0.0,,,
+106,Ethylene,Ethene_WAS,Ethene_WAS corrected,Filled with duplicate corrected,2835,2683,152,5.361552028218695,Correction applied: O_hat = 0.1655 + 0.8937 * M,0.1695653544789835,0.7796219349376127
+107,Acetylene,Ethyne_WAS,Ethyne_WAS corrected,Filled with duplicate corrected,2835,2683,152,5.361552028218695,Correction applied: O_hat = 0.0275 + 0.6629 * M,0.10772455214779361,0.4889594375395787
+108,nDecane,nDecane_WAS,,No fill from dup due to low r squared,3255,3255,0,0.0,,,
+109,Ethylbenzene,Ethyl_WAS,,No fill from dup due to low r squared,3255,3255,0,0.0,,,
+110,Ethane,Ethane_WAS,Ethane_WAS corrected,Filled with duplicate corrected,2835,2683,152,5.361552028218695,Correction applied: O_hat = 0.3214 + 0.9768 * M,0.49156561140197547,0.8676858133158059
+111,mpEthyltoluene,x3_x4_EthylToluene_WAS,,No fill from dup due to low r squared,3255,3255,0,0.0,,,
+112,oXylene,o_Xylene_WAS,,No fill from dup due to low r squared,3255,3255,0,0.0,,,
+113,buta13diene,x13_Butadiene_WAS,,No fill from dup due to low r squared,2835,2835,0,0.0,,,
+114,Styrene,Styrene_PTR,,No vardata so filled with init dup,3360,726,2634,78.39285714285714,,,
+115,mpXylene,m_p_Xylene_WAS,,No fill from dup due to low r squared,3255,3255,0,0.0,,,
+116,x135_Trimethylbenzene,x135_TriMethylBenzene_WAS,,No fill from dup due to low r squared,3255,3255,0,0.0,,,
+117,nPropylbenzene,nPropylBenzene_WAS,,No fill from dup due to low r squared,3255,3255,0,0.0,,,
+118,oEthyltoluene,x2_EthylToluene_WAS,,No fill from dup due to low r squared,3255,3255,0,0.0,,,
+119,x224_Trimethylpentane,x224_TriMethylPentane_WAS,x224_TriMethylPentane_WAS initial,Filled with duplicate initial,2835,2683,152,5.361552028218695,,0.05754772415548609,0.6864437027761472
+120,Toluene,"['Toluene_WAS', 'Toluene_PTR']","[nan, nan]","['No fill from dup due to low r squared', 'No fill from dup due to low r squared']","[np.int64(2835), np.int64(2835)]","[np.int64(2835), np.int64(2835)]","[np.int64(0), np.int64(0)]","[np.float64(0.0), np.float64(0.0)]","[nan, nan]","[nan, nan]","[nan, nan]"
+121,x124_Trimethylbenzene,x124_TriMethylBenzene_WAS,,No fill from dup due to low r squared,3255,3255,0,0.0,,,
+122,Isopropylbenzene,iPropylBenzene_WAS,,No fill from dup due to low r squared,3255,3255,0,0.0,,,
+123,Formaldehyde,HCHO_CRDS,HCHO_CRDS corrected,Filled with duplicate corrected,10,0,10,100.0,Correction applied: O_hat = 0.1902 + 0.9555 * M,0.21925085868138017,0.9643980970822144
+124,Benzene,"['Benzene_WAS', 'Benzene_PTR']","['Benzene_WAS', nan]","['Filled with duplicate corrected', 'No fill from dup due to low r squared']","[np.int64(2835), np.int64(2683)]","[np.int64(2683), np.int64(2683)]","[np.int64(152), np.int64(0)]","[np.float64(5.361552028218695), np.float64(0.0)]","['Correction applied: O_hat = 0.0178 + 1.0254 * M', nan]","[np.float64(0.05740475794578929), nan]","[0.7227115808265258, nan]"
+125,x123_Trimethylbenzene,x123_TriMethylBenzene_WAS,,No fill from dup due to low r squared,3255,3255,0,0.0,,,
+126,nHeptane,nHeptane_WAS,nHeptane_WAS corrected,Filled with duplicate corrected,2835,2694,141,4.973544973544974,Correction applied: O_hat = 0.0081 + 0.8540 * M,0.030835517684201282,0.7838047754643984
+127,nNonane,nNonane_WAS,,No fill from dup due to low r squared,3255,3255,0,0.0,,,
+128,Methylcyclopentane,MethylCycloPentane_WAS,MethylCycloPentane_WAS initial,Filled with duplicate initial,2835,2686,149,5.255731922398589,,0.04753116529511901,0.5977788773001853
+129,Propylene,Propene_WAS,Propene_WAS corrected,Filled with duplicate corrected,2835,2683,152,5.361552028218695,Correction applied: O_hat = 0.0928 + 0.7291 * M,0.06130613567594493,0.7360652559581936
+130,x3_Methylpentane,x3_MethylPentane_WAS,x3_MethylPentane_WAS corrected,Filled with duplicate corrected,2835,2683,152,5.361552028218695,Correction applied: O_hat = 0.0332 + 0.9166 * M,0.04067294054984553,0.7144702940779408
+131,nHexane,nHexane_WAS,nHexane_WAS corrected,Filled with duplicate corrected,2835,2683,152,5.361552028218695,Correction applied: O_hat = 0.0339 + 0.9559 * M,0.07093645110956359,0.7565855642522378
+132,x2_Methylpentane,x2_MethylPentane_WAS,x2_MethylPentane_WAS corrected,Filled with duplicate corrected,2835,2683,152,5.361552028218695,Correction applied: O_hat = 0.0419 + 1.4485 * M,0.07241698158132072,0.6970495220676469
+133,But1ene,x1_Butene_WAS,x1_Butene_WAS corrected,Filled with duplicate corrected,2835,2683,152,5.361552028218695,Correction applied: O_hat = 0.0248 + 0.6447 * M,0.010381124855292844,0.6723847602233164
+134,Cyclopentane,CycloPentane_WAS,CycloPentane_WAS corrected,Filled with duplicate corrected,2835,2687,148,5.220458553791888,Correction applied: O_hat = 0.0046 + 0.7982 * M,0.01859930662842735,0.6577253995382291
+135,nOctane,nOctane_WAS,nOctane_WAS corrected,Filled with duplicate corrected,2835,2684,151,5.326278659611993,Correction applied: O_hat = 0.0003 + 0.5676 * M,0.011424528394854765,0.8500097167075936
+136,Isobutane,iButane_WAS,iButane_WAS corrected,Filled with duplicate corrected,2835,2683,152,5.361552028218695,Correction applied: O_hat = 0.0596 + 0.8071 * M,0.19120314589650683,0.5472534380657661
+137,x22_Dimethylbutane,x22_DiMethylButane_WAS,x22_DiMethylButane_WAS corrected,Filled with duplicate corrected,2835,2683,152,5.361552028218695,Correction applied: O_hat = -0.0000 + 0.8042 * M,0.013864583034815095,0.4993941785638627
+138,Propane,Propane_WAS,Propane_WAS corrected,Filled with duplicate corrected,2835,2683,152,5.361552028218695,Correction applied: O_hat = 0.3044 + 0.8373 * M,0.6377549287500924,0.7076788495630175
+139,Pent1ene,x1_Pentene_WAS,x1_Pentene_WAS corrected,Filled with duplicate corrected,2835,2683,152,5.361552028218695,Correction applied: O_hat = 0.0275 + 0.8293 * M,0.012701934654476938,0.5086054596403631
+140,Methylcyclohexane,MethylCycloHexane_WAS,MethylCycloHexane_WAS corrected,Filled with duplicate corrected,2835,2708,127,4.479717813051146,Correction applied: O_hat = -0.0043 + 0.6356 * M,0.01464852433685604,0.893961129093827
+141,nButane,nButane_WAS,nButane_WAS corrected,Filled with duplicate corrected,2835,2683,152,5.361552028218695,Correction applied: O_hat = 0.2292 + 0.6328 * M,0.24318282361427596,0.7513886802843857
+142,nPentane,nPentane_WAS,nPentane_WAS corrected,Filled with duplicate corrected,2835,2683,152,5.361552028218695,Correction applied: O_hat = 0.2169 + 0.6808 * M,0.2037182526911564,0.711959018796144
+143,cis2Pentene,c2Pentene_WAS,,No fill from dup due to low r squared,2835,2835,0,0.0,,,
+144,trans2Pentene,t2Pentene_WAS,,No fill from dup due to low r squared,2835,2835,0,0.0,,,
+145,Isopentane,iPentane_WAS,iPentane_WAS corrected,Filled with duplicate corrected,2835,2683,152,5.361552028218695,Correction applied: O_hat = 0.3339 + 0.6414 * M,0.3126908341919314,0.7063682860037921
+146,cis2Butene,c2Butene_WAS,c2Butene_WAS corrected,Filled with duplicate corrected,2835,2708,127,4.479717813051146,Correction applied: O_hat = 0.0000 + 0.4508 * M,0.006443012548124676,0.6844039892538557
+147,trans2Butene,t2Butene_WAS,,No fill from dup due to low r squared,2835,2835,0,0.0,,,
+148,Isoprene,Isoprene_WAS,Isoprene_WAS corrected,Filled with duplicate corrected,2835,2683,152,5.361552028218695,Correction applied: O_hat = 0.0114 + 1.1795 * M,0.19461572594688728,0.7654861768779702
+149,x23_Dimethylpentane,,,No dup so stays vars,2835,2835,0,0.0,,,
+150,x3_Methylhexane,,,No dup so stays vars,2835,2835,0,0.0,,,
+151,x2_Methylhexane,,,No dup so stays vars,2835,2835,0,0.0,,,
+152,x234_Trimethylpentane,,,No dup so stays vars,2835,2835,0,0.0,,,
+153,x24_Dimethylpentane,,,No dup so stays vars,2835,2835,0,0.0,,,
+154,x23_Dimethylbutane,,,No dup so stays vars,2835,2835,0,0.0,,,
+155,Cyclohexane,,,No dup so stays vars,2835,2835,0,0.0,,,
+156,Hex1ene,,,No dup so stays vars,2835,2835,0,0.0,,,
+157,x3_Methylheptane,,,No dup so stays vars,2835,2835,0,0.0,,,
+158,nUndecane,,,No dup so stays vars,3255,3255,0,0.0,,,
+159,pDiethylbenzene,,,No dup so stays vars,3255,3255,0,0.0,,,
+160,mDiethylbenzene,,,No dup so stays vars,3360,3360,0,0.0,,,
+161,nDodecane,,,No dup so stays vars,3360,3360,0,0.0,,,
+162,x2_Methylheptane,,,No dup so stays vars,3360,3360,0,0.0,,,
+163,Alphapinene,Alpha_Pinene_WAS,Alpha_Pinene_WAS corrected,Filled with duplicate corrected,3255,2985,270,8.294930875576037,Correction applied: O_hat = -0.0072 + 0.3982 * M,0.00749966706227975,0.8696127459116572
+164,Betapinene,Beta_Pinene_WAS,,No vardata so filled with init dup,3360,2990,370,11.011904761904761,,,
+165,NO,NO_LIF,NO_LIF corrected,Filled with duplicate corrected,3113,231,2882,92.57950530035336,Correction applied: O_hat = 0.2213 + 0.5915 * M,0.5639829786966101,0.5721514793406873
+166,NO2,NO2_LIF,NO2_LIF corrected,Filled with duplicate corrected,2922,212,2710,92.74469541409994,Correction applied: O_hat = 1.2912 + 0.9971 * M,1.8168450611692963,0.780190044341229
+167,NOy,NOy_LIF,NOy_LIF corrected,Filled with duplicate corrected,2945,230,2715,92.19015280135824,Correction applied: O_hat = -0.3757 + 0.7493 * M,1.858628543645546,0.7781320777788815
+168,O3,O3_ppbv,O3_ppbv corrected,Filled with duplicate corrected,2556,311,2245,87.83255086071988,Correction applied: O_hat = 1.1600 + 0.9236 * M,3.8273593563383876,0.9236299132218709

@@ -97,7 +97,7 @@ def iwas_convert(savefilename):
 
     #Original starting time of midnight UTC on 07-15-2024 
     df_iwas, meta_iwas = read_icartt(icartt_file = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/CampaignData_and_Merges/R0/CSL_MobileLab_Parked/raw/20240715/USOS-iWAS_MobileLabGround_20240715_R1.ict')
-    base_dt = pd.Timestamp('2024-07-15 00:00:00')
+    base_dt = pd.Timestamp('2024-07-15 00:00:00').tz_localize('UTC')
     df_iwas['Start_dt_UTC'] = base_dt + pd.to_timedelta(df_iwas['iWAS_Start_UTC'], unit = 's')
     df_iwas['Stop_dt_UTC'] = base_dt + pd.to_timedelta(df_iwas['iWAS_Stop_UTC'], unit = 's')
     df_iwas['Mid_dt_UTC'] = base_dt + pd.to_timedelta(df_iwas['iWAS_Mid_UTC'], unit = 's')
@@ -116,17 +116,18 @@ def iwas_convert(savefilename):
         (df_iwas['Start_dt_UTC_rounded'].dt.hour == 23))
     df_iwas = df_iwas[~(df_jul23_hr23)]
     df_iwas = df_iwas.set_index(['Start_dt_UTC_rounded'])
+    
     #To check that reindexing was correct, use acetone as an example; compare with Line 95
-    #print(df_iwas['Acetone_ppbv'].loc['2024-08-14'])
+    # print(df_iwas['Acetone_ppbv'].loc['2024-07-23'])
 
     #Change index to 15 min frequency, with each value going into its closest 15 minute interval
     full_index = pd.date_range(start = pd.Timestamp('2024-07-15 00:00:00'),
                             end=pd.Timestamp('2024-08-18 23:45:00'),
-                            freq='15min')
+                            freq='15min', tz = 'UTC')
 
     df_iwas_reindex = df_iwas.reindex(full_index, method='nearest', fill_value=np.nan, tolerance = '8min')
     #To check that reindexing was correct, use acetone as an example; compare with Line 86
-    #print(df_iwas_new['Acetone_ppbv'].loc['2024-08-14'])
+    # print(df_iwas_reindex['Acetone_ppbv'].loc['2024-07-23'].values)
 
     #Drop columns not needed
     noplot_colnames = ['iWAS_Start_UTC', 'iWAS_Stop_UTC', 'iWAS_Mid_UTC', 'Start_dt_UTC', 'Stop_dt_UTC', 'Mid_dt_UTC']
@@ -141,31 +142,26 @@ def iwas_convert(savefilename):
     df_iwas_updated = df_iwas_updated.rename(columns=mapping)
     #rename index to 'time_UTC' to match netcdf file index name
     df_iwas_updated.index.rename('time_UTC', inplace=True)
-
+    #We need to use timezone naive datetime index for the netCDF file
+    df_iwas_updated.index = df_iwas_updated.index.tz_convert('UTC').tz_localize(None)
+    
+    #Now we are going to replace the old netCDF data with the new data
     ds_nc = xr.open_dataset('/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/CampaignData_and_Merges/R0/CSL_MobileLab_Parked/merged/rev_15min/all_CSL_MobileLab_Parked_rev15min.nc')
+    print(ds_nc)
+    #Convert the dataframe of updated iWAS data to xarray Dataset
+    new_iwas_data = xr.Dataset.from_dataframe(df_iwas_updated)
+    #Align time coordinates to NetCDF time
+    new_iwas_data = new_iwas_data.reindex(time_UTC = ds_nc.time_UTC)
 
-    for var in df_iwas_updated.columns:
-        if var in ds_nc.data_vars:
-            # Align the DataFrame to the NetCDF time
-            values = df_iwas_updated[var].reindex(ds_nc.time_UTC).to_numpy()
-
-            # Remove old variable completely
-            ds_nc = ds_nc.drop_vars(var)
-
-            # Assign as a DataArray with explicit dims and coords
-            da_new = xr.DataArray(
-                data=values,
-                dims=["time_UTC"],           # specify the correct dimension
-                coords={"time_UTC": ds_nc.time_UTC},  # assign coordinate explicitly
-                name=var
-            )
-            ds_nc[var] = da_new
-
+    for var in new_iwas_data.data_vars:
+        # Replace old values with new ones for each relevant variable
+        ds_nc[var] = new_iwas_data[var]
     save_ncfilename = savefilename + '.nc'
     full_savepath = merged_data_dir_15min + save_ncfilename
     ds_nc.to_netcdf(full_savepath, format = 'NETCDF4',mode='w')
     print('Saved netCDF file with updated iWAS measurements to: ', full_savepath)
 
+    #Check that the format looks consistent with the original ds_nc
     ds_new = xr.open_dataset(full_savepath)
     print(ds_new)
 
@@ -178,7 +174,7 @@ def formaldehyde_averaging(time_interval):
     df_ml_data = ds_newmerge[['HCHO_CRDS', 'time_local']].to_dataframe()
     df_ml_data['HCHO_CRDS'] = df_ml_data['HCHO_CRDS'].mask(df_ml_data['HCHO_CRDS'] < 0, np.nan)
 
-    # #read UDAQ Formaldehyde data, provided by Nell Schafer (CU Boulder/NOAA) and Bart (UDAQ)
+    # #read UDAQ Formaldehyde data, provided by and Bart (UDAQ)
     udaq_formaldehyde_load = hawthorne_data_dir + 'hw_zero_corrected_data_formaldehyde.csv'
     df_udaq_formaldehyde = pd.read_csv(udaq_formaldehyde_load, index_col='dt', parse_dates=True)
 
@@ -707,17 +703,17 @@ def fill_formaldehyde_raw_data_no_adjustment(time_interval_used, savefilename):
 
 
 ## CALL FUNCTIONS HERE
-# iwas_convert(
-#     savefilename = 'all_CSL_MobileLab_Parked_rev15min_iWASupdated'
-# )
+iwas_convert(
+    savefilename = 'all_CSL_MobileLab_Parked_rev15min_iWASupdated'
+)
 # formaldehyde_averaging(
 #     time_interval = 15*60
 # )
 
-formaldehyde_correction_compare(
-    time_interval_used = 15*60
+# formaldehyde_correction_compare(
+#     time_interval_used = 15*60
 
-)
+# )
 
 # bias_and_error_analysis(
 #     time_interval_used = 15*60
@@ -731,7 +727,7 @@ formaldehyde_correction_compare(
 #     savefilename = 'all_CSL_MobileLab_Parked_rev15min_iWASupdated_formaldehydeupdated'
 # )
 
-fill_formaldehyde_raw_data_no_adjustment(
-    time_interval_used = 15*60,
-     savefilename = 'all_CSL_MobileLab_Parked_rev15min_iWASupdated_formaldehydeupdated_raw_noadjustment'
-)
+# fill_formaldehyde_raw_data_no_adjustment(
+#     time_interval_used = 15*60,
+#      savefilename = 'all_CSL_MobileLab_Parked_rev15min_iWASupdated_formaldehydeupdated_raw_noadjustment'
+# )

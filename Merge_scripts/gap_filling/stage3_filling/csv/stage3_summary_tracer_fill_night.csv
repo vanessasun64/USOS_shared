@@ -1,0 +1,215 @@
+,Varname,tracers_filled_name,before_change_gap_count1,after_change_gap_count1,number_gaps_filled_by_change1,percent_of_gaps_filled_by_change1,odr_eq_adj_used_for_correction,norm_rmse_used,r2_used
+0,Br2_CIMS,,563,563,0,0.0,,,
+1,BrO_CIMS,,1012,1012,0,0.0,,,
+2,Cl2_CIMS,,524,524,0,0.0,,,
+3,ClNO2_CIMS,,537,537,0,0.0,,,
+4,BrCl_CIMS,,559,559,0,0.0,,,
+5,NCl3_CIMS,,701,701,0,0.0,,,
+6,NO_LIF,,231,231,0,0.0,,,
+7,NO2_LIF,"1    NOy_LIF
+Name: tracer, dtype: object",[np.int64(154)],[np.int64(154)],[np.int64(0)],[np.float64(0.0)],y = -0.5304629130690806 + 0.8342526010479023* M,0.20441224093216862,0.958215635757089
+8,NOy_LIF,,212,212,0,0.0,,,
+9,N2O5_CIMS,,1676,1676,0,0.0,,,
+10,C4H7NO5_CIMS,,519,519,0,0.0,,,
+11,ISOPN_CIMS,"13    MACR_WAS
+Name: tracer, dtype: object",[np.int64(465)],[np.int64(452)],[np.int64(13)],[np.float64(2.795698924731183)],y = 0.0006597048119762476 + 0.08019023092090341* M,0.5434955580520135,0.7046125783777304
+12,C5H10O3_CIMS,"10    MACR_WAS
+Name: tracer, dtype: object",[np.int64(524)],[np.int64(512)],[np.int64(12)],[np.float64(2.2900763358778624)],y = -0.010085202790075718 + 0.5986655916953143* M,0.588660584202097,0.6534787166068459
+13,C5H9NO5_CIMS,,527,527,0,0.0,,,
+14,C10H17NO4_CIMS,,528,528,0,0.0,,,
+15,HNO3_CIMS,,527,527,0,0.0,,,
+16,Methanol_PTR,,702,702,0,0.0,,,
+17,Acetonitrile_PTR,,702,702,0,0.0,,,
+18,Acetaldehyde_PTR,"31    Acrolein_PTR
+Name: tracer, dtype: object",[np.int64(704)],[np.int64(702)],[np.int64(2)],[np.float64(0.2840909090909091)],y = -0.8702665030648711 + 11.245210581856982* M,0.5600797054076584,0.6863107235904706
+19,Ethanol_PTR,,702,702,0,0.0,,,
+20,Methanethiol_PTR,"1    DMS_PTR
+Name: tracer, dtype: object",[np.int64(711)],[np.int64(710)],[np.int64(1)],[np.float64(0.14064697609001406)],y = 0.0023435993209444225 + 0.12512716079687014* M,0.5914408868108914,0.6501976774083464
+21,Acrolein_PTR,,670,670,0,0.0,,,
+22,Acetone_Propanal_PTR,,702,702,0,0.0,,,
+23,DMS_PTR,,750,750,0,0.0,,,
+24,MVK_MACR_PTR,"7    MACR_WAS
+Name: tracer, dtype: object",[np.int64(670)],[np.int64(629)],[np.int64(41)],[np.float64(6.119402985074627)],y = 0.033802217306448654 + 3.507918816591362* M,0.410686825659633,0.8313363312296143
+25,Benzene_PTR,,672,672,0,0.0,,,
+26,Toluene_PTR,,629,629,0,0.0,,,
+27,Styrene_PTR,"19    C8Aromatics_PTR
+Name: tracer, dtype: object",[np.int64(706)],[np.int64(702)],[np.int64(4)],[np.float64(0.56657223796034)],y = -0.0013496494050990293 + 0.12141113075975124* M,0.4912024020864678,0.758720200184484
+28,Benzaldehyde_PTR,,2209,2209,0,0.0,,,
+29,C8Aromatics_PTR,,670,670,0,0.0,,,
+30,C9Aromatics_PTR,"19    x3_x4_EthylToluene_WAS
+Name: tracer, dtype: object",[np.int64(670)],[np.int64(629)],[np.int64(41)],[np.float64(6.119402985074627)],y = 0.013271164518490171 + 2.4311263639612615* M,0.4631595964684672,0.7854831881991666
+31,Naphthalene_PTR,,1696,1696,0,0.0,,,
+32,Octanal_PTR,,702,702,0,0.0,,,
+33,Monoterpenes_PTR,,702,702,0,0.0,,,
+34,Nonanal_PTR,,702,702,0,0.0,,,
+35,C7H4ClF3_PTR,,714,714,0,0.0,,,
+36,D5_siloxane_PTR,,702,702,0,0.0,,,
+37,PAN_CIMS,,2129,2129,0,0.0,,,
+38,APAN_CIMS,,2135,2135,0,0.0,,,
+39,PPN_CIMS,"1    PAN_CIMS
+Name: tracer, dtype: object",[np.int64(2135)],[np.int64(2129)],[np.int64(6)],[np.float64(0.2810304449648712)],y = -0.002634961501774533 + 0.10718136482961026* M,0.40938358993284363,0.8324050762936973
+40,HCOOH_CIMS,,526,526,0,0.0,,,
+41,HONO_CIMS,,349,349,0,0.0,,,
+42,O3_ppbv,,311,311,0,0.0,,,
+43,CO2_Piccaro,,224,224,0,0.0,,,
+44,CH4_Piccaro,,199,199,0,0.0,,,
+45,CO_Piccaro,"13    Benzene_WAS
+Name: tracer, dtype: object",[np.int64(256)],[np.int64(249)],[np.int64(7)],[np.float64(2.734375)],y = 95.56846284730952 + 774.3403631753057* M,0.5977913660806408,0.6426454826394413
+46,H2O_Piccaro,,198,198,0,0.0,,,
+47,HCHO_CRDS,,0,0,0,,,,
+48,H2O_CRDS,,198,198,0,0.0,,,
+49,CH4_CRDS,,199,199,0,0.0,,,
+50,Acetone_WAS,,2990,2990,0,0.0,,,
+51,Benzene_WAS,"16    CO_Piccaro
+Name: tracer, dtype: object",[np.int64(366)],[np.int64(180)],[np.int64(186)],[np.float64(50.81967213114754)],y = -0.12341923169283359 + 0.001291421980616522* M,0.5131013377316194,0.7367270172180227
+52,C2Cl4_WAS,,2990,2990,0,0.0,,,
+53,C2HCl3_WAS,,3159,3159,0,0.0,,,
+54,CCl4_WAS,,2990,2990,0,0.0,,,
+55,CF2Cl2_WAS,,2990,2990,0,0.0,,,
+56,CH2Cl2_WAS,,2990,2990,0,0.0,,,
+57,Ethyl_WAS,"13    C8Aromatics_PTR
+Name: tracer, dtype: object",[np.int64(1905)],[np.int64(629)],[np.int64(1276)],[np.float64(66.98162729658793)],y = 0.004842859823470561 + 0.15713128124190806* M,0.5590901826687298,0.6874181676434463
+58,Ethane_WAS,"4    CH4_CRDS
+Name: tracer, dtype: object",[np.int64(1495)],[np.int64(744)],[np.int64(751)],[np.float64(50.23411371237459)],y = -28.195433957768778 + 0.015473053697104637* M,0.5582086492278631,0.6884031039272045
+59,Ethene_WAS,,1524,1524,0,0.0,,,
+60,Ethyne_WAS,,2683,2683,0,0.0,,,
+61,Isoprene_WAS,,2689,2689,0,0.0,,,
+62,Limonene_WAS,"1    Alpha_Pinene_WAS
+Name: tracer, dtype: object",[np.int64(3051)],[np.int64(3015)],[np.int64(36)],[np.float64(1.1799410029498525)],y = 0.00022582237567177402 + 0.05158584091524134* M,0.5758360327649112,0.6684128633695681
+63,MACR_WAS,"1    MVK_MACR_PTR
+Name: tracer, dtype: object",[np.int64(1905)],[np.int64(629)],[np.int64(1276)],[np.float64(66.98162729658793)],y = -0.00963570794981773 + 0.2850686621768733* M,0.3840871368581808,0.8524770713000851
+64,Propane_WAS,,2683,2683,0,0.0,,,
+65,Propene_WAS,,2716,2716,0,0.0,,,
+66,Toluene_WAS,,629,629,0,0.0,,,
+67,Alpha_Pinene_WAS,"7    Monoterpenes_PTR
+Name: tracer, dtype: object",[np.int64(2923)],[np.int64(1676)],[np.int64(1247)],[np.float64(42.66164899076291)],y = -0.018317153930373108 + 0.5142635079502237* M,0.5591295117101912,0.6873741891347231
+68,Beta_Pinene_WAS,"7    Monoterpenes_PTR
+Name: tracer, dtype: object",[np.int64(2990)],[np.int64(1714)],[np.int64(1276)],[np.float64(42.675585284280935)],y = -0.005262853933935952 + 0.18047673091208633* M,0.5872397556794863,0.6551494693494972
+69,iButane_WAS,"4    nButane
+Name: tracer, dtype: object",[np.int64(2683)],[np.int64(2683)],[np.int64(0)],[np.float64(0.0)],y = 0.022644448684091923 + 0.35031217383776647* M,0.556200503505902,0.6906409998997811
+70,iPentane_WAS,,2758,2758,0,0.0,,,
+71,m_p_Xylene_WAS,"13    C8Aromatics_PTR
+Name: tracer, dtype: object",[np.int64(1905)],[np.int64(629)],[np.int64(1276)],[np.float64(66.98162729658793)],y = 0.02294250321057555 + 0.4583413411940993* M,0.548462202840741,0.699189212055082
+72,nButane_WAS,,2743,2743,0,0.0,,,
+73,nHeptane_WAS,"7    nOctane_WAS
+Name: tracer, dtype: object",[np.int64(2694)],[np.int64(2684)],[np.int64(10)],[np.float64(0.3711952487008166)],y = 0.002517652878980782 + 1.6811240571660084* M,0.21494815527794758,0.9537972905426073
+74,nHexane_WAS,"4    nPentane
+Name: tracer, dtype: object",[np.int64(2691)],[np.int64(2683)],[np.int64(8)],[np.float64(0.29728725380899296)],y = 0.005141212813394289 + 0.23281414091255997* M,0.5664384911284966,0.679147435768072
+75,nNonane_WAS,,2990,2990,0,0.0,,,
+76,nOctane_WAS,"7    nNonane_WAS
+Name: tracer, dtype: object",[np.int64(2754)],[np.int64(2753)],[np.int64(1)],[np.float64(0.03631082062454612)],y = -0.003118128135816677 + 1.460719798900617* M,0.35674866099812624,0.8727303928760439
+77,nPentane_WAS,"10    Isopentane
+Name: tracer, dtype: object",[np.int64(2749)],[np.int64(2721)],[np.int64(28)],[np.float64(1.018552200800291)],y = -0.08828391505361398 + 0.6012502311378839* M,0.5508093615467554,0.6966090472324558
+78,o_Xylene_WAS,"13    C8Aromatics_PTR
+Name: tracer, dtype: object",[np.int64(1905)],[np.int64(629)],[np.int64(1276)],[np.float64(66.98162729658793)],y = 0.004063720420277065 + 0.2095906933350854* M,0.5263407652986644,0.7229653987848162
+79,x135_TriMethylBenzene_WAS,"25    C9Aromatics_PTR
+Name: tracer, dtype: object",[np.int64(2990)],[np.int64(1714)],[np.int64(1276)],[np.float64(42.675585284280935)],y = -9.574001742287517e-05 + 0.21517988873690364* M,0.42870830557292927,0.8162091887327879
+80,x224_TriMethylPentane_WAS,,2683,2683,0,0.0,,,
+81,nDecane_WAS,,2990,2990,0,0.0,,,
+82,x3_x4_EthylToluene_WAS,"19    C9Aromatics_PTR
+Name: tracer, dtype: object",[np.int64(1881)],[np.int64(642)],[np.int64(1239)],[np.float64(65.86921850079744)],y = -0.00545857242361959 + 0.4113279438403261* M,0.43216669498514093,0.8132319477456201
+83,x13_Butadiene_WAS,"1    Ethene_WAS
+Name: tracer, dtype: object",[np.int64(3025)],[np.int64(3009)],[np.int64(16)],[np.float64(0.5289256198347108)],y = -0.0025601832997836902 + 0.029435283058108445* M,0.48650351096410355,0.7633143338196005
+84,nPropylBenzene_WAS,"7    C9Aromatics_PTR
+Name: tracer, dtype: object",[np.int64(1909)],[np.int64(654)],[np.int64(1255)],[np.float64(65.74122577265584)],y = -0.0017632701114838458 + 0.12031590594668569* M,0.4614064901902698,0.7871040508102964
+85,x2_EthylToluene_WAS,"13    x124_TriMethylBenzene_WAS
+Name: tracer, dtype: object",[np.int64(1941)],[np.int64(1939)],[np.int64(2)],[np.float64(0.10303967027305513)],y = -0.00040649650871461276 + 0.23299857663088036* M,0.10205029409050317,0.9895857374760418
+86,x124_TriMethylBenzene_WAS,"22    C9Aromatics_PTR
+Name: tracer, dtype: object",[np.int64(1944)],[np.int64(691)],[np.int64(1253)],[np.float64(64.45473251028807)],y = -0.007335753806002792 + 0.4929491059901618* M,0.44647246201238816,0.8006623406645966
+87,iPropylBenzene_WAS,"16    nPropylBenzene_WAS
+Name: tracer, dtype: object",[np.int64(3056)],[np.int64(2993)],[np.int64(63)],[np.float64(2.06151832460733)],y = 0.00017069455695192627 + 0.35352237652225904* M,0.20288705807731353,0.9588368416647328
+88,x123_TriMethylBenzene_WAS,"1    x124_TriMethylBenzene_WAS
+Name: tracer, dtype: object",[np.int64(3008)],[np.int64(3007)],[np.int64(1)],[np.float64(0.03324468085106383)],y = -0.0008004659493623341 + 0.2292433974087921* M,0.1712412288331101,0.9706764415477265
+89,MethylCycloPentane_WAS,"1    nHexane_WAS
+Name: tracer, dtype: object",[np.int64(2686)],[np.int64(2686)],[np.int64(0)],[np.float64(0.0)],y = -0.004912434634577237 + 0.5366874952051073* M,0.12772633848870046,0.9836859824562699
+90,x3_MethylPentane_WAS,,2699,2699,0,0.0,,,
+91,x2_MethylPentane_WAS,,2692,2692,0,0.0,,,
+92,x1_Butene_WAS,,2709,2709,0,0.0,,,
+93,CycloPentane_WAS,,2687,2687,0,0.0,,,
+94,x22_DiMethylButane_WAS,"4    x2_Methylpentane
+Name: tracer, dtype: object",[np.int64(2683)],[np.int64(2683)],[np.int64(0)],[np.float64(0.0)],y = -0.0011402209318739814 + 0.08494803741022353* M,0.5730636259676788,0.6715980805927764
+95,x1_Pentene_WAS,"19    c2Pentene_WAS
+Name: tracer, dtype: object",[np.int64(2720)],[np.int64(2720)],[np.int64(0)],[np.float64(0.0)],y = 0.0013052013609747947 + 0.9982775297409722* M,0.3000523851361082,0.9099685661741326
+96,MethylCycloHexane_WAS,,2683,2683,0,0.0,,,
+97,c2Pentene_WAS,"1    t2Pentene_WAS
+Name: tracer, dtype: object",[np.int64(2991)],[np.int64(2990)],[np.int64(1)],[np.float64(0.033433634236041454)],y = 0.00044823370952993077 + 0.7091966503093585* M,0.056893764297695444,0.9967630995840383
+98,t2Pentene_WAS,,2990,2990,0,0.0,,,
+99,c2Butene_WAS,"1    t2Butene_WAS
+Name: tracer, dtype: object",[np.int64(2909)],[np.int64(2906)],[np.int64(3)],[np.float64(0.10312822275696115)],y = -0.000625377697887804 + 1.191767308504584* M,0.17121751180212355,0.9706845636522897
+100,t2Butene_WAS,"1    c2Butene_WAS
+Name: tracer, dtype: object",[np.int64(3036)],[np.int64(3022)],[np.int64(14)],[np.float64(0.461133069828722)],y = 0.0005247604450802698 + 0.8390888091560301* M,0.17078336953849993,0.9708330406890762
+101,iPropylONO2_WAS,,2995,2995,0,0.0,,,
+102,CFCl3_WAS,,2990,2990,0,0.0,,,
+103,nPropylONO2_WAS,,3159,3159,0,0.0,,,
+104,Furan_WAS,,3009,3009,0,0.0,,,
+105,CH3Br_WAS,,2990,2990,0,0.0,,,
+106,Ethylene,,2683,2683,0,0.0,,,
+107,Acetylene,,1520,1520,0,0.0,,,
+108,nDecane,,3255,3255,0,0.0,,,
+109,Ethylbenzene,"16    Toluene
+Name: tracer, dtype: object",[np.int64(3029)],[np.int64(2838)],[np.int64(191)],[np.float64(6.3057114559260485)],y = -0.014831290417374812 + 0.15556669355988625* M,0.3938958592245081,0.8448460520857864
+110,Ethane,,1486,1486,0,0.0,,,
+111,mpEthyltoluene,,3255,3255,0,0.0,,,
+112,oXylene,"16    Toluene
+Name: tracer, dtype: object",[np.int64(3029)],[np.int64(2836)],[np.int64(193)],[np.float64(6.371739848134698)],y = 0.0011760818953714823 + 0.15133676702044063* M,0.15966609779129337,0.9745067372161011
+113,buta13diene,,2835,2835,0,0.0,,,
+114,Styrene,,726,726,0,0.0,,,
+115,mpXylene,"16    Toluene
+Name: tracer, dtype: object",[np.int64(3029)],[np.int64(2836)],[np.int64(193)],[np.float64(6.371739848134698)],y = -0.0028271569692038334 + 0.5121003477277103* M,0.16336757652844702,0.973311034939222
+116,x135_Trimethylbenzene,,3255,3255,0,0.0,,,
+117,nPropylbenzene,,3255,3255,0,0.0,,,
+118,oEthyltoluene,,3255,3255,0,0.0,,,
+119,x224_Trimethylpentane,,2683,2683,0,0.0,,,
+120,Toluene,,2835,2835,0,0.0,,,
+121,x124_Trimethylbenzene,,3255,3255,0,0.0,,,
+122,Isopropylbenzene,,3255,3255,0,0.0,,,
+123,Formaldehyde,,0,0,0,,,,
+124,Benzene,,1520,1520,0,0.0,,,
+125,x123_Trimethylbenzene,,3255,3255,0,0.0,,,
+126,nHeptane,,2694,2694,0,0.0,,,
+127,nNonane,,3255,3255,0,0.0,,,
+128,Methylcyclopentane,,2686,2686,0,0.0,,,
+129,Propylene,,2683,2683,0,0.0,,,
+130,x3_Methylpentane,,2683,2683,0,0.0,,,
+131,nHexane,,2683,2683,0,0.0,,,
+132,x2_Methylpentane,,2683,2683,0,0.0,,,
+133,But1ene,,2683,2683,0,0.0,,,
+134,Cyclopentane,,2687,2687,0,0.0,,,
+135,nOctane,,2684,2684,0,0.0,,,
+136,Isobutane,,2683,2683,0,0.0,,,
+137,x22_Dimethylbutane,,2683,2683,0,0.0,,,
+138,Propane,,2683,2683,0,0.0,,,
+139,Pent1ene,,2683,2683,0,0.0,,,
+140,Methylcyclohexane,,2708,2708,0,0.0,,,
+141,nButane,"1    nButane_WAS
+Name: tracer, dtype: object",[np.int64(2683)],[np.int64(2683)],[np.int64(0)],[np.float64(0.0)],y = 0.061344671196490626 + 1.0751975121480073* M,0.5359144859427454,0.7127956637567229
+142,nPentane,,2683,2683,0,0.0,,,
+143,cis2Pentene,,2835,2835,0,0.0,,,
+144,trans2Pentene,,2835,2835,0,0.0,,,
+145,Isopentane,"4    nPentane_WAS
+Name: tracer, dtype: object",[np.int64(2683)],[np.int64(2683)],[np.int64(0)],[np.float64(0.0)],y = 0.14683512131405502 + 1.6631957911501873* M,0.5829321178317541,0.660190146000186
+146,cis2Butene,,2708,2708,0,0.0,,,
+147,trans2Butene,,2777,2777,0,0.0,,,
+148,Isoprene,"1    Isoprene_WAS
+Name: tracer, dtype: object",[np.int64(2683)],[np.int64(2683)],[np.int64(0)],[np.float64(0.0)],y = 0.023276724291373743 + 1.1408797293103359* M,0.4070817079794226,0.8342844830285561
+149,x23_Dimethylpentane,,2835,2835,0,0.0,,,
+150,x3_Methylhexane,,2774,2774,0,0.0,,,
+151,x2_Methylhexane,,2774,2774,0,0.0,,,
+152,x234_Trimethylpentane,,2835,2835,0,0.0,,,
+153,x24_Dimethylpentane,,2835,2835,0,0.0,,,
+154,x23_Dimethylbutane,,2774,2774,0,0.0,,,
+155,Cyclohexane,,2790,2790,0,0.0,,,
+156,Hex1ene,,2835,2835,0,0.0,,,
+157,x3_Methylheptane,,2835,2835,0,0.0,,,
+158,nUndecane,,3255,3255,0,0.0,,,
+159,pDiethylbenzene,,3255,3255,0,0.0,,,
+160,mDiethylbenzene,,3360,3360,0,0.0,,,
+161,nDodecane,,3360,3360,0,0.0,,,
+162,x2_Methylheptane,,3360,3360,0,0.0,,,
+163,Alphapinene,"7    Monoterpenes_PTR
+Name: tracer, dtype: object",[np.int64(2985)],[np.int64(1755)],[np.int64(1230)],[np.float64(41.20603015075377)],y = -0.011010624993270636 + 0.18490524222230875* M,0.47396779973937997,0.7753545248102109
+164,Betapinene,,2990,2990,0,0.0,,,
+165,NO,,231,231,0,0.0,,,
+166,NO2,,212,212,0,0.0,,,
+167,NOy,,212,212,0,0.0,,,
+168,O3,,311,311,0,0.0,,,

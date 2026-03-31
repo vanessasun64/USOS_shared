@@ -1,0 +1,36 @@
+Stage 1:
+* runs ODR fitting, applying adjustment to xdata
+* calculates metrics to compare init xdata vs init ydata and corr. xdata vs init ydata
+* save information in cache
+
+If there is valid data for both xdata and ydata, make QC plots to show the ODR fit.
+
+Save summary CSV file from Stage 1
+
+Stage 2:
+* reads Stage1 cache
+* fills gaps in init ydata with the either init xdata, corr xdata, or keeps the same init ydata
+* records which improvements using the corr xdata involves
+* compares gaps before and after init ydata is filled
+
+Stage 3: repeats most of Stage 1 but instead does CO (xdata) vs VOC (ydata) comparison
+* reads Stage2 cache
+* runs ODR fitting on 'ml_co_raw' as xdata and 'y_data_init_filled' from Stage2 results, applying adjustment to xdata
+* saves results from applying correction
+
+Stage 3_alt2: Same as 3 but considers CO only, Benzene & CO, Toluene (ML init, not filled by corr UDAQ) & CO, Benzene & Toluene & CO fit
+
+Stage 3_alt3: Same as 3 but considers 'y_data_init_full' unless 'y_species_name' has
+'ML_NoVar' in it, then use 'x_data_init_full'. If 'x_data_init_full' is all NaNs then there's no data. 
+[Only look at CO fit for raw ML data with no filling from Stage 2]
+
+Evaluation_on_which_correction_to_use: 
+compare r2 from Stage 3 alts to Stage 2
+apply gap filling to see how many gaps were filled by process
+
+Make plots to check the ODR fit
+
+Stage 4: (unsure about conditions for fit)
+* reads Stage2 cache
+* reads Stage3 cache
+* Fills 'y_data_init_filled' from Stage2 with 'x_data_corr_full' from Stage3

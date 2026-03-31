@@ -847,19 +847,19 @@ class mean_bias_plots:
             df_species = pd.DataFrame({'obs':df_ml_voc_data[self.species_name], 'model':df_udaq_voc_data[self.species_name]})
         
         print('mean observed value:', df_species['obs'].mean())
-        # 1. Compute pointwise error
+        #Compute pointwise error
         df_species['error'] = df_species['model'] - df_species['obs']
 
-        # 2. Overall scatter (standard deviation of error)
+        #Overall scatter (standard deviation of error)
         overall_std = df_species['error'].std()  # pandas std ignores NaNs by default
         print("Overall standard deviation of error:", overall_std)
 
-        # 3. Optional: Coefficient of Variation (relative scatter)
+        #Optional: Coefficient of Variation (relative scatter)
         mean_observed = df_species['obs'].mean()
         cv_error = overall_std / mean_observed
         print("Coefficient of variation of error:", cv_error)
 
-        # 4. Hourly scatter (standard deviation per hour of day)
+        #Hourly scatter (standard deviation per hour of day)
         hourly_std = df_species.groupby(df_species.index.hour)["error"].std()
         print("Hourly standard deviation of error:\n", hourly_std)
 

@@ -1,0 +1,69 @@
+,voc_udaq_name,voc_noaa_name,fill_case,higher_error_params,ml_initial_gap_count,gap_count_left_after_ml_filled,gaps_filled_by_udaq,percent_gaps_filled_by_udaq
+0,nDodecane,ML_NoVar_nDodecane,Only UDAQ var so ml_filled_with_udaq is init UDAQ data,,3336,3336,0,0.0
+1,Ethane,Ethane_WAS,ML gaps filled by corr UDAQ data,"['intercept', 'rmse']",2966,2664,302,10.182063385030343
+2,Ethylene,Ethene_WAS,ML gaps filled by corr UDAQ data,"['intercept', 'rmse']",2966,2668,298,10.0472016183412
+3,Propane,Propane_WAS,ML gaps filled by init UDAQ data,[],2966,2664,302,10.182063385030343
+4,Propylene,Propene_WAS,ML gaps filled by corr UDAQ data,"['intercept', 'rmse']",2966,2704,262,8.833445718138908
+5,Acetylene,Ethyne_WAS,ML gaps filled by init UDAQ data,[],2966,2664,302,10.182063385030343
+6,nButane,nButane_WAS,ML gaps filled by corr UDAQ data,"['slope', 'intercept', 'rmse']",2966,2724,242,8.15913688469319
+7,Isobutane,iButane_WAS,ML gaps filled by init UDAQ data,[],2966,2664,302,10.182063385030343
+8,trans2Butene,t2Butene_WAS,R squared too low so no ML gaps filled by UDAQ data,,3018,3018,0,0.0
+9,cis2Butene,c2Butene_WAS,ML gaps filled by corr UDAQ data,"['slope', 'rmse']",3005,2893,112,3.7271214642262893
+10,buta13diene,x13_Butadiene_WAS,R squared too low so no ML gaps filled by UDAQ data,,3021,3021,0,0.0
+11,nPentane,nPentane_WAS,ML gaps filled by corr UDAQ data,"['intercept', 'rmse']",2966,2734,232,7.82198246797033
+12,Isopentane,iPentane_WAS,ML gaps filled by corr UDAQ data,"['slope', 'intercept', 'rmse']",2966,2742,224,7.552258934592043
+13,Pent1ene,x1_Pentene_WAS,ML gaps filled by corr UDAQ data,"['intercept', 'rmse']",2967,2715,252,8.493427704752275
+14,trans2Pentene,t2Pentene_WAS,R squared too low so no ML gaps filled by UDAQ data,,2966,2966,0,0.0
+15,cis2Pentene,c2Pentene_WAS,R squared too low so no ML gaps filled by UDAQ data,,2967,2967,0,0.0
+16,x3_Methylpentane,x3_MethylPentane_WAS,ML gaps filled by corr UDAQ data,"['intercept', 'rmse']",2966,2698,268,9.035738368172623
+17,nHexane,nHexane_WAS,ML gaps filled by init UDAQ data,['rmse'],2966,2664,302,10.182063385030343
+18,nHeptane,nHeptane_WAS,ML gaps filled by init UDAQ data,[],2977,2675,302,10.1444407121263
+19,nOctane,nOctane_WAS,ML gaps filled by corr UDAQ data,"['slope', 'rmse']",2967,2764,203,6.841927873272666
+20,nNonane,nNonane_WAS,R squared too low so no ML gaps filled by UDAQ data,,2966,2966,0,0.0
+21,nDecane,nDecane_WAS,R squared too low so no ML gaps filled by UDAQ data,,2966,2966,0,0.0
+22,Cyclopentane,CycloPentane_WAS,ML gaps filled by init UDAQ data,[],2970,2668,302,10.168350168350168
+23,Isoprene,Isoprene_WAS,ML gaps filled by corr UDAQ data,"['slope', 'rmse']",2966,2670,296,9.97977073499663
+24,x22_Dimethylbutane,x22_DiMethylButane_WAS,ML gaps filled by init UDAQ data,['intercept'],2966,2664,302,10.182063385030343
+25,Hex1ene,ML_NoVar_Hex1ene,Only UDAQ var so ml_filled_with_udaq is init UDAQ data,,2816,2816,0,0.0
+26,x24_Dimethylpentane,ML_NoVar_x24_Dimethylpentane,Only UDAQ var so ml_filled_with_udaq is init UDAQ data,,2816,2816,0,0.0
+27,Cyclohexane,ML_NoVar_Cyclohexane,Only UDAQ var so ml_filled_with_udaq is init UDAQ data,,2816,2816,0,0.0
+28,x3_Methylhexane,ML_NoVar_x3_Methylhexane,Only UDAQ var so ml_filled_with_udaq is init UDAQ data,,2816,2816,0,0.0
+29,x224_Trimethylpentane,x224_TriMethylPentane_WAS,ML gaps filled by corr UDAQ data,"['slope', 'intercept', 'rmse']",2966,2664,302,10.182063385030343
+30,x234_Trimethylpentane,ML_NoVar_x234_Trimethylpentane,Only UDAQ var so ml_filled_with_udaq is init UDAQ data,,2816,2816,0,0.0
+31,x3_Methylheptane,ML_NoVar_x3_Methylheptane,Only UDAQ var so ml_filled_with_udaq is init UDAQ data,,2816,2816,0,0.0
+32,Methylcyclohexane,MethylCycloHexane_WAS,ML gaps filled by corr UDAQ data,"['slope', 'intercept', 'rmse']",2966,2664,302,10.182063385030343
+33,Methylcyclopentane,MethylCycloPentane_WAS,ML gaps filled by corr UDAQ data,"['slope', 'intercept', 'rmse']",2969,2667,302,10.171775008420344
+34,x2_Methylhexane,ML_NoVar_x2_Methylhexane,Only UDAQ var so ml_filled_with_udaq is init UDAQ data,,2816,2816,0,0.0
+35,But1ene,x1_Butene_WAS,ML gaps filled by corr UDAQ data,"['intercept', 'rmse']",2966,2704,262,8.833445718138908
+36,x23_Dimethylbutane,ML_NoVar_x23_Dimethylbutane,Only UDAQ var so ml_filled_with_udaq is init UDAQ data,,2816,2816,0,0.0
+37,x2_Methylpentane,x2_MethylPentane_WAS,ML gaps filled by corr UDAQ data,"['slope', 'intercept', 'rmse']",2966,2679,287,9.676331759946056
+38,x23_Dimethylpentane,ML_NoVar_x23_Dimethylpentane,Only UDAQ var so ml_filled_with_udaq is init UDAQ data,,2816,2816,0,0.0
+39,Formaldehyde,HCHO_CRDS,ML gaps filled by corr UDAQ data,"['slope', 'intercept', 'rmse']",1532,0,1532,100.0
+40,nUndecane,ML_NoVar_nUndecane,Only UDAQ var so ml_filled_with_udaq is init UDAQ data,,3231,3231,0,0.0
+41,x2_Methylheptane,ML_NoVar_x2_Methylheptane,Only UDAQ var so ml_filled_with_udaq is init UDAQ data,,3336,3336,0,0.0
+42,mpXylene,m_p_Xylene_WAS,R squared too low so no ML gaps filled by UDAQ data,,2966,2966,0,0.0
+43,Benzene,Benzene_PTR,R squared too low so no ML gaps filled by UDAQ data,,704,704,0,0.0
+44,Toluene,Toluene_PTR,ML gaps filled by corr UDAQ data,"['slope', 'rmse']",702,655,47,6.695156695156696
+45,Ethylbenzene,Ethyl_WAS,R squared too low so no ML gaps filled by UDAQ data,,2966,2966,0,0.0
+46,oXylene,o_Xylene_WAS,R squared too low so no ML gaps filled by UDAQ data,,2966,2966,0,0.0
+47,x135_Trimethylbenzene,x135_TriMethylBenzene_WAS,R squared too low so no ML gaps filled by UDAQ data,,2976,2976,0,0.0
+48,x124_Trimethylbenzene,x124_TriMethylBenzene_WAS,R squared too low so no ML gaps filled by UDAQ data,,2966,2966,0,0.0
+49,nPropylbenzene,nPropylBenzene_WAS,R squared too low so no ML gaps filled by UDAQ data,,2966,2966,0,0.0
+50,Isopropylbenzene,iPropylBenzene_WAS,R squared too low so no ML gaps filled by UDAQ data,,3050,3050,0,0.0
+51,oEthyltoluene,x2_EthylToluene_WAS,R squared too low so no ML gaps filled by UDAQ data,,2968,2968,0,0.0
+52,mDiethylbenzene,ML_NoVar_mDiethylbenzene,Only UDAQ var so ml_filled_with_udaq is init UDAQ data,,3336,3336,0,0.0
+53,pDiethylbenzene,ML_NoVar_pDiethylbenzene,Only UDAQ var so ml_filled_with_udaq is init UDAQ data,,3231,3231,0,0.0
+54,Styrene,Styrene_PTR,UDAQ data all NaNs so ml_filled_with_udaq is ML data,,726,726,0,0.0
+55,x123_Trimethylbenzene,x123_TriMethylBenzene_WAS,R squared too low so no ML gaps filled by UDAQ data,,2985,2985,0,0.0
+56,mpEthyltoluene,x3_x4_EthylToluene_WAS,R squared too low so no ML gaps filled by UDAQ data,,2966,2966,0,0.0
+57,UDAQ_NoVar_nPropylONO2_WAS,nPropylONO2_WAS,Only ML var so ml_filled_with_udaq is ML data,,3238,3238,0,0.0
+58,UDAQ_NoVar_MACR_WAS,MACR_WAS,Only ML var so ml_filled_with_udaq is ML data,,2966,2966,0,0.0
+59,UDAQ_NoVar_C2HCl3_WAS,C2HCl3_WAS,Only ML var so ml_filled_with_udaq is ML data,,3135,3135,0,0.0
+60,UDAQ_NoVar_CH3Br_WAS,CH3Br_WAS,Only ML var so ml_filled_with_udaq is ML data,,2966,2966,0,0.0
+61,UDAQ_NoVar_CF2Cl2_WAS,CF2Cl2_WAS,Only ML var so ml_filled_with_udaq is ML data,,2966,2966,0,0.0
+62,UDAQ_NoVar_CH2Cl2_WAS,CH2Cl2_WAS,Only ML var so ml_filled_with_udaq is ML data,,2966,2966,0,0.0
+63,UDAQ_NoVar_CCl4_WAS,CCl4_WAS,Only ML var so ml_filled_with_udaq is ML data,,2966,2966,0,0.0
+64,UDAQ_NoVar_iPropylONO2_WAS,iPropylONO2_WAS,Only ML var so ml_filled_with_udaq is ML data,,2973,2973,0,0.0
+65,UDAQ_NoVar_C2Cl4_WAS,C2Cl4_WAS,Only ML var so ml_filled_with_udaq is ML data,,2966,2966,0,0.0
+66,UDAQ_NoVar_CFCl3_WAS,CFCl3_WAS,Only ML var so ml_filled_with_udaq is ML data,,2966,2966,0,0.0
+67,UDAQ_NoVar_Furan_WAS,Furan_WAS,Only ML var so ml_filled_with_udaq is ML data,,2985,2985,0,0.0

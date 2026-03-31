@@ -35,12 +35,12 @@ merged_data_dir_15min = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vs
 
 #Read in data
 #ml_voc_data = xr.open_dataset(merged_data_dir_15min +'all_CSL_MobileLab_Parked_rev15min_iWASupdated_formaldehydeupdated.nc')
-ml_voc_data = xr.open_dataset(merged_data_dir_15min +'all_CSL_MobileLab_Parked_rev15min_iWASupdated_formaldehydeupdated_raw_noadjustment.nc')
+ml_voc_data = xr.open_dataset(merged_data_dir_15min +'all_CSL_MobileLab_Parked_rev15min_iWASupdated2.nc')
 df_ml_data = ml_voc_data.to_dataframe()
 df_ml_data.reset_index(inplace=True)
 df_ml_data.set_index('time_local', inplace=True)
 
-
+# Boundary Layer Height
 blh_filepath = dirpath+'Boundary_layer_height/BLH_Nell.csv'
 df_blh = pd.read_csv(blh_filepath)
 #Convert from Igor Pro Time to local time
@@ -50,7 +50,6 @@ df_blh = df_blh.set_index(['time_local'])
 df_blh = df_blh.drop(columns=['Time_start_15min_local'])
 df_ml_data = df_ml_data.join(df_blh, how="inner")   # only matching index values
 print(df_ml_data.columns)
-
 
 
 # Define which variables we need to make sure don't have Nans/ negs since we'll be using then as constraints in F0AM: 
@@ -487,21 +486,66 @@ def all_days(file_name, var_name):
     savemat(outpath+matfilename,{var_name: ddict})
     print('Saved MATLAB file to:' + outpath + matfilename)
 
+def jno2_ratio_plot():
+    load_filled_merge_data = pd.read_csv('/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/CampaignData_and_Merges/R0/CSL_MobileLab_Parked/' + 
+                                         'F0AM_filled/' + 'alldays_15min_CSL_mobile_lab_parked_with_interp_nell_match_with_formaldehyde_raw_noadjustment' + '.csv',
+                                         index_col = 'time_local')
+    
+    fig, (ax1) = plt.subplots(1,1, figsize = (16,8), tight_layout=True)
+
+    new_start_time = pd.Timestamp('2024-08-04 00:00:00')
+    new_end_time = pd.Timestamp('2024-08-07 23:45:00')
+    #Create a new datetime index from new_start to the end of existing index with same frequency
+    new_index = pd.date_range(start=new_start_time, end=new_end_time, freq='15min')
+
+
+    #ax1 is the first row of subplot, for July only
+    ax1.plot(load_filled_merge_data.index, load_filled_merge_data['jNO2_meas'],linestyle = 'solid', color = 'k', marker = '*', label = 'Measured jNO2')
+    ax1.plot(load_filled_merge_data.index, load_filled_merge_data['jNO2'],linestyle = 'solid', color = 'r', marker = '+', label = 'TUV jNO2')
+    
+    #Set x ticks
+    ax1.xaxis.set_major_locator(mdates.DayLocator())
+    ax1.xaxis.set_major_formatter(mdates.DateFormatter('%m-%d'))
+    # Minor ticks: every 3 hours
+    ax1.xaxis.set_minor_locator(mdates.HourLocator(byhour=[0, 3, 6, 9, 12, 15, 18, 21]))
+    # Rotate and format tick labels
+    ax1.tick_params(axis='x', which='major')
+    ax1.tick_params(axis='x', which='minor', length=3, color='gray')
+    #ax.grid(True, which='both')
+
+    ax1.set_ylabel('jNO$_2$ (s$^{-1}$)')
+    #ax1.set_xlabel('Date')
+    ax1.margins(x=0)
+    ax1.set_xlim([new_start_time, new_end_time])
+
+    ax1.legend(loc = 'upper right')
+
+    # #Mark midnight for every day
+    # midnight_vals = []
+    # for midnight_idx in range(24,len(df_ml_data.index),96):
+    #     midnight_vals.append(df_ml_data.index[midnight_idx])
+    # for day_pos in midnight_vals:
+    #     ax1.axvline(day_pos, color = 'black', linestyle = 'dotted')
+
+    plt.savefig(dirpath + 'Merge_scripts/f0am_fill/jno2_ratio_comparison.png', dpi =300)
+    plt.show()
 ###### CALL FUNCTIONS #########
-# plot_interps()
+plot_interps()
 
-# start_month = '08'
-# start_day = '05'
-# end_month = '08'
-# end_day = '07'
-# # subset_day(
-# #      date_time_start = '2024-' + start_month + '-' + start_day + ' 00:00:00', 
-# #      date_time_stop = '2024-' + end_month + '-' + end_day + ' 23:45:00',
-# #      file_subset_name = '2024' + start_month + start_day +'_' + '2024' + end_month + end_day + '_15min_CSL_mobile_lab_parked_with_interp_nell_match_with_formaldehyde_raw_noadjustment', 
-# #      var_name = 'USOS'
-# # )
-
-all_days(
-    file_name = 'alldays_15min_CSL_mobile_lab_parked_with_interp_nell_match_with_formaldehyde_raw_noadjustment',
-    var_name = 'USOS'
+start_month = '08'
+start_day = '05'
+end_month = '08'
+end_day = '07'
+subset_day(
+     date_time_start = '2024-' + start_month + '-' + start_day + ' 00:00:00', 
+     date_time_stop = '2024-' + end_month + '-' + end_day + ' 23:45:00',
+     file_subset_name = '2024' + start_month + start_day +'_' + '2024' + end_month + end_day + '_15min_CSL_mobile_lab_parked_with_interp_nell_match_new', 
+     var_name = 'USOS'
 )
+
+# all_days(
+#     file_name = 'alldays_15min_CSL_mobile_lab_parked_with_interp_nell_match_with_formaldehyde_raw_noadjustment',
+#     var_name = 'USOS'
+# )
+
+jno2_ratio_plot()

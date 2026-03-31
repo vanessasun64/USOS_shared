@@ -69,6 +69,11 @@ df_CRACMM_species_conc = pd.DataFrame()
 df_GEOSChem_species_conc = pd.DataFrame()
 df_MCM_species_conc = pd.DataFrame()
 
+df_CB6r5h_analysis = pd.DataFrame()
+df_CRACMM_analysis = pd.DataFrame()
+df_GEOSChem_analysis = pd.DataFrame()
+df_MCM_analysis = pd.DataFrame()
+
 for mech in mech_name:
     for run_day in range(4,8):
         run_date = run_month + '_' + str(run_day) + '_' + '2024'
@@ -77,18 +82,32 @@ for mech in mech_name:
         yaml_usos_full_filepath_analysis = yaml_usos_dirpath + '/' + 'Run' + run_number + '/' + mech +'/USOS_' + run_date + '_' + mech + '_' + 'Run' + run_number + '_analysis_output' + '.yaml'
         with open(yaml_usos_full_filepath_species_conc, 'r') as f:
             yaml_usos_species_conc = yaml.full_load(f)
+        with open(yaml_usos_full_filepath_analysis, 'r') as f:
+            yaml_usos_analysis = yaml.full_load(f)
 
         processed_data_species_conc = {k: [item[0] if isinstance(item, list) else item for item in v] for k, v in yaml_usos_species_conc.items()}
         df_yaml_species_conc = pd.DataFrame(processed_data_species_conc)
+
         
         if mech == 'CB6r5h':
             df_CB6r5h_species_conc = pd.concat([df_CB6r5h_species_conc, df_yaml_species_conc], ignore_index=True)
+        #     print(df_CB6r5h_analysis)
+        #     print(df_yaml_analysis)
+        #     df_CB6r5h_analysis = pd.concat([df_CB6r5h_analysis, df_yaml_analysis], ignore_index=True)
         elif mech == 'CRACMM':
             df_CRACMM_species_conc = pd.concat([df_CRACMM_species_conc, df_yaml_species_conc], ignore_index=True)
+        #     print(df_CRACMM_analysis)
+        #     #print(df_yaml_analysis)
+        #     #df_CRACMM_analysis = pd.concat([df_CRACMM_analysis, df_yaml_analysis], ignore_index=True)
+
         elif mech == 'GEOS-Chem':
             df_GEOSChem_species_conc = pd.concat([df_GEOSChem_species_conc, df_yaml_species_conc], ignore_index=True)
+        #     print(df_GEOSChem_analysis)
+        #     #df_GEOSChem_analysis = pd.concat([df_GEOSChem_analysis, df_yaml_analysis], ignore_index=True)
         elif mech == 'MCM':
             df_MCM_species_conc = pd.concat([df_MCM_species_conc, df_yaml_species_conc], ignore_index=True)
+        #     print(df_MCM_analysis)
+        #     #df_MCM_analysis = pd.concat([df_MCM_analysis, df_yaml_analysis], ignore_index=True)
         else:
             print('Mechanism name invalid')
 
@@ -279,9 +298,29 @@ def mean_bias():
         #plt.legend(loc=legend_loc)
         #plt.savefig(compare_udaq_ml_savepath + 'hawthorne_udaq_ml_' + 'mean_bias_' + SavePlotSpeciesName + '.png', dpi =300)
     plt.show()
+
+def plot_OPE_total():
+    print(len(df_CB6r5h_analysis['ope_total']))
+    print(len(df_CRACMM_analysis['ope_total']))
+    print(len(df_GEOSChem_analysis['ope_total']))
+    print(len(df_MCM_analysis['ope_total']))
     
+    # fig, ax = plt.subplots(figsize = (12,10), layout = 'tight')
+    # plt.plot(new_index, df_CB6r5h_analysis['ope_total'], label = 'CB6r5h', linewidth = 2, color = four_colorset1[0].tolist())
+    # plt.plot(new_index, df_CRACMM_analysis['ope_total'], label = 'CRACMM', linewidth = 2, color = four_colorset1[1].tolist())
+    # plt.plot(new_index, df_GEOSChem_analysis['ope_total'], label = 'GEOS-Chem', linewidth = 2, color = four_colorset1[2].tolist())
+    # plt.plot(new_index, df_MCM_analysis['ope_total'], label = 'MCM',linewidth = 2, color = four_colorset1[3].tolist())
+    # plt.legend()
+    # plt.margins(x=0,y=0)
+    # plt.xlabel('Hour')
+    # plt.ylabel('OPE')
+    # plt.ylim([0,2])
+    # plt.savefig(dirpath + '/F0AM_run_analysis/plots/ope_comparison_timeseries_08042024_08072024.png', dpi =150)
+    # plt.show()
+
 #CALL FUNCTIONS
-plot_ozone_conc_time_series()
-plot_ozone_hourly_mean()
-# plot_ozone_hourly_median()
-mean_bias()
+# plot_ozone_conc_time_series()
+# plot_ozone_hourly_mean()
+# # plot_ozone_hourly_median()
+# mean_bias()
+plot_OPE_total()

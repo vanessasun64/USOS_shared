@@ -1,0 +1,56 @@
+﻿Label,Category
+ISOP,Isoprene
+MO2,Methylperoxy radicals
+ETHP,Alkanes - Ethane
+HC3P,Alkanes
+HC5P,Alkanes
+ETEP,Alkenes - Ethene
+OLTP,Alkenes - Terminal
+OLIP,Alkenes - Internal/Olefins
+BENP,Aromatics
+TOLP,Aromatics
+XYLP,Aromatics
+EBZP,Aromatics
+APIP1,Terpenes
+APIP2,Terpenes
+APINP1,Terpenes
+APINP2,Terpenes
+LIMP1,Terpenes
+LIMP2,Terpenes
+LIMNP1,Terpenes
+LIMNP2,Terpenes
+ACO3,Peroxyacetyl radical
+RCO3,Acyl peroxy radicals
+ACTP,Acetone
+KETP,Ketones
+MACP,Isoprene
+MCP,Isoprene
+MVKP,Isoprene
+UALP,Aldehydes
+BALP,Aromatic aldehydes
+BAL1,Aromatic aldehydes
+ORAP,Acetic Acid
+OLNN,Alkenes
+OLND,Alkenes
+BDE13P,Dienes
+FURANO2,Dienes
+SESQNRO2,Terpenes
+SESQRO2,Terpenes
+VROCP6ALKP,Alkanes
+VROCP5ALKP,Alkanes
+VROCP4ALKP,Alkanes
+VROCP3ALKP,Alkanes
+VROCP2ALKP,Alkanes
+VROCP1ALKP,Alkanes
+HC10P,Alkanes
+VROCP6ALKP2,Alkanes
+VROCP5ALKP2,Alkanes
+VROCP4ALKP2,Alkanes
+VROCP3ALKP2,Alkanes
+VROCP2ALKP2,Alkanes
+VROCP1ALKP2,Alkanes
+HC10P2,Alkanes
+VROCP6AROP,Aromatics
+VROCP5AROP,Aromatics
+NAPHP,Aromatics
+STYP,Aromatics
