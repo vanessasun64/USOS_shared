@@ -53,10 +53,27 @@ def weekdays_weekends_dayofweek():
     df_saturdays = df_interp_vals.index[df_interp_vals.index.dayofweek == 5]
     df_sundays = df_interp_vals.index[df_interp_vals.index.dayofweek == 6]
     return df_weekdays, df_weekends, df_mondays, df_tuesdays, df_wednesdays, df_thursdays, df_fridays, df_saturdays, df_sundays
-# def smokedays_and_smokefreedays():
+def smokedays_and_smokefreedays():
+    #only modeled days that were:
+    # warm(not rain/cold days: 2024-08-09, 2024-08-12 to 16)
+    # days when drives weren't happening during peak photochemical hours (drives during: 2024-07-18, 07-22, 07-23, 07-26, 07-28, 07-30, 08-01, 08-03)
 
+    #compared NOx on weekend vs weekday
+
+    #smoke influenced days: elevated acetonitrile, CO, aerosols
+    #looks like should include 2024-07-31, 2024-08-02, and 2024-08-08? Nell modeled 3 smoke days (2024-07-31, 2024-08-02, 2024-08-08)
+    #2024-07-19?, 2024-07-24, 2024-07-25,  2024-07-29, 2024-08-05, 2024-08-06, 2024-08-07? Nell modeled 7 non-smoke days
+    #saw elevated CO, total VOCs, and NOx on smoke days
+    
+    #Smoke days -> NOx not elevated -> NOx lost to reservoir species [not sure if this means that when NOx isn't being elevated on smoke days, then NOx is being lost to res species?
+    # NOx is elevated on smoke days so my notes aren't very clear]
+    #PAN also elevated (but maybe look at all NOx reservoir species? They should be higher when NOx is lower?)
+
+
+#Get function outputs as variables to put into dictionary
 df_weekdays, df_weekends, df_mondays, df_tuesdays, df_wednesdays, df_thursdays, df_fridays, df_saturdays, df_sundays = weekdays_weekends_dayofweek()
 
+#Make dictionary for whole campaign
 whole_campaign_dict = {
     'Exceedance_days': mda8_calculate(save_filename = 'full_campaign_rolling_8hr_avg_ozone'),
     'Weekdays': df_weekdays,
