@@ -256,6 +256,7 @@ def choose_smarts_classifications():
     pans_species_names = df_updated_info.loc[(df_updated_info['PANs'] > 0) & (df_updated_info['Is_Radical'] == 0)]
     non_pan_peroxy_nitrates = df_updated_info.loc[(df_updated_info['RO2NO2s'] > 0) & (df_updated_info['Is_Radical'] == 0)]
     total_sum_nitrates = pd.concat([alkyl_nitrates_excluding_peroxy_nitrates_and_pans, pans_species_names, non_pan_peroxy_nitrates], ignore_index = True)
+    carboxylic_acids = df_updated_info.loc[(df_updated_info['Carboxylic_Acids'] > 0)]
 
     nitro_cresols =  df_updated_info.loc[(df_updated_info['Nitros'] > 0) & (df_updated_info['Phenols'] > 0) & (df_updated_info['Methyl'] > 0) & (df_updated_info['Is_Radical'] == 0)]
     nitro_phenols =  df_updated_info.loc[(df_updated_info['Nitros'] > 0) & (df_updated_info['Phenols'] > 0) & (df_updated_info['Is_Radical'] == 0) & (df_updated_info['Methyl'] == 0)]
@@ -272,7 +273,8 @@ def choose_smarts_classifications():
         'RONO2s': alkyl_nitrates_excluding_peroxy_nitrates_and_pans['Name'].values,
         'PANs': pans_species_names['Name'].values,
         'RO2NO2s': non_pan_peroxy_nitrates['Name'].values,
-        'Total_sum_nitrates': total_sum_nitrates['Name'].values
+        'Total_sum_nitrates': total_sum_nitrates['Name'].values,
+        'Carboxylic_acids': carboxylic_acids['Name'].values
     }
     print(den_groupings)
 
@@ -604,7 +606,6 @@ def precursor_ro2_classification():
 #     print(len(nitrates_and_nox_reservoirs))
 #     
 		
-    
 #CALL FUNCTIONS
 get_info_on_missing_species()
 subtract_mcm_species_minus_extra()
