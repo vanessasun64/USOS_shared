@@ -65,7 +65,8 @@ smart_groups= dict({
     'All_OHs':	'[#6]-[#8X2H1]',
     'Hydroxyls':	'[$([#8X2H]);!$([#8X2H][#6X3](=[#8]));!$([#8X2H]-[$([#8]),$([#16](=[#8])(=[#8]))])]',
     'Enols':	'[$([#6](=[#6])(-[#8X2H1]));!$([$([$(c1ccccc1)](-[#8X2H1]));!$([c](=[#8])(-[#8X2H1]))])]',
-    'Phenols':	'[$([$(c1ccccc1)](-[#8X2H1]));!$([c](=[#8])(-[#8X2H1]))]',
+    #'Phenols': '[c][OX2H]',
+    'Phenols': '[$([$(c1ccccc1)](-[#8X2H1]));!$([c](=[#8])(-[#8X2H1]))]', # -OH on benzene ring (but no carboxylic acids)
     'Thiols':	'[#6]-[#16X2H1]',
     'Dihydroxys':	'[#6X4;!$([#6]=[#8])](-[#8X2H1])(-[#8X2H1])',
     'Aliphatic_Alcohols':	'[$([CX4R0](-[#8X2H1]));!$([#6X3;!$([#6X3H])](=[#8])[#8X2H])!$([#6X4;!$([#6]=[#8])](-[#8X2H1])(-[#8X2H1]))]',
@@ -77,11 +78,40 @@ smart_groups= dict({
     'S':	'[#16]',
     'Cl':	'[#17]',
     'Br':	'[#35]',
-    'Toluene': '[$([$(Cc1ccccc1)])]',
-    'BenzeneRing': '[$([$(c1ccccc1)])]',
-    'Methyl': '[#6](-[#8])(-[#8])(-[#8])'
-
+    'Toluene': '[$(Cc1ccccc1)]',
+    'BenzeneRing': 'c1ccccc1',
+    'Methyl': '[#6](-[#1])(-[#1])(-[#1])'
 })
+
+
+def get_rdkit_frags(df_in, use, molec): 
+    df_out=pd.DataFrame()
+    df_out[use]= df_in[use].copy()
+    
+    fr_cols=['fr_Hydroxyls','fr_Carbonyls','fr_Carboxylic_Acids','fr_Aldehydes',
+    'fr_Esters','fr_Ketones','fr_Epoxides','fr_Nitros','fr_Ethers','fr_Phenols',
+    'fr_Thiols']
+    
+    for col in fr_cols: df_out[col]=list(np.full([len(df_out),1], np.nan)) 
+    
+    for  i, sp in enumerate(df_in[use]): 
+        molec = Chem.inchi.MolFromInchi(df_in.loc[i,'InChI'],sanitize=False, removeHs=False,logLevel=None)  #Turn this molec it into an RDKit molecule object. 
+        
+        if molec is not None:
+            molec.UpdatePropertyCache(strict=True)  # for radicals!
+            
+        df_out.at[i,'fr_Hydroxyls'] = Fragments.fr_Al_OH(molec) # Number of aliphatic hydroxyl groups
+        df_out.at[i,'fr_Carbonyls'] = Fragments.fr_C_O(molec) # Number of Carbonyl O 
+        df_out.at[i,'fr_Carboxylic_Acids'] = Fragments.fr_COO2(molec) #N umber of carboxylic acids 
+        df_out.at[i,'fr_Aldehydes']=Fragments.fr_aldehyde(molec) # Number of aldehydes
+        df_out.at[i,'fr_Esters']=Fragments.fr_ester(molec) # Number of esters
+        df_out.at[i,'fr_Ketones']=Fragments.fr_ketone(molec) # Number of ketones
+        df_out.at[i,'fr_Nitros']= Fragments.fr_nitro(molec) # Number of nitro groups
+        df_out.at[i,'fr_Ethers']=Fragments.fr_ether(molec) # Number of ether oxygens (including phenoxy)
+        df_out.at[i, 'fr_Phenols']=Fragments.fr_phenol_noOrthoHbond(molec) # Number of phenolic OH excluding ortho intramolecular Hbond substituents
+        df_out.at[i, 'fr_Thiols']=Fragments.fr_SH(molec) # Number of thiol groups
+    
+    return df_out
 
 #Get the information for all the species in the NOAA BB and Halogens Sherwen mechanism that aren't in the MCM Species List from Jessica
 def get_info_on_missing_species():
@@ -167,9 +197,11 @@ def subtract_mcm_species_minus_extra():
     #dupes = df_mcm_bb_halogens_sherwen_total[df_mcm_bb_halogens_sherwen_total["Name"].duplicated(keep=False)]
     df_mcm_bb_halogens_sherwen_total = df_mcm_bb_halogens_sherwen_total.drop_duplicates(subset="Name", ignore_index=True)
     df_mcm_bb_halogens_sherwen_total.to_excel(dirpath + 'Mechanism_info/mcm_species_bb_sherwen_total_info.xlsx')
-def group_all_species(df_in, use, groups):
-    df_out=pd.DataFrame(); df_out[use]= df_in[use].copy()
+def group_all_species(df_in, use, smart_groups):
+    df_out=pd.DataFrame()
+    df_out[use]= df_in[use].copy()
     df_out['Epoxides']=list(np.full([len(df_out),1], np.nan)) 
+    print('df_in: ', df_in)
     # df_out['Toluene']=list(np.full([len(df_out),1], np.nan)) 
     # df_out['BenzeneRing']=list(np.full([len(df_out),1], np.nan)) 
     # df_out['Methyl']=list(np.full([len(df_out),1], np.nan)) 
@@ -194,7 +226,7 @@ def group_all_species(df_in, use, groups):
                 df_out.at[i,key]=np.int64(len(inds))
                 
                 # # Use RDKit to get fragments(not always as specific as our group matches...) 
-                # rd_frags=get_rdkit_frags(molec)
+                #rd_frags=get_rdkit_frags(df_in, use, molec)
             
             df_out.at[i,'Epoxides'] = Fragments.fr_epoxide(molec) # Number of epoxide rings 
             # df_out.at[i, 'Toluene'] = Fragments.fr_toluene(molec)
@@ -205,8 +237,8 @@ def group_all_species(df_in, use, groups):
     Organic_Acid_OHs=['Enols','Phenols','Thiols', 'Carboxylic_Acids']
     df_out['Organic_Acid_OHs']=df_out[Organic_Acid_OHs].sum(axis=1)
 
-    print(df_out)
-    print(df_allspecies)
+    print('df_out: ', df_out)
+    print('df_allspecies: ', df_allspecies)
 
     #If we merge, there will be a double counting of some of the parameters like "Is_Radical". Instead, we replace the older
     #duplicate columns with the newer calculations, just in case the older code is wrong. We'll have all the older and newer
@@ -223,7 +255,7 @@ def group_all_species(df_in, use, groups):
     df_merged_total = (
         df_allspecies
         .merge(
-            df_out[['Name'] + duplicate_columns + ['Toluene'] + ['BenzeneRing'] + ['Methyl']],
+            df_out[['Name'] + duplicate_columns  + ['Toluene'] + ['BenzeneRing'] + ['Methyl']],
             on='Name',
             how='left',
             suffixes=('', '_right')
@@ -234,9 +266,10 @@ def group_all_species(df_in, use, groups):
         df_merged_total[col] = df_merged_total[f'{col}_right']
         df_merged_total.drop(columns=f'{col}_right', inplace=True)
 
-    print(df_merged_total)
+    print('df_merged_total: ', df_merged_total)
     print(list(df_merged_total.columns.values))
     df_merged_total.to_excel(dirpath + 'Mechanism_info/mcm_allspecies_bb_sherwen_info_updated.xlsx')
+
 def choose_smarts_classifications():
     df_updated_info = pd.read_excel(dirpath + 'Mechanism_info/mcm_allspecies_bb_sherwen_info_updated.xlsx', index_col=0)
 
@@ -257,16 +290,55 @@ def choose_smarts_classifications():
     non_pan_peroxy_nitrates = df_updated_info.loc[(df_updated_info['RO2NO2s'] > 0) & (df_updated_info['Is_Radical'] == 0)]
     total_sum_nitrates = pd.concat([alkyl_nitrates_excluding_peroxy_nitrates_and_pans, pans_species_names, non_pan_peroxy_nitrates], ignore_index = True)
     carboxylic_acids = df_updated_info.loc[(df_updated_info['Carboxylic_Acids'] > 0)]
+    hydroperoxides = df_updated_info.loc[(df_updated_info['HydroPeroxides'] > 0)]
 
-    nitro_cresols =  df_updated_info.loc[(df_updated_info['Nitros'] > 0) & (df_updated_info['Phenols'] > 0) & (df_updated_info['Methyl'] > 0) & (df_updated_info['Is_Radical'] == 0)]
+    nitro_cresols =  df_updated_info.loc[(df_updated_info['Nitros'] > 0) & (df_updated_info['Phenols'] > 0) & (df_updated_info['Is_Radical'] == 0) & (df_updated_info['Methyl'] > 0)]
     nitro_phenols =  df_updated_info.loc[(df_updated_info['Nitros'] > 0) & (df_updated_info['Phenols'] > 0) & (df_updated_info['Is_Radical'] == 0) & (df_updated_info['Methyl'] == 0)]
-    nitro_toluene =  df_updated_info.loc[(df_updated_info['Toluene'] > 0) & (df_updated_info['Nitros'] > 0) & (df_updated_info['Is_Radical'] == 0)]
-    nitro_benzene =  df_updated_info.loc[(df_updated_info['BenzeneRing'] > 0) & (df_updated_info['Nitros'] > 0) & (df_updated_info['Is_Radical'] == 0) & (df_updated_info['Phenols'] == 0)]
+    nitro_toluene =  df_updated_info.loc[(df_updated_info['Nitros'] > 0) & (df_updated_info['Toluene'] > 0) &  (df_updated_info['Is_Radical'] == 0)]
+    nitro_benzene =  df_updated_info.loc[(df_updated_info['Nitros'] > 0) & (df_updated_info['BenzeneRing'] > 0) &  (df_updated_info['Is_Radical'] == 0) & (df_updated_info['Phenols'] == 0)] #May also have to set condition of no toluene
     print('Nitro Cresols:', nitro_cresols)
     print('Nitro Phenols:', nitro_phenols)
     print('Nitro Toluene:', nitro_toluene)
     print('Nitro Benzene:', nitro_benzene)
-    
+
+    #Alfie counts any carbonyls and any alcohols as OVOCs. 
+    #Our carbonyls functional SMARTs includes all carbonyls including carboxylic acids. Since we have a separate depositional velocity, we want all the carbonyls excluding carboxylic acids.
+    carbonyls_group = (df_updated_info['Carbonyls'] > 0) & (df_updated_info['Carboxylic_Acids'] == 0)
+    dihydroxys_group = (df_updated_info['Dihydroxys'] > 0)
+    aliphatic_alcohols_group = (df_updated_info['Aliphatic_Alcohols'] > 0)
+    other_alcohols_group = (df_updated_info['Other_Alcohols'] > 0)
+    # ovocs = df_updated_info.loc[(carbonyls_group) | (dihydroxys_group) | (aliphatic_alcohols_group) | (other_alcohols_group)]
+    ovocs = df_updated_info.loc[((df_updated_info['Carbonyls'] > 0) & (df_updated_info['Carboxylic_Acids'] == 0)) | ((df_updated_info['Dihydroxys'] > 0)) | ((df_updated_info['Aliphatic_Alcohols'] > 0)) | ((df_updated_info['Other_Alcohols'] > 0))]
+
+    # Check for duplicates from carbonyls, dihidroxys, aliphatic alcohols, and other alcohols setup
+    print('OVOCs: ', ovocs)
+    # duplicates_carbonyls_alcohols = [i for i in set(ovocs) if ovocs.count(i) > 1]
+    # print('duplicates_carbonyls_alcohols: ', duplicates_carbonyls_alcohols)
+
+    # # Oxidized VOCs are all the species that are not primary, not inorganic, not radicals, not RO2s, and not duplicates
+    # # STEP 1: Determine Primary VOCs (so that we can subtract them from the list of total species)
+    # # Used the primary VOCs exporting from the MCM website to primary_vocs_and_precursors_mcm.xlsx file, along with the precursors in the function precursor_ro2_classification() below (with alphabetized sorting)
+    # # Added the furan relevant primary VOCs to the MCM website's VOC precursors to make primary_vocs_mcm_list.csv and primary_vocs_mcm_list.txt
+    # # where the CSV file is a column with heading MCM_primary_with_furans and the text file is a list called primary_vocs_mcm_list
+
+    # with open(dirpath + 'Mechanism_info/species_grouping/ovocs/primary_vocs_mcm_list.txt') as f: #read primary vocs
+    #     lines = f.readlines()
+
+    # # This primary VOCs list unfortunately includes a few species that we want in our OVOCs list. The OVOCs from Rickly et al., 2023 include:
+    # # Acetaldehyde, Acrolein, Formaldehyde, Ethanol, Formic Acid, Butanedione [not identified as primary VOC by MCM website], Glycolaldehyde [not identified as primary VOC by MCM website], 
+    # # Isopropanol, MACR, Methyl acetate, Methyl ethyl ketone, Methanol, MVK
+
+    # rickly_ovocs_to_include = ['CH3CHO', 'ACR', 'HCHO', 'C2H5OH', 'HCOOH', 'IPROPOL', 'MACR', 'METHACET', 'MEK', 'CH3OH', 'MVK']
+
+    # # Exclude all PANs and peroxy nitrates
+    # pans_species_names
+    # non_pan_peroxy_nitrates
+    # alkyl_nitrates_excluding_peroxy_nitrates_and_pans
+
+    # # Exclude duplicates, as in anything in the other categories of 
+    # hydroperoxides
+    # carboxylic_acids    
+
 
     #Creates dictionary by passing Series objects as values
     den_groupings = {
@@ -274,13 +346,13 @@ def choose_smarts_classifications():
         'PANs': pans_species_names['Name'].values,
         'RO2NO2s': non_pan_peroxy_nitrates['Name'].values,
         'Total_sum_nitrates': total_sum_nitrates['Name'].values,
-        'Carboxylic_acids': carboxylic_acids['Name'].values
+        'Carboxylic_acids': carboxylic_acids['Name'].values,
+        'HydroPeroxides': hydroperoxides['Name'].values
     }
     print(den_groupings)
 
     # Save the dictionary in an output .mat file: 
-    savemat(dirpath + "Mechanism_info/species_grouping/MCM_nitrates.mat", {"MCM_nitrates": den_groupings})
-
+    #savemat(dirpath + "Mechanism_info/species_grouping/MCM_species_classifications.mat", {"MCM_species_classifications": den_groupings})
 def precursor_ro2_classification():
     df_updated_info = pd.read_excel(dirpath + 'Mechanism_info/mcm_allspecies_bb_sherwen_info_updated.xlsx', index_col=0)
     #Now we want to create groupings for the precursor species for RO2s. 
@@ -309,7 +381,9 @@ def precursor_ro2_classification():
     'EBENZ', 'M23C4', 'CH3CCL3', 'NEOP', 'CDICLETH', 'CHEX', 'IPBENZ', 'TBUT2ENE', 
     'M2PE', 'THEX2ENE', 'BPINENE', 'LIMONENE', 'NC12H26', 'ME3BUT1ENE', 'M2F', 
     'ETBE', 'METHTOL', 'ME2BUT1ENE', 'BUOX2ETOH']
+    print('sorted: ', sorted(precursors_listed))
     #endregion
+
 
     #All groupings:
     # biomass_burning_grouping, xylene_grouping, eth_benz_grouping, methbenz_grouping, toluene_grouping, other_alkyl_benz_grouping, styrene_grouping, summed_aromatic_grouping, traffic_aromatic_grouping, 
@@ -612,6 +686,9 @@ subtract_mcm_species_minus_extra()
 
 path_all_species = dirpath + 'Mechanism_info/mcm_species_bb_sherwen_total_info.xlsx'
 df_allspecies = pd.read_excel(path_all_species, index_col = 0)
-group_all_species(df_allspecies, 'Name', smart_groups)
+group_all_species(
+    df_in = df_allspecies, 
+    use = 'Name', 
+    smart_groups = smart_groups)
 
 choose_smarts_classifications()
