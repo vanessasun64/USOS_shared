@@ -119,7 +119,7 @@ groups= dict({
     'Other_Alcohols': ''.join(['[$([#6;'
         '!$([$([#6](=[#6])(-[#8X2H1]));!$([$([$(c1ccccc1)](-[#8X2H1]));!$([c](=[#8])(-[#8X2H1]))])]);' # Not Carbon with a Phenol
         '!$([#6]-[#16X2H1]);' # Not carbon thiol
-        '!$([#6X4;!$([#6]=[#8])](-[#8X2H1])(-[#8X2H1]))]' #not a dihydroxy OH carbon. 
+        '!$([#6X4;!$([#6]=[#8])](-[#8X2H1])(-[#8X2H1]))];' #not a dihydroxy OH carbon. 
         '[#8X2H1]);' # But that carbon does gotta be attached to an OH group somewhere. 
         '!$([$([$(c1ccccc1)](-[#8X2H1]));!$([c](=[#8])(-[#8X2H1]))]);' #no phenol 
         '!$([#6X3;!$([#6X3H])](=[#8])[#8X2H]);' # no carb acid
