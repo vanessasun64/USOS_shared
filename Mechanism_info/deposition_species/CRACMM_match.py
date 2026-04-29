@@ -1,11 +1,11 @@
 import pandas as pd # ok with rdkit 
 import pickle
-# import numpy as np
+import numpy as np
 # import ast
 import sys
 from rdkit import Chem
 
-# from rdkit.Chem import  Descriptors, rdMolDescriptors, Fragments
+from rdkit.Chem import  Descriptors, rdMolDescriptors, Fragments
 from scipy.io import savemat
 from collections import OrderedDict, defaultdict
 import csv
@@ -80,32 +80,77 @@ def group_all_species(df_in, smart_groups):
     df_out['OM to OC (g/g)'] = df_in['OM to OC (g/g)']
 
     df_out['Epoxides']=list(np.full([len(df_out),1], np.nan)) 
-
     for i, species in enumerate(df_allspecies['Species']):
-        print(i, ' Species: ', df_allspecies.loc[i,'Species']) # Print off name of what you're parsing. 
-        print('SMILES: ', df_in.loc[i, 'SMILES'])
-        df_out.at[i, 'SMILES'] = df_in.loc[i, 'SMILES']
-        molec = Chem.MolFromSmiles(df_in.loc[i, 'SMILES'])  #Turn this molec it into an RDKit molecule object. 
-        #molec = Chem.AddHs(molec)
-        #molec = Chem.SetAromaticity(molec)
-        if molec is not None:
-            molec.UpdatePropertyCache(strict=True)  # for radicals!
-            for key in smart_groups:  # Loop over every functional group you want to search for. 
-                print('Obtaining info on Functional Group ', key, '\n')
-                # Turn the SMARTs string for this functional group into a RDKit molec fragment. 
-                frag = Chem.MolFromSmarts(smart_groups[key])
+        if df_in.loc[i, 'SMILES'] is not np.nan:
+            print(i, ' Species: ', df_allspecies.loc[i,'Species']) # Print off name of what you're parsing. 
+            print('SMILES: ', df_in.loc[i, 'SMILES'])
+            df_out.at[i, 'SMILES'] = df_in.loc[i, 'SMILES']
+            molec = Chem.MolFromSmiles(df_in.loc[i, 'SMILES'])  #Turn this molec it into an RDKit molecule object. 
+            #molec = Chem.AddHs(molec)
+            #molec = Chem.SetAromaticity(molec)
+            if molec is not None:
+                molec.UpdatePropertyCache(strict=True)  # for radicals!
+                for key in smart_groups:  # Loop over every functional group you want to search for. 
+                    print('Obtaining info on Functional Group ', key, '\n')
+                    # Turn the SMARTs string for this functional group into a RDKit molec fragment. 
+                    frag = Chem.MolFromSmarts(smart_groups[key])
+                    
+                    # Get a list of the indices of atom #s in molecule that match this fragment 
+                    inds=list(molec.GetSubstructMatches(frag))
+                    
+                    # Save the len of this list as the # of functional group matches you found!)
+                    df_out.at[i,key]=np.int64(len(inds))
                 
-                # Get a list of the indices of atom #s in molecule that match this fragment 
-                inds=list(molec.GetSubstructMatches(frag))
-                
-                # Save the len of this list as the # of functional group matches you found!)
-                df_out.at[i,key]=np.int64(len(inds))
-            
-                # # Use RDKit to get fragments(not always as specific as our group matches...) 
-                # rd_frags=get_rdkit_frags(df_in, use, molec)
+                    # # Use RDKit to get fragments(not always as specific as our group matches...) 
+                    # rd_frags=get_rdkit_frags(df_in, use, molec)
 
-            df_out.at[i, 'Epoxides'] = Fragments.fr_epoxide(molec) # Number of epoxide rings 
-
+                df_out.at[i, 'Epoxides'] = Fragments.fr_epoxide(molec) # Number of epoxide rings 
+        else:
+            print('No SMILES for ', species)
+            df_out.at[i, 'SMILES'] = np.nan
+            df_out.at[i, 'Is_Radical'] = np.nan
+            df_out.at[i, 'RO2s'] = np.nan
+            df_out.at[i, 'ROs'] = np.nan
+            df_out.at[i, 'Acyl_RO2s'] = np.nan
+            df_out.at[i, 'Acyl_ROs'] = np.nan
+            df_out.at[i, 'All_NO3s'] = np.nan
+            df_out.at[i, 'Non_PAN_NO3s'] = np.nan
+            df_out.at[i, 'Tertiary_NO3s'] = np.nan
+            df_out.at[i, 'RONO2s'] = np.nan
+            df_out.at[i, 'RO2NO2s'] = np.nan
+            df_out.at[i, 'PANs'] = np.nan
+            df_out.at[i, 'Nitros'] = np.nan
+            df_out.at[i, 'Peroxides'] = np.nan
+            df_out.at[i, 'OrganicPeroxides'] = np.nan
+            df_out.at[i, 'HydroPeroxides'] = np.nan
+            df_out.at[i, 'Peracids'] = np.nan
+            df_out.at[i, 'Carbonyls'] = np.nan
+            df_out.at[i, 'Carboxylic_Acids'] = np.nan
+            df_out.at[i, 'Ketones'] = np.nan
+            df_out.at[i, 'Aldehydes'] = np.nan
+            df_out.at[i, 'Esters'] = np.nan
+            df_out.at[i, 'Ethers'] = np.nan
+            df_out.at[i, 'Carbonates'] = np.nan
+            df_out.at[i, 'All_OHs'] = np.nan
+            df_out.at[i, 'Hydroxyls'] = np.nan
+            df_out.at[i, 'Enols'] = np.nan
+            df_out.at[i, 'Phenols'] = np.nan
+            df_out.at[i, 'Thiols'] = np.nan
+            df_out.at[i, 'Dihydroxys'] = np.nan
+            df_out.at[i, 'Aliphatic_Alcohols'] = np.nan
+            df_out.at[i, 'Other_Alcohols'] = np.nan
+            df_out.at[i, 'C'] = np.nan
+            df_out.at[i, 'H'] = np.nan
+            df_out.at[i, 'O'] = np.nan
+            df_out.at[i, 'N'] = np.nan
+            df_out.at[i, 'S'] = np.nan
+            df_out.at[i, 'Cl'] = np.nan
+            df_out.at[i, 'Br'] = np.nan
+            df_out.at[i, 'Epoxides'] = np.nan
+            df_out.at[i, 'Toluene'] = np.nan
+            df_out.at[i, 'Benzene'] = np.nan
+            df_out.at[i, 'Methyl'] = np.nan
+            df_out.at[i, 'Cresol'] = np.nan
     # Add a column that has the number of OH groups on a compounds that might cause it to be an organic acid... 
     Organic_Acid_OHs=['Enols', 'Phenols', 'Thiols', 'Carboxylic_Acids']
     df_out['Organic_Acid_OHs']=df_out[Organic_Acid_OHs].sum(axis=1)
@@ -287,7 +332,7 @@ def choose_smarts_classifications():
     }
 
     # Save the dictionary in an output .mat file: 
-    savemat('CRACMM_species_classifications.mat", {"CRACMM_species_classifications": den_groupings})
+    savemat("CRACMM_species_classifications.mat", {"CRACMM_species_classifications": den_groupings})
     
     return den_groupings
 
@@ -379,12 +424,12 @@ def deposition_file_CRACMM(den_groupings):
 
 ### CALL FUNCTIONS ###
 
-path_all_species = '../CRACMM/CRACMM_20251014update/metadata/cracmm3m/cracmm3m_metadata.csv'
-df_allspecies = pd.read_csv(path_all_species)
+# path_all_species = '../../CRACMM/CRACMM_20251014update/metadata/cracmm3m/cracmm3m_metadata.csv'
+# df_allspecies = pd.read_csv(path_all_species)
 
-group_all_species(
-    df_in = df_allspecies, 
-    smart_groups = smart_groups)
+# group_all_species(
+#     df_in = df_allspecies, 
+#     smart_groups = smart_groups)
 
 den_groupings = choose_smarts_classifications()
 deposition_file_CRACMM(den_groupings)

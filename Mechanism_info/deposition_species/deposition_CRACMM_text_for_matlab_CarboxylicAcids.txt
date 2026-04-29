@@ -1,0 +1,57 @@
+%----------------------------------------------
+% Carboxylic Acids
+%----------------------------------------------
+i=i+1;
+Rnames{i} = 'ORA2 = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ORA2';
+fORA2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ORAP = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ORAP';
+fORAP(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ROCN1OXY1 = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ROCN1OXY1';
+fROCN1OXY1(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ROCN1OXY3 = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ROCN1OXY3';
+fROCN1OXY3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ROCP0OXY2 = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ROCP0OXY2';
+fROCP0OXY2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ROCP0OXY4 = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ROCP0OXY4';
+fROCP0OXY4(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ROCP1OXY1 = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ROCP1OXY1';
+fROCP1OXY1(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ROCP2OXY2 = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ROCP2OXY2';
+fROCP2OXY2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ROCP4OXY2 = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ROCP4OXY2';
+fROCP4OXY2(i) = -1;
+

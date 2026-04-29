@@ -1,0 +1,57 @@
+%----------------------------------------------
+% RONO2s (Organic nitrates)
+%----------------------------------------------
+i=i+1;
+Rnames{i} = 'ADCN = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ADCN';
+fADCN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'BRNO3 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'BRNO3';
+fBRNO3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'CLNO3 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'CLNO3';
+fCLNO3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'HONIT = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'HONIT';
+fHONIT(i) = -1;
+
+i=i+1;
+Rnames{i} = 'INO3 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'INO3';
+fINO3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ISON = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ISON';
+fISON(i) = -1;
+
+i=i+1;
+Rnames{i} = 'N2O5 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'N2O5';
+fN2O5(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ONIT = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ONIT';
+fONIT(i) = -1;
+
+i=i+1;
+Rnames{i} = 'TRPN = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'TRPN';
+fTRPN(i) = -1;
+
