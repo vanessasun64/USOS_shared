@@ -505,6 +505,7 @@ def choose_smarts_classifications():
     # Save the dictionary in an output .mat file: 
     savemat(dirpath + "Mechanism_info/species_grouping/MCM_species_classifications.mat", {"MCM_species_classifications": den_groupings})
     
+    return den_groupings
 def precursor_ro2_classification():
     df_updated_info = pd.read_excel(dirpath + 'Mechanism_info/mcm_allspecies_bb_sherwen_info_updated.xlsx', index_col=0)
     #Now we want to create groupings for the precursor species for RO2s. 
@@ -827,6 +828,100 @@ def precursor_ro2_classification():
     # print(diff_ro2_lists)
     #Only GUAIACOLO is different between the lists. I think that whoever made the mechanism file put GUAIACOLO as an RO2 incorrectly? So we are good to use our ro2_species_smarts_list
 
+def deposition_file_MCM(den_groupings):
+    #Copy and paste the text file made with this function to use in the deposition_MCM.m file
+    #make a text file
+
+    with open(dirpath + 'Mechanism_info/deposition_MCM_text_for_matlab.txt', 'w', encoding="utf-8") as f:
+        #Organic Hydroperoxides: ROOH
+        f.write('%----------------------------------------------\n')
+        f.write('% Organic Hydroperoxides\n')
+        f.write('%----------------------------------------------\n')
+        for rooh_spec in den_groupings['Hydroperoxides_dep']:
+            f.write('i=i+1;\n')
+            rooh_rnames_string = "Rnames{i} = '" + str(rooh_spec) + " = DEP';\n"
+            f.write(rooh_rnames_string)
+
+            f.write('k(:,i) = ROOH_dep./(BLH_cm); %  s-1\n')
+
+            rooh_gstr_string = "Gstr{i,1} = '" + str(rooh_spec) + "';\n"
+            f.write(rooh_gstr_string)
+
+            rooh_fspecies_string = "f" + str(rooh_spec) + "(i) = -1;\n\n"
+            f.write(rooh_fspecies_string)
+
+        #RONO2s
+        f.write('%----------------------------------------------\n')
+        f.write('% RONO2s (Organic nitrates)\n')
+        f.write('%----------------------------------------------\n')
+
+        for rono2_spec in den_groupings['RONO2s_dep']:
+            f.write('i=i+1;\n')
+            rono2_rnames_string = "Rnames{i} = '" + str(rono2_spec) + " = DEP';\n"
+            f.write(rono2_rnames_string)
+
+            f.write('k(:,i) = RONO2_dep./(BLH_cm); %  s-1\n')
+
+            rono2_gstr_string = "Gstr{i,1} = '" + str(rono2_spec) + "';\n"
+            f.write(rono2_gstr_string)
+
+            rono2_fspecies_string = "f" + str(rono2_spec) + "(i) = -1;\n\n"
+            f.write(rono2_fspecies_string)
+
+        #CarboxylicAcids
+        f.write('%----------------------------------------------\n')
+        f.write('% Carboxylic Acids\n')
+        f.write('%----------------------------------------------\n')
+
+        for carboxylicacids_spec in den_groupings['CarboxylicAcids_dep']:
+            f.write('i=i+1;\n')
+            carboxylicacids_rnames_string = "Rnames{i} = '" + str(carboxylicacids_spec) + " = DEP';\n"
+            f.write(carboxylicacids_rnames_string)
+
+            f.write('k(:,i) = RCOOH_dep./(BLH_cm); %  s-1\n')
+
+            carboxylicacids_gstr_string = "Gstr{i,1} = '" + str(carboxylicacids_spec) + "';\n"
+            f.write(carboxylicacids_gstr_string)
+
+            carboxylicacids_fspecies_string = "f" + str(carboxylicacids_spec) + "(i) = -1;\n\n"
+            f.write(carboxylicacids_fspecies_string)
+
+        #OVOCs
+        f.write('%----------------------------------------------\n')
+        f.write('% OVOCs (Oxidized VOCs)\n')
+        f.write('%----------------------------------------------\n')
+        for ovocs_spec in den_groupings['OVOCs']:
+            f.write('i=i+1;\n')
+            ovocs_rnames_string = "Rnames{i} = '" + str(ovocs_spec) + " = DEP';\n"
+            f.write(ovocs_rnames_string)
+
+            f.write('k(:,i) = OVOC_dep./(BLH_cm); %  s-1\n')
+
+            ovocs_gstr_string = "Gstr{i,1} = '" + str(ovocs_spec) + "';\n"
+            f.write(ovocs_gstr_string)
+
+            ovocs_fspecies_string = "f" + str(ovocs_spec) + "(i) = -1;\n\n"
+            f.write(ovocs_fspecies_string)
+        
+        print('Saved text file to filepath: ', dirpath + 'Mechanism_info/deposition_MCM_text_for_matlab.txt')
+
+def missing_species():
+    with open("mcm_species_bb.txt", "r") as f:
+        text = f.read()
+
+    # Remove newlines
+    text = text.replace("\n", " ")
+    #split on ;
+    rxns_file_species = [x.strip().strip("'") for x in text.split(";") if x.strip()]
+    print('species in MCMv331_AllRxns_NOAABB.m: ', len(rxns_file_species))
+
+    df_updated_info = pd.read_excel(dirpath + 'Mechanism_info/mcm_allspecies_bb_sherwen_info_updated.xlsx', index_col=0)
+
+    text_set = set(rxns_file_species)
+    df_set = set(df_updated_info["Name"][0:5880].str.strip())
+
+    missing_in_df = text_set - df_set
+    print(missing_in_df)
 
 #print(nitrates_and_nox_reservoirs)
 #     print(len(nitrates_and_nox_reservoirs))
@@ -843,4 +938,6 @@ def precursor_ro2_classification():
 #     use = 'Name', 
 #     smart_groups = smart_groups)
 
-choose_smarts_classifications()
+# den_groupings = choose_smarts_classifications()
+# deposition_file_MCM(den_groupings)
+missing_species()
