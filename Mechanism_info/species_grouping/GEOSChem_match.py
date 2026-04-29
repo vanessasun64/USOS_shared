@@ -1,17 +1,19 @@
 import pandas as pd # ok with rdkit 
 import pickle
 import numpy as np
-import ast
+# import ast
 import sys
 # from rdkit import Chem
 
 # from rdkit.Chem import  Descriptors, rdMolDescriptors, Fragments
-from scipy.io import savemat
+#from scipy.io import savemat
 from collections import OrderedDict, defaultdict
 import csv
 import re
 
 dirpath = '/uufs/chpc.utah.edu/common/home/haskins-group1/users/vsun/USOS_shared/'
+
+
 smart_groups= dict({
     'Is_Radical':	'[#8H0;v1+0]',
     'RO2s':	'[#6,S;!$([#6](=[#8]))]~[#8][#8;X1v1+0]',
@@ -162,7 +164,8 @@ def group_all_species(df_in, use, smart_groups):
     print('Saved spreadsheet for manual review: ', dirpath + 'Mechanism_info/geoschem_manual_review_species_rdkit.xlsx')
 
 def choose_smarts_classifications():
-    df_updated_info = pd.read_excel(dirpath + 'Mechanism_info/Mechanism_info/geoschem_allspecies_info_rdkit.xlsx', index_col=0)
+    # df_updated_info = pd.read_excel(dirpath + 'Mechanism_info/geoschem_allspecies_info_rdkit.xlsx', index_col=0)
+    df_updated_info = pd.read_excel('../geoschem_allspecies_info_rdkit.xlsx', index_col=0)
 
     #Get species for groupings needed for deposition files in MCM.
     #These are RONO2s, carboxylic acids, hydroperoxides, ovocs
@@ -176,7 +179,7 @@ def choose_smarts_classifications():
     ovocs = df_updated_info.loc[((df_updated_info['Carbonyls'] > 0) & (df_updated_info['Carboxylic_Acids'] == 0)) | ((df_updated_info['Dihydroxys'] > 0)) | ((df_updated_info['Aliphatic_Alcohols'] > 0)) | ((df_updated_info['Other_Alcohols'] > 0))]
 
     # Check for duplicates in the OVOC list from carbonyls, dihidroxys, aliphatic alcohols, and other alcohols setup
-    ovocs_arr = ovocs['Name'].values
+    ovocs_arr = ovocs['NAME'].values
     print('OVOCs: ', ovocs_arr)
 
     u, c = np.unique(ovocs_arr, return_counts=True)
@@ -185,9 +188,9 @@ def choose_smarts_classifications():
     #We have no duplicates from the carbonyls and alcohols list. 
 
     # Now we want to check if there are any duplicates in multifunctional species. We get arrays of all the species in each grouping.
-    rono2_arr = alkyl_nitrates_excluding_peroxy_nitrates_and_pans['Name'].values
-    carboxylic_acids_arr = carboxylic_acids['Name'].values
-    hydroperoxides_arr = hydroperoxides['Name'].values
+    rono2_arr = alkyl_nitrates_excluding_peroxy_nitrates_and_pans['NAME'].values
+    carboxylic_acids_arr = carboxylic_acids['NAME'].values
+    hydroperoxides_arr = hydroperoxides['NAME'].values
 
     #First we tackle duplicates related to the deposition, keeping the duplicate in the functional group with the largest depositional velocity
     arrays_to_check_duplicates_deposition = [rono2_arr, carboxylic_acids_arr, hydroperoxides_arr, ovocs_arr]
@@ -246,7 +249,8 @@ def choose_smarts_classifications():
         print(f"{entry['value']} removed from {entry['removed_from']} -> kept in {entry['kept_in']}")
 
     #Log what was changed from the duplicates in CSV file
-    with open(dirpath + 'Mechanism_info/duplicate_log.csv', 'w', newline='') as f:
+    # with open(dirpath + 'Mechanism_info/GEOSChem_duplicate_log.csv', 'w', newline='') as f:
+    with open('../GEOSChem_duplicate_log.csv', 'w', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=['value', 'removed_from', 'kept_in'])
         writer.writeheader()
         writer.writerows(move_log)
@@ -266,11 +270,11 @@ def choose_smarts_classifications():
     #nitrocatechol
     nitro_catechol =  df_updated_info.loc[(df_updated_info['Nitros'] > 0) & (df_updated_info['Phenols'] == 2) & (df_updated_info['Is_Radical'] == 0)]
 
-    nitro_cresols_arr = nitro_cresols['Name'].values
-    nitro_phenols_arr = nitro_phenols['Name'].values
-    nitro_toluene_arr = nitro_toluene['Name'].values
-    nitro_benzene_arr = nitro_benzene['Name'].values
-    nitro_catechol_arr = nitro_catechol['Name'].values
+    nitro_cresols_arr = nitro_cresols['NAME'].values
+    nitro_phenols_arr = nitro_phenols['NAME'].values
+    nitro_toluene_arr = nitro_toluene['NAME'].values
+    nitro_benzene_arr = nitro_benzene['NAME'].values
+    nitro_catechol_arr = nitro_catechol['NAME'].values
 
     arrays_to_check_duplicates_nitros = [nitro_cresols_arr, nitro_phenols_arr, nitro_toluene_arr, nitro_benzene_arr, nitro_catechol_arr]
     arrays_to_check_duplicates_nitros_names = ['nitro_cresols_arr', 'nitro_phenols_arr', 'nitro_toluene_arr', 'nitro_benzene_arr', 'nitro_catechol_arr']
@@ -295,9 +299,9 @@ def choose_smarts_classifications():
     pans_species_names = df_updated_info.loc[(df_updated_info['PANs'] > 0) & (df_updated_info['Is_Radical'] == 0)]
     non_pan_peroxy_nitrates = df_updated_info.loc[(df_updated_info['RO2NO2s'] > 0) & (df_updated_info['Is_Radical'] == 0)]
     total_sum_nitrates = pd.concat([alkyl_nitrates_excluding_peroxy_nitrates_and_pans, pans_species_names, non_pan_peroxy_nitrates], ignore_index = True)
-    pans_arr = pans_species_names['Name'].values
-    ro2no2_arr = non_pan_peroxy_nitrates['Name'].values
-    total_sum_nitrates_arr = total_sum_nitrates['Name'].values
+    pans_arr = pans_species_names['NAME'].values
+    ro2no2_arr = non_pan_peroxy_nitrates['NAME'].values
+    total_sum_nitrates_arr = total_sum_nitrates['NAME'].values
 
     # #Check if there is any overlap between 
     # # RONO2s: Alkyl Nitrates - Organonitrates, catches R-NO3, including ions, excluding peroxy nitrates and excluding PANs
@@ -306,7 +310,7 @@ def choose_smarts_classifications():
     overlap_colcheck = ['RONO2s', 'RO2NO2s', 'PANs']
     mask = (df_updated_info[overlap_colcheck] >= 1).sum(axis=1) >= 2
     overlap_results =  df_updated_info.loc[mask]
-    overlap_results_print = df_updated_info.loc[mask, ['Name'] + overlap_colcheck]
+    overlap_results_print = df_updated_info.loc[mask, ['NAME'] + overlap_colcheck]
     print('Overlap RONO2s, RO2NO2s, PANs: \n', overlap_results_print)
     #We find several overlaps between RONO2s and PANs. These species are RONO2s but are also PANs. 
 
@@ -331,7 +335,7 @@ def choose_smarts_classifications():
     }
 
     # Save the dictionary in an output .mat file: 
-    savemat(dirpath + "Mechanism_info/species_grouping/GEOSChem_species_classifications.mat", {"GEOSChem_species_classifications": den_groupings})
+    # savemat(dirpath + "Mechanism_info/species_grouping/GEOSChem_species_classifications.mat", {"GEOSChem_species_classifications": den_groupings})
     
     return den_groupings
 
@@ -340,7 +344,8 @@ def deposition_file_GEOSChem(den_groupings):
     #make a text file
 
     #Organic Hydroperoxides: ROOH
-    with open(dirpath + 'Mechanism_info/deposition_GEOSChem_text_for_matlab_hydroperoxides.txt', 'w', encoding="utf-8") as f:
+    # with open(dirpath + 'Mechanism_info/deposition_GEOSChem_text_for_matlab_hydroperoxides.txt', 'w', encoding="utf-8") as f:
+    with open('../deposition_GEOSChem_text_for_matlab_hydroperoxides.txt', 'w', encoding="utf-8") as f:
         f.write('%----------------------------------------------\n')
         f.write('% Organic Hydroperoxides\n')
         f.write('%----------------------------------------------\n')
@@ -359,7 +364,8 @@ def deposition_file_GEOSChem(den_groupings):
         print('Saved text file to filepath: ', dirpath + 'Mechanism_info/deposition_GEOSChem_text_for_matlab_hydroperoxides.txt')
 
     #RONO2s
-    with open(dirpath + 'Mechanism_info/deposition_GEOSChem_text_for_matlab_rono2s.txt', 'w', encoding="utf-8") as f:
+    # with open(dirpath + 'Mechanism_info/deposition_GEOSChem_text_for_matlab_rono2s.txt', 'w', encoding="utf-8") as f:
+    with open('../deposition_GEOSChem_text_for_matlab_rono2s.txt', 'w', encoding="utf-8") as f:
         f.write('%----------------------------------------------\n')
         f.write('% RONO2s (Organic nitrates)\n')
         f.write('%----------------------------------------------\n')
@@ -379,7 +385,8 @@ def deposition_file_GEOSChem(den_groupings):
         print('Saved text file to filepath: ', dirpath + 'Mechanism_info/deposition_GEOSChem_text_for_matlab_rono2s.txt')
 
     #CarboxylicAcids
-    with open(dirpath + 'Mechanism_info/deposition_GEOSChem_text_for_matlab_CarboxylicAcids.txt', 'w', encoding="utf-8") as f:
+    # with open(dirpath + 'Mechanism_info/deposition_GEOSChem_text_for_matlab_CarboxylicAcids.txt', 'w', encoding="utf-8") as f:
+    with open('../deposition_GEOSChem_text_for_matlab_CarboxylicAcids.txt', 'w', encoding="utf-8") as f:
         f.write('%----------------------------------------------\n')
         f.write('% Carboxylic Acids\n')
         f.write('%----------------------------------------------\n')
@@ -399,7 +406,8 @@ def deposition_file_GEOSChem(den_groupings):
         print('Saved text file to filepath: ', dirpath + 'Mechanism_info/deposition_GEOSChem_text_for_matlab_CarboxylicAcids.txt')
 
     #OVOCs
-    with open(dirpath + 'Mechanism_info/deposition_GEOSChem_text_for_matlab_ovocs.txt', 'w', encoding="utf-8") as f:
+    # with open(dirpath + 'Mechanism_info/deposition_GEOSChem_text_for_matlab_ovocs.txt', 'w', encoding="utf-8") as f:
+    with open('../deposition_GEOSChem_text_for_matlab_ovocs.txt', 'w', encoding="utf-8") as f:
         f.write('%----------------------------------------------\n')
         f.write('% OVOCs (Oxidized VOCs)\n')
         f.write('%----------------------------------------------\n')
@@ -424,8 +432,8 @@ def deposition_file_GEOSChem(den_groupings):
 
 # group_all_species(
 #     df_in = df_allspecies, 
-#     use = 'NAME', 
+#     use = 'FullName', 
 #     smart_groups = smart_groups)
 
 den_groupings = choose_smarts_classifications()
-deposition_file_GEOSChem()
+deposition_file_GEOSChem(den_groupings)
