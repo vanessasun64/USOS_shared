@@ -1,0 +1,500 @@
+%----------------------------------------------
+% OVOCs (Oxidized VOCs)
+%----------------------------------------------
+i=i+1;
+Rnames{i} = 'ACET = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ACET';
+fACET(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ACO3 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ACO3';
+fACO3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ACR = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ACR';
+fACR(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ACRO2 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ACRO2';
+fACRO2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ALD2 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ALD2';
+fALD2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'APAN = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'APAN';
+fAPAN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'AROMCHO = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'AROMCHO';
+fAROMCHO(i) = -1;
+
+i=i+1;
+Rnames{i} = 'AROMP4 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'AROMP4';
+fAROMP4(i) = -1;
+
+i=i+1;
+Rnames{i} = 'AROMP5 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'AROMP5';
+fAROMP5(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ATO2 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ATO2';
+fATO2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'BALD = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'BALD';
+fBALD(i) = -1;
+
+i=i+1;
+Rnames{i} = 'BRO2 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'BRO2';
+fBRO2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'BUTDI = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'BUTDI';
+fBUTDI(i) = -1;
+
+i=i+1;
+Rnames{i} = 'BUTO2 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'BUTO2';
+fBUTO2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'BZCO3 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'BZCO3';
+fBZCO3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'BZCO3H = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'BZCO3H';
+fBZCO3H(i) = -1;
+
+i=i+1;
+Rnames{i} = 'C4HVP1 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'C4HVP1';
+fC4HVP1(i) = -1;
+
+i=i+1;
+Rnames{i} = 'C4HVP2 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'C4HVP2';
+fC4HVP2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'C96O2H = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'C96O2H';
+fC96O2H(i) = -1;
+
+i=i+1;
+Rnames{i} = 'CH2O = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'CH2O';
+fCH2O(i) = -1;
+
+i=i+1;
+Rnames{i} = 'EOH = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'EOH';
+fEOH(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ETOO = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ETOO';
+fETOO(i) = -1;
+
+i=i+1;
+Rnames{i} = 'GCO3 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'GCO3';
+fGCO3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'GLYC = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'GLYC';
+fGLYC(i) = -1;
+
+i=i+1;
+Rnames{i} = 'GLYX = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'GLYX';
+fGLYX(i) = -1;
+
+i=i+1;
+Rnames{i} = 'HAC = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'HAC';
+fHAC(i) = -1;
+
+i=i+1;
+Rnames{i} = 'HACTA = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'HACTA';
+fHACTA(i) = -1;
+
+i=i+1;
+Rnames{i} = 'HC5A = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'HC5A';
+fHC5A(i) = -1;
+
+i=i+1;
+Rnames{i} = 'HCOOH = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'HCOOH';
+fHCOOH(i) = -1;
+
+i=i+1;
+Rnames{i} = 'HMS = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'HMS';
+fHMS(i) = -1;
+
+i=i+1;
+Rnames{i} = 'HPALD1OO = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'HPALD1OO';
+fHPALD1OO(i) = -1;
+
+i=i+1;
+Rnames{i} = 'HPALD2OO = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'HPALD2OO';
+fHPALD2OO(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ICHE = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ICHE';
+fICHE(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ICHOO = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ICHOO';
+fICHOO(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ICNOO = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ICNOO';
+fICNOO(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ICPDH = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ICPDH';
+fICPDH(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IDC = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IDC';
+fIDC(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IDHNBOO = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IDHNBOO';
+fIDHNBOO(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IDHNDOO1 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IDHNDOO1';
+fIDHNDOO1(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IDHNDOO2 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IDHNDOO2';
+fIDHNDOO2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IDHPE = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IDHPE';
+fIDHPE(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IEPOXA = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IEPOXA';
+fIEPOXA(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IEPOXAOO = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IEPOXAOO';
+fIEPOXAOO(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IEPOXB = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IEPOXB';
+fIEPOXB(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IEPOXBOO = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IEPOXBOO';
+fIEPOXBOO(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IEPOXD = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IEPOXD';
+fIEPOXD(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IHOO1 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IHOO1';
+fIHOO1(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IHOO4 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IHOO4';
+fIHOO4(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ISOPNOO1 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ISOPNOO1';
+fISOPNOO1(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ISOPNOO2 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ISOPNOO2';
+fISOPNOO2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'LIMAL = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'LIMAL';
+fLIMAL(i) = -1;
+
+i=i+1;
+Rnames{i} = 'LIMKB = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'LIMKB';
+fLIMKB(i) = -1;
+
+i=i+1;
+Rnames{i} = 'LIMKET = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'LIMKET';
+fLIMKET(i) = -1;
+
+i=i+1;
+Rnames{i} = 'LIMO2 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'LIMO2';
+fLIMO2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'LIMO2H = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'LIMO2H';
+fLIMO2H(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MACR = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MACR';
+fMACR(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MACR1OO = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MACR1OO';
+fMACR1OO(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MACRNO2 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MACRNO2';
+fMACRNO2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MAP = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MAP';
+fMAP(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MCO3 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MCO3';
+fMCO3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MCRDH = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MCRDH';
+fMCRDH(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MCRENOL = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MCRENOL';
+fMCRENOL(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MCROHOO = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MCROHOO';
+fMCROHOO(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MEK = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MEK';
+fMEK(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MGLY = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MGLY';
+fMGLY(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MOH = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MOH';
+fMOH(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MPAN = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MPAN';
+fMPAN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MVK = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MVK';
+fMVK(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MVKDH = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MVKDH';
+fMVKDH(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MVKOHOO = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MVKOHOO';
+fMVKOHOO(i) = -1;
+
+i=i+1;
+Rnames{i} = 'NRO2 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'NRO2';
+fNRO2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'PAN = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'PAN';
+fPAN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'PHAN = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'PHAN';
+fPHAN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'PINAL = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'PINAL';
+fPINAL(i) = -1;
+
+i=i+1;
+Rnames{i} = 'PINONIC = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'PINONIC';
+fPINONIC(i) = -1;
+
+i=i+1;
+Rnames{i} = 'PIO2 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'PIO2';
+fPIO2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'PO2 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'PO2';
+fPO2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'PPN = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'PPN';
+fPPN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'RCHO = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'RCHO';
+fRCHO(i) = -1;
+
+i=i+1;
+Rnames{i} = 'RCO3 = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'RCO3';
+fRCO3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ROH = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ROH';
+fROH(i) = -1;
+
+i=i+1;
+Rnames{i} = 'SOAGX = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'SOAGX';
+fSOAGX(i) = -1;
+
+i=i+1;
+Rnames{i} = 'SOAIE = DEP';
+k(:,i) = OVOC_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'SOAIE';
+fSOAIE(i) = -1;
