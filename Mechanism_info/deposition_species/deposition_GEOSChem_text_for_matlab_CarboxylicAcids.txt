@@ -1,0 +1,51 @@
+%----------------------------------------------
+% Carboxylic Acids
+%----------------------------------------------
+i=i+1;
+Rnames{i} = 'ACTA = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ACTA';
+fACTA(i) = -1;
+
+i=i+1;
+Rnames{i} = 'C96N = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'C96N';
+fC96N(i) = -1;
+
+i=i+1;
+Rnames{i} = 'HMML = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'HMML';
+fHMML(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MACR1OOH = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MACR1OOH';
+fMACR1OOH(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MVKHC = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MVKHC';
+fMVKHC(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MVKHCB = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MVKHCB';
+fMVKHCB(i) = -1;
+
+i=i+1;
+Rnames{i} = 'PYAC = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'PYAC';
+fPYAC(i) = -1;
+
+i=i+1;
+Rnames{i} = 'RCOOH = DEP';
+k(:,i) = RCOOH_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'RCOOH';
+fRCOOH(i) = -1;
+

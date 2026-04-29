@@ -1,0 +1,201 @@
+%----------------------------------------------
+% RONO2s (Organic nitrates)
+%----------------------------------------------
+i=i+1;
+Rnames{i} = 'ALK4N2 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ALK4N2';
+fALK4N2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'BrNO3 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'BrNO3';
+fBrNO3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'BZPAN = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'BZPAN';
+fBZPAN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ClNO3 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ClNO3';
+fClNO3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ETHLN = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ETHLN';
+fETHLN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ETHN = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ETHN';
+fETHN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ETNO3 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ETNO3';
+fETNO3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'HNO3 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'HNO3';
+fHNO3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ICN = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ICN';
+fICN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IDN = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IDN';
+fIDN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IHN1 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IHN1';
+fIHN1(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IHN2 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IHN2';
+fIHN2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IHN3 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IHN3';
+fIHN3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IHN4 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IHN4';
+fIHN4(i) = -1;
+
+i=i+1;
+Rnames{i} = 'INPB = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'INPB';
+fINPB(i) = -1;
+
+i=i+1;
+Rnames{i} = 'INPD = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'INPD';
+fINPD(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IONITA = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IONITA';
+fIONITA(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IONO2 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IONO2';
+fIONO2(i) = -1;
+
+i=i+1;
+Rnames{i} = 'IPRNO3 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'IPRNO3';
+fIPRNO3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ITCN = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ITCN';
+fITCN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'ITHN = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'ITHN';
+fITHN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MCRHN = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MCRHN';
+fMCRHN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MCRHNB = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MCRHNB';
+fMCRHNB(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MENO3 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MENO3';
+fMENO3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MONITA = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MONITA';
+fMONITA(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MONITS = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MONITS';
+fMONITS(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MONITU = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MONITU';
+fMONITU(i) = -1;
+
+i=i+1;
+Rnames{i} = 'MVKN = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'MVKN';
+fMVKN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'N2O5 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'N2O5';
+fN2O5(i) = -1;
+
+i=i+1;
+Rnames{i} = 'NPRNO3 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'NPRNO3';
+fNPRNO3(i) = -1;
+
+i=i+1;
+Rnames{i} = 'PROPNN = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'PROPNN';
+fPROPNN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'PRPN = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'PRPN';
+fPRPN(i) = -1;
+
+i=i+1;
+Rnames{i} = 'R4N2 = DEP';
+k(:,i) = RONO2_dep./(BLH_cm); %  s-1
+Gstr{i,1} = 'R4N2';
+fR4N2(i) = -1;
+
